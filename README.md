@@ -41,3 +41,9 @@ The `Publish Pages` workflow is dispatched on `main` after a selected release
 is ready. It builds only this public repository, records its exact commit in
 every page and `revision.json`, and deploys the Pages artifact. No private
 repository, model acquisition, credentials file or research runtime is bundled.
+
+The active-area allocation guide adds a fixed 598-coordinate comparison of
+four same-area active redesigns with two matched-current baselines. It preserves
+failed nominal design attempts and inconclusive minimum-effect decisions.
+See the versioned [guide](https://ds54e.github.io/analog-design-notes/studies/active-allocation/)
+and its [reproduction example](https://ds54e.github.io/analog-design-notes/studies/active-allocation/reproduce.html).

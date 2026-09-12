@@ -1,0 +1,25 @@
+* ADS gain/operating-point study: original finite circuit
+* MOS instance terminal order is drain gate source body; one unit each.
+Vdd vdd 0 DC 1 AC 0
+Vin in 0 DC 0.45000000000000001 AC 1 SIN(0.45000000000000001 0.0050000000000000001 10000)
+Rsrc in gate 1000
+Rload out 0 100000
+Cload out 0 9.9999999999999998e-13
+Idist 0 out DC 0 AC 0
+Rs source 0 82.601808305296373
+Vn0d out n0d 0
+Vn0g gate n0g 0
+Vn0s source n0s 0
+Vn0b 0 n0b 0
+xn0 n0d n0g n0s n0b apm045_vtg_nmos w=2.9472200135876367e-06 l=3.9999999999999998e-07
+Vn1d out n1d 0
+Vn1g gate n1g 0
+Vn1s source n1s 0
+Vn1b 0 n1b 0
+xn1 n1d n1g n1s n1b apm045_vtg_nmos w=2.9472200135876367e-06 l=3.9999999999999998e-07
+Vn2d out n2d 0
+Vn2g gate n2g 0
+Vn2s source n2s 0
+Vn2b 0 n2b 0
+xn2 n2d n2g n2s n2b apm045_vtg_nmos w=2.9472200135876367e-06 l=3.9999999999999998e-07
+Rd vdd out 13334.310654004061

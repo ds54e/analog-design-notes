@@ -1,0 +1,102 @@
+---
+title: "Reproduce the active-area allocation study"
+---
+
+Download the [active allocation 1.0 example](../../downloads/allocation-study-v1.0.zip),
+or use `examples/active-allocation` in the public Notes repository. It contains
+six exact circuit bodies, all 16,744 saved MOS records for the fresh confirmation,
+compact nominal/development/confirmation evidence, and graph/statistics/replay
+code. Public APM models are retrieved separately under their original terms.
+
+The following commands were actually run in the new directory
+`/tmp/adn-allocation-clean-001`. The example used only the selected files, a
+fresh public model clone and a fresh Python environment. The checked host was
+Linux x86_64, Python 3.9.25 and preinstalled ngspice 47 at `/usr/local/bin/ngspice`.
+This is a clean input/Python check on the same host, not a clean-OS or all-platform
+qualification. Use new output destinations for another run; SPICE acquisition
+is outside the site build.
+
+## Obtain dependencies
+
+```bash
+git -c credential.helper= -c http.extraHeader= clone --depth 1 --branch v5.0.0 https://github.com/ds54e/analog-process-models.git /tmp/adn-allocation-clean-001/apm-v5
+python3 -m venv /tmp/adn-allocation-clean-001/.venv
+/tmp/adn-allocation-clean-001/.venv/bin/python -m pip install --disable-pip-version-check --no-cache-dir --index-url https://pypi.org/simple -r /tmp/adn-allocation-clean-001/example/requirements.txt
+```
+
+The public v5.0.0 tag resolves to commit
+`381517fda5107fabf98af7801d5a5103f38e230c`. Replay verifies the commit and
+APM045/VTG model hashes. Obtain ngspice 47 separately if needed from its
+[official source and documentation](https://ngspice.sourceforge.io/).
+No private repository or GitHub authentication is needed by this example.
+
+## Regenerate statistics and figures
+
+Working directory: `/tmp/adn-allocation-clean-001`.
+
+```bash
+.venv/bin/python -B example/statistics.py --data /tmp/adn-allocation-clean-001/example/data --output /tmp/adn-allocation-clean-001/recomputed-statistics.json
+MPLCONFIGDIR=/tmp/adn-allocation-clean-001/mplconfig PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -B example/plot.py --data /tmp/adn-allocation-clean-001/example/data --output /tmp/adn-allocation-clean-001/regenerated-plots
+```
+
+All seven SVGs and the complete statistics JSON matched the source bytes.
+The script reproduces 12 candidate/condition summaries and all ten frozen paired
+intervals. It reconstructs 16 role-variance terms from the published reference
+Jacobians, source sigmas and circuit sensitivities, and recomputes the five
+uniform functional checks from measured scalars. Graph/statistic regeneration
+does not rerun the 7,176 confirmation acquisitions or the reference calibration.
+
+The included first-study `measurements-v1.json` retains its original bytes,
+including its historical subset and pre-freeze status wording. The current
+`confirmation-plan.json` defines this study's actual freeze and selects only
+indices 100 and 101 for additional nominal sine checks. The scalar measurement
+formulas are reused; the two studies' exposure and sampling policies stay separate.
+
+## Replay preselected physical circuits
+
+These three examples were selected in the confirmation policy before their
+outputs were observed. They retain failed specification outcomes.
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -B example/replay.py --apm /tmp/adn-allocation-clean-001/apm-v5 --output /tmp/adn-allocation-clean-001/replay-AL37W-nominal-001 --candidate AL37W --index 100 --condition nominal
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -B example/replay.py --apm /tmp/adn-allocation-clean-001/apm-v5 --output /tmp/adn-allocation-clean-001/replay-AL37W-supply-001 --candidate AL37W --index 100 --condition supply_097
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -B example/replay.py --apm /tmp/adn-allocation-clean-001/apm-v5 --output /tmp/adn-allocation-clean-001/replay-AR37-nominal-001 --candidate AR37 --index 100 --condition nominal
+```
+
+| Candidate / index / condition | Output (V) | Gain (V/V) | Delivered current (µA) |
+| --- | ---: | ---: | ---: |
+| AL37W / 100 / nominal | 0.4431550851688903 | −5.9527060530810365 | 36.61112302361139 |
+| AL37W / 100 / 0.97 V | 0.3858129361689002 | −5.959059320205351 | 34.72835070782275 |
+| AR37 / 100 / nominal | 0.3855881477468428 | −6.002288028912106 | 36.05679046409179 |
+
+All three serialized scalars matched exactly in every replay. All three cases
+still fail the assessed specification. Reproduction success verifies evidence;
+it does not turn a failed physical circuit into a passing one.
+
+The replay uses saved UID, geometry, DELVTO and ln(MULU0), relocating only path
+bindings. It performs no sampling, reference remapping, trimming, rebiasing or
+recentering. Pinned APM checks actual model/W/L/m/nf/raw readbacks around OP/AC;
+the example also checks terminal domains, device KCL and frequency endpoints.
+The original nominal/scientific audits separately retain output-node KCL,
+noise/sine measurements and the precise native observation identities.
+
+## Evidence and limits
+
+- [Selected scientific and clean-replay evidence](evidence.json)
+- [Frozen scientific confirmation policy](confirmation-plan.json)
+- [Every confirmation condition](data/confirmation.csv)
+- [Saved physical MOS values](data/realizations.csv)
+- [Development observations](data/development.csv)
+- [Nominal design attempts, including the failed proportional-load design](data/design-attempts.csv)
+- [Source transformations and first-order budget](data/source-transforms.csv)
+- [File manifest](data/manifest.json)
+
+Nominal and 0.97-V settings were already known; the confirmation uses fresh
+saved physical coordinates, separate from the 24 development coordinates.
+The same standardized coordinates across changed geometry do not mean identical
+complete circuits. Counts and intervals are conditional on the source-transfer
+model, not manufacturing yield or silicon qualification. Passive/global/spatial/
+calibrated-temperature statistics remain excluded. Selected OP/AC replay does
+not claim population noise, distortion or dynamic coverage. The original
+[first study](../gain-operating-point-accuracy/) and [passive study](../passive-sensitivity/)
+retain their original downloads and definitions.

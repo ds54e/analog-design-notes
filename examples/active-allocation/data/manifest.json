@@ -1,0 +1,21 @@
+{
+  "files": {
+    "ac.csv": "d0b9c7d01c9b627ebf458f9bdf8f1c01e276dd7f3c521bb678c85b44474bc1e8",
+    "conditions.csv": "9dc9a61830246c1949df488695181ac4f30d99ab371b861758809cccfa86ec87",
+    "configuration.json": "ba090194a92ab3987f637b8dedddf7b004d59afb60fa8b49cb8e856245855a17",
+    "confirmation.csv": "e311bb3e1742c1434c5caa7a52e1dbc25b4bc878c090c1a787be83192fdae5a2",
+    "design-attempts.csv": "d995e12d6107c08b272145860908ad7ac5279fae01734e99f22f57c8d5e46bed",
+    "development.csv": "c43604b5d7e953a0407256426fb096d2eddb8912496377ce0df48a0aa27d19f9",
+    "noise.csv": "c7538cbdb013f61491d88cb0ab7084a2ce5e7c81dbe88214128f4f01461c2389",
+    "nominal-op.csv": "67b7047dcb3cfcd179db438193cf25060efad939f4a5cd25512f7b58fd05a6cb",
+    "nominal.csv": "4ef66d31c55e4fac4d6c498f0fc3392f0c1adeb583880bd1601dc8a4e5cf9d3d",
+    "raw-sensitivities.csv": "d8fc73863a0b294cf923945bf6bf6d19bc20b145a8c9591f7c36ca2c69a233ab",
+    "realizations.csv": "e016118e813f65b506d6bb17f4c23b33d752a7e479b478534e4f93dc7d9671e2",
+    "sensitivities.csv": "ce055d407f9cf98a86843df145328f2b88df321cb9209bfa576c039131207554",
+    "source-budget.csv": "ca70e640d5a4a0b060db78baaf4f11ec63a0a74d5761c487818ba152ef340862",
+    "source-transforms.csv": "30c7ce9a1dc69befe8b4756b3cd47a0ba93ced032759a077f119b69694618f83",
+    "statistics.json": "c79d84cc5f917b438071d4cf7b28ccb173b4c7fa5ccccb8520ae144e4025c9f6"
+  },
+  "schema": "adn.compact-data.v1",
+  "scope": "Selected original data including failed nominal design and physical specification failures; no bulk waveform/calibration/private runtime archive."
+}

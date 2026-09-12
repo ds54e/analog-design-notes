@@ -25,6 +25,7 @@ def main():
             if not target.is_relative_to(root) or not target.exists():broken.append((str(file.relative_to(root)),url,'missing'))
     required=['index.html','methods.html','ja/gain-operating-point-accuracy.html','studies/gain-operating-point-accuracy/index.html','studies/gain-operating-point-accuracy/reproduce.html','downloads/gain-study-v1.0.zip','revision.json']
     required += ['ja/passive-sensitivity.html','studies/passive-sensitivity/index.html','studies/passive-sensitivity/reproduce.html','downloads/passive-study-v1.0.zip']
+    required += ['ja/active-allocation.html','studies/active-allocation/index.html','studies/active-allocation/reproduce.html','downloads/allocation-study-v1.0.zip']
     for name in required:
         if not (root/name).is_file():broken.append(('required',name,'missing'))
     assert not broken,broken

@@ -1,0 +1,176 @@
+{
+  "schema": "adn.allocation-evidence.v1",
+  "study": "active-allocation",
+  "version": "1.0",
+  "scope": "Four same-function, matched-current/area active-load redesigns and two matched-current/common-ceiling baselines; fixed fresh Local confirmation.",
+  "model": {
+    "apm_version": "5.0.0",
+    "commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "technology": "APM045",
+    "family": "VTG",
+    "ngspice": "47"
+  },
+  "confirmation": {
+    "frozen_utc": "2026-09-12T22:12:34.311242+00:00",
+    "assignments_sha256": "4fe8ef85c7aabc287b3b832e6e6c9cbc3b68dcc0dd434e7aba200ab00c517726",
+    "assignment_count": 3588,
+    "physical_units": 16744,
+    "condition_attempts": 7176,
+    "known_realizations_compared": 2048,
+    "overlap_with_retained_development_or_first_study_raw_or_z": 0,
+    "matching_prior_ADS_target_attempts": [],
+    "paired_coordinate_equalities": 13156,
+    "same_geometry_physical_equalities": 1794,
+    "native_reference_observations_remeasured": 13156,
+    "reference_maximum_residual_sigma": 9.663714334859141e-06,
+    "actual_reference_raw_readbacks_and_evidence_hashes_verified": true
+  },
+  "scientific_audit": {
+    "all_request_conditions_and_saved_physical_inputs_verified": true,
+    "all_saved_file_hashes_checked": true,
+    "all_scalar_measurements_recomputed": true,
+    "assignments_sha256": "4fe8ef85c7aabc287b3b832e6e6c9cbc3b68dcc0dd434e7aba200ab00c517726",
+    "checked_utc": "2026-09-12T22:28:25.473560+00:00",
+    "first_target_started_utc": "2026-09-12T22:16:16.051287+00:00",
+    "last_target_started_utc": "2026-09-12T22:24:35.675800+00:00",
+    "maximum_kcl_a": 3.627604943864937e-16,
+    "model_names_and_raw_readbacks_rechecked": true,
+    "native_attempts": 7176,
+    "observations": 7176,
+    "readback_units": 33488,
+    "scope": "Internal same-agent audit of saved evidence; finite model coordinates, not manufacturing yield or independent replication.",
+    "status": "PASS"
+  },
+  "nominal_audit": {
+    "actual_model_and_raw_readbacks_rechecked": true,
+    "all_native_file_and_input_hashes_verified": true,
+    "all_retained_measurements_recomputed": true,
+    "causal_and_condition_observations": 196,
+    "checked_utc": "2026-09-12T22:32:58.732699+00:00",
+    "maximum_kcl_a": 2.462900760072384e-16,
+    "model_readback_units": 1930,
+    "nominal_observations": 190,
+    "original_proportional_load_design_status": "NOMINAL_TARGET_NOT_MET",
+    "scope": "Same-agent saved-evidence audit. Failed nominal matching and physical specification failures retained; no new native acquisition.",
+    "status": "PASS",
+    "total_observations": 386
+  },
+  "public_confirmation_policy_sha256": "0d7d8c88a3817e97218c4323c2f149d93cb81bd195e2efec5fbaf42f00af9101",
+  "data_manifest_sha256": "451eee49f01a6f0ab4ef671ab7f387ad0e9b1911f50fb17c91c5d56351dd0f16",
+  "definition_note": "The reused first-study measurement JSON retains its historical status/subset text. The allocation confirmation policy and actual freeze select indices 100 and 101 for sine checks; original scalar formulas and the old study bytes are preserved.",
+  "clean_public_reproduction": {
+    "status": "PASS",
+    "checked_utc": "2026-09-12T22:39:11.168041+00:00",
+    "apm_public_repository": "https://github.com/ds54e/analog-process-models",
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "installed_packages": [
+      "contourpy==1.3.0",
+      "cycler==0.12.1",
+      "fonttools==4.60.2",
+      "importlib_metadata==8.7.1",
+      "importlib_resources==6.5.2",
+      "kiwisolver==1.4.7",
+      "matplotlib==3.9.4",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.3.0",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.13.1",
+      "six==1.17.0",
+      "tomli==2.2.1",
+      "typing_extensions==4.16.0",
+      "zipp==3.23.1"
+    ],
+    "native_checks": [
+      {
+        "status": "PASS",
+        "candidate": "AL37W",
+        "index": 100,
+        "condition": "nominal",
+        "measured": {
+          "out_v": 0.4431550851688903,
+          "gain": -5.9527060530810365,
+          "current_a": 3.661112302361139e-05
+        },
+        "differences_from_published": {
+          "out_v": 0.0,
+          "gain": 0.0,
+          "current_a": 0.0
+        },
+        "reproduction_status": "PASS",
+        "dc_ac_current_specification_pass": false,
+        "readback": "Pinned APM checked actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every OP/AC analysis.",
+        "max_device_kcl_residual_a": 1.3100889188592812e-16,
+        "scope": "Selected OP/AC replay with saved Local units. No random redraw, noise, sine, temperature statistics or full-population replay claimed.",
+        "run_id": "0dde265db1b8dc3eedc2d7f3f48009167f3824f5b5e25e30606ac03219ebff54",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c"
+      },
+      {
+        "status": "PASS",
+        "candidate": "AL37W",
+        "index": 100,
+        "condition": "supply_097",
+        "measured": {
+          "out_v": 0.3858129361689002,
+          "gain": -5.959059320205351,
+          "current_a": 3.472835070782275e-05
+        },
+        "differences_from_published": {
+          "out_v": 0.0,
+          "gain": 0.0,
+          "current_a": 0.0
+        },
+        "reproduction_status": "PASS",
+        "dc_ac_current_specification_pass": false,
+        "readback": "Pinned APM checked actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every OP/AC analysis.",
+        "max_device_kcl_residual_a": 8.868773770931426e-17,
+        "scope": "Selected OP/AC replay with saved Local units. No random redraw, noise, sine, temperature statistics or full-population replay claimed.",
+        "run_id": "019885448ee5dec090fafad3fe7d6b552bbd9630e2e748982c4e8f97dee7ed20",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c"
+      },
+      {
+        "status": "PASS",
+        "candidate": "AR37",
+        "index": 100,
+        "condition": "nominal",
+        "measured": {
+          "out_v": 0.3855881477468428,
+          "gain": -6.002288028912106,
+          "current_a": 3.605679046409179e-05
+        },
+        "differences_from_published": {
+          "out_v": 0.0,
+          "gain": 0.0,
+          "current_a": 0.0
+        },
+        "reproduction_status": "PASS",
+        "dc_ac_current_specification_pass": false,
+        "readback": "Pinned APM checked actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every OP/AC analysis.",
+        "max_device_kcl_residual_a": 5.587159885742685e-17,
+        "scope": "Selected OP/AC replay with saved Local units. No random redraw, noise, sine, temperature statistics or full-population replay claimed.",
+        "run_id": "15ece1d833ce5baa68c489135d771a9a68e567a404ec6902754dee3f45ee070e",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c"
+      }
+    ],
+    "regenerated_svg_sha256": {
+      "confirmation-supply.svg": "15d57e2b3dc1dac1310f7a574b24b3234c267c96a0bccf209b235090c33a3d55",
+      "source-budget.svg": "530435562fa8402af16641a84498b14ae50818d4430d7a40d563600f7e61db56",
+      "paired-comparisons.svg": "16170767f948c97f0e3187b54394fe2fdd0166d3576261b72d344f690a639424",
+      "nominal-noise.svg": "07c7a8d42e4c1c39cbe7853f18b1e8e35314e28d286dfb4582b3b7e81e2fc6f9",
+      "assessed-function.svg": "6640f7aa6a8e5d0c19a6b8e3e8f72c05f506c6e8722e93e1a190f52366160e24",
+      "confirmation-nominal.svg": "e78e05afa5db78c6d822f163af91e1221c565213c56272784f12a529fcc0c227",
+      "prediction-error.svg": "262160ead5c735b78690dccd95195716d9b3ca4e2d9766864f1e4ccea3786b9b"
+    },
+    "all_graph_bytes_equal": true,
+    "statistics": "All 12 candidate-condition summaries and ten frozen intervals exactly reproduced; 16 role variance terms reconstructed from public source transforms; uniform functional checks recomputed from scalars.",
+    "limitation": "Fresh public model clone and Python environment, selected public files on the same Linux host with preinstalled ngspice47; not a clean-OS or all-platform qualification."
+  },
+  "review_roles": "Internal checks by the same Codex agent. No prior human review of this follow-on release, peer approval or independent scientific replication.",
+  "limitations": [
+    "Source-transfer hypothesis, no manufacturing yield or silicon qualification; profile-excluded effects remain excluded.",
+    "Known environmental settings, fresh saved physical coordinates. Deleted old campaign values cannot be exhaustively compared.",
+    "Nominal noise and sparse sine checks do not qualify a Local noise/dynamic population.",
+    "Bulk native/reference observations remain private; selected public replay requires no private inputs."
+  ]
+}

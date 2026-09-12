@@ -1,0 +1,348 @@
+{
+  "contrasts": [
+    {
+      "condition": "nominal",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.0108119499443685,
+        0.014768158437878874
+      ],
+      "left": "A37",
+      "mean_mae_reduction_v": 0.012790054191123687,
+      "meaningful_reduction_v": 0.008,
+      "n_pairs": 598,
+      "paired_sd_v": 0.017168592401692953,
+      "right": "AL37W"
+    },
+    {
+      "condition": "nominal",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.008370631056294948,
+        0.012917468558427868
+      ],
+      "left": "AR37",
+      "mean_mae_reduction_v": 0.010644049807361408,
+      "meaningful_reduction_v": 0.005,
+      "n_pairs": 598,
+      "paired_sd_v": 0.01973172038806936,
+      "right": "AL37W"
+    },
+    {
+      "condition": "nominal",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.01032757979890776,
+        0.014427364419107771
+      ],
+      "left": "AI37",
+      "mean_mae_reduction_v": 0.012377472109007765,
+      "meaningful_reduction_v": 0.005,
+      "n_pairs": 598,
+      "paired_sd_v": 0.01779166370892859,
+      "right": "AL37W"
+    },
+    {
+      "condition": "nominal",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.0069150057819133345,
+        0.010402797099209025
+      ],
+      "left": "AB37",
+      "mean_mae_reduction_v": 0.00865890144056118,
+      "meaningful_reduction_v": 0.005,
+      "n_pairs": 598,
+      "paired_sd_v": 0.015135821988916724,
+      "right": "AL37W"
+    },
+    {
+      "condition": "nominal",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.033135144385074894,
+        0.0419953944050593
+      ],
+      "left": "AL37W",
+      "mean_mae_reduction_v": 0.037565269395067095,
+      "meaningful_reduction_v": 0.02,
+      "n_pairs": 598,
+      "paired_sd_v": 0.03845045614247409,
+      "right": "R37"
+    },
+    {
+      "condition": "supply_097",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.006675030817096793,
+        0.010973353841115302
+      ],
+      "left": "A37",
+      "mean_mae_reduction_v": 0.008824192329106048,
+      "meaningful_reduction_v": 0.008,
+      "n_pairs": 598,
+      "paired_sd_v": 0.01865325250962852,
+      "right": "AL37W"
+    },
+    {
+      "condition": "supply_097",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.00547195650586709,
+        0.010149532607865563
+      ],
+      "left": "AR37",
+      "mean_mae_reduction_v": 0.007810744556866326,
+      "meaningful_reduction_v": 0.005,
+      "n_pairs": 598,
+      "paired_sd_v": 0.02029908121749522,
+      "right": "AL37W"
+    },
+    {
+      "condition": "supply_097",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.006351410913334625,
+        0.01074802109802208
+      ],
+      "left": "AI37",
+      "mean_mae_reduction_v": 0.008549716005678352,
+      "meaningful_reduction_v": 0.005,
+      "n_pairs": 598,
+      "paired_sd_v": 0.019079785186713886,
+      "right": "AL37W"
+    },
+    {
+      "condition": "supply_097",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.0042544101498163435,
+        0.007891076967937262
+      ],
+      "left": "AB37",
+      "mean_mae_reduction_v": 0.006072743558876803,
+      "meaningful_reduction_v": 0.005,
+      "n_pairs": 598,
+      "paired_sd_v": 0.015781890768269226,
+      "right": "AL37W"
+    },
+    {
+      "condition": "supply_097",
+      "family_size": 10,
+      "full_sampled_model_comparison_allowed": true,
+      "interpretation": "Positive means right has lower MAE. Frozen Bonferroni paired t intervals across all stated contrasts and conditions; model-conditional approximate uncertainty.",
+      "interval_v": [
+        0.03893587850799467,
+        0.0499929833382529
+      ],
+      "left": "AL37W",
+      "mean_mae_reduction_v": 0.044464430923123785,
+      "meaningful_reduction_v": 0.02,
+      "n_pairs": 598,
+      "paired_sd_v": 0.047984055007437715,
+      "right": "R37"
+    }
+  ],
+  "role": "CONFIRMATION",
+  "schema": "ads.allocation-statistics.v1",
+  "summaries": {
+    "A37/nominal": {
+      "assigned": 598,
+      "dc_ac_current_pass": 142,
+      "mae_v": 0.06246656393396597,
+      "max_absolute_error_v": 0.2955108819624527,
+      "mean_error_v": -0.003995688049373058,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.01835021788641561,
+      "prediction_rmse_v": 0.0021118925187870274,
+      "rms_error_v": 0.0788218515776383,
+      "sd_error_v": 0.0787864129248823,
+      "sine_all_assessed_pass": 1,
+      "sine_assessed": 2,
+      "usable_supported": 598
+    },
+    "A37/supply_097": {
+      "assigned": 598,
+      "dc_ac_current_pass": 101,
+      "mae_v": 0.08114150089508959,
+      "max_absolute_error_v": 0.34141672906120807,
+      "mean_error_v": -0.06371553746324297,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.032390321495168684,
+      "prediction_rmse_v": 0.003477153811384131,
+      "rms_error_v": 0.09972407653339939,
+      "sd_error_v": 0.07677942249750647,
+      "sine_all_assessed_pass": 0,
+      "sine_assessed": 0,
+      "usable_supported": 598
+    },
+    "AB37/nominal": {
+      "assigned": 598,
+      "dc_ac_current_pass": 153,
+      "mae_v": 0.05833541118340347,
+      "max_absolute_error_v": 0.2789411588420009,
+      "mean_error_v": -0.0037067449387203515,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.015522343541490402,
+      "prediction_rmse_v": 0.0018409031756287096,
+      "rms_error_v": 0.07365196563607701,
+      "sd_error_v": 0.07362021136443307,
+      "sine_all_assessed_pass": 1,
+      "sine_assessed": 2,
+      "usable_supported": 598
+    },
+    "AB37/supply_097": {
+      "assigned": 598,
+      "dc_ac_current_pass": 97,
+      "mae_v": 0.07839005212486035,
+      "max_absolute_error_v": 0.32615185130877233,
+      "mean_error_v": -0.06373756608034586,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.027043383631627338,
+      "prediction_rmse_v": 0.0031016629721936006,
+      "rms_error_v": 0.09590441058241134,
+      "sd_error_v": 0.0717201525275505,
+      "sine_all_assessed_pass": 0,
+      "sine_assessed": 0,
+      "usable_supported": 598
+    },
+    "AI37/nominal": {
+      "assigned": 598,
+      "dc_ac_current_pass": 146,
+      "mae_v": 0.062053981851850064,
+      "max_absolute_error_v": 0.297032604961619,
+      "mean_error_v": -0.0037263531280131773,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.018254269742807194,
+      "prediction_rmse_v": 0.0020404711197896863,
+      "rms_error_v": 0.07841173678270179,
+      "sd_error_v": 0.078388713006104,
+      "sine_all_assessed_pass": 1,
+      "sine_assessed": 2,
+      "usable_supported": 598
+    },
+    "AI37/supply_097": {
+      "assigned": 598,
+      "dc_ac_current_pass": 102,
+      "mae_v": 0.08086702457166191,
+      "max_absolute_error_v": 0.3392565944884237,
+      "mean_error_v": -0.06351372477595771,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.031860942821807126,
+      "prediction_rmse_v": 0.0034352069829071815,
+      "rms_error_v": 0.09928628316493815,
+      "sd_error_v": 0.07637753500271961,
+      "sine_all_assessed_pass": 0,
+      "sine_assessed": 0,
+      "usable_supported": 598
+    },
+    "AL37W/nominal": {
+      "assigned": 598,
+      "dc_ac_current_pass": 190,
+      "mae_v": 0.0496765097428423,
+      "max_absolute_error_v": 0.24380162160560026,
+      "mean_error_v": -0.0042207950782869,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.010873978030992049,
+      "prediction_rmse_v": 0.0017915159471214837,
+      "rms_error_v": 0.06269488155564462,
+      "sd_error_v": 0.06260500955527884,
+      "sine_all_assessed_pass": 1,
+      "sine_assessed": 2,
+      "usable_supported": 598
+    },
+    "AL37W/supply_097": {
+      "assigned": 598,
+      "dc_ac_current_pass": 113,
+      "mae_v": 0.07231730856598356,
+      "max_absolute_error_v": 0.29462607926440687,
+      "mean_error_v": -0.063490494321733,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.019466657925828135,
+      "prediction_rmse_v": 0.002679396292207927,
+      "rms_error_v": 0.08795106879912212,
+      "sd_error_v": 0.060914305143371456,
+      "sine_all_assessed_pass": 0,
+      "sine_assessed": 0,
+      "usable_supported": 598
+    },
+    "AR37/nominal": {
+      "assigned": 598,
+      "dc_ac_current_pass": 148,
+      "mae_v": 0.0603205595502037,
+      "max_absolute_error_v": 0.28515521410998024,
+      "mean_error_v": -0.0036051143189827477,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.015993943131611787,
+      "prediction_rmse_v": 0.0018619135259474334,
+      "rms_error_v": 0.07623442464842592,
+      "sd_error_v": 0.07621288409378241,
+      "sine_all_assessed_pass": 1,
+      "sine_assessed": 2,
+      "usable_supported": 598
+    },
+    "AR37/supply_097": {
+      "assigned": 598,
+      "dc_ac_current_pass": 102,
+      "mae_v": 0.08012805312284989,
+      "max_absolute_error_v": 0.3313115228653679,
+      "mean_error_v": -0.06412531858426342,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.028264397503161787,
+      "prediction_rmse_v": 0.0031839637759708763,
+      "rms_error_v": 0.09810737935696143,
+      "sd_error_v": 0.07431174812212696,
+      "sine_all_assessed_pass": 0,
+      "sine_assessed": 0,
+      "usable_supported": 598
+    },
+    "R37/nominal": {
+      "assigned": 598,
+      "dc_ac_current_pass": 542,
+      "mae_v": 0.012111240347775196,
+      "max_absolute_error_v": 0.0463959381518384,
+      "mean_error_v": -0.001406751740071191,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.00364633764897776,
+      "prediction_rmse_v": 0.0009338697401131392,
+      "rms_error_v": 0.015233605825758657,
+      "sd_error_v": 0.015181211940740718,
+      "sine_all_assessed_pass": 2,
+      "sine_assessed": 2,
+      "usable_supported": 598
+    },
+    "R37/supply_097": {
+      "assigned": 598,
+      "dc_ac_current_pass": 264,
+      "mae_v": 0.027852877642859774,
+      "max_absolute_error_v": 0.07115879560970217,
+      "mean_error_v": -0.02741453505789435,
+      "missing_or_unsupported": 0,
+      "prediction_max_absolute_error_v": 0.0035873868233347594,
+      "prediction_rmse_v": 0.0009274171435135912,
+      "rms_error_v": 0.03132104864326334,
+      "sd_error_v": 0.015160332987847532,
+      "sine_all_assessed_pass": 0,
+      "sine_assessed": 0,
+      "usable_supported": 598
+    }
+  }
+}
