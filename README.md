@@ -1,7 +1,13 @@
 # Analog Design Notes
 
 Read the [research site](https://ds54e.github.io/analog-design-notes/) or the
-[Japanese overview](https://ds54e.github.io/analog-design-notes/ja/gain-operating-point-accuracy.html).
+[latest Japanese overview](https://ds54e.github.io/analog-design-notes/ja/passive-sensitivity.html).
+
+The passive-sensitivity study asks when absolute or ratio resistor error changes
+the benefit of added current. Its 5,568 new conditions reuse the known MOS cohort;
+the passive scenarios are synthetic, not foundry statistics or fresh population
+confirmation. See its [guide](https://ds54e.github.io/analog-design-notes/studies/passive-sensitivity/)
+and [public example](examples/passive-sensitivity/README.md).
 
 The first study compares gain, output operating point and untrimmed accuracy
 in four finite amplifiers. It includes a frozen 464-coordinate paired study,
@@ -14,13 +20,14 @@ retrieved APM v5.0.0 and ngspice 47. The static site build never runs SPICE.
 
 Original prose/plots/data: CC BY 4.0. Original code/circuit examples: MIT.
 See [LICENSE.md](LICENSE.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
-This first release has internal AI checks, without prior human or peer review.
+These releases have internal AI checks, without prior human or peer review.
 
 The editable canonical manuscripts are maintained in the private research
 repository. This repository receives an explicit selected publication set.
 Reader corrections belong in Issues; they are applied to that canonical source
-before export. The immutable research tag is
-`gain-operating-point-accuracy-v1.0`.
+before export. The immutable research tags are
+`gain-operating-point-accuracy-v1.0` and `passive-sensitivity-v1.0`. Versioned
+downloads are static checked artifacts; the first release's ZIP bytes are preserved.
 
 Maintainers render with Quarto **1.10.18**:
 

@@ -4,8 +4,24 @@ toc: false
 ---
 
 Research notes that connect circuit behavior, measured evidence, and practical
-design choices. The first study follows a small amplifier from current balance
-to finite redesign and a frozen comparison.
+design choices. Start with the amplifier's current balance, then ask which
+uncertainty changes the design decision. Basic MOS small-signal and SPICE
+knowledge is helpful; each guide explains its current paths before comparisons.
+
+## Does resistor matching preserve the benefit of more current?
+
+[**Resistor accuracy is more than a matching ratio**](studies/passive-sensitivity/index.qmd)
+
+Source and drain/bias resistor errors act in opposite directions. Their common
+drift partly cancels; ratio error reinforces. Fixed synthetic conditions show
+where R75's extra current loses its RMS accuracy advantage, and why a smaller
+RMS error can coexist with fewer observations meeting the functional limits.
+
+**Study v1.0 · 5,568 new passive conditions on the known MOS cohort · 156 nominal controls**
+
+- [Read the English design guide](studies/passive-sensitivity/index.qmd)
+- [抵抗誤差の日本語概要](ja/passive-sensitivity.qmd)
+- [Regenerate plots and replay saved physical circuits](studies/passive-sensitivity/reproduce.qmd)
 
 ## Where should extra current go?
 
@@ -28,7 +44,9 @@ before the statistical comparison.
 - [Reproduce plots and selected circuits](studies/gain-operating-point-accuracy/reproduce.qmd)
 - [Model scope, methods and review roles](methods.qmd)
 
-Last substantive research revision: **2026-09-12 UTC**. This collection's
+Last substantive research revision: **2026-09-12 UTC**. Each study has a separate
+version tag and download; the original first-study download is retained exactly.
+This collection's
 longer-term direction is low-current on-chip analog design, including regulators.
 This first release studies a foundational amplifier; it does not demonstrate
 an integrated LDO.

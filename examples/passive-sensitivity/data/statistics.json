@@ -1,0 +1,432 @@
+{
+  "schema": "adn.passive-statistics.v1",
+  "exposure": "Known MOS cohort, synthetic two-point log-passive scenarios; no population confirmation or yield claim.",
+  "weighting": "Both passive signs equally weighted within each of 464 retained MOS indices.",
+  "groups": [
+    {
+      "candidate": "R37",
+      "kind": "common",
+      "log_amplitude": 0.1,
+      "physical_circuits": 464,
+      "observations": 928,
+      "usable": 928,
+      "supported": 928,
+      "dc_ac_current_pass": 145,
+      "comparison_complete": true,
+      "mean_v": -0.0012373303157190377,
+      "mae_v": 0.041396220352149196,
+      "mse_v2": 0.001952547345560984,
+      "rms_v": 0.04418763792692458,
+      "population_sd_v": 0.044170310834889835,
+      "nominal_prediction": {
+        "mean_v": 9.21291688778635e-05,
+        "mae_v": 0.04141236967137609,
+        "mse_v2": 0.0019492132887444843,
+        "rms_v": 0.04414989568214725,
+        "population_sd_v": 0.04414979955742411,
+        "prediction_error_rms_v": 0.0017671638891573077,
+        "prediction_error_max_abs_v": 0.005777070122982675
+      },
+      "known_OP_prediction": {
+        "mean_v": 9.21291688778644e-05,
+        "mae_v": 0.041387840613492266,
+        "mse_v2": 0.0019497875255844639,
+        "rms_v": 0.04415639846709041,
+        "population_sd_v": 0.044156302356523305,
+        "prediction_error_rms_v": 0.0013297231702983445,
+        "prediction_error_max_abs_v": 0.0014183461425901212
+      }
+    },
+    {
+      "candidate": "R37",
+      "kind": "ratio",
+      "log_amplitude": 0.06,
+      "physical_circuits": 464,
+      "observations": 928,
+      "usable": 928,
+      "supported": 928,
+      "dc_ac_current_pass": 704,
+      "comparison_complete": true,
+      "mean_v": -5.716528403524606e-05,
+      "mae_v": 0.01677272476784074,
+      "mse_v2": 0.00042302740242395654,
+      "rms_v": 0.020567629966137483,
+      "population_sd_v": 0.02056755052392622,
+      "nominal_prediction": {
+        "mean_v": 9.21291688778635e-05,
+        "mae_v": 0.016777028842731755,
+        "mse_v2": 0.0004227785435009976,
+        "rms_v": 0.02056157930463994,
+        "population_sd_v": 0.020561372904483774,
+        "prediction_error_rms_v": 0.00045710884503196114,
+        "prediction_error_max_abs_v": 0.0017983439058366635
+      },
+      "known_OP_prediction": {
+        "mean_v": 9.21291688778635e-05,
+        "mae_v": 0.016771628184115837,
+        "mse_v2": 0.00042288836430680223,
+        "rms_v": 0.02056424966554341,
+        "population_sd_v": 0.020564043292189506,
+        "prediction_error_rms_v": 0.0001493565215783606,
+        "prediction_error_max_abs_v": 0.000165117317835084
+      }
+    },
+    {
+      "candidate": "R37",
+      "kind": "ratio",
+      "log_amplitude": 0.1,
+      "physical_circuits": 464,
+      "observations": 928,
+      "usable": 928,
+      "supported": 928,
+      "dc_ac_current_pass": 513,
+      "comparison_complete": true,
+      "mean_v": -0.00032253212204805785,
+      "mae_v": 0.02345583745970698,
+      "mse_v2": 0.0007526267529887274,
+      "rms_v": 0.02743404368642595,
+      "population_sd_v": 0.027432147674197414,
+      "nominal_prediction": {
+        "mean_v": 9.21291688778635e-05,
+        "mae_v": 0.023455841791474582,
+        "mse_v2": 0.0007517559389790706,
+        "rms_v": 0.027418168045642118,
+        "population_sd_v": 0.027418013261272463,
+        "prediction_error_rms_v": 0.0008309455341661928,
+        "prediction_error_max_abs_v": 0.0031814279321213945
+      },
+      "known_OP_prediction": {
+        "mean_v": 9.212916887786219e-05,
+        "mae_v": 0.023460416561373966,
+        "mse_v2": 0.0007520609967729727,
+        "rms_v": 0.027423730540773857,
+        "population_sd_v": 0.027423575787800074,
+        "prediction_error_rms_v": 0.00041483790381006643,
+        "prediction_error_max_abs_v": 0.0004593836187854472
+      }
+    },
+    {
+      "candidate": "R75",
+      "kind": "common",
+      "log_amplitude": 0.1,
+      "physical_circuits": 464,
+      "observations": 928,
+      "usable": 928,
+      "supported": 928,
+      "dc_ac_current_pass": 90,
+      "comparison_complete": true,
+      "mean_v": -0.0012472267472540645,
+      "mae_v": 0.03720262445633668,
+      "mse_v2": 0.0014772709108098717,
+      "rms_v": 0.03843528210914903,
+      "population_sd_v": 0.038415040495238396,
+      "nominal_prediction": {
+        "mean_v": -0.0003125449397453848,
+        "mae_v": 0.03718956044734267,
+        "mse_v2": 0.0014745011675493171,
+        "rms_v": 0.03839923394482391,
+        "population_sd_v": 0.03839796196687992,
+        "prediction_error_rms_v": 0.001083755114025655,
+        "prediction_error_max_abs_v": 0.0024356648466073993
+      },
+      "known_OP_prediction": {
+        "mean_v": -0.0003125449397453857,
+        "mae_v": 0.03720791779306052,
+        "mse_v2": 0.0014761684162750439,
+        "rms_v": 0.038420937212346136,
+        "population_sd_v": 0.038419665952942425,
+        "prediction_error_rms_v": 0.000934699436897689,
+        "prediction_error_max_abs_v": 0.0009462597467880807
+      }
+    },
+    {
+      "candidate": "R75",
+      "kind": "ratio",
+      "log_amplitude": 0.06,
+      "physical_circuits": 464,
+      "observations": 928,
+      "usable": 928,
+      "supported": 928,
+      "dc_ac_current_pass": 754,
+      "comparison_complete": true,
+      "mean_v": -0.000538530160455993,
+      "mae_v": 0.016796085145276505,
+      "mse_v2": 0.00036416761602814005,
+      "rms_v": 0.019083176256277153,
+      "population_sd_v": 0.019075576040959268,
+      "nominal_prediction": {
+        "mean_v": -0.0003125449397453852,
+        "mae_v": 0.016788126416147308,
+        "mse_v2": 0.0003633589165908772,
+        "rms_v": 0.019061975673861226,
+        "population_sd_v": 0.019059413218971793,
+        "prediction_error_rms_v": 0.00041930021664755813,
+        "prediction_error_max_abs_v": 0.0012211662564407533
+      },
+      "known_OP_prediction": {
+        "mean_v": -0.0003125449397453849,
+        "mae_v": 0.01679446285104473,
+        "mse_v2": 0.0003638522330691914,
+        "rms_v": 0.019074911089417727,
+        "population_sd_v": 0.019072350372458843,
+        "prediction_error_rms_v": 0.00022604087442195978,
+        "prediction_error_max_abs_v": 0.00024029294685817826
+      }
+    },
+    {
+      "candidate": "R75",
+      "kind": "ratio",
+      "log_amplitude": 0.1,
+      "physical_circuits": 464,
+      "observations": 928,
+      "usable": 928,
+      "supported": 928,
+      "dc_ac_current_pass": 378,
+      "comparison_complete": true,
+      "mean_v": -0.0009402277638502953,
+      "mae_v": 0.027507234372256776,
+      "mse_v2": 0.0008494803623622402,
+      "rms_v": 0.029145846399825828,
+      "population_sd_v": 0.029130676856439934,
+      "nominal_prediction": {
+        "mean_v": -0.0003125449397453853,
+        "mae_v": 0.02748338666399286,
+        "mse_v2": 0.0008467743038053031,
+        "rms_v": 0.029099386656857615,
+        "population_sd_v": 0.029097708147995824,
+        "prediction_error_rms_v": 0.0008606890340052193,
+        "prediction_error_max_abs_v": 0.002304994191508203
+      },
+      "known_OP_prediction": {
+        "mean_v": -0.00031254493974538377,
+        "mae_v": 0.02750201467470986,
+        "mse_v2": 0.0008481446273561761,
+        "rms_v": 0.029122922713151166,
+        "population_sd_v": 0.029121245560875583,
+        "prediction_error_rms_v": 0.0006278542682435512,
+        "prediction_error_max_abs_v": 0.0006702053422039111
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "kind": "common",
+      "log_amplitude": 0.1,
+      "R75_minus_R37_mse_v2": -0.00047527643475111223,
+      "R75_minus_R37_rms_v": -0.005752355817775549,
+      "R75_minus_R37_mae_v": -0.004193595895812516
+    },
+    {
+      "kind": "ratio",
+      "log_amplitude": 0.06,
+      "R75_minus_R37_mse_v2": -5.8859786395816494e-05,
+      "R75_minus_R37_rms_v": -0.0014844537098603304,
+      "R75_minus_R37_mae_v": 2.3360377435763247e-05
+    },
+    {
+      "kind": "ratio",
+      "log_amplitude": 0.1,
+      "R75_minus_R37_mse_v2": 9.685360937351274e-05,
+      "R75_minus_R37_rms_v": 0.0017118027133998792,
+      "R75_minus_R37_mae_v": 0.004051396912549795
+    }
+  ],
+  "curvature": [
+    {
+      "candidate": "R37",
+      "kind": "common",
+      "log_amplitude": 0.1,
+      "mean_even_shift_v": -0.001329459484596901,
+      "baseline_v2": 0.00023772875854458146,
+      "odd_response_v2": 0.0017124966959502896,
+      "offset_even_response_v2": 5.537567948038329e-07,
+      "even_response_square_v2": 1.7681342713089624e-06,
+      "role": "Retrospective exact two-sign decomposition. The even component is not a prospective higher-order predictor."
+    },
+    {
+      "candidate": "R37",
+      "kind": "ratio",
+      "log_amplitude": 0.06,
+      "mean_even_shift_v": -0.00014929445291310956,
+      "baseline_v2": 0.00023772875854458146,
+      "odd_response_v2": 0.00018517182244164618,
+      "offset_even_response_v2": 1.0451426940725463e-07,
+      "even_response_square_v2": 2.230716832168664e-08,
+      "role": "Retrospective exact two-sign decomposition. The even component is not a prospective higher-order predictor."
+    },
+    {
+      "candidate": "R37",
+      "kind": "ratio",
+      "log_amplitude": 0.1,
+      "mean_even_shift_v": -0.00041466129092592135,
+      "baseline_v2": 0.00023772875854458146,
+      "odd_response_v2": 0.0005144358513704436,
+      "offset_even_response_v2": 2.90057822353468e-07,
+      "even_response_square_v2": 1.7208525134888928e-07,
+      "role": "Retrospective exact two-sign decomposition. The even component is not a prospective higher-order predictor."
+    },
+    {
+      "candidate": "R75",
+      "kind": "common",
+      "log_amplitude": 0.1,
+      "mean_even_shift_v": -0.0009346818075086796,
+      "baseline_v2": 9.143776128276256e-05,
+      "odd_response_v2": 0.001384335986417332,
+      "offset_even_response_v2": 6.235286090430129e-07,
+      "even_response_square_v2": 8.736345007342789e-07,
+      "role": "Retrospective exact two-sign decomposition. The even component is not a prospective higher-order predictor."
+    },
+    {
+      "candidate": "R75",
+      "kind": "ratio",
+      "log_amplitude": 0.06,
+      "mean_even_shift_v": -0.0002259852207106079,
+      "baseline_v2": 9.143776128276256e-05,
+      "odd_response_v2": 0.0002724430734443286,
+      "offset_even_response_v2": 2.3568757557748955e-07,
+      "even_response_square_v2": 5.109372547137015e-08,
+      "role": "Retrospective exact two-sign decomposition. The even component is not a prospective higher-order predictor."
+    },
+    {
+      "candidate": "R75",
+      "kind": "ratio",
+      "log_amplitude": 0.1,
+      "mean_even_shift_v": -0.0006276828241049102,
+      "baseline_v2": 9.143776128276256e-05,
+      "odd_response_v2": 0.0007569939859737597,
+      "offset_even_response_v2": 6.544413691454949e-07,
+      "even_response_square_v2": 3.941737365722688e-07,
+      "role": "Retrospective exact two-sign decomposition. The even component is not a prospective higher-order predictor."
+    }
+  ],
+  "baseline": {
+    "R37": {
+      "mean_v": 9.21291688778635e-05,
+      "mae_v": 0.012616048285989608,
+      "mse_v2": 0.00023772875854458146,
+      "rms_v": 0.015418455128338294,
+      "population_sd_v": 0.015418179878339187
+    },
+    "R75": {
+      "mean_v": -0.000312544939745385,
+      "mae_v": 0.007714192273585158,
+      "mse_v2": 9.143776128276256e-05,
+      "rms_v": 0.00956230941157849,
+      "population_sd_v": 0.009557200266992532
+    }
+  },
+  "slope_moments": {
+    "R37": {
+      "nominal_common_v": -0.41370092218895316,
+      "nominal_ratio_v": 0.22672167528370313,
+      "known_OP_common_mean_square_v2": 0.1712058767039882,
+      "known_OP_ratio_mean_square_v2": 0.05143322382283911
+    },
+    "R75": {
+      "nominal_common_v": -0.37189560447342673,
+      "nominal_ratio_v": 0.2748338666399286,
+      "known_OP_common_mean_square_v2": 0.13847306549922808,
+      "known_OP_ratio_mean_square_v2": 0.07567068660734134
+    }
+  },
+  "gradient_recomputation": [
+    {
+      "candidate": "R37",
+      "parameter": "rd",
+      "native_centered_derivative_v": -0.4335721363781797,
+      "equation_estimate_v": -0.43357275612752716
+    },
+    {
+      "candidate": "R37",
+      "parameter": "rload",
+      "native_centered_derivative_v": 0.057813854889454674,
+      "equation_estimate_v": 0.057813938213173335
+    },
+    {
+      "candidate": "R37",
+      "parameter": "rs",
+      "native_centered_derivative_v": 0.01987121418922655,
+      "equation_estimate_v": 0.01987293406669303
+    },
+    {
+      "candidate": "R37",
+      "parameter": "rsrc",
+      "native_centered_derivative_v": 1.649150371818564e-05,
+      "equation_estimate_v": 1.649288575837465e-05
+    },
+    {
+      "candidate": "A37",
+      "parameter": "rbias",
+      "native_centered_derivative_v": -0.9843298218819574,
+      "equation_estimate_v": -0.984512624844348
+    },
+    {
+      "candidate": "A37",
+      "parameter": "rload",
+      "native_centered_derivative_v": 0.45261274920105343,
+      "equation_estimate_v": 0.4526157885151262
+    },
+    {
+      "candidate": "A37",
+      "parameter": "rs",
+      "native_centered_derivative_v": 0.38353552692443893,
+      "equation_estimate_v": 0.38355511672305964
+    },
+    {
+      "candidate": "A37",
+      "parameter": "rsrc",
+      "native_centered_derivative_v": 2.298781442977571e-06,
+      "equation_estimate_v": 2.3022308737737098e-06
+    },
+    {
+      "candidate": "R75",
+      "parameter": "rd",
+      "native_centered_derivative_v": -0.46078166887664196,
+      "equation_estimate_v": -0.4607830451050788
+    },
+    {
+      "candidate": "R75",
+      "parameter": "rload",
+      "native_centered_derivative_v": 0.030721194425264997,
+      "equation_estimate_v": 0.030721289025095744
+    },
+    {
+      "candidate": "R75",
+      "parameter": "rs",
+      "native_centered_derivative_v": 0.08888606440321523,
+      "equation_estimate_v": 0.08889832340659365
+    },
+    {
+      "candidate": "R75",
+      "parameter": "rsrc",
+      "native_centered_derivative_v": 3.543498611202622e-05,
+      "equation_estimate_v": 3.544461499409467e-05
+    },
+    {
+      "candidate": "A75",
+      "parameter": "rbias",
+      "native_centered_derivative_v": -0.9843265901044451,
+      "equation_estimate_v": -0.9844754306412297
+    },
+    {
+      "candidate": "A75",
+      "parameter": "rload",
+      "native_centered_derivative_v": 0.45261288315889825,
+      "equation_estimate_v": 0.45261578851063483
+    },
+    {
+      "candidate": "A75",
+      "parameter": "rs",
+      "native_centered_derivative_v": 0.38353563027243576,
+      "equation_estimate_v": 0.3835551167232583
+    },
+    {
+      "candidate": "A75",
+      "parameter": "rsrc",
+      "native_centered_derivative_v": 2.300538259891738e-06,
+      "equation_estimate_v": 2.302230873775204e-06
+    }
+  ],
+  "linear_ratio_break_even_log_amplitude": 0.07786131145289521,
+  "known_OP_linear_ratio_break_even_log_amplitude": 0.07769001809895837
+}

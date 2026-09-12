@@ -1,0 +1,71 @@
+{
+  "schema": "ads.gain-development-contract.v1",
+  "decided_utc": "2026-09-12T16:35:14.971474+00:00",
+  "status": "B1_FIXED_BEFORE_LOCAL_TARGETS",
+  "candidates": [
+    "R37",
+    "A37",
+    "R75",
+    "A75"
+  ],
+  "basis": "A coarse small voltage-amplifier task: 10 mV peak-to-peak input, 60 mV peak-to-peak output, not precision audio. 10 mV peak is retained as a separate distortion challenge; resistor designs exceeded 2% there. No Local target seen.",
+  "function": {
+    "vdd_v": 1.0,
+    "input_dc_v": 0.45,
+    "temperature_c": 26.85,
+    "output_center_v": 0.5,
+    "signed_gain": -6.0,
+    "gain_reference": "external Vin at 1 kHz",
+    "source_r_ohm": 1000.0,
+    "load_r_ohm": 100000.0,
+    "load_c_f": 1e-12,
+    "input_peak_v": 0.005,
+    "signal_hz": 10000.0,
+    "signal_band_hz": [
+      1000.0,
+      100000.0
+    ],
+    "nominal_output_peak_to_peak_v": 0.06
+  },
+  "limits": {
+    "center_abs_error_v": 0.025,
+    "gain_relative_error": 0.1,
+    "bandwidth_min_hz": 1000000.0,
+    "thd_max_fraction": 0.02,
+    "output_bounds_v": [
+      0.25,
+      0.75
+    ],
+    "current_max_a": 8e-05
+  },
+  "nominal_matching": {
+    "center_abs_error_v": 0.001,
+    "gain_relative_error": 0.005,
+    "current_relative_error": 0.002,
+    "groups": [
+      {
+        "candidates": [
+          "R37",
+          "A37"
+        ],
+        "target_a": 3.75e-05
+      },
+      {
+        "candidates": [
+          "R75",
+          "A75"
+        ],
+        "target_a": 7.5e-05
+      }
+    ]
+  },
+  "resources": {
+    "current_ceiling_a": 8e-05,
+    "drawn_MOS_area_ceiling_um2": 10.0,
+    "internal_resistance_sum_ceiling_ohm": 30000.0,
+    "internal_capacitance_ceiling_f": 0.0,
+    "boundary": "Includes all physical reference, bias and signal branches; common ideal Vdd and Vin ports with 1 kohm source resistance. Port-delivered current/power counted, external source implementation cost unknown. MOS drawn area is not total layout area; resistor area/parasitics unknown."
+  },
+  "frozen_confirmation": false,
+  "scope": "Local accuracy and deterministic condition changes. No noise limit; nominal noise reported. Dynamic behavior measured on a declared finite subset in confirmation; no all-population joint-pass claim."
+}

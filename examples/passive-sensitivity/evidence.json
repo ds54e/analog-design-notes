@@ -1,0 +1,142 @@
+{
+  "schema": "adn.passive-evidence.v1",
+  "study": "passive-sensitivity",
+  "version": "1.0",
+  "scope": "Known MOS cohort under frozen synthetic log-resistance scenarios; prospective condition transfer, not a fresh population confirmation.",
+  "model": {
+    "apm_version": "5.0.0",
+    "commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "technology": "APM045",
+    "family": "VTG",
+    "ngspice": "47"
+  },
+  "frozen_utc": "2026-09-12T20:16:19.334013+00:00",
+  "freeze_manifest_sha256": "14b1e1be69c71afd0808e868541addb65f2c2dbb0dd55b46b796dabc92cd65d5",
+  "transfer_plan_sha256": "996906b46301aa90d1a55b7c1ac92855b1599d5180d47dd816e507a335912fec",
+  "data_manifest_sha256": "139619507c05dcfb5c5b366bc48b6896f9d1113f90bc7cab5eb30c1d2d3fa898",
+  "scientific_audit": {
+    "all_MOS_before_applied_after_readbacks_rechecked": true,
+    "all_passive_readbacks_rechecked": true,
+    "all_saved_file_hashes_checked": true,
+    "all_scalar_measurements_recomputed": true,
+    "all_transfer_MOS_physical_fields_equal_original": true,
+    "checked_utc": "2026-09-12T20:37:16.495286+00:00",
+    "first_target_started_utc": "2026-09-12T20:22:22.554547+00:00",
+    "freeze_sha256": "14b1e1be69c71afd0808e868541addb65f2c2dbb0dd55b46b796dabc92cd65d5",
+    "gradient_cases": 68,
+    "last_target_started_utc": "2026-09-12T20:33:51.237735+00:00",
+    "limitations": "Known MOS cohort, synthetic conditional passive scenarios, OP/AC/current only. Same-agent internal audit, not independent scientific replication.",
+    "max_kcl_residual_a": 1.860355402713565e-16,
+    "nominal_boundary_cases": 88,
+    "observations": 5724,
+    "schema": "ads.passive-scientific-audit.v1",
+    "status": "PASS",
+    "transfer_assessed_pass": 2584,
+    "transfer_cases": 5568,
+    "transfer_supported": 5568,
+    "transfer_usable": 5568
+  },
+  "clean_public_reproduction": {
+    "schema": "ads.passive-clean-public-input-check.v1",
+    "status": "PASS",
+    "checked_utc": "2026-09-12T20:46:40.541676+00:00",
+    "apm_public_repository": "https://github.com/ds54e/analog-process-models",
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "python_version": "Python 3.9.25",
+    "installed_packages": [
+      "contourpy==1.3.0",
+      "cycler==0.12.1",
+      "fonttools==4.60.2",
+      "importlib_metadata==8.7.1",
+      "importlib_resources==6.5.2",
+      "kiwisolver==1.4.7",
+      "matplotlib==3.9.4",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.3.0",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.13.1",
+      "six==1.17.0",
+      "tomli==2.2.1",
+      "typing_extensions==4.16.0",
+      "zipp==3.23.1"
+    ],
+    "selected_data_sha256": "139619507c05dcfb5c5b366bc48b6896f9d1113f90bc7cab5eb30c1d2d3fa898",
+    "regenerated_svg_sha256": {
+      "finite-common.svg": "71bd536d3d7573aea41d7aa673182ec6362a340137cb3f6749fd8687f6799ff8",
+      "finite-function.svg": "05527997b72cdadd08b1cc39fb337ce66a59a363a7502168b0c1cedb5229187b",
+      "finite-ratio.svg": "50781448b598c350dbccdf5c50c0521b8c1f188437ecd04c64ee69550b5767a9",
+      "internal-sensitivity.svg": "61ecd961b6ba5c70b7a478da99290a9a86e0c529d6cf6f630047fc0a0b565dea",
+      "nominal-common.svg": "1d3893c30f836d901db3d7f830d9d083b3494c4218dcd3be27ed235fa336815b",
+      "nominal-ratio.svg": "f0b6ee0d925d8ac67afaa916dc32457bb9260f436b27e07924c75392440f7596"
+    },
+    "all_graph_bytes_equal": true,
+    "all_statistics_bytes_equal": true,
+    "native_checks": [
+      {
+        "status": "PASS",
+        "candidate": "R75",
+        "index": 1000,
+        "scenario": "ratio+0.1",
+        "measured": {
+          "out_v": 0.5382745126518996,
+          "gain": -5.540382317205924,
+          "current_a": 7.280971040271251e-05
+        },
+        "differences_from_published": {
+          "out_v": 0.0,
+          "gain": 0.0,
+          "current_a": 0.0
+        },
+        "reproduction_status": "PASS",
+        "dc_ac_current_specification_pass": false,
+        "MOS_readback": "Pinned APM actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after OP/AC.",
+        "resistor_readback_ohm": {
+          "Rs": 180.62731149756908,
+          "Rd": 6342.028941754375
+        },
+        "resistor_readback_method": "Actual source/drain supply port currents and terminal voltage drops, using circuit KCL.",
+        "max_device_kcl_residual_a": 7.258017475092511e-17,
+        "out_kcl_residual_a": 1.0757318430129614e-19,
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "scope": "One known MOS realization under a saved synthetic passive condition. No new sampling, sine/noise or full campaign replay."
+      },
+      {
+        "status": "PASS",
+        "candidate": "R37",
+        "index": 1000,
+        "scenario": "common-0.1",
+        "measured": {
+          "out_v": 0.5536417417371056,
+          "gain": -5.390136792626277,
+          "current_a": 3.6997598678294634e-05
+        },
+        "differences_from_published": {
+          "out_v": 0.0,
+          "gain": 0.0,
+          "current_a": 0.0
+        },
+        "reproduction_status": "PASS",
+        "dc_ac_current_specification_pass": false,
+        "MOS_readback": "Pinned APM actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after OP/AC.",
+        "resistor_readback_ohm": {
+          "Rs": 74.74120695206571,
+          "Rd": 12065.383223458419
+        },
+        "resistor_readback_method": "Actual source/drain supply port currents and terminal voltage drops, using circuit KCL.",
+        "max_device_kcl_residual_a": 7.560354895421897e-17,
+        "out_kcl_residual_a": -1.2705494208814505e-20,
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "scope": "One known MOS realization under a saved synthetic passive condition. No new sampling, sine/noise or full campaign replay."
+      }
+    ],
+    "limitation": "Fresh public-only example, fresh Python environment and public model clone on the same ngspice47 host; no clean-OS, full-campaign or independent-operator replication."
+  },
+  "review_roles": "Internal checks by the same Codex agent. No prior human review, peer approval or independent scientific replication.",
+  "limitations": [
+    "Known MOS samples, synthetic passive conditions, no manufacturing yield or calibrated passive statistics.",
+    "New block assesses OP/AC/current, not full sine/noise/temperature or layout behavior.",
+    "Bulk observations remain private; this example requires only selected public files and separately retrieved public APM."
+  ]
+}

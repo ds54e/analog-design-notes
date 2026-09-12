@@ -1,0 +1,22 @@
+{
+  "schema": "ads.passive-transfer-plan.v1",
+  "role": "PROSPECTIVE_CONDITION_TRANSFER_ON_KNOWN_MOS_COHORT",
+  "candidates": ["R37", "R75"],
+  "indices_inclusive": [1000, 1463],
+  "known_MOS_source": "First-study confirmation, nominal condition; explicitly known development evidence",
+  "conditions": [
+    {"kind": "common", "log_values": [-0.10, 0.10]},
+    {"kind": "ratio", "log_values": [-0.06, 0.06]},
+    {"kind": "ratio", "log_values": [-0.10, 0.10]}
+  ],
+  "passive_semantics": "Synthetic equal-weight two-point log errors. Common: ln(Rs/Rs0)=ln(Rd/Rd0)=c. Ratio: ln(Rs/Rs0)=d/2, ln(Rd/Rd0)=-d/2. This is not a foundry/passive distribution or an APM Local extension.",
+  "decision": "Test whether the lower MOS-error floor of R75 survives common error and whether larger ratio sensitivity reverses the ranking across the estimated break-even region.",
+  "prediction": "Save both nominal-gradient and previously measured per-MOS-OP gradient predictions before new passive-condition targets. Known baseline output is allowed and disclosed; no target-condition OP enters predictions.",
+  "measurements": "ads.passive-study.v1 with unchanged first-study DC/AC gain, center, bandwidth and current assessment; actual resistor and MOS readbacks plus KCL. No new sine/noise coverage from this block.",
+  "outcomes": "Signed center error, MAE, RMS and per-index equal-weight squared loss across the two passive signs. Preserve all numerical and supported physical failures. Do not performance-filter the accuracy comparison.",
+  "sample_size_reason": "The complete existing 464-coordinate finite cohort supplies the baseline moments used by this conditional comparison. Using every retained resistor circuit avoids subset selection; it is not a universal quota or a fresh population confirmation.",
+  "uncertainty": "The exact finite-cohort contrast answers this synthetic transfer test. Do not describe it as new independent population confirmation or manufacturing yield. Any resampling of this known cohort is exploratory uncertainty only.",
+  "stopping": "Exactly 2 candidates x 464 saved physical circuits x 6 conditions = 5568 attempts, once each. Three consecutive numerical failures stop the block for diagnosis. Required retries use identical saved inputs in new destinations and remain explicitly recorded; no automatic redraw or extension.",
+  "resource_bound": "One native worker; estimated under 20 minutes and about 1.5 GiB native data from measured pilot. No new acquisition after 2026-09-13T19:56:10Z.",
+  "no_trim_rebias_recenter": true
+}

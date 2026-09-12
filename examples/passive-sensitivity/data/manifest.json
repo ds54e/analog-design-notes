@@ -1,0 +1,14 @@
+{
+  "files": {
+    "configuration.json": "5bb70e08114b0421a456a38f3aa3f564c77946bd82f6ebf662305c1276cf30b5",
+    "gradient-observations.csv": "b55bf55fd1126bbeaf06c86f96e25900ba670c5959c99065ea5a1832ebaac39b",
+    "known-baselines.csv": "0c15c39c05317468132999607fcdbbca6ba20ae820bbd926b99f6cc6460d9cd9",
+    "nominal-boundaries.csv": "7b9e90b412353ac07ec1d218d6f78fab200b8634101f27710ef01f83b8226a39",
+    "nominal-op.csv": "1a45976043817da7ef4801068ad6978ce64662259d483c307cafa1d78d7e8070",
+    "realizations.csv": "1bd67a34c35450e51f66b9667be4e330475461e3a396341e883d6d8774013a24",
+    "sensitivities.csv": "042b2a0a4fd26a53ef426ee64574c81c18d186bf261f297d898285cbf86b4701",
+    "statistics.json": "97f84d2de9d17ee93f088a8e979b73d48ec12e091b2c497d015bb221cc89b908",
+    "transfer.csv": "aae1048a6ed85a4d5c529b6d0ea0a83c1755018c0ebc259826edf086f129a77e"
+  },
+  "schema": "adn.passive-data-manifest.v1"
+}

@@ -11,6 +11,13 @@ the guide. An equation populated with an observed nominal operating point is
 a retrospective explanation. A forecast saved before a new target is observed
 is prospective, even when its local Jacobian was learned from earlier SPICE.
 
+The passive study reuses the first study's already exposed MOS cohort. Its new
+resistance conditions and predictions were frozen before those targets, but it
+does not call the MOS samples fresh. The common/ratio log-error scenarios are
+explicitly synthetic and separate from the APM Local profile. Exact finite
+cohort comparisons, hard functional counts and approximation errors are reported
+without a new manufacturing-yield or population-confirmation claim.
+
 The pinned public device source is
 [APM v5.0.0, commit 381517f](https://github.com/ds54e/analog-process-models/tree/381517fda5107fabf98af7801d5a5103f38e230c).
 APM045 VTG uses native BSIM4 in ngspice 47. Its Local profile is a
@@ -47,11 +54,19 @@ The twelve exploratory coordinates remain separate from the 464 confirmation
 coordinates. Available historical exposure was audited; deleted older raw
 records cannot support an exhaustive uniqueness claim.
 
+The [passive evidence receipt](studies/passive-sensitivity/evidence.json)
+records 5,568 new transfer conditions and 156 nominal controls. Every scalar
+assessment and physical readback was rechecked. All are numerically usable and
+terminal-supported; physical specification failures remain in the public data.
+Its public-only example reproduced six graphs, all summary calculations and two
+selected native passive-condition observations in a fresh Python/model checkout
+on the same host. No full-campaign or clean-OS replay is implied.
+
 ## AI and human roles
 
 Codex performed the derivations, implementation, acquisitions, writing and
 internal scientific/publication checks. The user selected the direction and
-will assess this first release after publication. No prior human review,
+assesses the published results and chooses further directions. No prior human review,
 peer approval or independent scientific validation is claimed. Reader
 corrections can be reported through the public repository's Issues.
 
@@ -64,7 +79,7 @@ retain their own terms. See the downloadable
 [third-party notices](licenses/THIRD_PARTY_NOTICES.md).
 
 The public site is rendered with pinned Quarto 1.10.18. Its build copies
-selected static resources and creates the download; it never runs SPICE.
+selected static resources and immutable versioned downloads; it never runs SPICE.
 Graph regeneration and native replay are separate reader commands. Navigation,
 equations, narrow layout, public assets and actual deployed revision are checked
 as publication concerns, not additional scientific observations.

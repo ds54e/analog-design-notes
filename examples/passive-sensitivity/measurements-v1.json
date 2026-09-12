@@ -1,0 +1,65 @@
+{
+  "AC": {
+    "bandwidth": "first downward magnitude crossing of |H(1 kHz)|/sqrt(2), magnitude interpolation in log frequency; no crossing is explicit",
+    "gain": "signed real at 1 kHz; band magnitude within 5.4\u20136.6 over every recorded frequency 1\u2013100 kHz",
+    "grid": "80 points/decade 1 kHz\u2013100 MHz",
+    "reference": "complex V(out)/V(in), external ideal voltage port before Rsrc",
+    "reference_hz": 1000.0
+  },
+  "DC": "Vout minus fixed 0.5 V; signed error, mean absolute error, RMS error and sample SD kept distinct.",
+  "common_contract": "development-contract-v1.json",
+  "historical": "Original v1.1/v1.2 measurements remain distinct; this study never overwrites their evaluations.",
+  "noise": {
+    "band_hz": [
+      1000,
+      1000000
+    ],
+    "method": "Trapezoidal integration with interpolated endpoints; frequency-by-frequency referral S_out/|Vout/Vin|^2, gain-squared interpolated in log frequency.",
+    "quantity": "PSD V^2/Hz verified with set sqrnoise and A resistor/RC check",
+    "scope": "Nominal designs only, no Local noise statistics",
+    "sources": "BSIM and all resistor noise, including source and external load; ideal voltage sources add no noise."
+  },
+  "numerical": "ngspice47 Sparse, one thread, -n with pinned system spinit, reltol1e-7/abstol1e-15/vntol1e-9, native gm/gds and actual DELVTO/MULU0/W/L/m/nf before and after every analysis; finite shapes/axes/endpoints plus KCL and supported terminal pairs. Numerical usability separate from every specification outcome.",
+  "refinement": "Two representative unchanged physical nominal circuits: double frequency density and halve tmax, reltol1e-8; all reported scalar changes <0.005 relative, center <1uV. A validated analytic/edge/censoring fixtures retained.",
+  "resources": "DC delivered current sum max(0,-I(Vdd))+max(0,-I(Vin)); port power sum -V*I using each actual voltage. Sine period-average net currents and integrated port power separate. Zero-V sensors not counted twice. All internal reference/load/bias/passives counted; common external source/load dependencies explicit.",
+  "sine": {
+    "cycles": 8,
+    "frequency_hz": 10000,
+    "harmonics": 10,
+    "initial": "ordinary DC operating-point initialization; no UIC",
+    "input_dc_v": 0.45,
+    "input_peak_v": 0.005,
+    "limits": "THD <= 2%, fundamental gain within 10% of 6, actual output within [0.25,0.75] V. No tail recentering.",
+    "source_r_ohm": 1000,
+    "stationary": "Last two resampled cycles differ by < max(100 nV, fundamental_peak*1e-4)",
+    "stop_s": 0.001,
+    "subset": "first four frozen indices at nominal; other samples have no dynamic compliance claim",
+    "thd": "sqrt(sum harmonic amplitude^2 for 2..10)/fundamental",
+    "tmax_s": 1e-07,
+    "uniform_points_per_cycle": 1000,
+    "window_s": [
+      0.0002,
+      0.001
+    ]
+  },
+  "status": "TO_BE_HASH_FROZEN_BEFORE_CONFIRMATION",
+  "step": {
+    "band": "1% of separately solved stationary output difference; last outside/first inside bracket with no observed later re-exit; not accuracy recentering",
+    "horizon_s": [
+      8e-06,
+      1.4e-05
+    ],
+    "input_values_v": [
+      0.44,
+      0.46
+    ],
+    "origin_s": [
+      2.01e-06,
+      8.01e-06
+    ],
+    "rise_fall_s": 1e-08,
+    "scope": "four separate nominal development experiments",
+    "tmax_s": 2e-09
+  },
+  "version": "ads.measurements.v1 + ads.gain-study.v1"
+}

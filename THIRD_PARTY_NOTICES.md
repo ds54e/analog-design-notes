@@ -27,6 +27,6 @@ cdnjs ES6 polyfill endpoint. These separately retrieved components retain
 their own upstream terms. They render the page and are not used for scientific
 acquisition. Ordinary body text uses system fonts.
 
-The guide links to MIT OpenCourseWare and the pinned APM source decision as
+The guides link to MIT OpenCourseWare, Analog Devices' resistance tutorial and the pinned APM source decision as
 technical references. No source illustrations or extended quoted passages
 are copied. Those linked works retain their own terms.
