@@ -1,0 +1,52 @@
+name: Publish Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Install verified Quarto 1.10.18
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 https://github.com/quarto-dev/quarto-cli/releases/download/v1.10.18/quarto-1.10.18-linux-amd64.tar.gz --output "$RUNNER_TEMP/quarto.tar.gz"
+          echo "afad071b5bd22c02f2d300695743189d3650e0537a53073e654b630cff2b0c73  $RUNNER_TEMP/quarto.tar.gz" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/quarto.tar.gz" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/quarto-1.10.18/bin" >> "$GITHUB_PATH"
+      - name: Build static reading material
+        run: |
+          python3 tools/build_site.py
+          quarto render site
+          python3 tools/check_site.py --site site/_site
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: site/_site
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

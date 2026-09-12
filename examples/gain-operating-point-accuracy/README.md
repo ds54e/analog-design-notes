@@ -1,0 +1,91 @@
+# Reproduce the first study
+
+Download the [small reproduction package](https://ds54e.github.io/analog-design-notes/downloads/gain-study-v1.0.zip),
+or use the `examples/gain-operating-point-accuracy` directory in the public
+repository. It contains exact circuit bodies, compact data, saved physical
+parameters, definitions, plotting/statistics code and a selected native replay.
+Models are retrieved separately under their original terms.
+
+The commands below were actually run in a fresh directory,
+`/tmp/adn-first-study-clean-001`, with the distributed files under `example/`.
+Choose a new directory and new output names for another run; existing native
+attempt and graph destinations refuse overwrite. Use Python 3.9 or a compatible
+Python with the pinned packages. The checked environment was Python 3.9.25 on
+Linux x86_64, with a preinstalled ngspice 47 at `/usr/local/bin/ngspice`.
+This was a fresh Python environment and public model checkout on the same host,
+not a clean-OS or all-platform qualification.
+
+## Obtain the public model and Python dependencies
+
+These commands used public GitHub and PyPI, with no private research checkout
+or account credential needed for the model:
+
+```bash
+git -c credential.helper= -c http.extraHeader= clone --depth 1 --branch v5.0.0 https://github.com/ds54e/analog-process-models.git /tmp/adn-first-study-clean-001/apm-v5
+python3 -m venv /tmp/adn-first-study-clean-001/.venv
+/tmp/adn-first-study-clean-001/.venv/bin/python -m pip install --disable-pip-version-check --no-cache-dir --index-url https://pypi.org/simple -r /tmp/adn-first-study-clean-001/example/requirements.txt
+```
+
+The example checks APM commit
+`381517fda5107fabf98af7801d5a5103f38e230c`, circuit/model file hashes and the
+compact data manifest. The annotated tag resolves to that commit. Install
+ngspice 47 separately if needed; see its [official source and documentation](https://ngspice.sourceforge.io/).
+No simulator is installed or invoked by the website build.
+
+## Regenerate graphs and paired statistics
+
+Working directory for this graph command: `/tmp/adn-first-study-clean-001`.
+It uses saved CSV only; it does not invoke SPICE:
+
+```bash
+MPLCONFIGDIR=/tmp/adn-first-study-clean-001/mplconfig PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B example/plot.py --data /tmp/adn-first-study-clean-001/example/data --output /tmp/adn-first-study-clean-001/regenerated-plots
+/tmp/adn-first-study-clean-001/.venv/bin/python /tmp/adn-first-study-clean-001/example/statistics.py --data /tmp/adn-first-study-clean-001/example/data --output /tmp/adn-first-study-clean-001/statistics-recomputed.json
+```
+
+All eleven SVG files matched the selected source figures byte for byte in this
+check. All eight group summaries and eight paired intervals recomputed from
+CSV matched the published statistics within 1e-15 V. The graph script also
+writes PNG files. Regeneration of a graph or statistic does not repeat its
+underlying native acquisition.
+
+## Replay saved physical circuits
+
+Working directory: `/tmp/adn-first-study-clean-001`. These two commands were run:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B example/replay.py --apm /tmp/adn-first-study-clean-001/apm-v5 --output /tmp/adn-first-study-clean-001/replay-R37-001 --candidate R37 --index 1000 --condition nominal
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B example/replay.py --apm /tmp/adn-first-study-clean-001/apm-v5 --output /tmp/adn-first-study-clean-001/replay-A37-001 --candidate A37 --index 1000 --condition supply_097
+```
+
+| Replayed case | Output, V | Signed gain at 1 kHz, V/V | Total current, µA |
+|---|---:|---:|---:|
+| R37 / 1000 / nominal | 0.5146791602530518 | −5.822334998184231 | 36.39903551750882 |
+| A37 / 1000 / 0.97 V supply | 0.5301877221234104 | −5.895727751979681 | 36.18469033660043 |
+
+All three quantities matched the published observations exactly at serialized
+double precision. The A37 case still **fails** the ±25-mV center requirement;
+reproduction success is reported separately from specification success.
+
+The replay reads each saved raw DELVTO/ln(MULU0) and physical UID/geometry from
+CSV. It creates new path bindings for the local checkout and preserves the
+original realization ID in its receipt. It never samples, recalibrates, trims
+or recenters the circuit. Pinned APM checks actual model, W/L, m/nf and raw
+parameter readbacks around OP and AC. The example additionally checks terminal
+voltages, KCL, frequency endpoints and differences from the selected observation.
+The output folder retains the executed deck, raw observations and receipts.
+
+## What is and is not covered
+
+`data/confirmation.csv` includes all 3,712 conditions and their specification
+failures. `data/realizations.csv` preserves 10,208 physical unit records for
+1,856 circuits. `data/configuration.json` and `data/manifest.json` bind the
+selected data and circuits. The frozen protocol and measurement definitions
+are included. Nominal noise, source sensitivities and variance budgets are
+separate from the Local target observations.
+
+The public package supports inspection, graph/statistics regeneration and
+selected OP/AC replay. The original full waveform/calibration archive remains
+private and is not a dependency of this example. The clean check did not rerun
+the full native campaign, all sine/step/noise cases, every temperature, or another
+operating system. The Local model remains a source-transfer hypothesis and does
+not establish manufacturing yield or silicon qualification.

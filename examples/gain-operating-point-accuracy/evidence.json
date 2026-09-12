@@ -1,0 +1,350 @@
+{
+  "schema": "adn.public-evidence.v1",
+  "study": "gain-operating-point-accuracy",
+  "version": "1.0",
+  "scope": "Original independent amplifier study. Selected evidence supports inspection, graph/statistics regeneration and saved-physical OP/AC replay.",
+  "model": {
+    "apm_version": "5.0.0",
+    "commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "technology": "APM045",
+    "family": "VTG",
+    "ngspice": "47"
+  },
+  "confirmation": {
+    "frozen_utc": "2026-09-12T16:57:21.699895+00:00",
+    "first_target_started_utc": "2026-09-12T16:59:12.595+00:00",
+    "last_target_started_utc": "2026-09-12T17:04:10.896+00:00",
+    "freeze_manifest_sha256": "37a86b1f7da64d4a5d359adc035545821f2a55d59223195dde8dd9234d8da21f",
+    "saved_circuits": 1856,
+    "physical_unit_records": 10208,
+    "observed_conditions": 3712,
+    "indices": [
+      1000,
+      1463
+    ],
+    "historical_exposure_limit": "Old raw paths in the selected closeout index are intentionally absent. Their exact values cannot be compared. Freshness rests on a new OS-random seed distinct from retained seeds, saved new raw/latent values, explicit sample IDs, and zero overlap with available ADS observations; exhaustive deleted-history uniqueness is not claimed.",
+    "status": "COMPLETE_FIXED_STOP; no retries, redraw, retuning or sample extension",
+    "definition_note": "The retained measurement JSON contains its historical pre-freeze status string. The exact bytes were subsequently frozen; hashes here and the observed audit establish the actual completed state."
+  },
+  "definitions_sha256": {
+    "development-contract-v1.json": "cb91b8ab367fb46421c6b073429f95ec8921441a5495ed66850276e796ed9eb0",
+    "measurements-v1.json": "6000451488a85a78a9f527d88b1ca13549d985cc14985f574726a50f10e0eab1",
+    "confirmation-plan.json": "61b8769b9fb7f26bb2cbaa12b1ca015a8a19fb6fe526a8f3312dab1e1bfdd1b8"
+  },
+  "data_manifest_sha256": "3ecd7e566e27d2c226717097af08640e19f97f1a0bfb8afc8edec61d678e9da7",
+  "scientific_review": {
+    "checked_utc": "2026-09-12T17:06:18.696226+00:00",
+    "checks": [
+      "Frozen source hashes unchanged",
+      "All attempt/file/model identities streamed and verified",
+      "Actual per-analysis raw readback parsed again",
+      "All saved array shapes/finite values/endpoints checked",
+      "40 full measurement recalculations including all 16 sine traces exactly equal",
+      "Fixed statistical analysis recomputed"
+    ],
+    "expected_and_observed_cases": 3712,
+    "limitations": "Internal review by the same Codex agent; not independent replication or human review. Reference-mapping receipts remain in the private store; no complete upstream requalification.",
+    "max_terminal_output_kcl_residual_a": 3.348829460264602e-16,
+    "numerically_unusable": [],
+    "saved_data_exact_recalculations": [
+      [
+        "R37",
+        1000,
+        "nominal"
+      ],
+      [
+        "R37",
+        1000,
+        "supply_097"
+      ],
+      [
+        "R37",
+        1001,
+        "nominal"
+      ],
+      [
+        "R37",
+        1001,
+        "supply_097"
+      ],
+      [
+        "R37",
+        1002,
+        "nominal"
+      ],
+      [
+        "R37",
+        1002,
+        "supply_097"
+      ],
+      [
+        "R37",
+        1003,
+        "nominal"
+      ],
+      [
+        "R37",
+        1003,
+        "supply_097"
+      ],
+      [
+        "R37",
+        1463,
+        "nominal"
+      ],
+      [
+        "R37",
+        1463,
+        "supply_097"
+      ],
+      [
+        "A37",
+        1000,
+        "nominal"
+      ],
+      [
+        "A37",
+        1000,
+        "supply_097"
+      ],
+      [
+        "A37",
+        1001,
+        "nominal"
+      ],
+      [
+        "A37",
+        1001,
+        "supply_097"
+      ],
+      [
+        "A37",
+        1002,
+        "nominal"
+      ],
+      [
+        "A37",
+        1002,
+        "supply_097"
+      ],
+      [
+        "A37",
+        1003,
+        "nominal"
+      ],
+      [
+        "A37",
+        1003,
+        "supply_097"
+      ],
+      [
+        "A37",
+        1463,
+        "nominal"
+      ],
+      [
+        "A37",
+        1463,
+        "supply_097"
+      ],
+      [
+        "R75",
+        1000,
+        "nominal"
+      ],
+      [
+        "R75",
+        1000,
+        "supply_097"
+      ],
+      [
+        "R75",
+        1001,
+        "nominal"
+      ],
+      [
+        "R75",
+        1001,
+        "supply_097"
+      ],
+      [
+        "R75",
+        1002,
+        "nominal"
+      ],
+      [
+        "R75",
+        1002,
+        "supply_097"
+      ],
+      [
+        "R75",
+        1003,
+        "nominal"
+      ],
+      [
+        "R75",
+        1003,
+        "supply_097"
+      ],
+      [
+        "R75",
+        1463,
+        "nominal"
+      ],
+      [
+        "R75",
+        1463,
+        "supply_097"
+      ],
+      [
+        "A75",
+        1000,
+        "nominal"
+      ],
+      [
+        "A75",
+        1000,
+        "supply_097"
+      ],
+      [
+        "A75",
+        1001,
+        "nominal"
+      ],
+      [
+        "A75",
+        1001,
+        "supply_097"
+      ],
+      [
+        "A75",
+        1002,
+        "nominal"
+      ],
+      [
+        "A75",
+        1002,
+        "supply_097"
+      ],
+      [
+        "A75",
+        1003,
+        "nominal"
+      ],
+      [
+        "A75",
+        1003,
+        "supply_097"
+      ],
+      [
+        "A75",
+        1463,
+        "nominal"
+      ],
+      [
+        "A75",
+        1463,
+        "supply_097"
+      ]
+    ],
+    "schema": "ads.gain-scientific-review.v1",
+    "status": "PASS",
+    "unsupported_terminal_cases": []
+  },
+  "clean_reproduction": {
+    "checked_utc": "2026-09-12T17:40:57.048124+00:00",
+    "apm_public_repository": "https://github.com/ds54e/analog-process-models.git",
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "installed_packages": [
+      "contourpy==1.3.0",
+      "cycler==0.12.1",
+      "fonttools==4.60.2",
+      "importlib_metadata==8.7.1",
+      "importlib_resources==6.5.2",
+      "kiwisolver==1.4.7",
+      "matplotlib==3.9.4",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.3.0",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.13.1",
+      "six==1.17.0",
+      "tomli==2.2.1",
+      "typing_extensions==4.16.0",
+      "zipp==3.23.1"
+    ],
+    "native_checks": [
+      {
+        "status": "PASS",
+        "candidate": "R37",
+        "index": 1000,
+        "condition": "nominal",
+        "measured": {
+          "out_v": 0.5146791602530518,
+          "gain": -5.822334998184231,
+          "current_a": 3.639903551750882e-05
+        },
+        "differences_from_published": {
+          "out_v": 0.0,
+          "gain": 0.0,
+          "current_a": 0.0
+        },
+        "reproduction_status": "PASS",
+        "dc_ac_current_specification_pass": true,
+        "readback": "Pinned APM checked actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every OP/AC analysis.",
+        "max_device_kcl_residual_a": 3.200879482004162e-17,
+        "scope": "Selected OP/AC replay with saved Local units. No random redraw, noise, sine, temperature statistics or full-population replay claimed.",
+        "run_id": "ffe6f0723e4066cfc3510b11a37631f866c5cc04b74d1c2c9508387a0332be54",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c"
+      },
+      {
+        "status": "PASS",
+        "candidate": "A37",
+        "index": 1000,
+        "condition": "supply_097",
+        "measured": {
+          "out_v": 0.5301877221234104,
+          "gain": -5.895727751979681,
+          "current_a": 3.618469033660043e-05
+        },
+        "differences_from_published": {
+          "out_v": 0.0,
+          "gain": 0.0,
+          "current_a": 0.0
+        },
+        "reproduction_status": "PASS",
+        "dc_ac_current_specification_pass": false,
+        "readback": "Pinned APM checked actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every OP/AC analysis.",
+        "max_device_kcl_residual_a": 5.866341727982402e-17,
+        "scope": "Selected OP/AC replay with saved Local units. No random redraw, noise, sine, temperature statistics or full-population replay claimed.",
+        "run_id": "4e5889fb8e0f26edf60dd64f33b16456485c936a2152b4522c6685ffe8372afd",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c"
+      }
+    ],
+    "regenerated_svg_sha256": {
+      "confirmation-nominal.svg": "e7a87a5982fc31e1e5e685660c78a2691b9a8319e0e17067a1c8729447a27953",
+      "confirmation-supply.svg": "096211cf271c068b2af4364ea315e766de1d040fb63a2ec366b25e1fbcba91c2",
+      "confirmation.svg": "84f3ca54703152a8953b06cd09b765721d02e689e1d30614edcbe765101d68cf",
+      "error-paths-budget.svg": "3245c56ff4fce4612c0898a870b05d31d7f0739657d752d33e23a993157f78a2",
+      "error-paths-current.svg": "2a98ad166c8610af19150f3a3ccf98e96b6c672bf4d433245085841637df0a2d",
+      "error-paths-supply.svg": "559af1a5c83b8b1344e22335e5de6e3bc52a4c0822d9e697b2c02abb6ed2d3f6",
+      "error-paths.svg": "79d9957e3b8252b1b9039278fed599547da13ab020eaf213c889499298cc149c",
+      "nominal-response-gain.svg": "745ab6a989e2a6e2118e17bc6e46cb9fe9fbac8ebdb0eb2c299c647e9c67352b",
+      "nominal-response-noise.svg": "59758d5323ff44b9bb52a43fbd23079d4140191acef4a5d01f927e92cdebf09b",
+      "nominal-response.svg": "6980cde4b675793b5163dc3e79a48214f529cdea78236bbf7519ab7a28101220",
+      "paired-comparisons.svg": "b0b63c34461e87a06366646e739ab686bca230b3b4fd5d49717eb8753f9f8a1e"
+    },
+    "all_graph_bytes_equal": true,
+    "statistics": "All 8 groups and 8 paired intervals recomputed from public CSV and matched within 1e-15 V.",
+    "limitation": "Fresh directory and Python environment, same Linux host and installed ngspice47. No clean-OS/all-platform or full native campaign replay claimed. Selected candidate files will be published unchanged."
+  },
+  "review_roles": "Internal checks by Codex, the same agent that performed the work. No prior human review, peer approval or independent scientific replication.",
+  "limits": [
+    "Source-transfer model hypothesis, not manufacturing yield or silicon qualification.",
+    "Bulk native/calibration archive is private; selected public replay needs no private inputs.",
+    "Same-host clean Python/public model test; no clean-OS or all-platform claim.",
+    "No full Local dynamic/noise/temperature campaign replay claimed."
+  ]
+}

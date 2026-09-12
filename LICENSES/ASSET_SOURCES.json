@@ -1,0 +1,45 @@
+{
+  "scope": "Upstream license texts for applicable Quarto browser components; generated asset copyright headers are also retained. MathJax is retrieved by readers from public CDN, not bundled.",
+  "sources": [
+    {
+      "file": "Bootstrap-MIT.txt",
+      "url": "https://raw.githubusercontent.com/twbs/bootstrap/v5.3.1/LICENSE",
+      "sha256": "3d0b0c88216e4752b9afd3d24e36faaf27873b5a45a61458bb3c83e794c26832"
+    },
+    {
+      "file": "Bootstrap-Icons-MIT.txt",
+      "url": "https://raw.githubusercontent.com/twbs/icons/v1.13.1/LICENSE",
+      "sha256": "0fb3e11bd57e896c5a512afd64864d28a37de45d19835016c87ca1ad19ead969"
+    },
+    {
+      "file": "Clipboard-MIT.txt",
+      "url": "https://raw.githubusercontent.com/zenorocha/clipboard.js/v2.0.11/LICENSE",
+      "sha256": "a798e7b5fa604117d52d607e05f1cbac3b2fa5da087837f412a1a3c866b4b748"
+    },
+    {
+      "file": "Popper-MIT.txt",
+      "url": "https://raw.githubusercontent.com/floating-ui/floating-ui/v2.11.7/LICENSE.md",
+      "sha256": "bf67e2c9b7974543bb18ced3a0b37f53729aaff953b442dd89a3adaf90fd93e8"
+    },
+    {
+      "file": "Tippy-MIT.txt",
+      "url": "https://raw.githubusercontent.com/atomiks/tippyjs/v6.3.7/LICENSE",
+      "sha256": "7f4929c55f525ae510a77c361496c5a86a092434a3681c95a4dc89e951c67e98"
+    },
+    {
+      "file": "MathJax-Apache-2.0.txt",
+      "url": "https://cdn.jsdelivr.net/npm/mathjax@4.1.3/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "Anchor-MIT.txt",
+      "url": "https://raw.githubusercontent.com/bryanbraun/anchorjs/5.0.0/LICENSE",
+      "sha256": "6b33f0bf2de79ce6ee1165453b37b4f1deda813bea9356dec621835860f2bb68"
+    },
+    {
+      "file": "Headroom-MIT.txt",
+      "url": "https://raw.githubusercontent.com/WickyNilliams/headroom.js/v0.12.0/LICENSE",
+      "sha256": "acaab926214cf714b8c74718151734a4f4e71f4ba7ebb1fca497a446caa13881"
+    }
+  ]
+}

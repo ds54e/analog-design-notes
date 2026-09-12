@@ -1,0 +1,17 @@
+{
+  "files": {
+    "ac.csv": "ff67dcef4ea56d186c605cfff9c1697c6dafe56b06bbd6d34ac52c8122a476ff",
+    "conditions.csv": "006275a8a64d8fe63943038f072cccff64a98df51a9ecf98b23271d62a6c9924",
+    "configuration.json": "05738190673fe52393ef1d141a97d1a1cf0ba8e3f6504f38a29ab55bfe5e762d",
+    "confirmation.csv": "536d907bb34c4b4e1ce65104905551ae317364f39337ec36efa5bfe53b4091b5",
+    "contrasts.csv": "6135343571ad50c419142ef9a9b422b2bd5b61435ab6987ebae9fde255345d60",
+    "noise.csv": "0cf1c23986a78d38ea4db406058c5943cbe1816b7d51fc2b985e04fcd7b240d0",
+    "nominal.csv": "89f1c4cd15425098e62a676cc24e289b0850bab17588fc5256b8df7c7113661a",
+    "realizations.csv": "139d3223cfe29c45805c9716dabf7abc25c4fab1ee8db3af0801690c14fa2a3c",
+    "sensitivities.csv": "2286c6e3e257a4c5957c955bea846fd961f4997423194820429c5351aa048116",
+    "source-budget.csv": "7ccd18144f99bb6a23b79f3751c17ab019aa0522b863399c9fcbf37f84a37566",
+    "statistics.json": "7b54cfc33a653ed238f5711f8655123d62a070654026ed1c6a1990a233d09471"
+  },
+  "schema": "adn.compact-data.v1",
+  "scope": "Selected original study numerical data, not bulk waveform or calibration archive. Circuit replay requires publicly retrievable pinned APM models."
+}

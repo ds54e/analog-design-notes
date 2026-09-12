@@ -1,0 +1,70 @@
+---
+title: "Methods, scope, and review roles"
+---
+
+## What the evidence represents
+
+The first study combines explicit calculations, nominal SPICE observations,
+controlled interventions, a fixed local prediction model and a prospective
+confirmation using saved physical realizations. These roles are labelled in
+the guide. An equation populated with an observed nominal operating point is
+a retrospective explanation. A forecast saved before a new target is observed
+is prospective, even when its local Jacobian was learned from earlier SPICE.
+
+The pinned public device source is
+[APM v5.0.0, commit 381517f](https://github.com/ds54e/analog-process-models/tree/381517fda5107fabf98af7801d5a5103f38e230c).
+APM045 VTG uses native BSIM4 in ngspice 47. Its Local profile is a
+**source-transfer hypothesis** based on a TSMC40 companion adaptation, with an
+independent-Croon covariance assumption and a drawn-area geometry transfer.
+See the pinned [source decision](https://github.com/ds54e/analog-process-models/blob/381517fda5107fabf98af7801d5a5103f38e230c/validation/evidence/v5_source_decision.md).
+
+The profile does not establish global/spatial/passive variation, calibrated
+weak-inversion or temperature/noise statistics, manufacturing yield, TSMC55
+correlation or silicon qualification. Increasing the number of simulated
+coordinates cannot remove unquantified model-transfer uncertainty. The study
+has no layout/PEX or integrated-regulator validation.
+
+## Checks and their limits
+
+Numerical usability requires finite complete observations, the expected solver,
+actual model/geometry/raw-parameter readback and terminal-domain checks.
+Specification performance is evaluated separately; failed physical designs
+remain in the denominator. No individual circuit is trimmed or recentered to
+meet a common target.
+
+The first study completed all 3,712 frozen condition attempts and checked their
+file/model identities and physical readbacks. Forty full saved-data assessments
+were recomputed exactly. Two representative numerical refinements and earlier
+analytic resistor/RC and measurement-edge checks support the implementation.
+The public package provides compact data, exact circuit bodies, saved raw
+physical values, definitions and selected replay commands. Bulk calibration
+and waveform archives are not required to run those selected replays.
+
+See the [public evidence receipt](studies/gain-operating-point-accuracy/evidence.json),
+[measurement definitions](studies/gain-operating-point-accuracy/measurements-v1.json)
+and [frozen protocol](studies/gain-operating-point-accuracy/confirmation-plan.json).
+The twelve exploratory coordinates remain separate from the 464 confirmation
+coordinates. Available historical exposure was audited; deleted older raw
+records cannot support an exhaustive uniqueness claim.
+
+## AI and human roles
+
+Codex performed the derivations, implementation, acquisitions, writing and
+internal scientific/publication checks. The user selected the direction and
+will assess this first release after publication. No prior human review,
+peer approval or independent scientific validation is claimed. Reader
+corrections can be reported through the public repository's Issues.
+
+## Licensing
+
+Original prose, plots and numerical data are **CC BY 4.0**. Original code and
+circuit examples are **MIT**. Third-party software, fonts and retrieved models
+retain their own terms. See the downloadable
+[license mapping](licenses/LICENSE.md) and
+[third-party notices](licenses/THIRD_PARTY_NOTICES.md).
+
+The public site is rendered with pinned Quarto 1.10.18. Its build copies
+selected static resources and creates the download; it never runs SPICE.
+Graph regeneration and native replay are separate reader commands. Navigation,
+equations, narrow layout, public assets and actual deployed revision are checked
+as publication concerns, not additional scientific observations.

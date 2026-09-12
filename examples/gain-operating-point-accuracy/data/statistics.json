@@ -1,0 +1,247 @@
+{
+  "contrasts": [
+    {
+      "condition": "nominal",
+      "family95_t_interval_v": [
+        0.004010228406213865,
+        0.005793483618595036
+      ],
+      "left": "R37",
+      "mean_mae_reduction_v": 0.00490185601240445,
+      "meaningful_reduction_v": 0.003,
+      "n_pairs": 464,
+      "paired_sd_v": 0.007659507965817805,
+      "right": "R75",
+      "rule": "Positive means right has lower MAE; four Bonferroni paired t intervals per condition. Approximate finite-sample uncertainty conditional on this model and pairing."
+    },
+    {
+      "condition": "nominal",
+      "family95_t_interval_v": [
+        0.0029434781392923817,
+        0.009313578022981946
+      ],
+      "left": "A37",
+      "mean_mae_reduction_v": 0.006128528081137164,
+      "meaningful_reduction_v": 0.005,
+      "n_pairs": 464,
+      "paired_sd_v": 0.02736110370709295,
+      "right": "A75",
+      "rule": "Positive means right has lower MAE; four Bonferroni paired t intervals per condition. Approximate finite-sample uncertainty conditional on this model and pairing."
+    },
+    {
+      "condition": "nominal",
+      "family95_t_interval_v": [
+        0.045049750924848066,
+        0.055569638713916604
+      ],
+      "left": "A37",
+      "mean_mae_reduction_v": 0.050309694819382335,
+      "meaningful_reduction_v": 0.02,
+      "n_pairs": 464,
+      "paired_sd_v": 0.04518543602756984,
+      "right": "R37",
+      "rule": "Positive means right has lower MAE; four Bonferroni paired t intervals per condition. Approximate finite-sample uncertainty conditional on this model and pairing."
+    },
+    {
+      "condition": "nominal",
+      "family95_t_interval_v": [
+        0.044099745849135015,
+        0.05406629965216422
+      ],
+      "left": "A75",
+      "mean_mae_reduction_v": 0.049083022750649616,
+      "meaningful_reduction_v": 0.02,
+      "n_pairs": 464,
+      "paired_sd_v": 0.0428087341150227,
+      "right": "R75",
+      "rule": "Positive means right has lower MAE; four Bonferroni paired t intervals per condition. Approximate finite-sample uncertainty conditional on this model and pairing."
+    },
+    {
+      "condition": "supply_097",
+      "family95_t_interval_v": [
+        -0.0030029264368478126,
+        -0.0005985849473581553
+      ],
+      "left": "R37",
+      "mean_mae_reduction_v": -0.0018007556921029839,
+      "meaningful_reduction_v": 0.003,
+      "n_pairs": 464,
+      "paired_sd_v": 0.010327222185264997,
+      "right": "R75",
+      "rule": "Positive means right has lower MAE; four Bonferroni paired t intervals per condition. Approximate finite-sample uncertainty conditional on this model and pairing."
+    },
+    {
+      "condition": "supply_097",
+      "family95_t_interval_v": [
+        -0.0016158266340296095,
+        0.004683895889764894
+      ],
+      "left": "A37",
+      "mean_mae_reduction_v": 0.001534034627867642,
+      "meaningful_reduction_v": 0.005,
+      "n_pairs": 464,
+      "paired_sd_v": 0.02705881610126582,
+      "right": "A75",
+      "rule": "Positive means right has lower MAE; four Bonferroni paired t intervals per condition. Approximate finite-sample uncertainty conditional on this model and pairing."
+    },
+    {
+      "condition": "supply_097",
+      "family95_t_interval_v": [
+        0.04512715723590473,
+        0.05782386361419596
+      ],
+      "left": "A37",
+      "mean_mae_reduction_v": 0.051475510425050344,
+      "meaningful_reduction_v": 0.02,
+      "n_pairs": 464,
+      "paired_sd_v": 0.05453539289775206,
+      "right": "R37",
+      "rule": "Positive means right has lower MAE; four Bonferroni paired t intervals per condition. Approximate finite-sample uncertainty conditional on this model and pairing."
+    },
+    {
+      "condition": "supply_097",
+      "family95_t_interval_v": [
+        0.04214724794720791,
+        0.05413419226295153
+      ],
+      "left": "A75",
+      "mean_mae_reduction_v": 0.04814072010507972,
+      "meaningful_reduction_v": 0.02,
+      "n_pairs": 464,
+      "paired_sd_v": 0.05148679495497107,
+      "right": "R75",
+      "rule": "Positive means right has lower MAE; four Bonferroni paired t intervals per condition. Approximate finite-sample uncertainty conditional on this model and pairing."
+    }
+  ],
+  "schema": "ads.gain-statistics.v1",
+  "summaries": {
+    "A37/nominal": {
+      "all_assessed_including_sine_pass": 2,
+      "assessed_dc_ac_current_pass": 106,
+      "assigned": 464,
+      "center_pass": 106,
+      "interpretation": "Counts in a simulated finite coordinate set, not manufacturing yield. Missing cases stay in assigned counts.",
+      "mae_v": 0.06292574310537194,
+      "max_absolute_error_v": 0.25202226398971495,
+      "mean_error_v": 0.0012518042626636517,
+      "prediction_rmse_v": 0.0016967820016679153,
+      "rms_error_v": 0.07697557491288917,
+      "sd_error_v": 0.07704846674338643,
+      "sine_assessed": 4,
+      "unresolved_or_invalid": 0,
+      "usable_supported": 464
+    },
+    "A37/supply_097": {
+      "all_assessed_including_sine_pass": 0,
+      "assessed_dc_ac_current_pass": 98,
+      "assigned": 464,
+      "center_pass": 98,
+      "interpretation": "Counts in a simulated finite coordinate set, not manufacturing yield. Missing cases stay in assigned counts.",
+      "mae_v": 0.07762900486981889,
+      "max_absolute_error_v": 0.26016186518697815,
+      "mean_error_v": -0.058588538923808706,
+      "prediction_rmse_v": 0.002917305286899477,
+      "rms_error_v": 0.09523866034065,
+      "sd_error_v": 0.07516623026911082,
+      "sine_assessed": 0,
+      "unresolved_or_invalid": 0,
+      "usable_supported": 464
+    },
+    "A75/nominal": {
+      "all_assessed_including_sine_pass": 2,
+      "assessed_dc_ac_current_pass": 134,
+      "assigned": 464,
+      "center_pass": 134,
+      "interpretation": "Counts in a simulated finite coordinate set, not manufacturing yield. Missing cases stay in assigned counts.",
+      "mae_v": 0.05679721502423478,
+      "max_absolute_error_v": 0.23667471922105976,
+      "mean_error_v": -0.0010257388211496756,
+      "prediction_rmse_v": 0.0017945931041679,
+      "rms_error_v": 0.07091656949687468,
+      "sd_error_v": 0.0709856854083747,
+      "sine_assessed": 4,
+      "unresolved_or_invalid": 0,
+      "usable_supported": 464
+    },
+    "A75/supply_097": {
+      "all_assessed_including_sine_pass": 0,
+      "assessed_dc_ac_current_pass": 87,
+      "assigned": 464,
+      "center_pass": 87,
+      "interpretation": "Counts in a simulated finite coordinate set, not manufacturing yield. Missing cases stay in assigned counts.",
+      "mae_v": 0.07609497024195123,
+      "max_absolute_error_v": 0.22372064045126655,
+      "mean_error_v": -0.06083865597976436,
+      "prediction_rmse_v": 0.002709767967700396,
+      "rms_error_v": 0.092169640096475,
+      "sd_error_v": 0.06931272964497294,
+      "sine_assessed": 0,
+      "unresolved_or_invalid": 0,
+      "usable_supported": 464
+    },
+    "R37/nominal": {
+      "all_assessed_including_sine_pass": 4,
+      "assessed_dc_ac_current_pass": 421,
+      "assigned": 464,
+      "center_pass": 421,
+      "interpretation": "Counts in a simulated finite coordinate set, not manufacturing yield. Missing cases stay in assigned counts.",
+      "mae_v": 0.012616048285989608,
+      "max_absolute_error_v": 0.058355784561784585,
+      "mean_error_v": 9.21291688778635e-05,
+      "prediction_rmse_v": 0.0009000087822356183,
+      "rms_error_v": 0.015418455128338294,
+      "sd_error_v": 0.015434821199835452,
+      "sine_assessed": 4,
+      "unresolved_or_invalid": 0,
+      "usable_supported": 464
+    },
+    "R37/supply_097": {
+      "all_assessed_including_sine_pass": 0,
+      "assessed_dc_ac_current_pass": 227,
+      "assigned": 464,
+      "center_pass": 227,
+      "interpretation": "Counts in a simulated finite coordinate set, not manufacturing yield. Missing cases stay in assigned counts.",
+      "mae_v": 0.026153494444768534,
+      "max_absolute_error_v": 0.08427699198066874,
+      "mean_error_v": -0.025917680070886195,
+      "prediction_rmse_v": 0.0008961549101574301,
+      "rms_error_v": 0.03014620812845414,
+      "sd_error_v": 0.015413622208606726,
+      "sine_assessed": 0,
+      "unresolved_or_invalid": 0,
+      "usable_supported": 464
+    },
+    "R75/nominal": {
+      "all_assessed_including_sine_pass": 4,
+      "assessed_dc_ac_current_pass": 463,
+      "assigned": 464,
+      "center_pass": 463,
+      "interpretation": "Counts in a simulated finite coordinate set, not manufacturing yield. Missing cases stay in assigned counts.",
+      "mae_v": 0.007714192273585158,
+      "max_absolute_error_v": 0.026489070288323813,
+      "mean_error_v": -0.000312544939745385,
+      "prediction_rmse_v": 0.0006675728262106574,
+      "rms_error_v": 0.00956230941157849,
+      "sd_error_v": 0.009567515650747437,
+      "sine_assessed": 4,
+      "unresolved_or_invalid": 0,
+      "usable_supported": 464
+    },
+    "R75/supply_097": {
+      "all_assessed_including_sine_pass": 0,
+      "assessed_dc_ac_current_pass": 186,
+      "assigned": 464,
+      "center_pass": 186,
+      "interpretation": "Counts in a simulated finite coordinate set, not manufacturing yield. Missing cases stay in assigned counts.",
+      "mae_v": 0.027954250136871518,
+      "max_absolute_error_v": 0.05409898409445563,
+      "mean_error_v": -0.027954250136871518,
+      "prediction_rmse_v": 0.0006632182977301514,
+      "rms_error_v": 0.02953924504005185,
+      "sd_error_v": 0.009556344236846667,
+      "sine_assessed": 0,
+      "unresolved_or_invalid": 0,
+      "usable_supported": 464
+    }
+  }
+}

@@ -1,0 +1,34 @@
+---
+title: "Analog Design Notes"
+toc: false
+---
+
+Research notes that connect circuit behavior, measured evidence, and practical
+design choices. The first study follows a small amplifier from current balance
+to finite redesign and a frozen comparison.
+
+## Where should extra current go?
+
+[**Gain, current balance, and untrimmed accuracy**](studies/gain-operating-point-accuracy/index.qmd)
+
+Four circuits share gain −6 and a 0.5-V nominal output center. Adding current to
+the signal branch improves nominal accuracy; adding it only to an active
+reference leaves a large output-load error floor. A supply change can reverse
+the ranking between the two resistor-load designs.
+
+**Study v1.0 · 464 paired coordinates · 3,712 condition observations**
+
+The guide includes explicit MOS terminals, exact SPICE inputs, equations,
+measured plots, preserved failures and the costs of each choice. Basic MOS
+small-signal and SPICE knowledge is helpful; the current paths are explained
+before the statistical comparison.
+
+- [Read the full English study](studies/gain-operating-point-accuracy/index.qmd)
+- [日本語の概要](ja/gain-operating-point-accuracy.qmd)
+- [Reproduce plots and selected circuits](studies/gain-operating-point-accuracy/reproduce.qmd)
+- [Model scope, methods and review roles](methods.qmd)
+
+Last substantive research revision: **2026-09-12 UTC**. This collection's
+longer-term direction is low-current on-chip analog design, including regulators.
+This first release studies a foundational amplifier; it does not demonstrate
+an integrated LDO.
