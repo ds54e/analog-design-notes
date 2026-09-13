@@ -1,0 +1,17 @@
+{
+  "actual_mos_units_rechecked": 364,
+  "all_input_model_raw_conditions_and_scalar_measurements_rechecked": true,
+  "cases": 59,
+  "checked_utc": "2026-09-13T01:26:59.817674+00:00",
+  "first_target_started_utc": "2026-09-13T01:21:55.413333+00:00",
+  "freeze_sha256": "4a78e51fa605f26ad60f3ed184b84dd6a3a48db956a1c73ab0475f4ce0be64e1",
+  "last_target_started_utc": "2026-09-13T01:22:50.089063+00:00",
+  "maximum_charge_relative_difference": 2.6139252673473834e-06,
+  "maximum_kcl_a": 2.8269492527584726e-13,
+  "model_free_controls": 1,
+  "native_report_bytes": 277951481,
+  "schema": "ads.power-sequence-audit.v1",
+  "scope": "Same-agent audit of finite nominal histories and numerical controls. No population, all-history reachability, equilibrium uniqueness or independent-replication claim.",
+  "status": "PASS",
+  "supported_transistor_cases": 58
+}

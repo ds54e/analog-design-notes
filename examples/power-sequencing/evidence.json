@@ -1,0 +1,629 @@
+{
+  "schema": "adn.power-sequencing-evidence.v1",
+  "study": "power-sequencing",
+  "version": "1.0",
+  "model": {
+    "apm_version": "5.0.0",
+    "commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "technology": "APM045",
+    "family": "VTG",
+    "ngspice": "47"
+  },
+  "fixed_nominal_cases": 59,
+  "frozen_utc": "2026-09-13T01:19:23.171244+00:00",
+  "freeze_sha256": "4a78e51fa605f26ad60f3ed184b84dd6a3a48db956a1c73ab0475f4ce0be64e1",
+  "audit": {
+    "actual_mos_units_rechecked": 364,
+    "all_input_model_raw_conditions_and_scalar_measurements_rechecked": true,
+    "cases": 59,
+    "checked_utc": "2026-09-13T01:26:59.817674+00:00",
+    "first_target_started_utc": "2026-09-13T01:21:55.413333+00:00",
+    "freeze_sha256": "4a78e51fa605f26ad60f3ed184b84dd6a3a48db956a1c73ab0475f4ce0be64e1",
+    "last_target_started_utc": "2026-09-13T01:22:50.089063+00:00",
+    "maximum_charge_relative_difference": 2.6139252673473834e-06,
+    "maximum_kcl_a": 2.8269492527584726e-13,
+    "model_free_controls": 1,
+    "native_report_bytes": 277951481,
+    "schema": "ads.power-sequence-audit.v1",
+    "scope": "Same-agent audit of finite nominal histories and numerical controls. No population, all-history reachability, equilibrium uniqueness or independent-replication claim.",
+    "status": "PASS",
+    "supported_transistor_cases": 58
+  },
+  "scientific_review": {
+    "acquisition_retries": 0,
+    "actual_mos_unit_uses": 364,
+    "checked_utc": "2026-09-13T01:56:22.127240+00:00",
+    "checks": [
+      "All saved native/input/model/raw/source/element/terminal/measurement identities re-audited.",
+      "MOS-free finite-ramp analytic control error59.91nV; maximum charge discrepancy2.614ppm.",
+      "Four declared refinements pass; largest waveform difference56.714uV, with coarse/refined cycle times retained.",
+      "Five public plots and deterministic summary regenerate byte-for-byte in fresh public clone/Python environment; four illustrative native cases pass."
+    ],
+    "evidence_sha256": {
+      "clean-public-check.json": "18eb7d1094d0a29a47e3b5c0823b9f8340e8c52a39c5779d3e92156c7cc9e4c6",
+      "data/manifest.json": "f23d67927d514bc25c0cfbff88077ccc8820807e569d7e17f28574f5d594d481",
+      "nominal-audit.json": "b1de376904e4334d28338d477a50d21a1c5ba7f2151733530fa79f4ca9cfe661",
+      "nominal-plan.json": "634102c9a8c2237328282af4bfc30090bcd6c57cc441f1066dad6024ea1d8865",
+      "statistics.json": "4f36c0b8eb75be014b19eec90d3bd103fd613b54afd9332333be17b75f0b9546"
+    },
+    "extra_diagnostics": 0,
+    "findings": [
+      "F75L input-only delivery 3.99673 uA, supply-only absorption 8.50166 uA; zero voltage is a driven clamp, not floating I/O.",
+      "Exact input-node identity includes resistor path and measured total gate current; largest full-wave residual 1.008 fA.",
+      "All 54 transistor plateau observations reach independent stationary target bands within the fixed horizons; this does not establish all-history reachability.",
+      "R75 fast 8-pF supply startup peaks at 140.981 uA; the 1-us ramp reduces it to81.797 uA with greater total time from ramp start.",
+      "Eight already-in-band entries retain their original raw measurement and explicitly unresolved entry time; no picosecond settling claim."
+    ],
+    "fixed_cases": 59,
+    "limits": [
+      "Driven/clamped source boundaries; no actual driver, protection diode or current-limited supply circuit.",
+      "Nominal off/near-threshold observations; no added Local statistical qualification, population startup probability or silicon inference.",
+      "Ordinary OP initial states and finite source histories, not arbitrary charge/root uniqueness/formal stability proof.",
+      "Same agent and same host; clean-directory reproduction is not independent scientific replication."
+    ],
+    "physical_scope": "Unchanged saved nominal A75/R75/F75L units, UID/geometry/raw [0,0]; no Local sample cohort, retuning or target-based extension.",
+    "pre_target_verified_private_commit": "a58d60bfb8da090a992b7551b6dcddc112ac4156",
+    "public_replay_limit": "The DC-only public V/I route cannot resolve Rbias <=1pA and does not measure inactive capacitance; original private native parameter readback did. Three transient examples check all resistors and effective capacitance.",
+    "reviewer": "Same Codex agent; internal evidence review, not independent replication or prior human approval.",
+    "schema": "ads.power-sequence-scientific-review.v1",
+    "status": "SCIENCE_COMPLETE",
+    "transistor_cases": 58
+  },
+  "clean_public_reproduction": {
+    "all_graph_bytes_equal": true,
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "apm_public_repository": "https://github.com/ds54e/analog-process-models",
+    "checked_utc": "2026-09-13T01:59:22.406227+00:00",
+    "examples_selection": "Four illustrations selected after the finite 59-case block was observed, for mechanism coverage; not a preselected statistical confirmation subset.",
+    "fresh_public_model_clone": true,
+    "fresh_python_environment": true,
+    "graph_revision_note": "Legend/title-only revisions, first native measurements and all earlier rendered images preserved; no native replay repeated.",
+    "installed_packages": [
+      "contourpy==1.3.0",
+      "cycler==0.12.1",
+      "fonttools==4.60.2",
+      "importlib_metadata==8.7.1",
+      "importlib_resources==6.5.2",
+      "kiwisolver==1.4.7",
+      "matplotlib==3.9.4",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.3.0",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.13.1",
+      "six==1.17.0",
+      "tomli==2.2.1",
+      "typing_extensions==4.16.0",
+      "zipp==3.23.1"
+    ],
+    "limitation": "Same-host clean-directory reproduction, not clean OS/all-platform or independent scientific replication. Public DC-only example cannot resolve Rbias V/I at <=1 pA and does not observe inactive capacitance; private acquisition directly read both parameters. Other three native examples check every resistor by V/I and effective capacitance from charge.",
+    "native_checks": {
+      "F75L-input_only": {
+        "actual_mos_readback": "Pinned APM checks actual model, W/L/m/nf, DELVTO and MULU0 before/applied/after every analysis.",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "capacitor_readback": "DC only: capacitance is inactive and not independently measured by this public replay; private acquisition included direct parameter readback.",
+        "case": "F75L-input_only",
+        "maximum_device_kcl_a": 3.999759708219234e-17,
+        "op_differences": {
+          "i(Vbiasdiag)": 0.0,
+          "i(Vcap)": 0.0,
+          "i(Vdd)": 0.0,
+          "i(Vin)": 0.0,
+          "i(Vn0b)": 0.0,
+          "i(Vn0d)": 0.0,
+          "i(Vn0g)": 0.0,
+          "i(Vn0s)": 0.0,
+          "i(Vn1b)": 0.0,
+          "i(Vn1d)": 0.0,
+          "i(Vn1g)": 0.0,
+          "i(Vn1s)": 0.0,
+          "i(Vn2b)": 0.0,
+          "i(Vn2d)": 0.0,
+          "i(Vn2g)": 0.0,
+          "i(Vn2s)": 0.0,
+          "i(Vp0b)": 0.0,
+          "i(Vp0d)": 0.0,
+          "i(Vp0g)": 0.0,
+          "i(Vp0s)": 0.0,
+          "i(Vr0b)": 0.0,
+          "i(Vr0d)": 0.0,
+          "i(Vr0g)": 0.0,
+          "i(Vr0s)": 0.0,
+          "v(capnode)": 0.0,
+          "v(drive)": 0.0,
+          "v(gate)": 0.0,
+          "v(in)": 0.0,
+          "v(out)": 0.0,
+          "v(pbias)": 0.0,
+          "v(pdrive)": 0.0,
+          "v(source)": 0.0,
+          "v(vdd)": 0.0
+        },
+        "resistor_readbacks": {
+          "Rbias": {
+            "declared_ohm": 10731.024577367358,
+            "maximum_observed_current_a": 6.575822084882075e-14,
+            "reason": "Observed current at most 1 pA; V/I is ill-conditioned.",
+            "status": "V_I_READBACK_UNRESOLVED"
+          },
+          "Rf": {
+            "declared_ohm": 100000.0,
+            "measured_v_over_i_ohm": 99999.99999962324,
+            "relative_difference": -3.767652856367931e-12,
+            "status": "PASS"
+          },
+          "Rin": {
+            "declared_ohm": 9000.0,
+            "measured_v_over_i_ohm": 8999.999999999964,
+            "relative_difference": -3.9968028886505635e-15,
+            "status": "PASS"
+          },
+          "Rload": {
+            "declared_ohm": 100000.0,
+            "measured_v_over_i_ohm": 99999.99998570554,
+            "relative_difference": -1.4294465611186524e-10,
+            "status": "PASS"
+          },
+          "Rs": {
+            "declared_ohm": 670.3660992954378,
+            "measured_v_over_i_ohm": 670.3660992954376,
+            "relative_difference": -3.3306690738754696e-16,
+            "status": "PASS"
+          },
+          "Rsrc": {
+            "declared_ohm": 1000.0,
+            "measured_v_over_i_ohm": 999.9999999999915,
+            "relative_difference": -8.548717289613705e-15,
+            "status": "PASS"
+          }
+        },
+        "run_id": "f9b306858ca4a21f913b158bb1e0a3464a52ad220051545c9dd116099f0138c8",
+        "scope": "Known saved nominal replay on the tested host. No redraw, Local off-state qualification or all-history claim.",
+        "status": "PASS"
+      },
+      "F75L-supply-cycle-8p": {
+        "actual_mos_readback": "Pinned APM checks actual model, W/L/m/nf, DELVTO and MULU0 before/applied/after every analysis.",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "case": "F75L-supply-cycle-8p",
+        "maximum_device_kcl_a": 2.269302909647941e-16,
+        "op_differences": {
+          "i(Vbiasdiag)": 0.0,
+          "i(Vcap)": 0.0,
+          "i(Vdd)": 0.0,
+          "i(Vin)": 0.0,
+          "i(Vn0b)": 0.0,
+          "i(Vn0d)": 0.0,
+          "i(Vn0g)": 0.0,
+          "i(Vn0s)": 0.0,
+          "i(Vn1b)": 0.0,
+          "i(Vn1d)": 0.0,
+          "i(Vn1g)": 0.0,
+          "i(Vn1s)": 0.0,
+          "i(Vn2b)": 0.0,
+          "i(Vn2d)": 0.0,
+          "i(Vn2g)": 0.0,
+          "i(Vn2s)": 0.0,
+          "i(Vp0b)": 0.0,
+          "i(Vp0d)": 0.0,
+          "i(Vp0g)": 0.0,
+          "i(Vp0s)": 0.0,
+          "i(Vr0b)": 0.0,
+          "i(Vr0d)": 0.0,
+          "i(Vr0g)": 0.0,
+          "i(Vr0s)": 0.0,
+          "v(capnode)": 0.0,
+          "v(drive)": 0.0,
+          "v(gate)": 0.0,
+          "v(in)": 0.0,
+          "v(out)": 0.0,
+          "v(pbias)": 0.0,
+          "v(pdrive)": 0.0,
+          "v(source)": 0.0,
+          "v(vdd)": 0.0
+        },
+        "resistor_readbacks": {
+          "Rbias": {
+            "declared_ohm": 10731.024577367358,
+            "measured_v_over_i_ohm": 10731.024577367356,
+            "relative_difference": -2.220446049250313e-16,
+            "status": "PASS"
+          },
+          "Rf": {
+            "declared_ohm": 100000.0,
+            "measured_v_over_i_ohm": 100000.00000045693,
+            "relative_difference": 4.569233880147294e-12,
+            "status": "PASS"
+          },
+          "Rin": {
+            "declared_ohm": 9000.0,
+            "measured_v_over_i_ohm": 9000.00000000003,
+            "relative_difference": 3.3306690738754696e-15,
+            "status": "PASS"
+          },
+          "Rload": {
+            "declared_ohm": 100000.0,
+            "measured_v_over_i_ohm": 99999.99999750582,
+            "relative_difference": -2.4941826382018917e-11,
+            "status": "PASS"
+          },
+          "Rs": {
+            "declared_ohm": 670.3660992954378,
+            "measured_v_over_i_ohm": 670.366099295438,
+            "relative_difference": 2.220446049250313e-16,
+            "status": "PASS"
+          },
+          "Rsrc": {
+            "declared_ohm": 1000.0,
+            "measured_v_over_i_ohm": 999.9999999999986,
+            "relative_difference": -1.3322676295501878e-15,
+            "status": "PASS"
+          }
+        },
+        "run_id": "04f359d75be9e4b6c2183c8acc8d110d10cbebf500bedeb4eb4497c611db3415",
+        "scope": "Known saved nominal replay on the tested host. No redraw, Local off-state qualification or all-history claim.",
+        "status": "PASS",
+        "transient": {
+          "capacitor_readback": [
+            {
+              "declared_f": 8e-12,
+              "measured_integral_i_over_delta_v_f": 7.999999910047706e-12,
+              "relative_difference": -1.1244036701718585e-08
+            },
+            {
+              "declared_f": 8e-12,
+              "measured_integral_i_over_delta_v_f": 8.000000035763587e-12,
+              "relative_difference": 4.470448455862197e-09
+            }
+          ],
+          "maximum_input_identity_residual_a": 2.826451006803074e-16,
+          "maximum_output_kcl_a": 3.658991749725445e-17,
+          "output_extrema_differences": {
+            "out_max_v": 0.0,
+            "out_min_v": 0.0
+          },
+          "plateaus": [
+            {
+              "endpoint_error_v": -7.965850201685498e-15,
+              "relative_bracket_s": [
+                0.0,
+                1.6762479914921307e-11
+              ],
+              "status": "IN_BAND_AT_FIRST_OBSERVATION",
+              "time_s": 1.6762479914921307e-11
+            },
+            {
+              "endpoint_error_v": -4.797828800917614e-12,
+              "relative_bracket_s": [
+                7.144448333938684e-07,
+                7.244448333938683e-07
+              ],
+              "status": "OBSERVED_FINAL_ENTRY",
+              "time_s": 7.244448333938683e-07
+            }
+          ],
+          "ports": {
+            "Vdd": {
+              "differences": {
+                "absorbed_energy_j": 0.0,
+                "max_delivered_current_a": 0.0,
+                "min_delivered_current_a": 0.0,
+                "positive_delivered_energy_j": 0.0,
+                "signed_energy_j": 0.0
+              },
+              "measured": {
+                "absorbed_energy_j": 1.7513732493275006e-16,
+                "max_delivered_current_a": 7.528212406576703e-05,
+                "min_delivered_current_a": -2.082107261332605e-08,
+                "positive_delivered_energy_j": 1.4595922601017865e-09,
+                "signed_energy_j": 1.4595920849644616e-09
+              }
+            },
+            "Vin": {
+              "differences": {
+                "absorbed_energy_j": 0.0,
+                "max_delivered_current_a": 0.0,
+                "min_delivered_current_a": 0.0,
+                "positive_delivered_energy_j": 0.0,
+                "signed_energy_j": 0.0
+              },
+              "measured": {
+                "absorbed_energy_j": 3.8200545398254526e-12,
+                "max_delivered_current_a": 3.9967687122016205e-06,
+                "min_delivered_current_a": -4.52479877039e-07,
+                "positive_delivered_energy_j": 1.8956742615042078e-11,
+                "signed_energy_j": 1.5136688075216625e-11
+              }
+            }
+          }
+        }
+      },
+      "F75L-supply_first-fast-8p": {
+        "actual_mos_readback": "Pinned APM checks actual model, W/L/m/nf, DELVTO and MULU0 before/applied/after every analysis.",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "case": "F75L-supply_first-fast-8p",
+        "maximum_device_kcl_a": 2.725413211085437e-16,
+        "op_differences": {
+          "i(Vbiasdiag)": 0.0,
+          "i(Vcap)": 0.0,
+          "i(Vdd)": 0.0,
+          "i(Vin)": 0.0,
+          "i(Vn0b)": 0.0,
+          "i(Vn0d)": 0.0,
+          "i(Vn0g)": 0.0,
+          "i(Vn0s)": 0.0,
+          "i(Vn1b)": 0.0,
+          "i(Vn1d)": 0.0,
+          "i(Vn1g)": 0.0,
+          "i(Vn1s)": 0.0,
+          "i(Vn2b)": 0.0,
+          "i(Vn2d)": 0.0,
+          "i(Vn2g)": 0.0,
+          "i(Vn2s)": 0.0,
+          "i(Vp0b)": 0.0,
+          "i(Vp0d)": 0.0,
+          "i(Vp0g)": 0.0,
+          "i(Vp0s)": 0.0,
+          "i(Vr0b)": 0.0,
+          "i(Vr0d)": 0.0,
+          "i(Vr0g)": 0.0,
+          "i(Vr0s)": 0.0,
+          "v(capnode)": 0.0,
+          "v(drive)": 0.0,
+          "v(gate)": 0.0,
+          "v(in)": 0.0,
+          "v(out)": 0.0,
+          "v(pbias)": 0.0,
+          "v(pdrive)": 0.0,
+          "v(source)": 0.0,
+          "v(vdd)": 0.0
+        },
+        "resistor_readbacks": {
+          "Rbias": {
+            "declared_ohm": 10731.024577367358,
+            "measured_v_over_i_ohm": 10731.024577367358,
+            "relative_difference": 0.0,
+            "status": "PASS"
+          },
+          "Rf": {
+            "declared_ohm": 100000.0,
+            "measured_v_over_i_ohm": 99999.99999963326,
+            "relative_difference": -3.66739971724428e-12,
+            "status": "PASS"
+          },
+          "Rin": {
+            "declared_ohm": 9000.0,
+            "measured_v_over_i_ohm": 9000.0,
+            "relative_difference": 0.0,
+            "status": "PASS"
+          },
+          "Rload": {
+            "declared_ohm": 100000.0,
+            "measured_v_over_i_ohm": 99999.99999946746,
+            "relative_difference": -5.325406782219488e-12,
+            "status": "PASS"
+          },
+          "Rs": {
+            "declared_ohm": 670.3660992954378,
+            "measured_v_over_i_ohm": 670.3660992954365,
+            "relative_difference": -1.9984014443252818e-15,
+            "status": "PASS"
+          },
+          "Rsrc": {
+            "declared_ohm": 1000.0,
+            "measured_v_over_i_ohm": 1000.0,
+            "relative_difference": 0.0,
+            "status": "PASS"
+          }
+        },
+        "run_id": "f603c446aa750866caa6e8ea4ec8c0ef373acfeb6656089bf86208fedafaf7ee",
+        "scope": "Known saved nominal replay on the tested host. No redraw, Local off-state qualification or all-history claim.",
+        "status": "PASS",
+        "transient": {
+          "capacitor_readback": [
+            {
+              "declared_f": 8e-12,
+              "measured_integral_i_over_delta_v_f": 7.99999953685504e-12,
+              "relative_difference": -5.789311996462487e-08
+            }
+          ],
+          "maximum_input_identity_residual_a": 2.4882863375015954e-16,
+          "maximum_output_kcl_a": 5.454014484777749e-14,
+          "output_extrema_differences": {
+            "out_max_v": 0.0,
+            "out_min_v": 0.0
+          },
+          "plateaus": [
+            {
+              "endpoint_error_v": 2.4913404672588513e-13,
+              "relative_bracket_s": [
+                8.16352388405653e-07,
+                8.183523884056531e-07
+              ],
+              "status": "OBSERVED_FINAL_ENTRY",
+              "time_s": 8.183523884056531e-07
+            }
+          ],
+          "ports": {
+            "Vdd": {
+              "differences": {
+                "absorbed_energy_j": 0.0,
+                "max_delivered_current_a": 0.0,
+                "min_delivered_current_a": 0.0,
+                "positive_delivered_energy_j": 0.0,
+                "signed_energy_j": 0.0
+              },
+              "measured": {
+                "absorbed_energy_j": 0.0,
+                "max_delivered_current_a": 7.499739158572831e-05,
+                "min_delivered_current_a": 5.534678684753759e-05,
+                "positive_delivered_energy_j": 1.4602765921196865e-09,
+                "signed_energy_j": 1.4602765921196865e-09
+              }
+            },
+            "Vin": {
+              "differences": {
+                "absorbed_energy_j": 0.0,
+                "max_delivered_current_a": 0.0,
+                "min_delivered_current_a": 0.0,
+                "positive_delivered_energy_j": 0.0,
+                "signed_energy_j": 0.0
+              },
+              "measured": {
+                "absorbed_energy_j": 3.8876103082543844e-12,
+                "max_delivered_current_a": -4.524798764624213e-07,
+                "min_delivered_current_a": -8.501664780913284e-06,
+                "positive_delivered_energy_j": 0.0,
+                "signed_energy_j": -3.8876103082543844e-12
+              }
+            }
+          }
+        }
+      },
+      "R75-input_first-fast-8p": {
+        "actual_mos_readback": "Pinned APM checks actual model, W/L/m/nf, DELVTO and MULU0 before/applied/after every analysis.",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "case": "R75-input_first-fast-8p",
+        "maximum_device_kcl_a": 1.5301780396516583e-16,
+        "op_differences": {
+          "i(Vcap)": 0.0,
+          "i(Vdd)": 0.0,
+          "i(Vin)": 0.0,
+          "i(Vn0b)": 0.0,
+          "i(Vn0d)": 0.0,
+          "i(Vn0g)": 0.0,
+          "i(Vn0s)": 0.0,
+          "i(Vn1b)": 0.0,
+          "i(Vn1d)": 0.0,
+          "i(Vn1g)": 0.0,
+          "i(Vn1s)": 0.0,
+          "i(Vn2b)": 0.0,
+          "i(Vn2d)": 0.0,
+          "i(Vn2g)": 0.0,
+          "i(Vn2s)": 0.0,
+          "i(Vn3b)": 0.0,
+          "i(Vn3d)": 0.0,
+          "i(Vn3g)": 0.0,
+          "i(Vn3s)": 0.0,
+          "i(Vn4b)": 0.0,
+          "i(Vn4d)": 0.0,
+          "i(Vn4g)": 0.0,
+          "i(Vn4s)": 0.0,
+          "i(Vn5b)": 0.0,
+          "i(Vn5d)": 0.0,
+          "i(Vn5g)": 0.0,
+          "i(Vn5s)": 0.0,
+          "v(capnode)": 0.0,
+          "v(gate)": 0.0,
+          "v(in)": 0.0,
+          "v(out)": 0.0,
+          "v(source)": 0.0,
+          "v(vdd)": 0.0
+        },
+        "resistor_readbacks": {
+          "Rd": {
+            "declared_ohm": 6667.191718846597,
+            "measured_v_over_i_ohm": 6667.191718846597,
+            "relative_difference": 0.0,
+            "status": "PASS"
+          },
+          "Rload": {
+            "declared_ohm": 100000.0,
+            "measured_v_over_i_ohm": 99999.99999988628,
+            "relative_difference": -1.1372014441235478e-12,
+            "status": "PASS"
+          },
+          "Rs": {
+            "declared_ohm": 171.81801356494375,
+            "measured_v_over_i_ohm": 171.81801356494404,
+            "relative_difference": 1.5543122344752192e-15,
+            "status": "PASS"
+          },
+          "Rsrc": {
+            "declared_ohm": 1000.0,
+            "measured_v_over_i_ohm": 1000.0000000000235,
+            "relative_difference": 2.353672812205332e-14,
+            "status": "PASS"
+          }
+        },
+        "run_id": "336c1220a97793044b289a54b55b84548db6f24177a4c87cb1321aa70cd418af",
+        "scope": "Known saved nominal replay on the tested host. No redraw, Local off-state qualification or all-history claim.",
+        "status": "PASS",
+        "transient": {
+          "capacitor_readback": [
+            {
+              "declared_f": 8e-12,
+              "measured_integral_i_over_delta_v_f": 8.000000446193338e-12,
+              "relative_difference": 5.577416728463902e-08
+            }
+          ],
+          "maximum_input_identity_residual_a": 9.118140270603092e-16,
+          "maximum_output_kcl_a": 1.072745725396042e-16,
+          "output_extrema_differences": {
+            "out_max_v": 0.0,
+            "out_min_v": 0.0
+          },
+          "plateaus": [
+            {
+              "endpoint_error_v": -1.7910672944765338e-12,
+              "relative_bracket_s": [
+                2.984707397817318e-07,
+                3.0047073978173197e-07
+              ],
+              "status": "OBSERVED_FINAL_ENTRY",
+              "time_s": 3.0047073978173197e-07
+            }
+          ],
+          "ports": {
+            "Vdd": {
+              "differences": {
+                "absorbed_energy_j": 0.0,
+                "max_delivered_current_a": 0.0,
+                "min_delivered_current_a": 0.0,
+                "positive_delivered_energy_j": 0.0,
+                "signed_energy_j": 0.0
+              },
+              "measured": {
+                "absorbed_energy_j": 0.0,
+                "max_delivered_current_a": 0.00014098066621613363,
+                "min_delivered_current_a": -5.269701584186332e-10,
+                "positive_delivered_energy_j": 1.3528249115421542e-09,
+                "signed_energy_j": 1.3528249115421542e-09
+              }
+            },
+            "Vin": {
+              "differences": {
+                "absorbed_energy_j": 0.0,
+                "max_delivered_current_a": 0.0,
+                "min_delivered_current_a": 0.0,
+                "positive_delivered_energy_j": 0.0,
+                "signed_energy_j": 0.0
+              },
+              "measured": {
+                "absorbed_energy_j": 2.8030099896225338e-15,
+                "max_delivered_current_a": 8.660804780703628e-09,
+                "min_delivered_current_a": -2.955215033266165e-07,
+                "positive_delivered_energy_j": 5.513649718150862e-14,
+                "signed_energy_j": 5.2333487191886086e-14
+              }
+            }
+          }
+        }
+      }
+    },
+    "public_inputs_only": true,
+    "regenerated_svg_sha256": {
+      "input-current-paths.svg": "76f62a3bd7949d28bada335ad48a73274f67db50d3b29abe3b02de7c4a7b823d",
+      "peak-demands.svg": "6e2b29973ccb22e28cba633b8418e48a857d9f4725f97062c260442d4bc75d2e",
+      "startup-histories.svg": "8acee5a8a56f399fcbb087a9ad716d4093da92a866920690177d32958e7d6db0",
+      "static-interface.svg": "7c2df64c35d62045b877e9a1cf421db3a0e2cb9e3534a2f6aa825f65d25813af",
+      "supply-cycle.svg": "451becbc7264c837c058b6a07b43a99d91b526610e1a871d8695dab5137c083a"
+    },
+    "schema": "adn.power-sequence-clean-public-check.v1",
+    "statistics_bytes_equal": true,
+    "status": "PASS"
+  },
+  "data_manifest_sha256": "f23d67927d514bc25c0cfbff88077ccc8820807e569d7e17f28574f5d594d481",
+  "scope": "Finite nominal driven/clamped input and supply histories, unchanged saved physical designs. No Local off-state qualification or all-history claim.",
+  "review_roles": "Same Codex agent performed research and internal checks; no prior human/peer approval or independent replication."
+}

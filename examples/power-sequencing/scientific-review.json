@@ -1,0 +1,40 @@
+{
+  "acquisition_retries": 0,
+  "actual_mos_unit_uses": 364,
+  "checked_utc": "2026-09-13T01:56:22.127240+00:00",
+  "checks": [
+    "All saved native/input/model/raw/source/element/terminal/measurement identities re-audited.",
+    "MOS-free finite-ramp analytic control error59.91nV; maximum charge discrepancy2.614ppm.",
+    "Four declared refinements pass; largest waveform difference56.714uV, with coarse/refined cycle times retained.",
+    "Five public plots and deterministic summary regenerate byte-for-byte in fresh public clone/Python environment; four illustrative native cases pass."
+  ],
+  "evidence_sha256": {
+    "clean-public-check.json": "18eb7d1094d0a29a47e3b5c0823b9f8340e8c52a39c5779d3e92156c7cc9e4c6",
+    "data/manifest.json": "f23d67927d514bc25c0cfbff88077ccc8820807e569d7e17f28574f5d594d481",
+    "nominal-audit.json": "b1de376904e4334d28338d477a50d21a1c5ba7f2151733530fa79f4ca9cfe661",
+    "nominal-plan.json": "634102c9a8c2237328282af4bfc30090bcd6c57cc441f1066dad6024ea1d8865",
+    "statistics.json": "4f36c0b8eb75be014b19eec90d3bd103fd613b54afd9332333be17b75f0b9546"
+  },
+  "extra_diagnostics": 0,
+  "findings": [
+    "F75L input-only delivery 3.99673 uA, supply-only absorption 8.50166 uA; zero voltage is a driven clamp, not floating I/O.",
+    "Exact input-node identity includes resistor path and measured total gate current; largest full-wave residual 1.008 fA.",
+    "All 54 transistor plateau observations reach independent stationary target bands within the fixed horizons; this does not establish all-history reachability.",
+    "R75 fast 8-pF supply startup peaks at 140.981 uA; the 1-us ramp reduces it to81.797 uA with greater total time from ramp start.",
+    "Eight already-in-band entries retain their original raw measurement and explicitly unresolved entry time; no picosecond settling claim."
+  ],
+  "fixed_cases": 59,
+  "limits": [
+    "Driven/clamped source boundaries; no actual driver, protection diode or current-limited supply circuit.",
+    "Nominal off/near-threshold observations; no added Local statistical qualification, population startup probability or silicon inference.",
+    "Ordinary OP initial states and finite source histories, not arbitrary charge/root uniqueness/formal stability proof.",
+    "Same agent and same host; clean-directory reproduction is not independent scientific replication."
+  ],
+  "physical_scope": "Unchanged saved nominal A75/R75/F75L units, UID/geometry/raw [0,0]; no Local sample cohort, retuning or target-based extension.",
+  "pre_target_verified_private_commit": "a58d60bfb8da090a992b7551b6dcddc112ac4156",
+  "public_replay_limit": "The DC-only public V/I route cannot resolve Rbias <=1pA and does not measure inactive capacitance; original private native parameter readback did. Three transient examples check all resistors and effective capacitance.",
+  "reviewer": "Same Codex agent; internal evidence review, not independent replication or prior human approval.",
+  "schema": "ads.power-sequence-scientific-review.v1",
+  "status": "SCIENCE_COMPLETE",
+  "transistor_cases": 58
+}

@@ -27,6 +27,7 @@ def main():
     required += ['ja/passive-sensitivity.html','studies/passive-sensitivity/index.html','studies/passive-sensitivity/reproduce.html','downloads/passive-study-v1.0.zip']
     required += ['ja/active-allocation.html','studies/active-allocation/index.html','studies/active-allocation/reproduce.html','downloads/allocation-study-v1.0.zip']
     required += ['ja/finite-feedback.html','studies/finite-feedback/index.html','studies/finite-feedback/reproduce.html','downloads/feedback-study-v1.0.zip']
+    required += ['ja/power-sequencing.html','studies/power-sequencing/index.html','studies/power-sequencing/reproduce.html','downloads/sequencing-study-v1.0.zip']
     for name in required:
         if not (root/name).is_file():broken.append(('required',name,'missing'))
     assert not broken,broken

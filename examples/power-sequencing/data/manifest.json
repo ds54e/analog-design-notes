@@ -1,0 +1,13 @@
+{
+  "files": {
+    "configuration.json": "28c31e660ab236d927ba2180b757108e4a8e41087dc569f3b46430193570ac69",
+    "histories.csv": "a26f7ca38f9306822df896004a3e6c4feb7b4abe10974be888b5f4020452cd30",
+    "input-paths.csv": "658d00b1661ff79d03146405118d3810bb8813848c685a50fcbd51a1a1cb6574",
+    "observations.json": "33c11895b0dfe2edfcc4c3e9ab20e57c4a82a2da393ab49280f570d452e019c0",
+    "plateaus.csv": "5507fee176e637e70b3d42b806b923edcbfa27f9c0c5d92f18ff40c104329dc8",
+    "static.csv": "68a19ec9818ab5b69eebfb7c8cb4bd2672ef60851fd8ee25519a4bca2952a258",
+    "waveforms.csv": "2e0eadba86c6ca37c0cf01883c9416d506b8ab5a40b548d866035fb964f4012d"
+  },
+  "schema": "adn.compact-data.v1",
+  "scope": "Retrospective export after complete saved-evidence audit. Compact traces are for drawing only. Existing settling status/raw brackets are preserved and separately normalized for display."
+}

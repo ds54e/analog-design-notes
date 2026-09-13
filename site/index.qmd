@@ -8,6 +8,21 @@ design choices. Start with the amplifier's current balance, then ask which
 uncertainty changes the design decision. Basic MOS small-signal and SPICE
 knowledge is helpful; each guide explains its current paths before comparisons.
 
+## What must the input and supply do during startup?
+
+[**Power sequencing exposes the cost of an amplifier input**](studies/power-sequencing/index.qmd)
+
+A feedback input can deliver current while its supply is off, or absorb much
+more current before the signal is present than during normal operation. The
+faster resistor-loaded design has a larger supply charging peak. Finite source
+histories separate these interface demands from the 75-µA DC operating point.
+
+**Study v1.0 · 59 nominal static/history/control observations · no population startup claim**
+
+- [Read the English guide](studies/power-sequencing/index.qmd)
+- [電源投入順序の日本語概要](ja/power-sequencing.qmd)
+- [Regenerate figures and replay four small nominal examples](studies/power-sequencing/reproduce.qmd)
+
 ## What does finite feedback cost at the input?
 
 [**Finite feedback lowers an error path, with a price at the input**](studies/finite-feedback/index.qmd)

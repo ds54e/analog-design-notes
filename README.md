@@ -1,7 +1,13 @@
 # Analog Design Notes
 
 Read the [research site](https://ds54e.github.io/analog-design-notes/) or the
-[latest Japanese overview](https://ds54e.github.io/analog-design-notes/ja/finite-feedback.html).
+[latest Japanese overview](https://ds54e.github.io/analog-design-notes/ja/power-sequencing.html).
+
+The power-sequencing study explains input delivery/absorption and supply
+charging peaks in 59 nominal static/history/control observations. It preserves
+the driven-clamp boundary and finite-history limits. See the
+[guide](https://ds54e.github.io/analog-design-notes/studies/power-sequencing/)
+and [four small native examples](examples/power-sequencing/README.md).
 
 The finite-feedback study connects lower active-load error to input-current,
 resistor, noise and dynamic costs. Its frozen 521-coordinate confirmation and
@@ -33,7 +39,7 @@ repository. This repository receives an explicit selected publication set.
 Reader corrections belong in Issues; they are applied to that canonical source
 before export. The immutable research tags are
 `gain-operating-point-accuracy-v1.0`, `passive-sensitivity-v1.0`,
-`active-allocation-v1.0` and `finite-feedback-v1.0`. Versioned
+`active-allocation-v1.0`, `finite-feedback-v1.0` and `power-sequencing-v1.0`. Versioned
 downloads are static checked artifacts; the first release's ZIP bytes are preserved.
 
 Maintainers render with Quarto **1.10.18**:

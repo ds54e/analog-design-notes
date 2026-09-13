@@ -1,0 +1,52 @@
+* ADS gain/operating-point study: original finite circuit
+* MOS instance terminal order is drain gate source body; one unit each.
+Vdd vdd 0 DC 1 AC 0 PWL(0 1 1.9999999999999999e-06 1 3.0000000000000001e-06 0 1.2e-05 0 1.2999999999999999e-05 1 3.0000000000000001e-05 1)
+Vin in 0 DC 0.45000000000000001 AC 1 PWL(0 0.45000000000000001 3.0000000000000001e-05 0.45000000000000001)
+Rsrc in gate 1000
+Rload out 0 100000
+Cload capnode 0 7.9999999999999998e-12
+Idist 0 out DC 0 AC 0
+Rs source 0 6951.6565509415113
+Vn0d out n0d 0
+Vn0g gate n0g 0
+Vn0s source n0s 0
+Vn0b 0 n0b 0
+xn0 n0d n0g n0s n0b apm045_vtg_nmos w=2.4945485933293912e-06 l=3.2000000000000001e-07
+Vn1d out n1d 0
+Vn1g gate n1g 0
+Vn1s source n1s 0
+Vn1b 0 n1b 0
+xn1 n1d n1g n1s n1b apm045_vtg_nmos w=2.4945485933293912e-06 l=3.2000000000000001e-07
+Vbiasdiag pbias pdrive DC 0 AC 0
+Rbias pbias 0 8198.3586936381707
+Vr0d pbias r0d 0
+Vr0g pbias r0g 0
+Vr0s vdd r0s 0
+Vr0b vdd r0b 0
+xr0 r0d r0g r0s r0b apm045_vtg_pmos w=1.9999999999999999e-06 l=2.3999999999999998e-07
+Vr1d pbias r1d 0
+Vr1g pbias r1g 0
+Vr1s vdd r1s 0
+Vr1b vdd r1b 0
+xr1 r1d r1g r1s r1b apm045_vtg_pmos w=1.9999999999999999e-06 l=2.3999999999999998e-07
+Vr2d pbias r2d 0
+Vr2g pbias r2g 0
+Vr2s vdd r2s 0
+Vr2b vdd r2b 0
+xr2 r2d r2g r2s r2b apm045_vtg_pmos w=1.9999999999999999e-06 l=2.3999999999999998e-07
+Vr3d pbias r3d 0
+Vr3g pbias r3g 0
+Vr3s vdd r3s 0
+Vr3b vdd r3b 0
+xr3 r3d r3g r3s r3b apm045_vtg_pmos w=1.9999999999999999e-06 l=2.3999999999999998e-07
+Vr4d pbias r4d 0
+Vr4g pbias r4g 0
+Vr4s vdd r4s 0
+Vr4b vdd r4b 0
+xr4 r4d r4g r4s r4b apm045_vtg_pmos w=1.9999999999999999e-06 l=2.3999999999999998e-07
+Vp0d out p0d 0
+Vp0g pdrive p0g 0
+Vp0s vdd p0s 0
+Vp0b vdd p0b 0
+xp0 p0d p0g p0s p0b apm045_vtg_pmos w=1.9999999999999999e-06 l=2.3999999999999998e-07
+Vcap out capnode 0

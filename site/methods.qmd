@@ -78,6 +78,16 @@ waveform subset establishes no dynamic population rate or formal loop stability.
 All eleven public figures/statistics and four preselected native examples were
 checked in a fresh public model/Python environment on the same host.
 
+The [power-sequencing evidence](studies/power-sequencing/evidence.json) covers
+59 fixed nominal static/PWL/control observations on unchanged saved circuits.
+Zero-voltage sources are driven/clamped; floating I/O and a real driver are
+outside that comparison. The original entry-into-band measurement retains
+already-in-band status separately from a resolved entry time. All saved inputs,
+364 MOS unit uses, actual element/source values and scalar assessments were
+rechecked. Five graphs/statistics and four retrospectively selected native
+illustrations were reproduced from public inputs. This establishes neither
+new Local off-state statistics nor all-sequence startup behavior.
+
 ## AI and human roles
 
 Codex performed the derivations, implementation, acquisitions, writing and
