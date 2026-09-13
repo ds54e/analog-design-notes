@@ -1,0 +1,148 @@
+---
+title: "8. From these blocks toward an LDO"
+---
+
+[Previous: supply and startup](07-supply-and-startup.qmd) · [Reading route](index.qmd) ·
+[Japanese overview](../ja/learning-path.qmd)
+
+The preceding circuits are useful because their limitations can be connected
+to a larger job. A low-dropout regulator must compare a sensed output with a
+reference, move a pass-device control voltage, and deliver load current while
+maintaining accuracy and a controlled response. A good amplifier at one bias
+point is only one part of that chain.
+
+This chapter states that chain, makes a few bounded predictions from the saved
+OTA observations, and marks the interfaces still unproved. It does not report
+a completed LDO or a new OTA optimization campaign.
+
+## Trace a complete correction path
+
+Consider a conceptual PMOS pass device between a positive supply and a regulated
+output. The connection below fixes the feedback sign for the positive-gain
+OTA of chapter 4. Pass dimensions, divider values and compensation remain to
+be designed; this is an application reading view, not an executed netlist.
+
+```text
+Supply node: vin_supply
+Regulated node: vreg; pass control: ctrl
+
+Ppass(D=vreg, G=ctrl, S=vin_supply, B=vin_supply) W/L = to be designed
+Load(vreg -> 0); Cout(vreg, 0)
+Rtop(vreg, sense); Rbottom(sense, 0)
+
+Finite error-amplifier inputs:
+  positive input = sense
+  negative input = reference
+  output        = ctrl
+Reference and amplifier bias have explicit supply/current dependencies.
+```
+
+If load current increases, Cout initially supplies the difference and `vreg`
+falls. The sensed voltage falls relative to the reference. For the OTA's
+positive differential transconductance, its output `ctrl` falls. This increases
+the PMOS pass device's source-to-gate voltage and hence its supplied current,
+bringing `vreg` back up. Conversely, a high sensed output raises `ctrl`, weakens
+the pass device and reduces delivered current. Reversing the amplifier inputs
+would reverse this correction sign for this PMOS connection.
+
+With an unloaded ideal divider, $V_{sense}=kV_{reg}$ where
+$k=R_{bottom}/(R_{top}+R_{bottom})$. An ideal infinite-gain equilibrium suggests
+$V_{reg}=V_{ref}/k$. Real input current loads the divider; amplifier offset and
+finite gain require a nonzero input difference; reference error moves the target;
+the pass device requires finite voltage and current to serve the load. These
+are separate accuracy paths, not one generic “loop gain” number.
+
+At the regulated output,
+
+$$C_{out}\frac{dV_{reg}}{dt}=I_{pass}-I_{load}-I_{divider}.$$
+
+For a brief load-current increase $\Delta I$ before pass current responds,
+the first capacitor-only estimate is
+$\Delta V_{reg}\approx-\Delta I\Delta t/C_{out}$. ESR, parasitics, voltage-
+dependent capacitance, current limits and subsequent loop response change
+that prediction. The equation shows why amplifier bandwidth alone does not
+specify a load-step excursion.
+
+## The amplifier output must suit the receiving port
+
+The next circuit receives a voltage and charge, not an abstract voltage gain.
+For a PMOS pass device, the required `ctrl` voltage depends on its source
+voltage, geometry, load current and allowed source-to-drain drop. Near dropout,
+the pass device may have insufficient voltage to supply the load even when
+the amplifier drives as hard as it can. The error amplifier cannot correct
+missing headroom by increasing its own gain indefinitely.
+
+The pass gate also has voltage-dependent stored charge. The amplifier must
+deliver or remove that charge along the actual control trajectory, while
+driving parasitic capacitance and any compensation network. A steady-state
+MOS gate's small leakage does not imply a small dynamic current requirement.
+The sequencing chapter already showed that even an apparently MOS-only input
+can draw charging peaks far above its stationary current.
+
+For a simple fixed diagnostic capacitor, $\Delta Q=C\Delta V$. A 5-pF load
+moving 0.1 V needs 0.5 pC. If a constant 10-µA net current were available,
+the charge-only estimate would be 50 ns. Those are arithmetic scales, not a
+prediction of D1's measured settling: current changes with input difference
+and output voltage, and the final accuracy band must also be reached.
+
+The saved initial-D1 buffer takes roughly 175–180 ns to enter its stated 1%
+band for the 0.25↔0.35-V input steps into 1 MΩ ∥ 5 pF. Its charge balance is
+checked from terminal currents. The C diagnostic shows available current near
+±11.7 µA only at an output clamped to 0.3 V and a large differential drive.
+Neither result establishes that this current remains available near a rail or
+through a real pass gate's nonlinear charge trajectory.
+
+No 25-pF initial-D1 result is claimed. The later archive's selected-D1 load
+transfer belongs to a different selection history. Keeping the actual
+inventory and receiving port visible is more useful than silently borrowing
+that result to make the application appear complete.
+
+## What the present evidence supports
+
+| Interface or decision | Evidence available in this edition | What remains to be demonstrated |
+| --- | --- | --- |
+| Input comparison | A/B current steering; finite-tail common-mode dependence; C's PMOS-input sign at 0.3 V. | Reference/sense voltage ranges over the intended regulator supply and temperature domain. |
+| Low-voltage buffer accuracy | Initial D1: source 0.25–0.35 V, output 0.249311–0.347634 V, worst error 2.366 mV. | Required regulator accuracy after reference, divider loading and pass-device operating point are included. |
+| Amplifier resource cost | Same six-device initial core, 5.2 µm² drawn MOS area; at most 16.085 µA VDD current on its saved input grid. | Total regulator budget, including reference, divider, startup, compensation and any driver stage. |
+| Receiving-port charge | Initial-D1 1-MΩ/5-pF step and C's clamped current sweep, with original circuit identities. | Actual gate-voltage trajectory, nonlinear gate charge, required delivery/absorption, saturation and recovery. |
+| Supply and sequencing | Published A75/R75/F75L driven/clamped source histories and current peaks. | Floating pins, current-limited sources, arbitrary stored charge and startup of the integrated regulator. |
+| Dynamics and stability | Particular closed-loop signal/step observations under their stated loads. | Regulator return ratio, all relevant crossings, compensation and load/input transients across the chosen domain. |
+| Statistical accuracy | Original finite Local source-transfer studies and labeled synthetic resistor scenarios. | A justified combined device/passive/spatial/reference model, layout/PEX effects and silicon validation. |
+
+The [exact C](../studies/learning-path-v1/circuits/C-area-base.cir) and
+[initial-D1](../studies/learning-path-v1/circuits/D1-initial-14u.cir) inputs,
+[selected observations](../studies/learning-path-v1/summary.json) and
+[public reproduction](../studies/learning-path-v1/reproduce.qmd) support the
+bounded OTA entries. The table describes measured scope, not a list of items
+that can be assumed to pass by choosing a conventional schematic.
+
+## Choose the next design question from the interface gap
+
+A useful next assignment would specify a receiving device and its voltage,
+current and charge needs before choosing the amplifier. It could compare a
+few fixed nominal control points and a declared trajectory, with a finite
+stopping rule and preserved physical inputs. If the necessary trajectory
+extends outside this OTA's demonstrated range, a different input polarity,
+output stage or bias allocation may be required. That is a new design question,
+not a reason to stretch the present claims.
+
+Another question is whether the reference-origin supply path dominates the
+eventual error budget. If it does, the unfinished self-bias prototype would
+first need its saved equality-check failure diagnosed on its own terms. Its
+startup and temperature behavior cannot be inferred from the completed
+amplifier sequencing study. A third question is how much passive absolute
+accuracy and ratio tracking the sense network actually needs. The synthetic
+scenarios teach how to ask that question; they do not provide foundry statistics.
+
+The route has now connected local device behavior to a system decision:
+solve current balance, identify the useful signal and unwanted paths, count
+the finite bias/input/load resources, and check the required voltage and charge
+trajectory. Preserve a failed physical requirement as a result; preserve an
+unresolved comparison as unresolved. That discipline makes the next circuit
+choice reviewable instead of treating a familiar topology as proof.
+
+For a broader regulator discussion, see
+[Wulff's voltage-regulation material](https://analogicus.com/aic2026/voltage_regulation).
+The [five detailed studies](../index.qmd#detailed-studies) retain the experimental
+depth behind this route. Return to the [reading map](index.qmd) or
+[Japanese overview](../ja/learning-path.qmd) to choose where to revisit it.

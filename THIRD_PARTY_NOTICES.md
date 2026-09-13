@@ -1,8 +1,11 @@
 # Third-party notices
 
 The original study prose, numerical observations, finite circuit bodies and
-example code were prepared for Analog Design Notes. No historical private
-circuit archive, third-party figure or model package is redistributed here.
+example code were prepared for Analog Design Notes. The learning edition also
+selects four original owner-authored circuit bodies and their numerical
+observations from the pinned Lab v2 archive. Those explicit selected files are
+licensed under this publication's original-work defaults. The private archive,
+runtime/history, third-party course figures and model packages are not exported.
 
 The native example retrieves [APM v5.0.0](https://github.com/ds54e/analog-process-models/tree/381517fda5107fabf98af7801d5a5103f38e230c),
 commit `381517fda5107fabf98af7801d5a5103f38e230c`. APM's original code is Apache
@@ -30,3 +33,9 @@ acquisition. Ordinary body text uses system fonts.
 The guides link to MIT OpenCourseWare, Analog Devices' resistance tutorial and the pinned APM source decision as
 technical references. No source illustrations or extended quoted passages
 are copied. Those linked works retain their own terms.
+
+The learning route's educational order is informed by Harald Pretl, Michael
+Koefinger and Simon Dorrer's Analog (Integrated) Circuit Design course and
+Carsten Wulff's Advanced Integrated Circuits material. Exact public links appear
+at the reading entry and relevant chapters. No course text, figure, code or
+process-model statistics are copied; the linked works retain their own terms.

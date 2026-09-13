@@ -9,7 +9,8 @@ root=Path(__file__).resolve().parents[1]
 release=json.loads((root/'RELEASE.json').read_text());site=root/'site'
 downloads=site/'downloads';downloads.mkdir(exist_ok=True)
 studies=[release]+release.get('additional_studies',[])
-for study in studies:
+packages=studies+release.get('additional_packages',[])
+for study in packages:
     slug=study['study'];example=root/'examples'/slug;web=site/'studies'/slug
     for name in study['example_files']:
         p=Path(name);assert not p.is_absolute() and '..' not in p.parts
@@ -29,7 +30,9 @@ for name in license_files:
 revision=os.environ.get('GITHUB_SHA',os.environ.get('ADN_PREVIEW_REVISION','CANDIDATE'))
 assert revision=='CANDIDATE' or re.fullmatch('[0-9a-f]{40}',revision)
 (site/'revision.json').write_text(json.dumps(dict(commit=revision,study=release['study'],version=release['version'],
-    collection_version=release.get('collection_version'),studies=[dict(study=s['study'],version=s['version'],research_tag=s['research_tag']) for s in studies]),indent=2)+'\n')
+    collection_version=release.get('collection_version'),learning_edition=release.get('learning_edition'),
+    studies=[dict(study=s['study'],version=s['version'],research_tag=s['research_tag']) for s in studies],
+    additional_packages=[dict(package=s['study'],version=s['version'],tag=s['research_tag']) for s in release.get('additional_packages',[])]),indent=2)+'\n')
 (site/'revision-header.html').write_text('<meta name="adn-source-commit" content="'+revision+'">\n')
 (site/'revision-footer.html').write_text('<div id="adn-build">Collection '+release.get('collection_version',release['version'])+' · source revision '+revision+'</div>\n')
 print('Prepared only selected static resources, example download and revision metadata.')

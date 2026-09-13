@@ -1,0 +1,199 @@
+---
+title: "4. From a differential pair to a finite OTA buffer"
+---
+
+[Previous: mirrors and bias](03-mirrors-and-bias.qmd) · [Reading route](index.qmd) ·
+[Next: feedback and response](05-feedback-and-response.qmd)
+
+The common-source amplifier responds to one gate voltage relative to a bias
+condition. A differential pair instead responds to the difference between two
+inputs. It steers a shared current, and a load converts that steering into a
+voltage or a net output current. This is the missing bridge between a transistor
+amplifier and an error amplifier in a feedback system.
+
+We follow four specific archived nominal examples, called **A**, **B**, **C**
+and **initial D1** here. They were recovered from a pinned archive and their
+adopted calculations were checked against the saved arrays and physical
+readbacks. The [public learning package](../studies/learning-path-v1/reproduce.qmd)
+contains these selected inputs. They are zero-raw nominal interventions,
+not new Local samples or a new confirmation. The environment remains APM
+v5.0.0/APM045 VTG, ngspice 47 and 26.85 °C.
+
+## A: steer an ideal tail current
+
+Write the inputs as common mode plus opposite halves of a differential signal:
+
+$$V_+=V_{CM}+V_D/2,\qquad V_-=V_{CM}-V_D/2.$$
+
+This convention matters: $V_D$ is the *full* input difference, not the voltage
+applied independently to each gate. Example A uses NMOS inputs at
+$V_{CM}=0.6$ V and an ideal 10-µA tail sink.
+
+```text
+A-alignedload-i10
+VDD(vdd, 0) = 1 V
+inp = 0.6 V + Vdiff/2; inn = 0.6 V - Vdiff/2
+N1(D=dl, G=inp, S=tail, B=0) W=2 um L=0.24 um
+N2(D=dr, G=inn, S=tail, B=0) W=2 um L=0.24 um
+Itail(tail -> 0) = 10 uA  [ideal diagnostic source]
+Rleft(vdd, dl) = 90 kohm; Rright(vdd, dr) = 90 kohm
+Cleft(dl, 0) = 1 pF; Cright(dr, 0) = 1 pF
+Observed differential output: V(dr) - V(dl)
+```
+
+The [exact A circuit](../studies/learning-path-v1/circuits/A-alignedload-i10.cir)
+uses dependent sources to impose the differential convention and observe the
+output difference. At equal inputs, symmetry predicts half the tail current
+in each branch. Each 90-kΩ load then drops about 0.45 V, placing both outputs
+near 0.55 V. The saved solve gives 4.999714 µA per drain, 0.550026 V at both
+outputs and 0.167556 V at `tail`. Small terminal leakage accounts for the drain
+sum differing slightly from the exact tail-source current.
+
+Raise `inp` relative to `inn`. N1 takes more of the shared current, pulling
+`dl` down; N2 takes less, allowing `dr` to rise. Thus the selected output
+$V(dr)-V(dl)$ increases. If the output order were reversed, its sign would
+reverse too. At symmetry and low frequency, each branch changes by roughly
+$\pm g_m v_d/2$, and the differential output estimate is
+
+$$A_d\simeq g_m(90\,\mathrm{k}\Omega\parallel r_o).$$
+
+Here $g_m$ is one input device's transconductance, not the sum of both. The
+saved OP parameters predict 8.55539 V/V; the archived 1-kHz AC observation is
+8.55512 V/V. A centered difference of the saved DC current sweep gives a
+differential-current slope of 95.054 µS. This is slightly below the bare-device
+gm because the finite drain resistors permit drain-voltage motion.
+
+[![A steers nearly fixed total drain current between two branches.](figures/differential-steering.svg)](figures/differential-steering.svg)
+
+The curves flatten as most current moves into one branch. A local gain does
+not imply a globally linear input range. The ideal tail also hides the
+headroom and bias cost of a physical sink. That is the next controlled change.
+
+## B: a finite tail and its reference
+
+B retains the two input devices, 90-kΩ/1-pF loads and 0.6-V common mode. It
+replaces the ideal source with a finite NMOS mirror branch:
+
+```text
+B-reference-lean-symmetric — same N1/N2 and loads as A
+Nt(D=tail, G=bias, S=0, B=0) W=4 um L=0.40 um
+Nr(D=bias, G=bias, S=0, B=0) W=1 um L=0.40 um
+Rref(vdd, bias) = 226.192620687 kohm
+```
+
+The [exact B circuit](../studies/learning-path-v1/circuits/B-reference-lean-symmetric.cir)
+has four physical MOS units. Rref and the diode-connected Nr set `bias`; Nt
+uses that voltage to sink tail current. At nominal the saved tail current is
+10.000107 µA, but VDD supplies **12.536708 µA** in total. The approximately
+2.537-µA reference-network contribution cannot be omitted when calling this
+a 10-µA pair. Drawn MOS area rises from A's 0.96 to B's 2.96 µm².
+
+Now raise or lower both inputs together. The source node follows enough to
+preserve input-device current balance, but that changes Nt's drain voltage.
+Finite output conductance changes its current; at low common mode its limited
+drain voltage constrains the sink further. The saved 0.4–0.9-V common-mode
+sweep spans approximately 5.347–10.215 µA tail current despite a fixed reference
+resistor and supply.
+
+[![B's finite tail changes current as the input common mode changes.](figures/finite-tail.svg)](figures/finite-tail.svg)
+
+In a perfectly symmetric nominal pair, both output voltages can move together
+while their difference stays near numerical zero. That does **not** make the
+tail ideal or establish population common-mode rejection. Mismatch can convert
+a common-mode change into differential output; B's zero-raw symmetry is not a
+measurement of that distribution. Judge the headroom and current paths before
+using an impressive nominal cancellation number.
+
+## C: change the interface and combine the branch currents
+
+The next example asks for a single-ended output near 0.3 V. It changes to
+PMOS inputs at 0.3-V common mode and an NMOS mirror load. This is a deliberate
+new headroom/interface choice, not a one-device improvement to B. Polarity,
+common mode, load and topology all change. The 1-MΩ output load at 0.3 V needs
+0.3 µA; the same resistor at 0.6 V would need 0.6 µA. A lower input common
+mode lets a PMOS pair place its source node below the positive tail device
+while retaining gate-to-source voltage for conduction.
+
+```text
+C-area-base — 1 V supply; inp/inn = 0.3 V +/- Vdiff/2
+P1(D=mirror, G=inp, S=tail, B=vdd) W=4 um L=0.24 um
+P2(D=out,    G=inn, S=tail, B=vdd) W=4 um L=0.24 um
+N3(D=mirror, G=mirror, S=0, B=0) W=4 um L=0.24 um
+N4(D=out,    G=mirror, S=0, B=0) W=4 um L=0.24 um
+P5(D=tail, G=bias, S=vdd, B=vdd) W=4 um L=0.24 um
+P6(D=bias, G=bias, S=vdd, B=vdd) W=1 um L=0.40 um
+Rbias(bias, 0) = 273.692635412 kohm
+Rload(out, 0) = 1 Mohm; Cload(out, 0) = 5 pF
+Vout(out, 0) = 0.3 V  [ideal output clamp in this diagnostic]
+```
+
+The [exact C circuit](../studies/learning-path-v1/circuits/C-area-base.cir)
+contains a five-transistor signal/bias core **plus the sixth reference MOS**.
+Its total drawn MOS area is 5.2 µm². P6 and Rbias sustain P5's finite bias;
+they are not an invisible ideal 14-µA source. At the central clamped point,
+the saved `tail`, `mirror` and `bias` nodes are approximately 0.756744,
+0.377742 and 0.550117 V respectively.
+
+Trace the sign physically. Raising `inp` reduces P1's source-to-gate voltage,
+so less current enters the diode-connected N3. The mirror node falls, reducing
+N4's sink current. The other input branch supplies relatively more current
+through P2. Both changes increase net current available at `out`. This is
+positive transconductance from $V(inp)-V(inn)$ to supplied output current.
+
+Define $I_{avail}=-I_D(P2)-I_D(N4)$ using currents positive *into* each MOS
+drain. The clamp measures the imbalance while preventing `out` from moving.
+It makes current conversion visible; it is an external source that can deliver
+or absorb the missing current, not a functioning voltage amplifier output.
+
+The central differential-current slope is **131.333 µS**. Sweeping the clamped
+output slightly gives a loaded output conductance of **2.1394 µS**, including
+Rload. Their ratio predicts a positive loaded gain near **61.39**. The differential
+input voltage that makes $I_{avail}=0$ is about −0.672 mV, whereas the input
+needed to supply the 0.3-µA resistor load is about +1.612 mV. The next chapter
+uses those different null conditions to explain finite buffer precision.
+
+## Initial D1: let feedback find the output
+
+Initial D1 keeps **all six physical MOS units**, Rbias, 1-MΩ load and 5-pF
+capacitor from C. It removes the output clamp and changes the input fixture:
+
+```text
+D1-initial-14u — same six-MOS core and output load as C
+Vin(source, 0) = 0.3 V DC; AC magnitude 1
+Rsource(source, input_access) = 10 kohm
+Voffset(inp, input_access) = 0 V
+Vfeedback(feedback, out) = 0 V
+Vinj(inn, feedback) = 0 V; Iinj(0 -> inn) = 0 A
+
+Functional connection: inp <- external input; inn <- out
+Standard input history: 0.25 -> 0.35 -> 0.25 V, 12.5-ns edges
+```
+
+The zero-valued sources preserve diagnostic access; in the functional buffer
+they connect the negative input to the output. See the
+[exact initial-D1 circuit](../studies/learning-path-v1/circuits/D1-initial-14u.cir).
+If the output falls below the positive input, the differential input increases;
+the OTA supplies more net output current and raises the output. This is
+negative feedback with an external differential-input OTA, distinct from
+source degeneration or feeding a common-source gate through a resistor.
+
+An ideal high-gain buffer suggests $V_O\approx V_{IN}$. The actual central
+output is **0.298456 V** for an external 0.3-V input. The finite input resistor
+also has a small drop: `inp` is about 0.300024 V because its source absorbs
+modeled gate current. Across the saved 0.25–0.35-V source sweep, the output
+ranges 0.249311–0.347634 V and the largest absolute source-to-output error is
+2.366 mV. VDD's maximum quiescent delivered current on that grid is 16.085 µA.
+
+[![Initial D1 follows its input with a finite, input-dependent error.](figures/buffer-accuracy.svg)](figures/buffer-accuracy.svg)
+
+This result is an honest functional bridge: the circuit follows a useful
+input range with a finite reference, load and bias cost. It is not an ideal
+op-amp, a precision reference, or an LDO. C and D1 share a core inventory;
+their complete fixtures and saved realization identities differ. The later
+archived “selected D1” and its 25-pF transfer use a different selection history
+and are not evidence for this initial circuit.
+
+The [selected arrays, definitions and calculations](../studies/learning-path-v1/reproduce.qmd)
+support every numerical example on this page. Next, separate the remaining
+DC precision error from frequency/time response in
+[chapter 5](05-feedback-and-response.qmd).

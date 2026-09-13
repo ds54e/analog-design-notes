@@ -1,0 +1,15 @@
+{
+  "files": {
+    "A.npz": "996cd06c71281a3fa8449216fd7929b888f2be0959adcbfa5de55be98d995b2c",
+    "B.npz": "dc57d0a5ad4a7f8b4dbd9273292d235dfc569bdae9c99c9a4aa0a09d9e2513b1",
+    "C.npz": "85ee2310a012ec40afba3c36b506db6ddb443e8035ceda6021bdcb453265a236",
+    "D1.npz": "c0fd6fb9d6050325832dcc076e4b7bef6203ff877dbd4c86fb545b49713370cb",
+    "configuration.json": "3764e9297bfd624daeae53b1c36584fa53dbfa022e29819e4c3a718d2cf14b35",
+    "gain-ac.csv": "ff67dcef4ea56d186c605cfff9c1697c6dafe56b06bbd6d34ac52c8122a476ff",
+    "gain-noise.csv": "0cf1c23986a78d38ea4db406058c5943cbe1816b7d51fc2b985e04fcd7b240d0",
+    "gain-nominal.csv": "89f1c4cd15425098e62a676cc24e289b0850bab17588fc5256b8df7c7113661a",
+    "gain-sensitivities.csv": "2286c6e3e257a4c5957c955bea846fd961f4997423194820429c5351aa048116",
+    "resistor-op.json": "d86b57ab48e9745f828f132fda65d5cc5bb3fded4c3bda4469ffeb96acb51c01"
+  },
+  "schema": "learning.selected-data.v1"
+}

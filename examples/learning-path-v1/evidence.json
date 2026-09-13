@@ -1,0 +1,286 @@
+{
+  "schema": "adn.learning-evidence.v1",
+  "edition": "learning-path-v1.0",
+  "status": "SELECTED_EVIDENCE_AND_PUBLIC_REPRODUCTION_CHECKED",
+  "archive_commit": "094fae68ad20fffd7748f93091d92a9ffe86c93b",
+  "model": {
+    "apm": "5.0.0",
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "technology": "APM045",
+    "family": "VTG",
+    "ngspice": "47"
+  },
+  "source_scope": "Four selected zero-raw nominal cases; all columns/points of 19 selected analyses, 7821 rows. Source circuits, requests/realizations, model bindings, arrays and applied/after readbacks were checked.",
+  "adopted_comparisons": [
+    {
+      "case": "A",
+      "field": "differential_current_slope_S",
+      "recomputed": 9.505443659326234e-05,
+      "original": 9.505443659326236e-05,
+      "difference": -1.3552527156068805e-20
+    },
+    {
+      "case": "A",
+      "field": "differential_gain_1kHz",
+      "recomputed": 8.555121107973799,
+      "original": 8.555121107973799,
+      "difference": 0.0
+    },
+    {
+      "case": "B",
+      "field": "reference_network_current_A",
+      "recomputed": 2.5371734984377113e-06,
+      "original": 2.5371734984377062e-06,
+      "difference": 5.082197683525802e-21
+    },
+    {
+      "case": "C",
+      "field": "gm_S",
+      "recomputed": 0.0001313330193183111,
+      "original": 0.00013133301931831114,
+      "difference": -2.710505431213761e-20
+    },
+    {
+      "case": "C",
+      "field": "loaded_gout_S",
+      "recomputed": 2.1394036985545777e-06,
+      "original": 2.13940369855426e-06,
+      "difference": 3.1763735522036263e-19
+    },
+    {
+      "case": "C",
+      "field": "predicted_loaded_gain",
+      "recomputed": 61.387675176518684,
+      "original": 61.38767517652781,
+      "difference": -9.123368727159686e-12
+    },
+    {
+      "case": "C",
+      "field": "loaded_null",
+      "recomputed": 0.0016124700240742864,
+      "original": 0.0016124700240742835,
+      "difference": 2.8189256484623115e-18
+    },
+    {
+      "case": "C",
+      "field": "unloaded_null",
+      "recomputed": -0.0006719424359306633,
+      "original": -0.0006719424359306658,
+      "difference": 2.4936649967166602e-18
+    },
+    {
+      "case": "D1",
+      "field": "gain",
+      "recomputed": 0.9833173443522033,
+      "original": 0.9833173443522033,
+      "difference": 0.0
+    },
+    {
+      "case": "D1",
+      "field": "bandwidth",
+      "recomputed": 4241447.80668238,
+      "original": 4241447.8066823725,
+      "difference": 7.450580596923828e-09
+    },
+    {
+      "case": "D1",
+      "field": "worst_error",
+      "recomputed": 0.0023664718637076976,
+      "original": 0.0023664718637076976,
+      "difference": 0.0
+    },
+    {
+      "case": "D1",
+      "field": "noise_old_definition",
+      "recomputed": 3.0599791647614625e-05,
+      "original": 3.0599791647614625e-05,
+      "difference": 0.0
+    },
+    {
+      "case": "D1",
+      "field": "charge",
+      "recomputed": 3.6565705735533166e-09,
+      "original": 3.6565705735533166e-09,
+      "difference": 0.0
+    },
+    {
+      "case": "D1",
+      "field": "rise_entry_time_new_DC_endpoint_vs_old_median",
+      "recomputed": 1.7946475047498851e-07,
+      "original": 1.7946475047498851e-07,
+      "difference": 0.0
+    },
+    {
+      "case": "D1",
+      "field": "fall_entry_time_new_DC_endpoint_vs_old_median",
+      "recomputed": 1.7720305016594013e-07,
+      "original": 1.7720305016594013e-07,
+      "difference": 0.0
+    }
+  ],
+  "errata_and_definitions": [
+    "Read pinned V3_0_PREPARATION.md and relevant V3_0_EXECUTION.md: preserve old constant-1-kHz-gain noise referral, signed ports/resistance accounting and changed-fixture distinctions.",
+    "Read V3_1_ERRATA.md: reused v3.1 training tensors, not a correction to these four nominal v2 stems. No claim depends on newer Local calibration.",
+    "Old v2 standard-step endpoints were median plateaus. New independent DC-endpoint diagnostic has same entry-time brackets; endpoint definition remains separately labeled.",
+    "Selected-D1 25-pF transfer and final 13:12 mirror correction excluded."
+  ],
+  "native_same_host_pilot": {
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "center": {
+      "VDD_delivered_A": 1.6011469378805154e-05,
+      "input_delivered_A": -2.4289853045081063e-09,
+      "input_node_V": 0.30002428985304513,
+      "output_V": 0.29845625823310806
+    },
+    "differences": {
+      "0": {
+        "kind": "op",
+        "maximum_output_absolute_difference": 0.0,
+        "rows": 1,
+        "units": "V/V for unit AC stimulus; V for OP/DC"
+      },
+      "1": {
+        "kind": "dc",
+        "maximum_output_absolute_difference": 0.0,
+        "rows": 203,
+        "units": "V/V for unit AC stimulus; V for OP/DC"
+      },
+      "3": {
+        "kind": "ac",
+        "maximum_output_absolute_difference": 0.0,
+        "rows": 361,
+        "units": "V/V for unit AC stimulus; V for OP/DC"
+      }
+    },
+    "maximum_MOS_KCL_residual_A": 4.865628299571823e-16,
+    "maximum_terminal_span_V": 0.7511797064756318,
+    "new_run_id": "4248e8413564402ba084b036197b4b17968f6503a9ce50de351e0e8a43191a84",
+    "original_run_id": "759d43d86d2956084d3c83625e438fe2451de3595c04eaa7fe8a628ebf8a1304",
+    "readback": "Pinned APM verified actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every analysis.",
+    "scope": "Initial-D1 OP/DC/central AC replay through the pinned public APM API. No new physical samples, no archived loop/noise/step native replay.",
+    "status": "PASS"
+  },
+  "clean_public_reproduction": {
+    "status": "PASS",
+    "checked_utc": "2026-09-13T08:06:29.477583+00:00",
+    "python": "Python 3.9.25",
+    "requirements_sha256": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a",
+    "installed_requirements": [
+      "contourpy==1.3.0",
+      "cycler==0.12.1",
+      "fonttools==4.60.2",
+      "importlib_metadata==8.7.1",
+      "importlib_resources==6.5.2",
+      "kiwisolver==1.4.7",
+      "matplotlib==3.9.4",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.3.0",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.13.1",
+      "six==1.17.0",
+      "tomli==2.2.1",
+      "typing_extensions==4.16.0",
+      "zipp==3.23.1"
+    ],
+    "public_APM_clone": "https://github.com/ds54e/analog-process-models.git",
+    "clone_credentials": "git credential.helper empty; no authentication requested",
+    "ngspice_binary_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+    "native": {
+      "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+      "center": {
+        "VDD_delivered_A": 1.6011469378805154e-05,
+        "input_delivered_A": -2.4289853045081063e-09,
+        "input_node_V": 0.30002428985304513,
+        "output_V": 0.29845625823310806
+      },
+      "differences": {
+        "0": {
+          "kind": "op",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 1,
+          "units": "V/V for unit AC stimulus; V for OP/DC"
+        },
+        "1": {
+          "kind": "dc",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 203,
+          "units": "V/V for unit AC stimulus; V for OP/DC"
+        },
+        "3": {
+          "kind": "ac",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 361,
+          "units": "V/V for unit AC stimulus; V for OP/DC"
+        }
+      },
+      "maximum_MOS_KCL_residual_A": 4.865628299571823e-16,
+      "maximum_terminal_span_V": 0.7511797064756318,
+      "new_run_id": "d27f1c49414ad38b5e69ffee9e0d8355e41f62850dd5ecb0d691416584a2076d",
+      "original_run_id": "759d43d86d2956084d3c83625e438fe2451de3595c04eaa7fe8a628ebf8a1304",
+      "readback": "Pinned APM verified actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every analysis.",
+      "scope": "Initial-D1 OP/DC/central AC replay through the pinned public APM API. No new physical samples, no archived loop/noise/step native replay.",
+      "status": "PASS"
+    },
+    "summary_exact_match": true,
+    "summary_sha256": "243026ff208d3b0dd6d3f4183862669f02383ca2dca3293a9d3ddc961d5a802b",
+    "eight_SVG_byte_matches": {
+      "buffer-accuracy.svg": "a4e4becc29ba02845a9871ae6eccf74363e5ec0e8f0ebd6d2850a76dd7bdd725",
+      "buffer-response.svg": "0e22771a476fef4307b098ac6b3b2bbfef86654df6f39ae6aaa334be3f2d9bbc",
+      "buffer-step.svg": "545a13500f79acae8e374095fb42bbcc5c7445a79544a4cb41c241b8fa00040d",
+      "differential-steering.svg": "c767f9eaf6a5024b3f9f3a0ea10a5202dfc952f25f03d05944c2c158954e81b7",
+      "finite-tail.svg": "4d71a67668b58cb2f7167a0d2f6a02fe57cd13924a18d56a8c6d759c7913f7bc",
+      "ota-current-balance.svg": "0e286d7d1b4a03b40e4b75a89efc7af9e4ffd8ffaa31f14975206ce24f93c930",
+      "resistor-gain.svg": "d16db16bd0f2cbd167034fbfc8f223a1d260b4bf52a9c4558989bbb9dde806d6",
+      "resistor-noise.svg": "31b89920e07da7d3728c7e4418a9338c98a89783f674ca44611a55ed1e5067ed"
+    },
+    "scope": "Fresh venv and public model clone on same WSL host; existing ngspice 47. Saved-data analysis and one native OP/DC/central AC replay; no new research.",
+    "tested_payload_sha256": {
+      "analyze.py": "3b6cf25073b74fb2ee015859fa1b6dd9ea42866881a4f33f09c05fd89b088c23",
+      "circuits/A-alignedload-i10.cir": "b71b73cdc5c9fc2c6e52d76ab5e58effa4681e8beb95f352bd298baeec38a22f",
+      "circuits/B-reference-lean-symmetric.cir": "7fc44d0ad10e4f566976bc01e87a812ce5164732f7e1f9779c8c54d5f4e3f2b4",
+      "circuits/C-area-base.cir": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "circuits/D1-initial-14u.cir": "8b741d0c57391fc82ae893b84f2fdcb59e83bb8b79e11f13e074a481ec26f11d",
+      "data/A.npz": "996cd06c71281a3fa8449216fd7929b888f2be0959adcbfa5de55be98d995b2c",
+      "data/B.npz": "dc57d0a5ad4a7f8b4dbd9273292d235dfc569bdae9c99c9a4aa0a09d9e2513b1",
+      "data/C.npz": "85ee2310a012ec40afba3c36b506db6ddb443e8035ceda6021bdcb453265a236",
+      "data/D1.npz": "c0fd6fb9d6050325832dcc076e4b7bef6203ff877dbd4c86fb545b49713370cb",
+      "data/configuration.json": "3764e9297bfd624daeae53b1c36584fa53dbfa022e29819e4c3a718d2cf14b35",
+      "data/gain-ac.csv": "ff67dcef4ea56d186c605cfff9c1697c6dafe56b06bbd6d34ac52c8122a476ff",
+      "data/gain-noise.csv": "0cf1c23986a78d38ea4db406058c5943cbe1816b7d51fc2b985e04fcd7b240d0",
+      "data/gain-nominal.csv": "89f1c4cd15425098e62a676cc24e289b0850bab17588fc5256b8df7c7113661a",
+      "data/gain-sensitivities.csv": "2286c6e3e257a4c5957c955bea846fd961f4997423194820429c5351aa048116",
+      "data/manifest.json": "cc4cf35e58f6c38b86982b0fd1a24e7e8f206260527fa7a6c7301b6c8c443283",
+      "data/resistor-op.json": "d86b57ab48e9745f828f132fda65d5cc5bb3fded4c3bda4469ffeb96acb51c01",
+      "licenses/LICENSE.md": "893f257c9147e98bed3f4dc8e2dcdc7cffb6468865584156a8383619ea4cc956",
+      "licenses/LICENSES/ASSET_SOURCES.json": "fea45b418073e02c414b9efb27279cc6a63f706c4fbb1d591cff484d547793db",
+      "licenses/LICENSES/Anchor-MIT.txt": "6b33f0bf2de79ce6ee1165453b37b4f1deda813bea9356dec621835860f2bb68",
+      "licenses/LICENSES/Bootstrap-Icons-MIT.txt": "0fb3e11bd57e896c5a512afd64864d28a37de45d19835016c87ca1ad19ead969",
+      "licenses/LICENSES/Bootstrap-MIT.txt": "3d0b0c88216e4752b9afd3d24e36faaf27873b5a45a61458bb3c83e794c26832",
+      "licenses/LICENSES/Clipboard-MIT.txt": "a798e7b5fa604117d52d607e05f1cbac3b2fa5da087837f412a1a3c866b4b748",
+      "licenses/LICENSES/DejaVu.txt": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
+      "licenses/LICENSES/Headroom-MIT.txt": "acaab926214cf714b8c74718151734a4f4e71f4ba7ebb1fca497a446caa13881",
+      "licenses/LICENSES/MIT.txt": "0d8dd5c3644ce7fc551ae27cebfe7f67fb4af5138ac47d29b4afcaa07cc6398d",
+      "licenses/LICENSES/MathJax-Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "licenses/LICENSES/Popper-MIT.txt": "bf67e2c9b7974543bb18ced3a0b37f53729aaff953b442dd89a3adaf90fd93e8",
+      "licenses/LICENSES/Quarto-COPYRIGHT.txt": "b99ec68b0ae2766380ecd177de507b799d1e3f6b7334d940a57021d3e4299721",
+      "licenses/LICENSES/Quarto-MIT.txt": "6b985ce085f33a39f96d12321cfbcee03aa2ad4249755f534537f38019dfa123",
+      "licenses/LICENSES/Tippy-MIT.txt": "7f4929c55f525ae510a77c361496c5a86a092434a3681c95a4dc89e951c67e98",
+      "licenses/THIRD_PARTY_NOTICES.md": "0a4177492f0ca62c0cd12c42b2a6f3ca5e0c84783e0826f9a1830e7d4284cb70",
+      "plot.py": "478fe2c1397104a3dc014980696023cac9d454babb79ea2a6d471b5335cff1dc",
+      "replay.py": "cc9fbf57fde006cc6c0ad0bc60ef755ee37c44a64f2c07bc764c245f5f73d05d",
+      "requirements.txt": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a",
+      "summary.json": "243026ff208d3b0dd6d3f4183862669f02383ca2dca3293a9d3ddc961d5a802b"
+    },
+    "receipt_boundary": "Code, circuit, data, requirements and generated outputs tested from candidate ZIP in a new directory. This receipt records the outcome afterward; final export must preserve the tested payload hashes."
+  },
+  "limits": [
+    "Only four specified stems and adopted analyses checked; not an audit of all v2 or old qualification.",
+    "Source text/arrays/hash and actual archived readback checked; no reconstruction of retired runtime.",
+    "All zero-raw original ARTIFICIAL profiles are nominal interventions, not Local draws.",
+    "No new research target or population; old five-study exposures remain known.",
+    "No claim for selected-D1 25pF, final mirror correction, self-bias, arbitrary overload recovery or completed LDO."
+  ],
+  "review_roles": "Same Codex agent performed selection, reanalysis, writing and internal verification. Owner supplied an editorial scope review; no prior human scientific approval or independent replication claimed."
+}

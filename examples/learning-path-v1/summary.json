@@ -1,0 +1,206 @@
+{
+  "cases": {
+    "A": {
+      "differential_current_slope_S": 9.505443659326234e-05,
+      "differential_gain_1kHz": 8.555121107973799,
+      "drain_current_sum_range_A": [
+        9.998839630888233e-06,
+        9.999427078793537e-06
+      ],
+      "left_current_A": 4.999713539394143e-06,
+      "maximum_MOS_KCL_residual_A": 2.1052834497416184e-16,
+      "maximum_terminal_span_V": 0.9015595769821447,
+      "operating_nodes_V": {
+        "cm": 0.6000000000000001,
+        "diff": 0.0,
+        "dl": 0.5500257814542877,
+        "dr": 0.5500257814542897,
+        "inn": 0.6000000000000001,
+        "inp": 0.6000000000000001,
+        "odiff": 1.9984014443252818e-15,
+        "tail": 0.16755552870315954,
+        "vdd": 1.0
+      },
+      "physical_units": 2,
+      "prediction_gm_times_parallel_load": 8.555388020683658,
+      "right_current_A": 4.9997135393993945e-06,
+      "run_id": "b125358eb32b5666a3abce869fa037908d40a311743c4c6ff54b0aedd3249f2e",
+      "stem": "A-alignedload-i10"
+    },
+    "B": {
+      "VDD_delivered_current_A": 1.2536707815798445e-05,
+      "common_mode_sweep_V": [
+        0.4,
+        0.9000000000000005
+      ],
+      "maximum_MOS_KCL_residual_A": 3.843822809145806e-16,
+      "maximum_terminal_span_V": 0.9000000000000005,
+      "operating_nodes_V": {
+        "bias": 0.426110077251597,
+        "cm": 0.6000000000000001,
+        "diff": 0.0,
+        "dl": 0.5500209557187662,
+        "dr": 0.5500209557187674,
+        "inn": 0.6000000000000001,
+        "inp": 0.6000000000000001,
+        "odiff": 1.2212453270876722e-15,
+        "tail": 0.16755506474748688,
+        "vdd": 1.0
+      },
+      "physical_units": 4,
+      "reference_network_current_A": 2.5371734984377113e-06,
+      "run_id": "1c82828cb5385871e0c5b860d7b96b41dd4d1d09e182b49ea40a057f5fe3e858",
+      "stem": "B-reference-lean-symmetric",
+      "tail_current_sweep_range_A": [
+        5.347069121012197e-06,
+        1.021495196243799e-05
+      ],
+      "tail_drain_current_A": 1.0000107244498829e-05
+    },
+    "C": {
+      "available_current_at_zero_diff_A": 8.824879939082179e-08,
+      "differential_sweep_V": [
+        -0.12,
+        0.1200000000000002
+      ],
+      "gm_S": 0.0001313330193183111,
+      "loaded_gout_S": 2.1394036985545777e-06,
+      "loaded_nulls_V": [
+        0.0016124700240742864
+      ],
+      "maximum_MOS_KCL_residual_A": 5.794429572389317e-16,
+      "maximum_terminal_span_V": 0.76,
+      "operating_nodes_V": {
+        "bias": 0.5501174664351552,
+        "cm": 0.30000000000000004,
+        "diff": 0.0,
+        "inn": 0.30000000000000004,
+        "inp": 0.30000000000000004,
+        "mirror": 0.3777423806139516,
+        "out": 0.30000000000000004,
+        "tail": 0.7567436143274626,
+        "vdd": 1.0
+      },
+      "output_load_A": 3e-07,
+      "physical_units": 6,
+      "predicted_load_shift_V": 0.0022842694210272563,
+      "predicted_loaded_gain": 61.387675176518684,
+      "run_id": "c184dfb0718be074769744d04cbff220a528570962a642c1813a7dfabc571723",
+      "source_sink_current_range_A": [
+        -1.1630625979341735e-05,
+        1.1762872097747438e-05
+      ],
+      "stem": "C-area-base",
+      "unloaded_nulls_V": [
+        -0.0006719424359306633
+      ]
+    },
+    "D1": {
+      "bandwidth_minus_3dB_Hz": 4241447.80668238,
+      "dc_endpoint_steps": {
+        "band_V": 0.0009832206874227567,
+        "definition": "New learning.bridge.v1: independent saved DC endpoints, 1% of actual DC step, final observed entry from input-source 50% crossing; original median-plateau metrics not changed.",
+        "directions": {
+          "fall": {
+            "bracket_s": [
+              1.7520305016593998e-07,
+              1.7720305016594013e-07
+            ],
+            "observed_until_s": 3.9924765250829285e-06,
+            "status": "OBSERVED_FINAL_ENTRY",
+            "target_V": 0.2493114593940166,
+            "time_s": 1.7720305016594013e-07
+          },
+          "rise": {
+            "bracket_s": [
+              1.7746475047498847e-07,
+              1.7946475047498851e-07
+            ],
+            "observed_until_s": 3.99260737523758e-06,
+            "status": "OBSERVED_FINAL_ENTRY",
+            "target_V": 0.3476335281362923,
+            "time_s": 1.7946475047498851e-07
+          }
+        }
+      },
+      "incremental_gain_range": [
+        0.9823423873886452,
+        0.9836885291678579
+      ],
+      "input_range_V": [
+        0.25,
+        0.3500000000000001
+      ],
+      "maximum_MOS_KCL_residual_A": 7.908644984559732e-16,
+      "maximum_VDD_delivered_quiescent_A": 1.6085393504055837e-05,
+      "maximum_terminal_span_V": 0.7511797064756318,
+      "old_v2_noise": {
+        "band_Hz": [
+          1000,
+          1000000
+        ],
+        "definition": "PSD integrated in linear frequency, then divided by |H(1kHz)|; differs from ADS frequency-by-frequency input PSD referral.",
+        "input_equivalent_rms_V": 3.0599791647614625e-05,
+        "output_rms_V": 3.0089305860663148e-05
+      },
+      "operating_nodes_V": {
+        "bias": 0.5501174593529324,
+        "feedback": 0.29845625823310806,
+        "inn": 0.29845625823310806,
+        "inp": 0.30002428985304513,
+        "input_access": 0.30002428985304513,
+        "mirror": 0.3770235334487682,
+        "out": 0.29845625823310806,
+        "source": 0.30000000000000004,
+        "tail": 0.7560983693077092,
+        "vdd": 1.0
+      },
+      "output_charge_relative_residual": 3.6565705735533166e-09,
+      "output_range_V": [
+        0.2493114593940166,
+        0.3476335281362924
+      ],
+      "physical_units": 6,
+      "run_id": "759d43d86d2956084d3c83625e438fe2451de3595c04eaa7fe8a628ebf8a1304",
+      "signal_gain_1kHz": 0.9833173443522033,
+      "signal_source_delivered_current_range_A": [
+        -2.76749556246263e-09,
+        -2.1101014897718733e-09
+      ],
+      "stem": "D1-initial-14u",
+      "worst_absolute_error_V": 0.0023664718637076976
+    }
+  },
+  "category": "Retrospective selected saved-data reanalysis; no new confirmation",
+  "resistor_equations": {
+    "R37": {
+      "D": 1.0558357767310889,
+      "Id_A": 3.2497251487076414e-05,
+      "Vgs_V": 0.4473126933789839,
+      "gain_relative_error": 0.00010964831332427316,
+      "gds_S": 1.5730179524306721e-06,
+      "gm_S": 0.0005479396041744916,
+      "gm_over_Id_per_V": 16.861106065920605,
+      "gmb_S": 0.00012645050600121587,
+      "measured_gain": -5.999999999999938,
+      "output_KCL_residual_A": 2.710505431213761e-20,
+      "predicted_current_error_path_ohm": 11562.787642634523,
+      "predicted_gain": -6.000657889879883
+    },
+    "R75": {
+      "D": 1.2605463812350746,
+      "Id_A": 6.999409362814832e-05,
+      "Vgs_V": 0.43796683586465185,
+      "gain_relative_error": 0.0001801414722575334,
+      "gds_S": 3.4859152100148483e-06,
+      "gm_S": 0.001231172419444464,
+      "gm_over_Id_per_V": 17.589661578949922,
+      "gmb_S": 0.000281750660125299,
+      "measured_gain": -5.999999999999706,
+      "output_KCL_residual_A": -5.014435047745458e-19,
+      "predicted_current_error_path_ohm": 6144.257805019073,
+      "predicted_gain": -6.001080848833251
+    }
+  },
+  "schema": "learning.bridge.v1"
+}

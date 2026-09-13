@@ -1,0 +1,33 @@
+* Analog Design Lab v2.0: finite-tail current-allocation comparison; all normal bodies grounded
+* Zero-volt MOS sensors point into each terminal; bodies/loads are explicit.
+Vdd vdd 0 DC 1 AC 0
+Vcm cm 0 DC 0.59999999999999998 AC 0
+Vdiff diff 0 DC 0 AC 1
+Eplus inp cm diff 0 0.5
+Eminus inn cm diff 0 -0.5
+Ediff odiff 0 dr dl 1
+Rleft vdd dl 90000
+Rright vdd dr 90000
+Cleft dl 0 9.9999999999999998e-13
+Cright dr 0 9.9999999999999998e-13
+VtM1d dl m1d 0
+VtM1g inp m1g 0
+VtM1s tail m1s 0
+VtM1b 0 m1b 0
+xm1 m1d m1g m1s m1b apm045_vtg_nmos w=1.9999999999999999e-06 l=2.3999999999999998e-07
+VtM2d dr m2d 0
+VtM2g inn m2g 0
+VtM2s tail m2s 0
+VtM2b 0 m2b 0
+xm2 m2d m2g m2s m2b apm045_vtg_nmos w=1.9999999999999999e-06 l=2.3999999999999998e-07
+VtMtd tail mtd 0
+VtMtg bias mtg 0
+VtMts 0 mts 0
+VtMtb 0 mtb 0
+xmt mtd mtg mts mtb apm045_vtg_nmos w=3.9999999999999998e-06 l=3.9999999999999998e-07
+VtMrd bias mrd 0
+VtMrg bias mrg 0
+VtMrs 0 mrs 0
+VtMrb 0 mrb 0
+xmr mrd mrg mrs mrb apm045_vtg_nmos w=9.9999999999999995e-07 l=3.9999999999999998e-07
+Rref vdd bias 226192.62068667449

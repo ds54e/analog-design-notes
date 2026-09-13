@@ -1,0 +1,151 @@
+---
+title: "1. A MOS operating point is more than a current"
+---
+
+[Reading route](index.qmd) · [Next: common-source amplifier](02-common-source.qmd)
+
+A useful transistor choice supplies the required current while leaving room
+for the terminal voltages to move. Its current alone does not tell us how much
+signal gain, output sensitivity or charging speed the circuit will obtain.
+We need the operating point and the local response around it before choosing
+width, length and how many physical units to place in parallel.
+
+## Four terminals determine the conducting state
+
+Consider the three equal NMOS units later used by R37:
+
+```text
+N0(D=out, G=gate, S=source, B=0) W=2.947220014 um L=0.40 um
+N1(D=out, G=gate, S=source, B=0) W=2.947220014 um L=0.40 um
+N2(D=out, G=gate, S=source, B=0) W=2.947220014 um L=0.40 um
+```
+
+The [full R37 circuit](../studies/gain-operating-point-accuracy/circuits/R37.cir)
+connects a drain resistor to the supply and a source resistor to ground. For
+an NMOS in its intended forward conducting state, increasing gate voltage
+relative to source generally increases current entering the drain. The supply
+provides the energy. The body also affects conduction; with `B=0`, a source
+that rises above ground changes body bias as well as gate-to-source voltage.
+
+Use differences, not absolute node labels:
+
+$$V_{GS}=V_G-V_S,\qquad V_{DS}=V_D-V_S,\qquad V_{BS}=V_B-V_S.$$
+
+For a PMOS near the positive rail, it is often easier to reason using positive
+magnitudes $V_{SG}$ and $V_{SD}$: lowering the gate relative to its source
+increases its source-to-drain conduction. We still report signed measured
+currents according to the sensor direction. In these circuits, NMOS bodies
+normally connect to ground and PMOS bodies to VDD. Reversing terminals, changing
+body ties, or driving beyond the model's declared voltage domain is a different
+case that needs its own support.
+
+## Make a first prediction, then identify its limits
+
+The elementary long-channel strong-inversion saturation approximation is
+
+$$I_D\approx\tfrac12\mu C_{ox}(W/L)(V_{GS}-V_T)^2.$$
+
+It suggests that increasing $W/L$ increases current at fixed overdrive and that
+$g_m/I_D\approx2/(V_{GS}-V_T)$. This is a starting intuition under that model's
+assumptions, not the sizing law used to generate the APM results. Short-channel
+effects, moderate inversion, output conductance and body bias matter. A hard
+threshold extracted from an operating-point printout is not a switch that
+separates exactly zero current from square-law behavior.
+
+For the saved R37 nominal point, the three-unit bank has $V_{GS}=0.447313$ V,
+$I_D=32.497$ µA and $g_m=547.940$ µS. The printed device threshold is about
+0.411211 V. Putting that threshold difference directly into the simple
+$2/(V_{GS}-V_T)$ expression predicts about 55.4 V⁻¹; the saved model's actual
+$g_m/I_D$ is **16.861 V⁻¹**. That large mismatch rejects the square-law shortcut
+at this operating point. It does not invalidate the current/voltage observations.
+Use the model's measured derivatives and supported terminal conditions for the
+design, rather than forcing a familiar approximation to fit.
+
+## Distinguish the slopes that control different errors
+
+Around a fixed bias point, a first-order NMOS drain-current increment is
+
+$$i_d=g_m v_{gs}+g_{ds}v_{ds}+g_{mb}v_{bs}.$$
+
+$g_m$ is the derivative with respect to $V_{GS}$ while $V_{DS}$ and $V_{BS}$
+are held fixed. $g_{ds}$ is the derivative with respect to $V_{DS}$ at fixed
+control voltages; its inverse $r_o$ is the local output resistance. $g_{mb}$
+describes the body-voltage contribution under the stated $V_{BS}$ convention.
+All three have units A/V, or siemens. They sum across parallel units when
+the units share the same terminal increments.
+
+The ratio $g_m/I_D$ measures local current-control efficiency. The ratio
+$g_m/g_{ds}$ estimates intrinsic voltage-gain potential with a high-impedance
+load. Neither is the completed amplifier's gain: external load conductance,
+source resistance and other transistors still enter the node equations.
+
+| Saved nominal bank quantity | R37 | R75 |
+| --- | ---: | ---: |
+| Physical NMOS units | 3 | 6 |
+| Current, µA | 32.497 | 69.994 |
+| gm, µS | 547.940 | 1231.172 |
+| gds, µS | 1.573 | 3.486 |
+| gmb, µS | 126.451 | 281.751 |
+| gm/ID, V⁻¹ | 16.861 | 17.590 |
+| Source voltage, mV | 2.685 | 12.027 |
+
+These values come from the [saved OP/device records](../studies/learning-path-v1/data/resistor-op.json)
+and the [recalculated bank quantities](../studies/learning-path-v1/summary.json).
+They are summed derivatives of the actual units at their own circuit operating
+points, not a new width sweep. R75's geometry and source resistor differ from
+R37's; do not attribute every change in this table to current alone.
+
+## Choose dimensions within a headroom and resource budget
+
+Width, length and unit count affect different parts of the problem. At a given
+current, a larger effective width can reduce required gate overdrive; it also
+adds gate and junction charge. Length changes output conductance and the
+current-density relation as well as physical area. In a calibrated variation
+model, enlarging a device can change its uncertainty, but the relevant source
+profile and the circuit's transmission path still matter. An area-only rule
+cannot replace that calculation.
+
+Our examples retain separate stable identities for each physical MOS unit.
+This matters when a later Local realization assigns device-specific threshold
+and mobility perturbations. One wide device and three independently varied
+devices are not automatically the same complete sample, even if their nominal
+total width matches. The examples use supported individual geometries rather
+than treating multiplicity as an excuse to hide the unit inventory.
+
+Headroom asks whether every device has enough terminal voltage for the intended
+behavior throughout the required signal range. In R37, $V_{DS}$ is about
+0.4973 V at nominal, while the printed saturation-voltage diagnostic is about
+0.0877 V per unit. That leaves room at the center, but does not by itself prove
+the required distortion or output swing. The output and source both move
+during a signal, so recheck the actual terminal voltages along that trajectory.
+A “saturation” label also does not mean $g_{ds}=0$.
+
+This is a practical sizing sequence: specify the current and voltage task;
+use equations to estimate the needed derivative; choose supported dimensions;
+solve the complete finite circuit; then check which condition or cost limits
+the intended use. The following chapters show actual redesign choices rather
+than a universal optimum for $g_m/I_D$ or device length.
+
+## A first look at diode connection
+
+Tie a MOS drain to its gate and let a finite source supply current to that
+node. The node voltage must settle where the MOS takes the supplied current:
+
+```text
+Diode NMOS: Nref(D=bias, G=bias, S=0, B=0)
+```
+
+With source and body fixed, a small rise in `bias` increases both $V_{GS}$ and
+$V_{DS}$. The small-signal conductance looking into that combined node is
+approximately $g_m+g_{ds}$, so its resistance is near $1/(g_m+g_{ds})$.
+The node is neither a perfect voltage reference nor an ideal current source.
+It will become the control voltage for a mirror in chapter 3, where we count
+the finite source that sustains it.
+
+You can now ask what the current buys: a local slope, output resistance, voltage
+room and a resource cost. [Chapter 2](02-common-source.qmd) puts the same MOS
+bank together with its load and solves the current balance that makes an
+amplifier. For broader device characterization and gm/ID methodology, see
+[Pretl, Koefinger and Dorrer, chapters 2–4](https://iic-jku.github.io/analog-circuit-design/aicd.html).
+Their process examples are further reading; the APM numerical evidence above
+comes from this site's own saved circuits.

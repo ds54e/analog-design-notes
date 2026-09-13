@@ -1,0 +1,149 @@
+---
+title: "Reproduce the learning edition's selected evidence"
+---
+
+This **learning-path-v1.0** package accompanies the eight-chapter route.
+It adds selected archived differential-pair/OTA observations and the explicit
+R37/R75 operating-point calculation. The five original study packages retain
+their own identities, definitions and exact ZIP bytes.
+
+Download [learning-path-v1.0.zip](../../downloads/learning-path-v1.0.zip).
+The archive has one `example/` directory. Its code and data are also available
+in the [public repository](https://github.com/ds54e/analog-design-notes/tree/main/examples/learning-path-v1).
+The [English reading route](../../learn/index.qmd) and
+[Japanese overview](../../ja/learning-path.qmd) provide context before execution.
+
+## What is selected, and what is new
+
+| Key | Exact circuit stem | Selected original analyses |
+| --- | --- | --- |
+| A | `A-alignedload-i10` | OP 0, differential DC 1, differential AC 2 |
+| B | `B-reference-lean-symmetric` | OP 0, common-mode DC 1, supply DC 2, differential AC 3 |
+| C | `C-area-base` | OP 0, differential DC 1, output-clamp DC 2, two AC current diagnostics 3/4 |
+| D1 | `D1-initial-14u` | OP 0, guarded input DC 1, low/center/high AC 2/3/4, noise 5, standard step 12 |
+
+The [configuration](data/configuration.json) provides exact circuit/model
+hashes, original run and realization identities, physical devices with raw
+values, terminal connections, recipes, column order and verified archived
+parameter readbacks. `A.npz`, `B.npz`, `C.npz` and `D1.npz` retain **all
+original float64 columns and points of these selected analyses**. No interpolation
+or decimation is used for their measurement calculation. They contain 7,821
+rows in total. Original complete-array hashes are retained alongside hashes
+of the selected arrays; these are different file sets.
+
+The selected circuits came from the pinned Lab archive
+`094fae68ad20fffd7748f93091d92a9ffe86c93b`. The archive itself remains private,
+but all inputs required by the commands below are in this public package or
+the public pinned APM repository. No archived runtime, database, runner, private
+logs or other studies are needed. The selected circuit/data contributions are
+the owner's original work, licensed here under the publication's code/data
+defaults; model and third-party software terms remain separate.
+
+Every selected v2 unit has saved raw coordinates `[0, 0]` under its original
+`ARTIFICIAL` profile. These are nominal interventions, not Local sample draws.
+C and initial D1 have the same six physical units and load, but different
+input/clamp/feedback fixtures. Neither the later selected-D1 25-pF transfer
+nor the final mirror correction is part of this package.
+
+`analyze.py` implements **learning.bridge.v1**, a small saved-data calculation.
+It checks hashes, four-terminal KCL and selected terminal spans, recomputes the
+adopted gains/current nulls, and closes the D1 output-capacitor charge identity.
+For settling it uses independently saved DC endpoints and reports final-entry
+time brackets from the input's 50% crossing. The original v2 calculation used
+stationary median plateaus; its old definition is not replaced. The two methods
+give the same selected entry brackets here. Old v2 noise remains an integrated
+output RMS divided by gain at 1 kHz; ADS input PSD referral at each frequency
+is separately defined in the earlier studies.
+
+## Regenerate calculations and figures
+
+Use Python 3.9 or later with the pinned scientific dependencies. The checked
+environment uses Python 3.9.25, NumPy 1.26.4, SciPy 1.13.1 and Matplotlib 3.9.4.
+From a fresh directory, extract the ZIP and run:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r example/requirements.txt
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/analyze.py --output "$PWD/analysis-001"
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/plot.py --output "$PWD/figures-001"
+```
+
+Both commands refuse an existing output directory. The first creates
+`analysis-001/summary.json`, comparable with the included [summary](summary.json).
+The second creates eight SVG figures and PNG inspection copies. SPICE is not
+called. The input [manifest](data/manifest.json) checks each selected data file;
+the archived circuit bodies have separate hashes in the configuration.
+
+Expected selected values include R37's equation gain −6.000658 versus measured
+−6, C's unloaded/loaded differential nulls −0.671942/+1.612470 mV, and initial
+D1's largest DC tracking error 2.366472 mV. D1's central signal bandwidth is
+4.241448 MHz; its DC-endpoint rise/fall entries are bracketed at about
+177.5–179.5 / 175.2–177.2 ns. See the summary for definitions, axes and KCL/charge
+residuals. Extra printed digits allow calculation comparison, not extra physical
+precision.
+
+The copied `gain-*.csv` files and `resistor-op.json` are selected original ADS
+nominal observations, separate from the v2 arrays. They retain the original
+four-candidate table where applicable; the new resistor plots select R37/R75.
+The full [first-study reproduction](../gain-operating-point-accuracy/reproduce.qmd)
+retains its Local sample replay and original graphs.
+
+## Replay the finite OTA from public model inputs
+
+Install **ngspice 47** separately. The public code checks its actual simulator
+identity through APM and verifies saved model hashes. These commands retrieve
+the public **APM v5.0.0** input at the required commit:
+
+```bash
+git clone --branch v5.0.0 --depth 1 https://github.com/ds54e/analog-process-models.git apm-v5
+git -C apm-v5 rev-parse HEAD
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -B example/replay.py --apm "$PWD/apm-v5" --binary /usr/local/bin/ngspice --output "$PWD/replay-D1-001"
+```
+
+The required APM commit is `381517fda5107fabf98af7801d5a5103f38e230c`.
+Change `--binary` to the actual location of ngspice 47 if necessary. APM's own
+code and FreePDK45 model notices remain in that separately retrieved checkout.
+No model file is relabeled or redistributed inside this ZIP.
+
+`replay.py` uses the exact initial-D1 circuit bytes and six saved physical
+units. It changes path bindings and selects original OP 0, DC 1 and central
+AC 3. The public APM API supports terminal vectors; native device-parameter
+OP vectors are omitted from this replay. The functional circuit already has
+the required AC source settings. The command does not draw, trim, calibrate,
+rebias or optimize any device.
+
+The replay checks original point counts and axes: one OP row, 203 guarded DC
+rows and 361 AC rows. It requires output differences below 1 µV for OP/DC and
+0.001 V/V for complex unit-stimulus AC, plus complete finite observations,
+actual model/W/L/m/nf/DELVTO/MULU0 readback, KCL and terminal-domain checks.
+The expected central output is **0.298456258233108 V** at a 0.3-V source; the
+input MOS node is **0.300024289853045 V**. VDD supplies about 16.011469 µA and
+the input source absorbs about 2.428985 nA at that point.
+
+This command replays the selected OP/DC/AC interface. The archived transient,
+noise and loops are not silently treated as native replays; `analyze.py`
+recomputes the selected saved step/noise observations. No complete v2 campaign,
+full population, clean-OS installation or arbitrary-platform qualification
+is advertised.
+
+## Verification and limits
+
+On 2026-09-13, the candidate ZIP was extracted into a new directory with a
+fresh pinned Python environment and an anonymous public APM clone. The summary
+and all eight SVGs matched exactly; the native D1 OP/DC/central AC replay had
+zero output difference on the checked host. The final package retains hashes
+of that tested code/circuit/data payload. This uses an existing ngspice 47
+installation, rather than claiming a fresh operating-system installation.
+
+The [selected evidence receipt](evidence.json) records source/readback adoption,
+the public-input replay and graph regeneration actually checked for this
+edition. Verification of the live site is separate from successful local
+calculation or rendering. The simulator stays outside the static Pages build.
+
+These examples demonstrate model behavior under their declared fixtures.
+They do not establish manufacturing yield, calibrated passive/spatial/noise
+statistics, layout/PEX, a full pass-gate charge model or LDO performance.
+The original self-bias prototype remains unfinished and is not part of this
+package. The same Codex agent performed writing and internal numerical/delivery
+checks; this is not claimed prior human scientific approval or independent
+replication.

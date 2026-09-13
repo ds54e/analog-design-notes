@@ -1,0 +1,178 @@
+---
+title: "3. Mirrors and bias: the active load has a reference cost"
+---
+
+[Previous: common-source amplifier](02-common-source.qmd) · [Reading route](index.qmd) ·
+[Next: differential pair and OTA](04-differential-pair-and-ota.qmd)
+
+A drain resistor converts current into voltage but also takes voltage headroom
+and fixes a substantial output conductance. A transistor load can supply current
+with a much higher incremental resistance. Before using it, however, we must
+explain where its gate voltage comes from, which current it actually copies,
+and what that new reference branch costs.
+
+## A diode connection establishes a finite bias voltage
+
+Tie the gate and drain of an NMOS together, as introduced in chapter 1. Current
+supplied to the combined node raises its voltage until the transistor and its
+feeding network agree on current. If the supplying current rises, the bias
+voltage must generally rise too. A second NMOS with the same source and gate
+voltage can use that bias to draw a related current at a separate drain:
+
+```text
+Conceptual NMOS mirror; dimensions must be chosen for the actual job:
+  Nref(D=bias, G=bias, S=0, B=0)
+  Nout(D=out,  G=bias, S=0, B=0)
+  A finite reference network supplies current to bias.
+  An external circuit supplies the current drawn at out.
+```
+
+Under a simple matched-device approximation, equal gate/source/body voltages
+and equal lengths suggest
+$I_{out}/I_{ref}\approx W_{out}/W_{ref}$. This first prediction assumes suitable
+drain voltages and matching characteristics. The reference has $V_D=V_G$;
+the output device usually does not. Finite $g_{ds}$ makes its current depend
+on output voltage. Device variation and gate currents also affect the ratio.
+
+**Compliance** is the output-voltage range over which the mirror can perform
+its intended current-source job to a stated accuracy. An NMOS sink needs
+voltage above ground; a PMOS source needs voltage below VDD. “In saturation”
+is useful operating-region information, not a promise of exact copying or
+infinite output resistance. Cascoding can reduce output-voltage dependence,
+but consumes additional headroom and bias resources. It is a later design
+choice, not a free repair to this example.
+
+## Reverse the polarity to supply the amplifier output
+
+The finite active-load amplifier **A37** uses PMOS devices near VDD. Two
+diode-connected reference units supply current to a resistor leading to ground.
+One PMOS load unit shares their gate voltage and supplies the output node.
+
+```text
+VDD(vdd, 0) = 1 V
+VIN(in, 0) = 0.45 V + 5 mV peak sine at 10 kHz
+Rsrc(in, gate) = 1 kohm
+Rload(out, 0) = 100 kohm; Cload(out, 0) = 1 pF
+
+PR0(D=pbias, G=pbias, S=vdd, B=vdd) W=2 um L=0.24 um
+PR1(D=pbias, G=pbias, S=vdd, B=vdd) W=2 um L=0.24 um
+Rbias(pbias, 0) = 20.495010790 kohm
+Vbiasdiag(pbias, pdrive) = 0 V  [normally a short]
+PL0(D=out, G=pdrive, S=vdd, B=vdd) W=2 um L=0.24 um
+
+N0(D=out, G=gate, S=source, B=0) W=2.494548593 um L=0.32 um
+N1(D=out, G=gate, S=source, B=0) W=2.494548593 um L=0.32 um
+Rs(source, 0) = 6.951656551 kohm
+```
+
+The [exact A37 SPICE](../studies/gain-operating-point-accuracy/circuits/A37.cir)
+retains all terminal sensors and digits. Each MOS above is a distinct physical
+unit with D/G/S/B explicit. The zero-volt diagnostic source contributes no
+extra bias voltage in the functional circuit.
+
+Rbias pulls `pbias` down; the reference PMOS units pull it up. Their simultaneous
+balance sets $V_{SG}$ for PL0. Lowering `pdrive` relative to VDD increases the
+PMOS output current. At `out`, that supplied current must equal the NMOS drain
+current plus the external load current. The input's positive increment still
+increases NMOS current and drives the output down. The polarity of the signal
+gain is unchanged from the resistor-loaded amplifier.
+
+At the designed nominal point, about 25 µA flows through the reference branch
+and 12.5 µA through the load branch. At 0.5 V, Rload takes 5 µA, leaving only
+about 7.5 µA for the signal NMOS bank. The reference consumes most of the
+37.5-µA budget. R37 could allocate about 32.5 µA to its NMOS bank at the same
+total current because it did not need this additional reference branch.
+
+The comparison is nevertheless meaningful: both complete finite circuits were
+designed for the same external center, signed gain, input, load and signal.
+A37 uses 3.037 µm² of drawn MOS area versus R37's 3.537 µm². These are not equal
+layout-area designs; their resistor sizes and unmodeled parasitics also differ.
+
+## Equal signal gain does not imply equal current-error sensitivity
+
+An active load's high output resistance helps create voltage gain from a small
+effective transconductance. It also creates voltage error from unwanted output
+current. Retain the source-degeneration factor $D$ from chapter 2 and define
+
+$$G_m=g_{mN}/D,\qquad G_O=1/R_L+g_{dsP}+g_{dsN}/D.$$
+
+For a small positive current disturbance injected into `out`, the approximate
+node equation is
+
+$$v_o\simeq-\frac{G_m}{G_O}v_{in}+\frac{i_{dist}}{G_O}.$$
+
+The wanted signal depends on $G_m/G_O$. The unwanted current depends on
+$1/G_O$ alone. A lower transconductance paired with a higher output resistance
+can preserve signal gain while amplifying an output-current error much more.
+
+| Nominal path, same gain near −6 | R37 | A37 |
+| --- | ---: | ---: |
+| Effective gm, local estimate, µS | 518.96 | 66.29 |
+| Output conductance, local estimate, µS | 86.48 | 11.05 |
+| Observed injected-current sensitivity, kΩ | 11.563 | 90.523 |
+| Observed supply sensitivity near 1 V, V/V | 0.86714 | 1.99819 |
+
+These [saved path measurements](../studies/gain-operating-point-accuracy/data/sensitivities.csv)
+used small signed current/voltage perturbations and separate AC checks. For
+orientation, a 10-nA injected current predicts about 0.116 mV output change in
+R37 and 0.905 mV in A37. That estimate is local; it is not a specification for
+large overload current or a different output voltage.
+
+[![The finite active load transmits more output-current error despite matched signal gain.](../studies/gain-operating-point-accuracy/figures/error-paths-current.svg)](../studies/gain-operating-point-accuracy/figures/error-paths-current.svg)
+
+An ideal extra conductance can reduce this path, but it also reduces signal
+gain unless the signal branch is redesigned. The first study's diagnostic
+20-µS shunt to an ideal 0.5-V source lowered A37's gain to about −2.135.
+That intervention explained a mechanism; it was not a same-function finite
+competitor. Chapter 5 instead adds a real output-to-gate feedback path and
+counts its input and resistor costs.
+
+## Decide which mirror error is worth reducing
+
+The reference devices, output device and input bank are distinct uncertainty
+sources. Making the reference larger can average its modeled independent
+unit-to-unit errors, but cannot average the separate output PMOS that remains
+unchanged. In **A75**, five reference units replace two and Rbias is reduced
+once to obtain nearly 75 µA total. The signal bank, source resistor and single
+output-load unit stay unchanged. The model's first-order output-load SD
+contribution therefore remains about 64.71 mV, while the reference contribution
+falls from 39.79 to 25.17 mV. Independent *variances* add; SDs do not.
+
+These numbers are source-transfer estimates of DC realization-to-realization
+variation, not stationary noise. They do not include calibrated resistor,
+spatial or foundry process distributions. The [original source-budget
+explanation](../studies/gain-operating-point-accuracy/index.qmd#which-source-does-reference-current-reduce)
+and chapter 6 explain how the source model and the transmission path compose.
+
+The next completed study took the alternative seriously: keep 37.5 µA and
+allocate a 3.7-µm² drawn-MOS budget among input, reference, output load and a
+balanced enlargement. Merely scaling the output PMOS proportionally failed
+the tight nominal matching requirement at the supported length boundary.
+The retained redesign **AL37W** allowed its width to be chosen separately,
+then adjusted the finite input/bias circuit before any confirmation samples.
+
+[![Area allocation changes different parts of the predicted error budget.](../studies/active-allocation/figures/source-budget.svg)](../studies/active-allocation/figures/source-budget.svg)
+
+The original 598-coordinate confirmation found nominal mean absolute output
+error of 49.677 mV for AL37W versus 62.467 mV for A37. At the same new area,
+reference-only, input-only and balanced allocations had 60.321, 62.054 and
+58.335 mV respectively. The output-load investment targeted the dominant
+source. Yet R37 still had 12.111 mV MAE at the same current and slightly less
+drawn MOS area. Improving a particular active-load circuit did not establish
+that it was the best architecture for this output-center requirement.
+
+At 0.97-V supply, the load investment's minimum-benefit comparisons against
+A37 and balanced allocation remained **inconclusive** under the frozen
+decision thresholds. A supply-induced mean shift limited the benefit of a
+narrower distribution. Those results and the failed proportional redesign
+remain in the [detailed allocation guide](../studies/active-allocation/index.qmd),
+with [reproduction](../studies/active-allocation/reproduce.qmd). The cohort was
+fresh for that original study; it is known evidence in this learning edition.
+
+The design judgment is conditional: a mirror can provide high incremental
+resistance with less signal current, but finite reference current, headroom,
+output-voltage dependence and device errors remain. First identify the dominant
+source and its voltage path; then spend resources on the part that limits the
+required function. We now have enough circuit language to compare two input
+voltages and use a mirror to combine their currents in
+[chapter 4](04-differential-pair-and-ota.qmd).

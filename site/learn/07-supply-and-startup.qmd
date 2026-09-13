@@ -1,0 +1,167 @@
+---
+title: "7. The supply and input must support the whole history"
+---
+
+[Previous: errors and resources](06-errors-and-resources.qmd) · [Reading route](index.qmd) ·
+[Next: toward an LDO](08-toward-an-ldo.qmd)
+
+A 75-µA nominal operating point does not specify what the circuit needs while
+one source is missing or a capacitor is charging. A finite reference can also
+transmit supply changes into the output even after startup is complete. Follow
+both the stationary sensitivity and the time-dependent port current before
+choosing the upstream supply, input driver or reference.
+
+## A reference resistor does not create a supply-independent current
+
+In the active-load stages, diode-connected PMOS units and a resistor to ground
+set `pbias`. A supply increase raises the PMOS source. The reference node moves
+too, but generally not enough to keep the output device's source-to-gate voltage
+constant. Two paths remain: direct PMOS output conductance, and gate-control
+change transmitted through the finite reference.
+
+With $G_R\approx\sum(g_{mR}+g_{dsR})$, the local estimate is
+
+$$\frac{\partial V_O}{\partial V_{DD}}
+\simeq Z_O\left(g_{dsP}+\frac{g_{mP}}{1+R_{bias}G_R}\right).$$
+
+Increasing reference unit count while reducing its resistor inversely can leave
+$R_{bias}G_R$ nearly unchanged. This explains why A37 and A75 both have line
+slopes near 1.998 V/V despite A75's extra reference current. The resistor-load
+R37/R75 slopes are about 0.867/0.922 V/V. F75S/F75L reduce the active-load path
+but still have about 1.224/1.259 V/V. These are local derivatives near the
+1-V nominal supply, with backward perturbations to stay inside the model's
+terminal-voltage domain.
+
+A first estimate for F75L under a −30-mV supply change is about −37.8 mV
+output change. The independently observed 0.97-V case gives 0.462088 V output,
+approximately −38 mV from its nominal center. It fails the original ±25-mV
+center requirement despite usable numerics and passing gain/bandwidth checks.
+This is a physical condition limit in the modeled circuit, not something to
+remove by subtracting the new mean.
+
+At 85 °C, F75L's nominal-device output is 0.538840 V and its gain is about
+−5.310. That separately tested point is not a temperature population model or
+a guarantee over a continuous temperature range. A reference redesign must
+address the needed supply/temperature domain explicitly; nominal current
+matching cannot establish it.
+
+## An output-to-gate resistor keeps conducting when a source is zero
+
+Use **F75L**, the larger-PMOS feedback design. It has the same topology as
+F75S in chapter 5, but three NMOS units are each 4/0.40 µm and its one
+reference/one output PMOS are each 3.333333/0.40 µm. Rs is 670.3661 Ω and
+Rbias is 10.7310 kΩ. Rsrc=1 kΩ, Rin=9 kΩ and Rf=100 kΩ retain their connections.
+
+```text
+Input path: in -- Rsrc -- drive -- Rin -- gate -- Rf -- out
+N0/N1/N2: D=out, G=gate, S=source, B=0
+Pref:    D=pbias, G=pbias, S=vdd, B=vdd
+Pload:   D=out, G=pdrive, S=vdd, B=vdd
+Vbiasdiag(pbias, pdrive) = 0 V
+Rs(source, 0); Rbias(pbias, 0)
+Rload(out, 0) = 100 kohm; Cload(out, 0) = 1 or 8 pF
+```
+
+The [exact supply-first 8-pF circuit](../studies/power-sequencing/circuits/F75L-supply_first-fast-8p.cir)
+includes the complete source history, all physical units and current sensors.
+The published sequencing study keeps these geometries and resistor values fixed.
+
+Let $I_{in}$ be positive when the input source delivers current toward the
+amplifier and let $I_g$ be current entering the three NMOS gates. With
+$R_t=R_{src}+R_{in}=10$ kΩ, gate KCL gives the exact circuit identity
+
+$$I_{in}=\frac{V_{in}-V_o}{R_t+R_f}
+       +\frac{R_f}{R_t+R_f}I_g.$$
+
+The first term exists even if a MOS gate draws negligible stationary current.
+During a transient, the second term includes intrinsic gate charging. This
+identity does not separate individual compact-model leakage and charge terms;
+it relates measurable terminal currents to the finite resistor path.
+
+| F75L stationary source state | Output | Input delivered current |
+| --- | ---: | ---: |
+| VDD held at 0; input held at 0.45 V | 10.532 mV | +3.997 µA |
+| VDD held at 1 V; input held at 0 | 934.819 mV | −8.502 µA |
+| VDD held at 1 V; input held at 0.45 V | 500.047 mV | −0.452 µA |
+
+Negative delivery means the input source must absorb current. **A voltage
+source set to zero remains a driven clamp.** It is not an open circuit or an
+unpowered I/O pin. No pad diode, driver rail or protection network is included
+in these examples.
+
+[![Stationary current demand changes markedly with which source is present.](../studies/power-sequencing/figures/static-interface.svg)](../studies/power-sequencing/figures/static-interface.svg)
+
+With the input present and VDD clamped to zero, the first estimate is
+$0.45\,\mathrm V/110\,\mathrm{k}\Omega=4.091$ µA if output is assumed zero.
+The actual 10.532-mV output reduces the resistor contribution to 3.99516 µA;
+gate current adds about 0.00157 µA. That predicts the observed 3.99673 µA.
+It flows mainly from the input through the feedback path and NMOS/load to
+ground. The clamped supply absorbs only about 55.4 pA in this particular state;
+the result is not evidence that a floating supply gets charged to a useful
+voltage.
+
+With VDD present and the input clamped low, the NMOS bank takes little current.
+The output rises until the PMOS supply balances Rload and the feedback path
+into the input clamp. The clamp must absorb 8.502 µA to remain at zero. A slower
+later input ramp cannot remove this initial stationary requirement.
+
+Port power is $P=VI_{delivered}$. A zero-volt ideal clamp can absorb current at
+zero ideal port power; a real driver still needs a circuit that can sustain
+that state. Current direction, delivered/absorbed energy and implementation
+cost are therefore separate things to report.
+
+## Predict the charging demand and observe a bounded history
+
+For R75's drain resistor, $I_{VDD}=(V_{DD}-V_O)/R_D$. If VDD rises faster
+than the output can charge, a drop near 1 V across 6.667 kΩ suggests a current
+near 150 µA, compared with about 75 µA at the final 0.5-V output. The measured
+peak for input-first startup, a 10-ns supply ramp and 8-pF load is **140.981 µA**.
+The nominal DC budget did not forbid that separately measured peak.
+
+[![The published fast histories expose supply and input peak demands.](../studies/power-sequencing/figures/peak-demands.svg)](../studies/power-sequencing/figures/peak-demands.svg)
+
+The fixed sequencing block includes 59 nominal observations and controls:
+12 stationary references, 36 startups, six supply cycles, four refinements
+and one analytic RC control. The startups combine three circuit designs,
+three source orders, two ramp lengths and 1/8-pF output capacitors. These are
+declared histories, not a search across arbitrary initial charge or all
+possible equilibria.
+
+For the fast 8-pF input-first case, post-ramp settling to a 1-mV band around
+the separately solved stationary endpoint takes about 0.300 µs in R75,
+0.871 µs in F75L and 4.445 µs in A75. Lengthening R75's supply ramp to 1 µs
+reduces its peak to 81.797 µA and its *post-ramp* delay to 0.189 µs. But total
+time from the start of the ramp grows from about 0.310 to 1.189 µs. The time
+origin changes the meaning of “faster.”
+
+On a supply off/on cycle with input held at 0.45 V, F75L continues drawing
+about 4 µA from the input during the zero-supply hold. Some slow downward
+ramps already end inside the off-state target band. The original measurement
+therefore records **IN_BAND_AT_FIRST_OBSERVATION**, with a bracket rather than
+a resolved entry time. It is not a picosecond settling result. The
+[complete sequencing guide](../studies/power-sequencing/index.qmd) retains
+the actual histories, refinements and [public replay](../studies/power-sequencing/reproduce.qmd).
+
+## What a better reference would still need to prove
+
+Self-bias can make circuit currents depend on an internal relation rather
+than a single resistor fed directly from a supply. That can be a useful design
+direction, but the relation may have multiple equilibria, including an unwanted
+low-current state. A startup path must move the circuit into the intended
+state and then leave a bounded residual loading/error. Supply tracking,
+temperature dependence, available headroom and the reference's own noise and
+variation still need evaluation.
+
+This edition does not claim a completed self-biased reference. The saved private
+prototype has an unresolved equality-check failure and remains paused; neither
+its cause nor its performance is inferred here. The published sequencing
+evidence stands on its own frozen inputs and checks and does not establish
+startup of that different topology.
+
+The practical choice is now clearer. A source must support DC accuracy and
+both directions of current through the required history. R75's accuracy and
+speed come with larger charging peaks and larger-signal distortion. F75L's
+linearity comes with a conductive input path and larger resistance/noise
+costs. [Chapter 8](08-toward-an-ldo.qmd) turns those interface lessons into
+the requirements of a possible regulator without assuming a regulator has
+already been designed.

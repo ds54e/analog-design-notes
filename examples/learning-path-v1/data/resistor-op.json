@@ -1,0 +1,474 @@
+{
+  "R37": {
+    "devices": [
+      {
+        "family": "apm045/vtg",
+        "l_m": 4e-07,
+        "path": [
+          "xn0"
+        ],
+        "polarity": "n",
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "uid": "ads/gain/input/0",
+        "w_m": 2.9472200135876367e-06
+      },
+      {
+        "family": "apm045/vtg",
+        "l_m": 4e-07,
+        "path": [
+          "xn1"
+        ],
+        "polarity": "n",
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "uid": "ads/gain/input/1",
+        "w_m": 2.9472200135876367e-06
+      },
+      {
+        "family": "apm045/vtg",
+        "l_m": 4e-07,
+        "path": [
+          "xn2"
+        ],
+        "polarity": "n",
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "uid": "ads/gain/input/2",
+        "w_m": 2.9472200135876367e-06
+      }
+    ],
+    "metrics": {
+      "KCL_residuals_a": {
+        "out": -2.710505431213761e-20,
+        "xn0": 7.908358916318329e-17,
+        "xn1": 1.3458627006819975e-16,
+        "xn2": 7.907850696549977e-17
+      },
+      "ac": {
+        "bandwidth_hz": 13639741.688986896,
+        "bandwidth_status": "CROSSING",
+        "crossings": [
+          {
+            "bracket_hz": [
+              13335214.321633492,
+              13724609.61007588
+            ],
+            "hz": 13639741.688986896
+          }
+        ],
+        "imag_v_per_v": 0.00044267399214934004,
+        "magnitude_v_per_v": 6.000000016329959,
+        "peaking_db": 0.0,
+        "real_v_per_v": -5.999999999999938,
+        "reference_hz": 1000.0
+      },
+      "measurement_version": "ads.measurements.v1; ads.gain-study.v1",
+      "noise": {
+        "band_hz": [
+          1000.0,
+          1000000.0
+        ],
+        "input_reference": "external Vin source",
+        "input_rms_v": 9.54917170427317e-06,
+        "max_referral_relative_difference": 2.1296328351905203e-06,
+        "output_rms_v": 5.726165731082975e-05,
+        "quantity": "PSD; set sqrnoise",
+        "simulator_input_rms_v": 9.54917056032967e-06
+      },
+      "op": {
+        "@m.xn0.mapm045_vtg_core[gds]": 5.243393174768889e-07,
+        "@m.xn0.mapm045_vtg_core[gm]": 0.00018264653472483056,
+        "@m.xn0.mapm045_vtg_core[gmbs]": 4.2150168667071976e-05,
+        "@m.xn0.mapm045_vtg_core[vdsat]": 0.08767406764957661,
+        "@m.xn0.mapm045_vtg_core[vth]": 0.41121105645834527,
+        "@m.xn1.mapm045_vtg_core[gds]": 5.243393174768944e-07,
+        "@m.xn1.mapm045_vtg_core[gm]": 0.0001826465347248304,
+        "@m.xn1.mapm045_vtg_core[gmbs]": 4.215016866707193e-05,
+        "@m.xn1.mapm045_vtg_core[vdsat]": 0.08767406764957607,
+        "@m.xn1.mapm045_vtg_core[vth]": 0.41121105645834527,
+        "@m.xn2.mapm045_vtg_core[gds]": 5.243393174768889e-07,
+        "@m.xn2.mapm045_vtg_core[gm]": 0.00018264653472483056,
+        "@m.xn2.mapm045_vtg_core[gmbs]": 4.2150168667071976e-05,
+        "@m.xn2.mapm045_vtg_core[vdsat]": 0.08767406764957661,
+        "@m.xn2.mapm045_vtg_core[vth]": 0.41121105645834527,
+        "i(Vdd)": -3.74972514870765e-05,
+        "i(Vin)": -2.7485129232784032e-09,
+        "i(Vn0b)": -2.670736045594904e-12,
+        "i(Vn0d)": 1.0832417162358809e-05,
+        "i(Vn0g)": 9.161710279315116e-10,
+        "i(Vn0s)": -1.0833330662571611e-05,
+        "i(Vn1b)": -2.6707360455949007e-12,
+        "i(Vn1d)": 1.0832417162358796e-05,
+        "i(Vn1g)": 9.161710834426628e-10,
+        "i(Vn1s)": -1.0833330662571606e-05,
+        "i(Vn2b)": -2.670736045594904e-12,
+        "i(Vn2d)": 1.0832417162358809e-05,
+        "i(Vn2g)": 9.161710279315116e-10,
+        "i(Vn2s)": -1.0833330662571617e-05,
+        "v(gate)": 0.44999725148707675,
+        "v(in)": 0.45,
+        "v(out)": 0.5000000000000062,
+        "v(source)": 0.0026845581080928924,
+        "v(vdd)": 1.0
+      },
+      "out_v": 0.5000000000000062,
+      "port_currents_delivered_a": {
+        "Vdd": 3.74972514870765e-05,
+        "Vin": 2.7485129232784032e-09
+      },
+      "power_w": 3.7498488317891974e-05,
+      "resources": {
+        "drawn_mos_area_um2": 3.5366640163051644,
+        "fixed_external": {
+          "Cload_f": 1e-12,
+          "Rload_ohm": 100000.0,
+          "Rsrc_ohm": 1000.0
+        },
+        "internal_capacitance_f": 0,
+        "internal_resistance_sum_ohm": 13416.912462309358,
+        "internal_resistors_ohm": {
+          "Rd": 13334.31065400406,
+          "Rs": 82.60180830529637
+        },
+        "physical_units": 3,
+        "real_external_ports": [
+          "Vdd",
+          "Vin"
+        ],
+        "zero_valued_instrumentation": [
+          "Idist"
+        ]
+      },
+      "sine": {
+        "cycles": 8,
+        "fundamental_gain_magnitude": 6.000379913192933,
+        "fundamental_peak_v": 0.030001874265748154,
+        "harmonics_peak_v": [
+          0.030001874265748154,
+          0.00041586899869979014,
+          6.34267370506164e-07,
+          5.0007999011059137e-08,
+          1.1278895902215042e-09,
+          5.277601279135847e-10,
+          1.186016900358985e-11,
+          9.5563250818958e-10,
+          1.506323331649499e-11,
+          7.719946420966063e-10
+        ],
+        "input_fundamental_peak_v": 0.0049999957835642275,
+        "max_last_cycle_difference_v": 2.191580250610059e-13,
+        "mean_v": 0.49958407907057273,
+        "output_max_v": 0.5291707866132234,
+        "output_min_v": 0.46916572744463947,
+        "period_average_net_delivered_current_a": {
+          "Vdd": 3.752844345233015e-05,
+          "Vin": 2.7520640197408148e-09
+        },
+        "period_average_port_power_w": 3.7529682574144165e-05,
+        "points_per_cycle": 1000,
+        "stationary": true,
+        "thd_fraction": 0.013861450178289571,
+        "window_s": [
+          0.00019999999999999998,
+          0.001
+        ]
+      },
+      "total_current_a": 3.749999999999978e-05
+    },
+    "original_realization_id": "14de858cc1f1a4cd88b62583ed4de0b9b083dbcd1e89257faae2f64e3c8e19d5",
+    "parameters": {
+      "amplitude": 0.005,
+      "cload": 1e-12,
+      "load": "resistor",
+      "nl": 0.4,
+      "nn": 3,
+      "nw": 2.947220013587637,
+      "rd": 13334.31065400406,
+      "rload": 100000.0,
+      "rs": 82.60180830529637,
+      "rsrc": 1000.0,
+      "vdd": 1.0,
+      "vin": 0.45
+    },
+    "source_record_sha256": "d95c795f8fa4886454018c1123e5e1150804ce73865d2865d291878df325e33b"
+  },
+  "R75": {
+    "devices": [
+      {
+        "family": "apm045/vtg",
+        "l_m": 4e-07,
+        "path": [
+          "xn0"
+        ],
+        "polarity": "n",
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "uid": "ads/gain/input/0",
+        "w_m": 3.867488768472841e-06
+      },
+      {
+        "family": "apm045/vtg",
+        "l_m": 4e-07,
+        "path": [
+          "xn1"
+        ],
+        "polarity": "n",
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "uid": "ads/gain/input/1",
+        "w_m": 3.867488768472841e-06
+      },
+      {
+        "family": "apm045/vtg",
+        "l_m": 4e-07,
+        "path": [
+          "xn2"
+        ],
+        "polarity": "n",
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "uid": "ads/gain/input/2",
+        "w_m": 3.867488768472841e-06
+      },
+      {
+        "family": "apm045/vtg",
+        "l_m": 4e-07,
+        "path": [
+          "xn3"
+        ],
+        "polarity": "n",
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "uid": "ads/gain/input/3",
+        "w_m": 3.867488768472841e-06
+      },
+      {
+        "family": "apm045/vtg",
+        "l_m": 4e-07,
+        "path": [
+          "xn4"
+        ],
+        "polarity": "n",
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "uid": "ads/gain/input/4",
+        "w_m": 3.867488768472841e-06
+      },
+      {
+        "family": "apm045/vtg",
+        "l_m": 4e-07,
+        "path": [
+          "xn5"
+        ],
+        "polarity": "n",
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "uid": "ads/gain/input/5",
+        "w_m": 3.867488768472841e-06
+      }
+    ],
+    "metrics": {
+      "KCL_residuals_a": {
+        "out": 5.014435047745458e-19,
+        "xn0": 6.697092473708076e-19,
+        "xn1": 6.561567153679774e-19,
+        "xn2": 6.561567153679774e-19,
+        "xn3": 6.612389178982646e-19,
+        "xn4": 6.544626543202302e-19,
+        "xn5": 6.544626543202302e-19
+      },
+      "ac": {
+        "bandwidth_hz": 25185642.222723454,
+        "bandwidth_status": "CROSSING",
+        "crossings": [
+          {
+            "bracket_hz": [
+              25118864.315096308,
+              25852348.39562243
+            ],
+            "hz": 25185642.222723454
+          }
+        ],
+        "imag_v_per_v": 0.00024335358584859357,
+        "magnitude_v_per_v": 6.000000004934786,
+        "peaking_db": 0.0,
+        "real_v_per_v": -5.999999999999706,
+        "reference_hz": 1000.0
+      },
+      "measurement_version": "ads.measurements.v1; ads.gain-study.v1",
+      "noise": {
+        "band_hz": [
+          1000.0,
+          1000000.0
+        ],
+        "input_reference": "external Vin source",
+        "input_rms_v": 7.091664998025675e-06,
+        "max_referral_relative_difference": 6.314342206881207e-07,
+        "output_rms_v": 4.254132791413965e-05,
+        "quantity": "PSD; set sqrnoise",
+        "simulator_input_rms_v": 7.091664699745511e-06
+      },
+      "op": {
+        "@m.xn0.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn0.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn0.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn0.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn0.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn1.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn1.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn1.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn1.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn1.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn2.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn2.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn2.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn2.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn2.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn3.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn3.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn3.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn3.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn3.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn4.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn4.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn4.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn4.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn4.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn5.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn5.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn5.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn5.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn5.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "i(Vdd)": -7.499409362814787e-05,
+        "i(Vin)": -5.906371849831275e-09,
+        "i(Vn0b)": -3.090559244465645e-12,
+        "i(Vn0d)": 1.1665682271358062e-05,
+        "i(Vn0g)": 9.843953430177521e-10,
+        "i(Vn0s)": -1.1666663576141165e-05,
+        "i(Vn1b)": -3.09055924446565e-12,
+        "i(Vn1d)": 1.1665682271358048e-05,
+        "i(Vn1g)": 9.843953430177521e-10,
+        "i(Vn1s)": -1.1666663576141165e-05,
+        "i(Vn2b)": -3.09055924446565e-12,
+        "i(Vn2d)": 1.1665682271358048e-05,
+        "i(Vn2g)": 9.843953430177521e-10,
+        "i(Vn2s)": -1.1666663576141165e-05,
+        "i(Vn3b)": -3.090559244465645e-12,
+        "i(Vn3d)": 1.166568227135806e-05,
+        "i(Vn3g)": 9.843953430177521e-10,
+        "i(Vn3s)": -1.1666663576141172e-05,
+        "i(Vn4b)": -3.090559244465645e-12,
+        "i(Vn4d)": 1.1665682271358053e-05,
+        "i(Vn4g)": 9.843953430177521e-10,
+        "i(Vn4s)": -1.1666663576141172e-05,
+        "i(Vn5b)": -3.090559244465645e-12,
+        "i(Vn5d)": 1.1665682271358053e-05,
+        "i(Vn5g)": 9.843953430177521e-10,
+        "i(Vn5s)": -1.1666663576141172e-05,
+        "v(gate)": 0.4499940936281502,
+        "v(in)": 0.45,
+        "v(out)": 0.5000000000000061,
+        "v(source)": 0.012027257763498332,
+        "v(vdd)": 1.0
+      },
+      "out_v": 0.5000000000000061,
+      "port_currents_delivered_a": {
+        "Vdd": 7.499409362814787e-05,
+        "Vin": 5.906371849831275e-09
+      },
+      "power_w": 7.499675149548029e-05,
+      "resources": {
+        "drawn_mos_area_um2": 9.281973044334817,
+        "fixed_external": {
+          "Cload_f": 1e-12,
+          "Rload_ohm": 100000.0,
+          "Rsrc_ohm": 1000.0
+        },
+        "internal_capacitance_f": 0,
+        "internal_resistance_sum_ohm": 6839.00973241154,
+        "internal_resistors_ohm": {
+          "Rd": 6667.191718846597,
+          "Rs": 171.81801356494375
+        },
+        "physical_units": 6,
+        "real_external_ports": [
+          "Vdd",
+          "Vin"
+        ],
+        "zero_valued_instrumentation": [
+          "Idist"
+        ]
+      },
+      "sine": {
+        "cycles": 8,
+        "fundamental_gain_magnitude": 5.999570399294279,
+        "fundamental_peak_v": 0.029997711496588392,
+        "harmonics_peak_v": [
+          0.029997711496588392,
+          0.00031347203051735527,
+          7.149512906675926e-07,
+          3.37684917582926e-08,
+          6.167300854481242e-10,
+          1.0810194187705999e-11,
+          1.1687164627354532e-11,
+          2.0222161147452356e-10,
+          1.2018175647156075e-11,
+          2.8508689281248356e-10
+        ],
+        "input_fundamental_peak_v": 0.0049999765816760786,
+        "max_last_cycle_difference_v": 3.39676808902567e-09,
+        "mean_v": 0.4996864883052799,
+        "output_max_v": 0.5293701207895175,
+        "output_min_v": 0.4693759712353669,
+        "period_average_net_delivered_current_a": {
+          "Vdd": 7.504111877836169e-05,
+          "Vin": 5.912624580790181e-09
+        },
+        "period_average_port_power_w": 7.504378086485885e-05,
+        "points_per_cycle": 1000,
+        "stationary": true,
+        "thd_fraction": 0.010449892075404242,
+        "window_s": [
+          0.00019999999999999998,
+          0.001
+        ]
+      },
+      "total_current_a": 7.49999999999977e-05
+    },
+    "original_realization_id": "cf830be2ace7a54158b73f7078fe38e5a870d1a306b0ab0f4d3be71ac9d2b4d4",
+    "parameters": {
+      "amplitude": 0.005,
+      "cload": 1e-12,
+      "load": "resistor",
+      "nl": 0.4,
+      "nn": 6,
+      "nw": 3.8674887684728407,
+      "rd": 6667.191718846597,
+      "rload": 100000.0,
+      "rs": 171.81801356494375,
+      "rsrc": 1000.0,
+      "vdd": 1.0,
+      "vin": 0.45
+    },
+    "source_record_sha256": "d82b6c070ff0a747417e1f115396bab0fc934fe7613aba84d8265e8334b29951"
+  }
+}

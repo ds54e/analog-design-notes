@@ -4,6 +4,17 @@ title: "Methods, scope, and review roles"
 
 ## What the evidence represents
 
+The [learning edition](learn/index.qmd) reorganizes five completed studies and
+four selected archived nominal differential-pair/OTA cases into a connected
+reading route. It is not a sixth completed research campaign. Existing study
+freezes, exposed inputs and definitions remain unchanged. The new
+[learning package](studies/learning-path-v1/reproduce.qmd) labels its selected
+source identities, actual readback, leaf reanalysis and native replay scope.
+The old zero-raw `ARTIFICIAL` realizations are nominal interventions; old v2
+noise and settling definitions remain distinguishable from new calculations.
+No selected-D1 25-pF transfer, final mirror correction or paused self-bias
+performance is borrowed to complete the route.
+
 The first study combines explicit calculations, nominal SPICE observations,
 controlled interventions, a fixed local prediction model and a prospective
 confirmation using saved physical realizations. These roles are labelled in

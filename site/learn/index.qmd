@@ -1,0 +1,107 @@
+---
+title: "Learn analog design through current balance"
+---
+
+An analog circuit is a set of connected devices that must agree on currents
+and voltages. This route starts with one transistor, builds a useful amplifier,
+then follows mirrors, differential operation, feedback, uncertainty and supply
+interfaces toward the questions an LDO would need answered. Each chapter makes
+a first prediction, checks selected observations, and uses the difference to
+make a design choice.
+
+**Learning edition v1.0.** The English chapters are the canonical route; the
+[Japanese reading overview](../ja/learning-path.qmd) explains where to begin
+and how the evidence fits. The five detailed studies remain available with
+their original circuit files, definitions, downloads and results.
+
+## The reading order
+
+| Read | What you will be able to decide |
+| --- | --- |
+| [1. MOS operating point and sizing](01-mos-operating-point.qmd) | What current, headroom, dimensions and local derivatives tell you about a device. |
+| [2. Common-source amplifier](02-common-source.qmd) | How MOS behavior and a resistor load jointly set the center, gain and finite swing. |
+| [3. Mirrors and bias](03-mirrors-and-bias.qmd) | How a finite reference establishes load current, and why signal gain does not measure DC accuracy. |
+| [4. Differential pair and OTA](04-differential-pair-and-ota.qmd) | How two inputs steer current; what changes when a clamped OTA becomes a buffer. |
+| [5. Feedback and response](05-feedback-and-response.qmd) | Part A: connection, loading and precision. Part B: bandwidth, settling, slew and recovery. |
+| [6. Errors and resources](06-errors-and-resources.qmd) | How to separate noise, offset, variation and error transmission before spending current or area. |
+| [7. Supply and startup](07-supply-and-startup.qmd) | What the supply, reference and input must deliver or absorb through declared histories. |
+| [8. Toward an LDO](08-toward-an-ldo.qmd) | Which interfaces these blocks support, and what a regulator still needs demonstrated. |
+
+Read 1–4 in order if these circuits are new. Chapter 5 has two reading stops;
+understand its connections before its dynamic measurements. Experienced readers
+can use the table to enter at a design question, then follow each chapter's
+links to the exact supporting study. No simulator installation is needed to
+read the route or inspect its plots and compact source data.
+
+## A small notation toolkit
+
+**Kirchhoff's current law (KCL):** signed currents entering a node sum to zero.
+At an output with a load capacitor, current imbalance changes stored charge:
+$I_{in}-I_{out}=C\,dV/dt$. At stationary DC, that capacitor current is zero.
+**Kirchhoff's voltage law (KVL):** voltage changes around a closed path sum to
+zero. We usually implement it by naming node voltages relative to `0`, the
+chosen ground reference, and subtracting them: $V_{GS}=V_G-V_S$.
+
+A MOS reading view always names **D**rain, **G**ate, **S**ource and **B**ody:
+
+```text
+N0(D=out, G=gate, S=source, B=0) W=... L=...
+Rload(out, 0) = ...
+```
+
+The node names show connectivity; device names distinguish physical instances.
+`N0` denotes an NMOS and `P0` a PMOS in these reading views. The exact linked
+SPICE, including zero-volt current sensors, is the execution authority. Text
+views explain a circuit and need not compile as SV/AMS. A body connection is
+part of the circuit, not a cosmetic choice. Width and length are in µm in the
+reading tables, and metres where the model's input schema requires them.
+
+Upper-case $V_O$ denotes a DC output operating point; lower-case $v_o$ denotes
+a small change about it. An AC analysis solves a linearized circuit at that
+point. A time-domain analysis follows a finite waveform; it can show distortion,
+charging limits and a changed operating region that the linearization misses.
+Never add a nominal DC voltage to an AC gain as though they were the same kind
+of quantity.
+
+## Predict, inspect, then judge
+
+A calculation is most useful when its assumptions can fail visibly. For example,
+gain might initially be estimated from transconductance times output resistance.
+The next question is which load, source motion or bias branch that estimate
+omitted. A more elaborate circuit earns its cost only if it improves the
+required function under the relevant conditions.
+
+Here **observed** means a saved simulator observation with a stated model,
+circuit and stimulus. **Predicted** means an equation or approximation applied
+before, or explicitly retrospectively to, those observations. **Confirmation**
+refers to the original studies' frozen finite experiments; their samples are
+already known evidence for this learning edition. A nominal example is not
+a population result. A valid computation can represent a circuit that fails
+its performance requirement.
+
+Noise needs a bandwidth and a reference port. DC variation needs a physical
+realization model. The two are introduced where first used and brought together
+in chapter 6. The model is pinned APM v5.0.0/APM045 VTG with ngspice 47; these
+results do not establish foundry statistics, manufacturing yield, layout/PEX
+performance or silicon qualification. The [methods page](../methods.qmd) explains
+the evidence and review limits.
+
+## Keep the depth and the reproduction routes
+
+The [five studies](../index.qmd#detailed-studies) retain complete design guides,
+failure records, original measurement definitions and exact downloads. The
+[learning evidence package](../studies/learning-path-v1/reproduce.qmd) adds the
+four selected archived differential-pair/OTA cases, current-balance calculations
+and figure regeneration. It supplies the selected public inputs; reading or
+replaying them does not require access to the private research archive.
+
+The progression is informed by the device–diode–amplifier–mirror–pair–OTA order
+in [Pretl, Koefinger and Dorrer's course](https://iic-jku.github.io/analog-circuit-design/aicd.html)
+and by [Wulff's circuit](https://analogicus.com/aic2026/circuits),
+[OTA](https://analogicus.com/aic2026/otas) and
+[regulator](https://analogicus.com/aic2026/voltage_regulation) discussions.
+Those are valuable further reading in their own process and teaching context.
+The prose, circuit observations and comparisons in this route are original;
+upstream dimensions or statistical assumptions are not transferred to APM.
+
+Begin with [what the MOS operating point tells you](01-mos-operating-point.qmd).

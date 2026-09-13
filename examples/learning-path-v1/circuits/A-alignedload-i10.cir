@@ -1,0 +1,23 @@
+* Analog Design Lab v2.0: N differential pair: vd=Vplus-Vminus; Idelta=Id1-Id2; Vdiffout=Vright-Vleft
+* Zero-volt MOS sensors point into each terminal; bodies/loads are explicit.
+Vdd vdd 0 DC 1
+Vcm cm 0 DC 0.59999999999999998
+Vdiff diff 0 DC 0 AC 1
+Eplus inp cm diff 0 0.5
+Eminus inn cm diff 0 -0.5
+Ediff odiff 0 dr dl 1
+Rleft vdd dl 90000.000000000015
+Rright vdd dr 90000.000000000015
+Cleft dl 0 1p
+Cright dr 0 1p
+Itail tail 0 DC 9.9999999999999991e-06
+VtM1d dl m1d 0
+VtM1g inp m1g 0
+VtM1s tail m1s 0
+VtM1b 0 m1b 0
+xm1 m1d m1g m1s m1b apm045_vtg_nmos w=1.9999999999999999e-06 l=2.3999999999999998e-07
+VtM2d dr m2d 0
+VtM2g inn m2g 0
+VtM2s tail m2s 0
+VtM2b 0 m2b 0
+xm2 m2d m2g m2s m2b apm045_vtg_nmos w=1.9999999999999999e-06 l=2.3999999999999998e-07

@@ -1,7 +1,15 @@
 # Analog Design Notes
 
-Read the [research site](https://ds54e.github.io/analog-design-notes/) or the
-[latest Japanese overview](https://ds54e.github.io/analog-design-notes/ja/power-sequencing.html).
+Read the [site](https://ds54e.github.io/analog-design-notes/), start the
+[eight-chapter learning route](https://ds54e.github.io/analog-design-notes/learn/),
+or use the [Japanese reading overview](https://ds54e.github.io/analog-design-notes/ja/learning-path.html).
+
+Learning edition **v1.0** connects MOS operating points, common-source stages,
+mirrors, differential pairs/OTAs, feedback, errors and supply/startup to the
+remaining interfaces of an LDO. Its [new selected evidence package](examples/learning-path-v1/README.md)
+contains four archived nominal examples, current-balance calculations and eight
+regenerable graphs. It is not a new completed research campaign; the five
+studies below retain their original histories and exact downloads.
 
 The power-sequencing study explains input delivery/absorption and supply
 charging peaks in 59 nominal static/history/control observations. It preserves
@@ -39,7 +47,8 @@ repository. This repository receives an explicit selected publication set.
 Reader corrections belong in Issues; they are applied to that canonical source
 before export. The immutable research tags are
 `gain-operating-point-accuracy-v1.0`, `passive-sensitivity-v1.0`,
-`active-allocation-v1.0`, `finite-feedback-v1.0` and `power-sequencing-v1.0`. Versioned
+`active-allocation-v1.0`, `finite-feedback-v1.0` and `power-sequencing-v1.0`.
+The new edition tag is `learning-path-v1.0`. Versioned
 downloads are static checked artifacts; the first release's ZIP bytes are preserved.
 
 Maintainers render with Quarto **1.10.18**:

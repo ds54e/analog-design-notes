@@ -3,95 +3,51 @@ title: "Analog Design Notes"
 toc: false
 ---
 
-Research notes that connect circuit behavior, measured evidence, and practical
-design choices. Start with the amplifier's current balance, then ask which
-uncertainty changes the design decision. Basic MOS small-signal and SPICE
-knowledge is helpful; each guide explains its current paths before comparisons.
+Learn how current and voltage behavior lead to an analog design choice.
+Follow one transistor into a common-source amplifier, a finite mirror, a
+differential OTA and feedback, then ask what uncertainty and power-up demand
+change the decision.
 
-## What must the input and supply do during startup?
+## Start the connected learning route
 
-[**Power sequencing exposes the cost of an amplifier input**](studies/power-sequencing/index.qmd)
+[**Read the entry page and eight chapters**](learn/index.qmd) ·
+[日本語の読み方](ja/learning-path.qmd)
 
-A feedback input can deliver current while its supply is off, or absorb much
-more current before the signal is present than during normal operation. The
-faster resistor-loaded design has a larger supply charging peak. Finite source
-histories separate these interface demands from the 75-µA DC operating point.
+**Learning edition v1.0 · 2026-09-13.** Original explanations connect first
+predictions with selected saved observations and finite design costs. Basic
+KCL/KVL is introduced at the entry; no simulator installation is needed to read.
 
-**Study v1.0 · 59 nominal static/history/control observations · no population startup claim**
+| Follow the circuit | Make the next judgment |
+| --- | --- |
+| [1. MOS operating point and sizing](learn/01-mos-operating-point.qmd) | Current, local derivatives, headroom and dimensions. |
+| [2. Common-source amplifier](learn/02-common-source.qmd) | Solve MOS behavior and load KCL together; compare R37/R75. |
+| [3. Mirrors and bias](learn/03-mirrors-and-bias.qmd) | Count the reference before judging an active load. |
+| [4. Differential pair and OTA](learn/04-differential-pair-and-ota.qmd) | Move from current steering to a finite low-voltage buffer. |
+| [5. Feedback and response](learn/05-feedback-and-response.qmd) | Read connection/precision first, frequency/time response second. |
+| [6. Errors and resources](learn/06-errors-and-resources.qmd) | Separate a source of error from its transmission. |
+| [7. Supply and startup](learn/07-supply-and-startup.qmd) | Specify input and supply delivery/absorption through a history. |
+| [8. Toward an LDO](learn/08-toward-an-ldo.qmd) | Identify receiving-port requirements and the evidence still needed. |
 
-- [Read the English guide](studies/power-sequencing/index.qmd)
-- [電源投入順序の日本語概要](ja/power-sequencing.qmd)
-- [Regenerate figures and replay four small nominal examples](studies/power-sequencing/reproduce.qmd)
+The [learning reproduction package](studies/learning-path-v1/reproduce.qmd)
+contains selected differential-pair/OTA inputs, calculations and eight graph
+examples. The earlier studies and downloads remain the detailed evidence layer.
 
-## What does finite feedback cost at the input?
+## Detailed studies {#detailed-studies}
 
-[**Finite feedback lowers an error path, with a price at the input**](studies/finite-feedback/index.qmd)
+Each study keeps its original guide, exact circuits, measurement definitions,
+failed attempts or physical requirements, results and versioned reproduction.
+Their completed cohorts are known evidence for this edition.
 
-Output-to-gate feedback lowers active-load error and larger-signal distortion.
-Fresh confirmation shows the accuracy improvement and a weaker case for extra
-PMOS area at lower supply. Resistor-load accuracy and speed remain attractive;
-feedback needs more resistance, input-current absorption and noise budget.
+| Study | Retained design lesson | Reproduction |
+| --- | --- | --- |
+| [Gain, current balance and untrimmed accuracy](studies/gain-operating-point-accuracy/index.qmd) | Spending current in the signal branch differs from enlarging only the active reference. | [First study v1.0](studies/gain-operating-point-accuracy/reproduce.qmd) |
+| [Passive sensitivity](studies/passive-sensitivity/index.qmd) | Common resistance shifts and ratio error can favor different designs. | [Passive v1.0](studies/passive-sensitivity/reproduce.qmd) |
+| [Active-area allocation](studies/active-allocation/index.qmd) | Extra area helps most at the dominant error source; supply shifts can leave comparisons inconclusive. | [Allocation v1.0](studies/active-allocation/reproduce.qmd) |
+| [Finite feedback](studies/finite-feedback/index.qmd) | Lower distortion and current-error transmission cost input drive, resistance and noise. | [Feedback v1.0](studies/finite-feedback/reproduce.qmd) |
+| [Power sequencing](studies/power-sequencing/index.qmd) | A nominal current budget does not specify charging peaks or an input source's absorption. | [Sequencing v1.0](studies/power-sequencing/reproduce.qmd) |
 
-**Study v1.0 · 521 fresh paired coordinates · 4,168 main + 24 selected signal conditions**
-
-- [Read the English design guide](studies/finite-feedback/index.qmd)
-- [有限帰還の日本語概要](ja/finite-feedback.qmd)
-- [Regenerate figures and replay the preselected OP/AC and 20-mV examples](studies/finite-feedback/reproduce.qmd)
-
-## Where should a fixed area budget go?
-
-[**Spend area where the error is generated**](studies/active-allocation/index.qmd)
-
-At the same 37.5 µA and 3.7 µm², enlarging the output PMOS improves untrimmed
-accuracy more than the finite reference, input or balanced alternatives. Fresh
-confirmation also shows its limits: the resistor-load baseline remains more
-accurate, and a lower supply leaves two minimum-improvement claims inconclusive.
-
-**Study v1.0 · 598 fresh paired coordinates · 7,176 confirmation conditions**
-
-- [Read the English design guide](studies/active-allocation/index.qmd)
-- [面積配分の日本語概要](ja/active-allocation.qmd)
-- [Regenerate plots and replay the preselected physical circuits](studies/active-allocation/reproduce.qmd)
-
-## Does resistor matching preserve the benefit of more current?
-
-[**Resistor accuracy is more than a matching ratio**](studies/passive-sensitivity/index.qmd)
-
-Source and drain/bias resistor errors act in opposite directions. Their common
-drift partly cancels; ratio error reinforces. Fixed synthetic conditions show
-where R75's extra current loses its RMS accuracy advantage, and why a smaller
-RMS error can coexist with fewer observations meeting the functional limits.
-
-**Study v1.0 · 5,568 new passive conditions on the known MOS cohort · 156 nominal controls**
-
-- [Read the English design guide](studies/passive-sensitivity/index.qmd)
-- [抵抗誤差の日本語概要](ja/passive-sensitivity.qmd)
-- [Regenerate plots and replay saved physical circuits](studies/passive-sensitivity/reproduce.qmd)
-
-## Where should extra current go?
-
-[**Gain, current balance, and untrimmed accuracy**](studies/gain-operating-point-accuracy/index.qmd)
-
-Four circuits share gain −6 and a 0.5-V nominal output center. Adding current to
-the signal branch improves nominal accuracy; adding it only to an active
-reference leaves a large output-load error floor. A supply change can reverse
-the ranking between the two resistor-load designs.
-
-**Study v1.0 · 464 paired coordinates · 3,712 condition observations**
-
-The guide includes explicit MOS terminals, exact SPICE inputs, equations,
-measured plots, preserved failures and the costs of each choice. Basic MOS
-small-signal and SPICE knowledge is helpful; the current paths are explained
-before the statistical comparison.
-
-- [Read the full English study](studies/gain-operating-point-accuracy/index.qmd)
-- [日本語の概要](ja/gain-operating-point-accuracy.qmd)
-- [Reproduce plots and selected circuits](studies/gain-operating-point-accuracy/reproduce.qmd)
-- [Model scope, methods and review roles](methods.qmd)
-
-Last substantive research revision: **2026-09-13 UTC**. Each study has a separate
-version tag and download; the original first-study download is retained exactly.
-This collection's
-longer-term direction is low-current on-chip analog design, including regulators.
-This first release studies a foundational amplifier; it does not demonstrate
-an integrated LDO.
+The five study tags and exact old ZIP bytes are retained. The new learning
+package has a separate identity. [Methods, model scope and review roles](methods.qmd)
+explain what the numerical checks establish. These are pinned-model studies,
+not manufacturing-yield or silicon qualifications. LDO design remains a
+longer-term direction; this edition makes its missing interfaces explicit.
