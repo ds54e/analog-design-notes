@@ -1,7 +1,13 @@
 # Analog Design Notes
 
 Read the [research site](https://ds54e.github.io/analog-design-notes/) or the
-[latest Japanese overview](https://ds54e.github.io/analog-design-notes/ja/passive-sensitivity.html).
+[latest Japanese overview](https://ds54e.github.io/analog-design-notes/ja/finite-feedback.html).
+
+The finite-feedback study connects lower active-load error to input-current,
+resistor, noise and dynamic costs. Its frozen 521-coordinate confirmation and
+24 preselected larger-signal cases preserve the limits of the improvement.
+See the [guide](https://ds54e.github.io/analog-design-notes/studies/finite-feedback/)
+and [public example](examples/finite-feedback/README.md).
 
 The passive-sensitivity study asks when absolute or ratio resistor error changes
 the benefit of added current. Its 5,568 new conditions reuse the known MOS cohort;
@@ -26,7 +32,8 @@ The editable canonical manuscripts are maintained in the private research
 repository. This repository receives an explicit selected publication set.
 Reader corrections belong in Issues; they are applied to that canonical source
 before export. The immutable research tags are
-`gain-operating-point-accuracy-v1.0` and `passive-sensitivity-v1.0`. Versioned
+`gain-operating-point-accuracy-v1.0`, `passive-sensitivity-v1.0`,
+`active-allocation-v1.0` and `finite-feedback-v1.0`. Versioned
 downloads are static checked artifacts; the first release's ZIP bytes are preserved.
 
 Maintainers render with Quarto **1.10.18**:

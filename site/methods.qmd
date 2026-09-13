@@ -62,6 +62,22 @@ Its public-only example reproduced six graphs, all summary calculations and two
 selected native passive-condition observations in a fresh Python/model checkout
 on the same host. No full-campaign or clean-OS replay is implied.
 
+The [allocation evidence](studies/active-allocation/evidence.json) records
+7,176 fresh physical conditions and the finite nominal/cause checks behind its
+same-current/area comparison. All saved physical identities and scalar
+measurements were rechecked. Useful-effect thresholds and inconclusive results
+remain separate from merely positive estimated differences.
+
+The [feedback evidence](studies/finite-feedback/evidence.json) records
+4,168 main conditions on 521 fresh paired coordinates and 24 preselected 20-mV
+sine conditions. Its 33-attempt nominal dynamic block includes an analytic
+RC control, finite ramps with independent DC targets, actual current/charge
+checks and targeted refinements. The input source's signed current, enlarged
+resistor budget and changed signal/load requirements are explicit. A sparse
+waveform subset establishes no dynamic population rate or formal loop stability.
+All eleven public figures/statistics and four preselected native examples were
+checked in a fresh public model/Python environment on the same host.
+
 ## AI and human roles
 
 Codex performed the derivations, implementation, acquisitions, writing and

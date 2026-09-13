@@ -1,0 +1,13 @@
+{
+  "schema": "ads.feedback-measurements.v1",
+  "status": "FIXED_BEFORE_CONFIRMATION_INPUT_PREPARATION",
+  "scalar_basis": "Unchanged original gain-study DC/AC/noise/sine formulas; old files/results remain their original definitions.",
+  "dc": "Vout - fixed .5 V; retain mean error, MAE, RMS, sample SD and physical failures separately.",
+  "ac": "80 points/decade, 1 kHz..100 MHz; complex external Vout/Vin, signed real gain at 1 kHz, all sampled magnitudes in 1..100 kHz. First downward -3 dB crossing relative to 1 kHz, interpolated in log frequency. No crossing remains explicit.",
+  "dc_current": "sum(max(0,-I(Vdd)),max(0,-I(Vin))); net signed port power separate. Explicit MOS and feedback/input/output/reference KCL and real resistor/model/raw readbacks. Source absorption is a dependency, not an uncounted auxiliary supply.",
+  "nominal_noise": "Unchanged 1 kHz..1 MHz PSD integral with pointwise input referral, all modeled resistor/device noise; no Local noise statistics.",
+  "sine": "10 kHz, 1-ms ordinary-OP initialized transient, tmax100 ns; last eight cycles on 1000 points/cycle; harmonics2..10 over fundamental, final-cycle stationarity check and fixed signal/swing limits. Exact selection is in confirmation-plan.json.",
+  "selected_signal": "Separate saved-physical 20-mV-peak condition on preselected indices. A zero-V capacitor current probe is instrumentation; actual node KCL, current/charge, and source/sink ranges are reported. This subset estimates no population rate.",
+  "nominal_dynamics": "The separate predeclared dynamics-plan.json/ads.feedback-dynamics.v1 uses endpoint-OP-referenced finite ramps, selected load sweeps to 1 GHz, actual capacitor current and selected time/frequency refinement. No phase-margin or all-load stability qualification.",
+  "numerical": "Pinned ngspice47/APM v5.0.0; supported geometry/terminal domains and actual per-unit raw/model readback, unique attempts, reltol1e-7, bounded I/O. Usability and specification outcomes are separate."
+}

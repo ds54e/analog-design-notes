@@ -1,0 +1,507 @@
+{
+  "schema": "adn.feedback-evidence.v1",
+  "study": "finite-feedback",
+  "version": "1.0",
+  "scope": "Finite physical output-to-gate feedback at matched nominal current and explicit common resource ceilings; fresh Local confirmation and separately labeled finite dynamics.",
+  "model": {
+    "apm_version": "5.0.0",
+    "commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "technology": "APM045",
+    "family": "VTG",
+    "ngspice": "47"
+  },
+  "confirmation": {
+    "frozen_utc": "2026-09-13T00:08:18.334713+00:00",
+    "assignments_sha256": "d3f93f851d03e8815ce63003ad3a0546c00f5b9d99c981a18a3fc442d9c4a93e",
+    "assignment_count": 2084,
+    "physical_units": 12504,
+    "condition_attempts": 4168,
+    "additional_signal_attempts": 24,
+    "total_target_attempts": 4192,
+    "known_realizations_compared": 5716,
+    "overlap_with_retained_development_or_first_study_raw_or_z": 0,
+    "matching_prior_ADS_target_attempts": [],
+    "paired_coordinate_equalities": 6252,
+    "same_geometry_physical_equalities": 1042,
+    "native_reference_observations_remeasured": 11462,
+    "reference_maximum_residual_sigma": 8.377754477846767e-06,
+    "actual_reference_raw_readbacks_and_evidence_hashes_verified": true
+  },
+  "scientific_review": {
+    "schema": "ads.feedback-scientific-review.v1",
+    "status": "SCIENCE_COMPLETE",
+    "checked_utc": "2026-09-13T00:36:53.839316+00:00",
+    "reviewer": "Same Codex agent; internal evidence review, not independent scientific replication or prior human approval.",
+    "freeze_unchanged": true,
+    "verified_pre_target_private_commit": "c02d6ef600c1acd215bad866d15ebab6e4b18262",
+    "fixed_stop": {
+      "main_observations": 4168,
+      "selected_signal_observations": 24,
+      "physical_coordinates": 521,
+      "missing_or_unsupported": 0,
+      "no_redraw_or_retuning": true
+    },
+    "same_function_and_resources": "Original 5-mV external job, nominal 75-uA delivered current, common 10-um2 MOS and explicitly increased 150-kohm internal-resistance ceilings. Input absorption, signed power, source/sink peaks, larger signal and load changes separately accounted.",
+    "findings": [
+      "All four frozen useful MAE reductions supported at nominal supply.",
+      "At .97 V F75S-to-F75L improvement 1.282 mV [0.216,2.348] remains below the frozen useful 4-mV threshold; no rescue or extension.",
+      "F75L has lower .97-V MAE but fewer five-test passes than F75S; fixed limits preserved.",
+      "All six preselected R75 20-mV cases fail distortion; F75S/F75L pass the dynamic subset but retain center failures in joint checks.",
+      "Analytic finite-loading/path equations, independent current/voltage probes, RC control, step/frequency refinement, actual device/resistor/current/charge checks support the causal explanation."
+    ],
+    "public_reproduction": "All 11 SVGs and statistics exact in fresh public clone/Python environment; four preselected native examples checked. OP/AC-only scalars exact; all selected waveform metrics exact. Public charge readback is distinguished from direct private parameter readback.",
+    "preserved_failure": "Characterization adapter stopped after 45 complete observations. Re-audited/reused them and acquired only 101 missing declared conditions in a new destination. All scientific failures/nominal attempts remain.",
+    "limitations": [
+      "Source-transfer hypothesis, known environmental settings and fresh retained-ADS physical coordinates; unavailable retired campaign history cannot be exhaustively compared.",
+      "No calibrated passive/global/spatial/temperature distributions, silicon/manufacturing-yield inference, layout/passive area or real source implementation.",
+      "No Local noise population, dynamic population pass rate, formal phase margin, universal stability or all-history startup claim."
+    ],
+    "audit_sha256": {
+      "nominal-audit.json": "0f252a68aaaf83024d26f2850bb4ea97a0a9183ae0ba6863cfd0bc554f3f7963",
+      "dynamics-audit.json": "615e862fc14943e655b271f089043e26b4a3620e98dc9f1738a1e42f6a75f1c6",
+      "development-audit.json": "568a7fc9092182d7239a669ac90653a007975af039ac0ee475052ca1cbaeb2f1",
+      "confirmation-audit.json": "37a1c5a1b460912527e32b9847354034d0abdde4c23a8d6f5d23de3746dca550",
+      "selected-signal-audit.json": "33ffe96559bd7151bed9c2938907236042b1a819a32dcbe813d91177f8717c16",
+      "clean-public-check.json": "082f85e3bb6f972b5890824e031145d32b7c5472ff4e3d5f38c74b3cc91dc65e"
+    }
+  },
+  "confirmation_audit": {
+    "all_request_conditions_and_saved_physical_inputs_verified": true,
+    "all_saved_file_hashes_checked": true,
+    "all_scalar_measurements_recomputed": true,
+    "assignments_sha256": "d3f93f851d03e8815ce63003ad3a0546c00f5b9d99c981a18a3fc442d9c4a93e",
+    "checked_utc": "2026-09-13T00:23:16.709070+00:00",
+    "first_target_started_utc": "2026-09-13T00:11:45.643847+00:00",
+    "last_target_started_utc": "2026-09-13T00:17:38.719091+00:00",
+    "maximum_kcl_a": 3.013123304092529e-16,
+    "model_names_and_raw_readbacks_rechecked": true,
+    "native_attempts": 4168,
+    "observations": 4168,
+    "readback_units": 25008,
+    "scope": "Internal same-agent audit of saved evidence; finite model coordinates, not manufacturing yield or independent replication.",
+    "status": "PASS"
+  },
+  "nominal_audit": {
+    "actual_model_raw_resistor_source_readbacks_rechecked": true,
+    "all_measurements_recomputed": true,
+    "all_native_file_and_input_hashes_verified": true,
+    "causal_and_condition_observations": 146,
+    "checked_utc": "2026-09-12T23:27:12.437115+00:00",
+    "later_new_causal_observations": 101,
+    "maximum_kcl_a": 2.5899599373252653e-16,
+    "model_readback_units": 1140,
+    "nominal_and_control_observations": 83,
+    "numerical_shapes_axes_and_terminal_domains_rechecked": true,
+    "retained_from_interrupted_block": 45,
+    "schema": "ads.feedback-nominal-audit.v1",
+    "scope": "Same-agent saved-evidence audit, not new acquisition or independent scientific replication. Valid physical failures and the adapter-validation interruption are preserved.",
+    "status": "PASS",
+    "summed_native_report_bytes": 55949945,
+    "summed_native_seconds": 4.985754361019644,
+    "total_observations": 229
+  },
+  "dynamics_audit": {
+    "actual_mos_units_rechecked": 190,
+    "all_saved_file_input_model_raw_identities_and_scalar_results_rechecked": true,
+    "analytic_control": {
+      "expected_dc_gain": 0.47619047619047616,
+      "expected_tau_s": 4.1904761904761906e-07,
+      "measured": {
+        "band_v": 0.00019047619047619007,
+        "capacitance_readback_f": 7.999999999999998e-12,
+        "capacitor_current_max_a": 3.5933059724414795e-07,
+        "capacitor_current_min_a": -3.5933037988676586e-07,
+        "charge_checks": [
+          {
+            "c_delta_voltage_c": 1.5238085909805595e-13,
+            "integral_current_c": 1.5238014931320993e-13,
+            "interval_s": [
+              2e-06,
+              8e-06
+            ],
+            "relative_difference": -4.6579659034318155e-06
+          },
+          {
+            "c_delta_voltage_c": -1.523807658151177e-13,
+            "integral_current_c": -1.5238005603165109e-13,
+            "interval_s": [
+              8e-06,
+              1.4e-05
+            ],
+            "relative_difference": -4.657959702503156e-06
+          }
+        ],
+        "input_fall_output_rise": {
+          "band_v": 0.00019047619047619007,
+          "bracket_s": [
+            1.922999999999329e-06,
+            1.9249999999993285e-06
+          ],
+          "observed_until_s": 5.99e-06,
+          "stationary_target_v": 0.20476190476190478,
+          "status": "OBSERVED_FINAL_ENTRY",
+          "time_s": 1.9249999999993285e-06
+        },
+        "input_rise_output_fall": {
+          "band_v": 0.00019047619047619007,
+          "bracket_s": [
+            1.9230000000001453e-06,
+            1.9250000000001455e-06
+          ],
+          "observed_until_s": 5.99e-06,
+          "stationary_target_v": 0.2238095238095238,
+          "status": "OBSERVED_FINAL_ENTRY",
+          "time_s": 1.9250000000001455e-06
+        },
+        "maximum_device_transient_kcl_a": 0.0,
+        "maximum_excursion_outside_dc_endpoint_interval_v": 1.6653345369377348e-16,
+        "maximum_output_transient_kcl_a": 3.4681764025327327e-18,
+        "port_current_ranges_and_averages": {
+          "Vdd": {
+            "average_absorption_a": 0.0,
+            "average_positive_delivery_a": 0.0,
+            "max_delivered_current_a": -0.0,
+            "min_delivered_current_a": -0.0
+          },
+          "Vin": {
+            "average_absorption_a": 0.0,
+            "average_positive_delivery_a": 2.1292517038530942e-06,
+            "max_delivered_current_a": 2.4092050463066857e-06,
+            "min_delivered_current_a": 1.8765093429112117e-06
+          }
+        },
+        "scope": "Actual finite current/charge observations; DC current ceiling is distinct from these signal-dependent source and sink peaks.",
+        "stationary_output_at_input_high_v": 0.2238095238095238,
+        "stationary_output_at_input_low_v": 0.20476190476190478
+      },
+      "status": "PASS",
+      "waveform_max_error_v": 9.083681648536235e-08
+    },
+    "checked_utc": "2026-09-12T23:44:59.293007+00:00",
+    "maximum_capacitor_charge_relative_difference": 4.6579659034318155e-06,
+    "maximum_transient_kcl_a": 1.623327123764784e-14,
+    "native_attempts": 33,
+    "native_report_bytes": 190978875,
+    "numerical_axes_and_actual_terminal_domains_rechecked": true,
+    "refinements": [
+      {
+        "candidate": "R75",
+        "changes": {
+          "bandwidth_relative": 9.2602063381797e-06,
+          "center_v": 0.0,
+          "gain_relative": 0.0,
+          "input_fall_output_rise_time_difference_s": -2.4250271555207703e-10,
+          "input_rise_output_fall_time_difference_s": 3.203320577878489e-10,
+          "thd_relative": 7.936306911204838e-06
+        },
+        "status": "PASS"
+      },
+      {
+        "candidate": "F75L",
+        "changes": {
+          "bandwidth_relative": 4.8009954452199466e-05,
+          "center_v": 0.0,
+          "gain_relative": 0.0,
+          "input_fall_output_rise_time_difference_s": -2.2359016966730112e-10,
+          "input_rise_output_fall_time_difference_s": -3.2672733558205514e-10,
+          "thd_relative": 9.144456415199897e-06
+        },
+        "status": "PASS"
+      }
+    ],
+    "schema": "ads.feedback-dynamics-audit.v1",
+    "scope": "Same-agent saved-evidence and numerical-refinement audit; nominal finite circuits only, no Local dynamic population or stability qualification.",
+    "status": "PASS",
+    "unchanged_saved_MOS_values_rechecked": true
+  },
+  "selected_signal_audit": {
+    "actual_mos_units_rechecked": 144,
+    "all_input_model_raw_source_and_saved_measurements_rechecked": true,
+    "assignments_sha256": "d3f93f851d03e8815ce63003ad3a0546c00f5b9d99c981a18a3fc442d9c4a93e",
+    "cases": 24,
+    "checked_utc": "2026-09-13T00:23:18.488684+00:00",
+    "first_target_started_utc": "2026-09-13T00:21:15.136802+00:00",
+    "last_target_started_utc": "2026-09-13T00:22:07.256041+00:00",
+    "maximum_transient_kcl_a": 4.1053315261163625e-16,
+    "scope": "Twenty-four preselected waveform cases on six paired coordinates; no dynamic population pass-rate or manufacturing-yield claim.",
+    "status": "PASS"
+  },
+  "clean_public_reproduction": {
+    "status": "PASS",
+    "checked_utc": "2026-09-13T00:32:53.974393+00:00",
+    "apm_public_repository": "https://github.com/ds54e/analog-process-models",
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "installed_packages": [
+      "contourpy==1.3.0",
+      "cycler==0.12.1",
+      "fonttools==4.60.2",
+      "importlib_metadata==8.7.1",
+      "importlib_resources==6.5.2",
+      "kiwisolver==1.4.7",
+      "matplotlib==3.9.4",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.3.0",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.13.1",
+      "six==1.17.0",
+      "tomli==2.2.1",
+      "typing_extensions==4.16.0",
+      "zipp==3.23.1"
+    ],
+    "native_checks": [
+      {
+        "status": "PASS",
+        "candidate": "F75L",
+        "index": 2000,
+        "condition": "nominal",
+        "measured": {
+          "out_v": 0.5226815247957144,
+          "gain": -6.014289590680717,
+          "current_a": 7.633383202878405e-05
+        },
+        "differences_from_published": {
+          "out_v": 0.0,
+          "gain": 0.0,
+          "current_a": 0.0
+        },
+        "dc_ac_current_specification_pass": true,
+        "actual_resistor_voltage_current_checks": {
+          "Rs": {
+            "measured_v_over_i_ohm": 670.3660992954382,
+            "declared_ohm": 670.3660992954378
+          },
+          "Rsrc": {
+            "measured_v_over_i_ohm": 1000.0000000000309,
+            "declared_ohm": 1000.0
+          },
+          "Rin": {
+            "measured_v_over_i_ohm": 9000.000000000195,
+            "declared_ohm": 9000.0
+          },
+          "Rf": {
+            "measured_v_over_i_ohm": 100000.00001509071,
+            "declared_ohm": 100000.0
+          },
+          "Rbias": {
+            "measured_v_over_i_ohm": 10731.024577367358,
+            "declared_ohm": 10731.024577367358
+          },
+          "Rload": {
+            "measured_v_over_i_ohm": 99999.99999809271,
+            "declared_ohm": 100000.0
+          }
+        },
+        "max_device_kcl_residual_a": 4.1179353763715065e-17,
+        "device_readback": "Pinned APM verified actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every analysis.",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "run_id": "2ec2e543186df401494804f900c0b5e075744f67e451d867205c9703b1ecaf0d",
+        "reproduction_status": "PASS",
+        "scope": "Saved physical OP/AC case. No noise, sine or full-population native replay."
+      },
+      {
+        "status": "PASS",
+        "candidate": "F75L",
+        "index": 2000,
+        "condition": "supply_097",
+        "measured": {
+          "out_v": 0.4845597330136635,
+          "gain": -5.9742987788816855,
+          "current_a": 7.207466172662554e-05
+        },
+        "differences_from_published": {
+          "out_v": 0.0,
+          "gain": 0.0,
+          "current_a": 0.0
+        },
+        "dc_ac_current_specification_pass": true,
+        "actual_resistor_voltage_current_checks": {
+          "Rs": {
+            "measured_v_over_i_ohm": 670.3660992954381,
+            "declared_ohm": 670.3660992954378
+          },
+          "Rsrc": {
+            "measured_v_over_i_ohm": 1000.0000000001196,
+            "declared_ohm": 1000.0
+          },
+          "Rin": {
+            "measured_v_over_i_ohm": 8999.99999999983,
+            "declared_ohm": 9000.0
+          },
+          "Rf": {
+            "measured_v_over_i_ohm": 99999.99997897989,
+            "declared_ohm": 100000.0
+          },
+          "Rbias": {
+            "measured_v_over_i_ohm": 10731.024577367358,
+            "declared_ohm": 10731.024577367358
+          },
+          "Rload": {
+            "measured_v_over_i_ohm": 100000.00000136465,
+            "declared_ohm": 100000.0
+          }
+        },
+        "max_device_kcl_residual_a": 9.037019032002577e-17,
+        "device_readback": "Pinned APM verified actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every analysis.",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "run_id": "c6d0e7b85adf1376719c630835eab9da431ab779f5f9459979229d44ac4f609d",
+        "reproduction_status": "PASS",
+        "scope": "Saved physical OP/AC case. No noise, sine or full-population native replay."
+      },
+      {
+        "status": "PASS",
+        "candidate": "R75",
+        "index": 2000,
+        "condition": "signal_20m",
+        "measured": {
+          "out_v": 0.497015626494782,
+          "gain": -6.021233234361601,
+          "current_a": 7.544767722212904e-05
+        },
+        "differences_from_published": {
+          "out_v": 3.0159208463942377e-13,
+          "gain": 1.1821654766208667e-12,
+          "current_a": 4.689174395999807e-18
+        },
+        "dc_ac_current_specification_pass": true,
+        "actual_resistor_voltage_current_checks": {
+          "Rs": {
+            "measured_v_over_i_ohm": 171.81801356494387,
+            "declared_ohm": 171.81801356494375
+          },
+          "Rsrc": {
+            "measured_v_over_i_ohm": 999.9999999949089,
+            "declared_ohm": 1000.0
+          },
+          "Rd": {
+            "measured_v_over_i_ohm": 6667.191718846597,
+            "declared_ohm": 6667.191718846597
+          },
+          "Rload": {
+            "measured_v_over_i_ohm": 100000.00000000528,
+            "declared_ohm": 100000.0
+          }
+        },
+        "max_device_kcl_residual_a": 1.728316289066867e-16,
+        "device_readback": "Pinned APM verified actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every analysis.",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "run_id": "20f318e242eac13a6881cea1cbc09cbef5ece374e44d9d59e53c06fcc084f07b",
+        "reproduction_status": "PASS",
+        "signal": {
+          "thd_fraction": 0.041292887496505844,
+          "fundamental_gain": 6.013746673058836,
+          "output_min_v": 0.36686110967041,
+          "output_max_v": 0.6073059886852571
+        },
+        "signal_differences_from_published": {
+          "thd_fraction": 0.0,
+          "fundamental_gain": 0.0,
+          "output_min_v": 0.0,
+          "output_max_v": 0.0
+        },
+        "dynamic_specification_pass": false,
+        "joint_dc_ac_signal_pass": false,
+        "effective_capacitance_from_charge_f": 1.0000045146279017e-12,
+        "max_output_transient_kcl_a": 6.369687763352339e-19,
+        "scope": "Saved preselected physical case, OP/AC and 20-mV sine. Charge/voltage capacitor check; no noise or population-dynamic replay."
+      },
+      {
+        "status": "PASS",
+        "candidate": "F75L",
+        "index": 2000,
+        "condition": "signal_20m",
+        "measured": {
+          "out_v": 0.5226815247939318,
+          "gain": -6.014289590682177,
+          "current_a": 7.633383202878794e-05
+        },
+        "differences_from_published": {
+          "out_v": -1.7825740883381513e-12,
+          "gain": -1.4601653219870059e-12,
+          "current_a": 3.889575293791747e-18
+        },
+        "dc_ac_current_specification_pass": true,
+        "actual_resistor_voltage_current_checks": {
+          "Rs": {
+            "measured_v_over_i_ohm": 670.3660992954376,
+            "declared_ohm": 670.3660992954378
+          },
+          "Rsrc": {
+            "measured_v_over_i_ohm": 1000.0000000000007,
+            "declared_ohm": 1000.0
+          },
+          "Rin": {
+            "measured_v_over_i_ohm": 8999.999999999922,
+            "declared_ohm": 9000.0
+          },
+          "Rf": {
+            "measured_v_over_i_ohm": 99999.99999381187,
+            "declared_ohm": 100000.0
+          },
+          "Rbias": {
+            "measured_v_over_i_ohm": 10731.024577367358,
+            "declared_ohm": 10731.024577367358
+          },
+          "Rload": {
+            "measured_v_over_i_ohm": 100000.00000078185,
+            "declared_ohm": 100000.0
+          }
+        },
+        "max_device_kcl_residual_a": 2.6945134491696e-16,
+        "device_readback": "Pinned APM verified actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after every analysis.",
+        "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+        "run_id": "7db9bdf8314fb471e5e418a6cd34eb01d03f9c3a52702fce498d728d501675ff",
+        "reproduction_status": "PASS",
+        "signal": {
+          "thd_fraction": 0.007683049674521053,
+          "fundamental_gain": 5.9978239102507915,
+          "output_min_v": 0.4010174296825484,
+          "output_max_v": 0.6406867247016084
+        },
+        "signal_differences_from_published": {
+          "thd_fraction": 0.0,
+          "fundamental_gain": 0.0,
+          "output_min_v": 0.0,
+          "output_max_v": 0.0
+        },
+        "dynamic_specification_pass": true,
+        "joint_dc_ac_signal_pass": true,
+        "effective_capacitance_from_charge_f": 1.0000048958686949e-12,
+        "max_output_transient_kcl_a": 2.3081647812679684e-19,
+        "scope": "Saved preselected physical case, OP/AC and 20-mV sine. Charge/voltage capacitor check; no noise or population-dynamic replay."
+      }
+    ],
+    "regenerated_svg_sha256": {
+      "confirmation-supply.svg": "2971946962cf0789fb6694f5896de4710273485e2dff5b63e9c1f97c3022a888",
+      "capacitive-load.svg": "55def5bff1dc5f56c2c5ad08527d5ce0c5804ed68fe6e94deeba7668c016c35d",
+      "step-response.svg": "c111ba2d301d0424193b1831ab7e31f068c074b5249615f9d118a084bf1ecf14",
+      "source-budget.svg": "f83849c05be4337b272509c5056ebe84d672f0f9a7a0ef03e16b6217cd11408a",
+      "paired-comparisons.svg": "d2370e6bc82ba813b4f03f7045601a2618cf25edb7bd68f3b1965a8f6c2bcc5d",
+      "signal-distortion.svg": "186a5f23a39d9faffa937ed45f5f292de6941a8b77fd509dc1b4ab5c2e8057eb",
+      "nominal-noise.svg": "e52c27db55677f0584b4bf3e418fd2e68dd636a31cf4bd52c6b00bf921f669e2",
+      "assessed-function.svg": "4c07050e319098be314b560649d235fd7973201844dbc1800bb73ddf82c8ce52",
+      "confirmation-nominal.svg": "291b2f6fa41e9b86aa3e303fb4acd136e6c82d26fbcd019fbfcc5ea172b51e25",
+      "prediction-error.svg": "9b08987c300038d862a9f3c3ab7a3662e9764173e05ff29fe2797ccca1f3a4b1",
+      "port-currents.svg": "9fde93b741fbff2e957e57e76c1b909d83011a23d189cb36e7cfc173c595b48c"
+    },
+    "all_graph_bytes_equal": true,
+    "statistics": "All eight candidate/condition summaries and eight frozen paired intervals exactly reproduced; ten role-variance terms reconstructed from reference Jacobians and source sigmas; five functional checks recomputed from scalars.",
+    "source_files_sha256": {
+      "replay.py": "d1af2afdbaf8edeacd7ed785f6f81b88799634aa4352d7133cdc48e5cb0518bc",
+      "statistics.py": "d6f9beb20b043328d54f600e6b13d2b4bbfa80aa746bc7509ec1d97980ca4e42",
+      "plot.py": "04195b5a470b28251e7cd06ca2bae03fe9835a710632f549540d28da74861d27",
+      "requirements.txt": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a"
+    },
+    "limitation": "Fresh public model clone and Python environment on the same Linux x86_64 host with preinstalled ngspice47. Selected public inputs only; not a clean-OS, all-platform or population dynamic qualification."
+  },
+  "public_confirmation_policy_sha256": "ec5bfdb9291ba8eb683d1a9cbdd6df6cd117ffce4c3399c01df9a6ffddd2e561",
+  "data_manifest_sha256": "a902778b360a806f96287e1748a12f6fff9ccb7734cd385683953d6e1a605857",
+  "definition_note": "Original scalar formulas retained. The feedback contract/measurements identify its actual finite resource/input interface and separately selected dynamic conditions; status strings record their pre-input freeze role.",
+  "review_roles": "Same Codex agent conducted design, acquisition, analysis, writing and internal checks. No claimed prior human review of this new release, independent replication or peer approval.",
+  "limitations": [
+    "Source-transfer hypothesis, known environmental settings and fresh retained-ADS physical coordinates; unavailable retired campaign history cannot be exhaustively compared.",
+    "No calibrated passive/global/spatial/temperature distributions, silicon/manufacturing-yield inference, layout/passive area or real source implementation.",
+    "No Local noise population, dynamic population pass rate, formal phase margin, universal stability or all-history startup claim."
+  ]
+}

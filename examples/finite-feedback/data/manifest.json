@@ -1,0 +1,28 @@
+{
+  "files": {
+    "ac.csv": "194fb06535994450eb23894a5fe2baa98642addf2066c851e15c6a279880ac00",
+    "conditions.csv": "8d2795bde67c35fcb19a047cea211572c348218ffc8f3639b365e3fc4fee5fb4",
+    "configuration.json": "e9fabbf61daeecdbd75a6cbf1c207fb3a8c6c4f9ec4f7021a8bf7d507dde1ba5",
+    "confirmation.csv": "c7c4b69a9d327d86e6e51080c6dbdc2f0606e34cb33ad8c7386c32eb9d948f5a",
+    "design-attempts.csv": "b7cc3aef3421d7abb611cd409f32555bddb462d1d491c8cf30ced50101dc670a",
+    "development.csv": "bf4b8e5d3846bb6b94e7ad8c331d0716c42773c93b6b52768c2ddc44de11923a",
+    "dynamic-ac.csv": "55f812720fb3580f018edf4b722912929d6348114a4d88a7f96beaf13f266bfd",
+    "dynamics.csv": "c196d1c0955dc4631757d743b5f9ffaa76cba8c76cdb92d52a44e1109b5396fc",
+    "noise.csv": "69aaebd2443349ab6adb10fcfd4505d759207a01c2c9dd8bb67d33c5840f067a",
+    "nominal-op.csv": "fb8374f84d709a52f90c40c398b8f1b643cef1c85e3eb72a71520de17fc6fd64",
+    "nominal.csv": "f3a69d18b889b62eb17f8c231fc37f5866ef814487aa4e66d1026b23f6da4051",
+    "passive-sensitivities.csv": "955a3a2603ed1760f8a723de31fe8c9210014309a1a22611173cfc61e0d85938",
+    "raw-sensitivities.csv": "f53967c15125c1cfda55f4d898f33eb897cd61444bff736824e1b2d64b2681a1",
+    "realizations.csv": "4c8e349710d4c1fd0a363208935549657c52341e7e48e9bf013ba3b2003ddb0d",
+    "selected-signal-statistics.json": "1ac043fe8e418467b877cfb75fe82ffdc52e81a4f05161d2d6c5e805e0f3f189",
+    "selected-signal.csv": "d6b3b6f51fd3d5d9cd84fc25fa9395e1b4b7d5f15f060b9273381a5ad1c1890d",
+    "sensitivities.csv": "e3fa1d1ec1d450f88e533cc4ac93e9a50d436d61bce637532fe1d3230519fab4",
+    "sine-waveforms.csv": "7fa6e27385c15a388ebc2a8008d3d616d31d6816781969db5b189ec14c3f4f53",
+    "source-budget.csv": "91c22cbc59eb6980fe730eead172da349f328ddb94d60f979495bd01e14b1dd3",
+    "source-transforms.csv": "95c509a5c830d7c0ce28333bad0632213737346ab840674a371872b6aac9d595",
+    "statistics.json": "aa90db3cd93beedfcb771a62b2780de3bf2bb438f0fe2a311ace60ee90b8b901",
+    "step-waveforms.csv": "139df0987a670549306af16544d629e7a16da20e54fcfc67944e248fee8f60b8"
+  },
+  "schema": "adn.compact-data.v1",
+  "scope": "Selected original data and retained physical failures. Dynamic plotting traces are compact interpolation grids, distinct from the full native observations used for measurement. No bulk waveform/calibration/private runtime archive."
+}

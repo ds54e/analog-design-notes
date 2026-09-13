@@ -1,0 +1,41 @@
+{
+  "role": "PRESELECTED_CONFIRMATION_SIGNAL_SUBSET",
+  "summaries": [
+    {
+      "assigned": 6,
+      "candidate": "A75",
+      "dynamic_tests_pass": 4,
+      "joint_dc_ac_signal_pass": 3,
+      "thd_max": 0.0286928964633189,
+      "thd_min": 0.01759822142975928,
+      "usable_supported": 6
+    },
+    {
+      "assigned": 6,
+      "candidate": "R75",
+      "dynamic_tests_pass": 0,
+      "joint_dc_ac_signal_pass": 0,
+      "thd_max": 0.04205107639603426,
+      "thd_min": 0.04053702461800194,
+      "usable_supported": 6
+    },
+    {
+      "assigned": 6,
+      "candidate": "F75S",
+      "dynamic_tests_pass": 6,
+      "joint_dc_ac_signal_pass": 4,
+      "thd_max": 0.00896195896845854,
+      "thd_min": 0.006460138069507858,
+      "usable_supported": 6
+    },
+    {
+      "assigned": 6,
+      "candidate": "F75L",
+      "dynamic_tests_pass": 6,
+      "joint_dc_ac_signal_pass": 5,
+      "thd_max": 0.007939087344485717,
+      "thd_min": 0.006003423609304723,
+      "usable_supported": 6
+    }
+  ]
+}

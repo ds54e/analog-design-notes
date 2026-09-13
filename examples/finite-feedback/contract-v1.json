@@ -1,0 +1,67 @@
+{
+  "schema": "ads.feedback-contract.v1",
+  "decided_utc": "2026-09-12T23:48:57.049107+00:00",
+  "status": "FIXED_BEFORE_CONFIRMATION_INPUT_PREPARATION",
+  "candidates": [
+    "A75",
+    "R75",
+    "F75S",
+    "F75L"
+  ],
+  "basis": "Same original 5-mV external job and matched nominal 75-uA current; finite feedback adds explicit resistor/input-source costs. Larger 20-mV signal is a separately labeled conditional function, with the original THD/gain/swing limits.",
+  "function": {
+    "vdd_v": 1.0,
+    "input_dc_v": 0.45,
+    "temperature_c": 26.85,
+    "output_center_v": 0.5,
+    "signed_gain": -6.0,
+    "gain_reference": "external Vin at 1 kHz",
+    "source_r_ohm": 1000.0,
+    "load_r_ohm": 100000.0,
+    "load_c_f": 1e-12,
+    "input_peak_v": 0.005,
+    "signal_hz": 10000.0,
+    "signal_band_hz": [
+      1000.0,
+      100000.0
+    ],
+    "nominal_output_peak_to_peak_v": 0.06
+  },
+  "limits": {
+    "center_abs_error_v": 0.025,
+    "gain_relative_error": 0.1,
+    "bandwidth_min_hz": 1000000.0,
+    "thd_max_fraction": 0.02,
+    "output_bounds_v": [
+      0.25,
+      0.75
+    ],
+    "current_max_a": 8e-05
+  },
+  "nominal_matching": {
+    "center_abs_error_v": 0.001,
+    "gain_relative_error": 0.005,
+    "current_relative_error": 0.002,
+    "groups": [
+      {
+        "candidates": [
+          "A75",
+          "R75",
+          "F75S",
+          "F75L"
+        ],
+        "target_a": 7.5e-05
+      }
+    ]
+  },
+  "resources": {
+    "current_ceiling_a": 8e-05,
+    "drawn_MOS_area_ceiling_um2": 10.0,
+    "internal_resistance_sum_ceiling_ohm": 150000.0,
+    "internal_capacitance_ceiling_f": 0.0,
+    "boundary": "All physical reference, bias, load, feedback and input resistors count. Same ideal Vin/Vdd external ports and source/load impedances, but finite feedback requires input current absorption and later delivery. Signed port power and source/sink peaks are reported separately from the DC positive-delivered-current ceiling. Drawn MOS area excludes passive/layout area and parasitics."
+  },
+  "scope": "Local DC/AC/current accuracy on the frozen cohort. Nominal noise and separate nominal dynamics. Preselected sparse Local sine conditions; no all-population dynamic pass, manufacturing yield or silicon qualification.",
+  "confirmation_policy_fixed": true,
+  "physical_input_freeze": "Separate saved-input barrier is required before target exposure."
+}

@@ -8,6 +8,21 @@ design choices. Start with the amplifier's current balance, then ask which
 uncertainty changes the design decision. Basic MOS small-signal and SPICE
 knowledge is helpful; each guide explains its current paths before comparisons.
 
+## What does finite feedback cost at the input?
+
+[**Finite feedback lowers an error path, with a price at the input**](studies/finite-feedback/index.qmd)
+
+Output-to-gate feedback lowers active-load error and larger-signal distortion.
+Fresh confirmation shows the accuracy improvement and a weaker case for extra
+PMOS area at lower supply. Resistor-load accuracy and speed remain attractive;
+feedback needs more resistance, input-current absorption and noise budget.
+
+**Study v1.0 · 521 fresh paired coordinates · 4,168 main + 24 selected signal conditions**
+
+- [Read the English design guide](studies/finite-feedback/index.qmd)
+- [有限帰還の日本語概要](ja/finite-feedback.qmd)
+- [Regenerate figures and replay the preselected OP/AC and 20-mV examples](studies/finite-feedback/reproduce.qmd)
+
 ## Where should a fixed area budget go?
 
 [**Spend area where the error is generated**](studies/active-allocation/index.qmd)
@@ -59,7 +74,7 @@ before the statistical comparison.
 - [Reproduce plots and selected circuits](studies/gain-operating-point-accuracy/reproduce.qmd)
 - [Model scope, methods and review roles](methods.qmd)
 
-Last substantive research revision: **2026-09-12 UTC**. Each study has a separate
+Last substantive research revision: **2026-09-13 UTC**. Each study has a separate
 version tag and download; the original first-study download is retained exactly.
 This collection's
 longer-term direction is low-current on-chip analog design, including regulators.

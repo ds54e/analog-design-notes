@@ -1,0 +1,70 @@
+{
+  "schema": "ads.feedback-dynamics-plan.v1",
+  "declared_utc": "2026-09-12T23:36:13.358830+00:00",
+  "role": "NOMINAL_DEVELOPMENT_DIAGNOSTICS",
+  "candidates": [
+    "A75",
+    "R75",
+    "F75S",
+    "F75L"
+  ],
+  "question": "Does the nominal accuracy/noise tradeoff buy useful large-signal linearity, and how much capacitive-load bandwidth, settling and external source/sink capability is required?",
+  "amplitude_peak_v": [
+    0.01,
+    0.02
+  ],
+  "amplitude_scope": "Two explicitly changed signal functions. Retain 2-percent THD, 10-percent fundamental gain and .25..75-V output limits. Original 5-mV results/definitions are unchanged. No Local dynamic population claim.",
+  "capacitance_f": [
+    2e-13,
+    8e-12,
+    1.6e-11
+  ],
+  "capacitance_basis": "The actual roughly 17-kohm output resistance predicts a bandwidth boundary near 9 pF. Choose 8 pF below and 16 pF above it, plus .2 pF to inspect the light-load response. R75 may exceed the old 100-MHz sweep at .2 pF, so these three load sweeps are declared up to 1 GHz before observation.",
+  "step": {
+    "input_low_v": 0.43,
+    "input_high_v": 0.47,
+    "rise_start_s": 2e-06,
+    "fall_start_s": 8e-06,
+    "edge_duration_s": 1e-08,
+    "stop_s": 1.4e-05,
+    "tmax_s": 2e-09,
+    "capacitance_f": [
+      1e-12,
+      8e-12
+    ],
+    "band_fraction_of_separate_dc_endpoint_difference": 0.01,
+    "target_method": "Separate stationary OP solves at both input endpoints. No tail fitting, rebias or recentering.",
+    "observed_current": "Zero-V series capacitor sensor and every MOS terminal current; output KCL and integral of capacitor current versus C*delta_V. Report actual input/supply delivery and absorption ranges."
+  },
+  "refinement": {
+    "candidates": [
+      "R75",
+      "F75L"
+    ],
+    "sine_amplitude_peak_v": 0.02,
+    "sine_tmax_s": 5e-08,
+    "ac_points_per_decade": 160,
+    "step_capacitance_f": 8e-12,
+    "step_tmax_s": 1e-09,
+    "reltol": 1e-08,
+    "acceptance": "Center <1 uV; gain/THD/bandwidth relative change <0.005. Step settling brackets must agree within max(4 ns, 0.005 of time). Retain any discrepancy for bounded diagnosis."
+  },
+  "analytic_control": {
+    "circuit": "MOS-free known feedback passive network: Rsrc1k+Rin9k, Rf100k, Rload100k, Cload8p; same input ramp pair and series capacitor sensor.",
+    "expected_dc_gain": 0.47619047619047616,
+    "expected_tau_s": 4.1904761904761906e-07,
+    "waveform_max_absolute_error_v": 2e-06,
+    "charge_relative_error_limit": 0.001,
+    "reason": "Check the changed capacitor-current and finite-ramp history extraction before MOS dynamic attempts."
+  },
+  "fixed_attempts": {
+    "analytic_control": 1,
+    "new_sines": 8,
+    "capacitive_ac": 12,
+    "large_steps": 8,
+    "refinements": 4,
+    "total": 33
+  },
+  "stopping": "Exactly these 33 native attempts once at one worker. Stop on unusable numerics or analytic-control failure for bounded diagnosis. Retain physical failures and unsupported domains; no outcome-driven matrix extension. These are known nominal physical inputs, not fresh confirmation.",
+  "resources": "Expected under 250 MB output, under 128 MB per observation and a few minutes native/analysis at one worker. Host/backing have >230 GB free and about 13 GB available RAM; acquire.py rechecks capacity each attempt."
+}
