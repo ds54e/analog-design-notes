@@ -1,0 +1,36 @@
+{
+  "case": "F75L-20m",
+  "created_utc": "2026-09-13T14:14:20.078542+00:00",
+  "finite_stop": "One advertised known F75L replay. Preserve incomplete attempts and diagnose an execution issue before any necessary identical retry; no sampling or extension of the original science.",
+  "measurement_function": {
+    "function": "periodic",
+    "source_module_sha256": "d1af2afdbaf8edeacd7ed785f6f81b88799634aa4352d7133cdc48e5cb0518bc",
+    "source_public_tag": "finite-feedback-v1.0",
+    "source_zip_member": "example/replay.py",
+    "verbatim_body_sha256": "36e3122ad9cb67a74ae73d44360102c364fe5a1138ca6b955a5c451ae56524f8"
+  },
+  "physical_units": 5,
+  "role": "Public reproduction of exposed saved nominal conditions; no new scientific target, candidate or cohort",
+  "schema": "learning.nonlinearity.public-replay.v1",
+  "static_input_v": [
+    0.4499,
+    0.45,
+    0.4501
+  ],
+  "stimulus": "Original20-mV-peak10-kHz sine; 1-pF load, 1V and26.85C. Exact circuit and five zero-raw units.",
+  "tolerances": {
+    "capacitor_ac_relative": 1e-05,
+    "capacitor_charge_relative": 0.001,
+    "cycle_current_a": 1e-11,
+    "cycle_voltage_v": 1e-06,
+    "dc_curvature_relative": 0.0005,
+    "dc_slope_relative": 1e-05,
+    "mos_kcl_a": 1e-10,
+    "op_voltage_v": 1e-08,
+    "resistor_relative": 1e-05,
+    "terminal_span_slack_v": 1e-08,
+    "thd_relative": 0.001
+  },
+  "transient_stop_s": 0.001,
+  "transient_tmax_s": 1e-07
+}

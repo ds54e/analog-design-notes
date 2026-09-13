@@ -1,0 +1,216 @@
+{
+  "actual_port_identity_errors_v": {
+    "gate_resistor_identity_max_v": 9.43689570931383e-16,
+    "source_resistor_identity_max_v": 1.5092094240998222e-16
+  },
+  "clean_public_reproduction": {
+    "APM_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "APM_retrieval": "Public v5.0.0 clone with global/system Git config, credential helper, extra headers and prompting disabled; commit verified.",
+    "anonymous_inputs": {
+      "authentication": "No Authorization header, GitHub token or prior session used.",
+      "bytes": 3068219,
+      "checked_utc": "2026-09-13T14:29:13.906100+00:00",
+      "sha256": "348d3f2c8cb3ef41b9c968f4bbb68c011c40cfb64ddda4138d2ff115c5e95bc6",
+      "status": 200,
+      "url": "https://ds54e.github.io/analog-design-notes/downloads/feedback-study-v1.0.zip"
+    },
+    "candidate_archive_sha256": "31978a9d5f8b287dd2fb5ec714ef50a86851f2d95d8f45b8cfa9a5b9b1368026",
+    "checked_utc": "2026-09-13T14:47:47.370001+00:00",
+    "limits": "Fresh Python environment and new directory with selected candidate ZIP, anonymous public inputs and existing ngspice47 on this same host; not a clean OS or independent scientific replication. Final README/evidence metadata are outside executable payload hashes.",
+    "native": {
+      "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+      "binary_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "capacitor_ac_relative_error": 6.661504163722985e-16,
+      "capacitor_charge_relative_residual": 3.2460214376021907e-13,
+      "cycle_maximum_differences": {
+        "capacitor_current_a": 0.0,
+        "gate_v": 0.0,
+        "input_delivered_current_a": 0.0,
+        "input_v": 0.0,
+        "output_v": 0.0,
+        "source_v": 0.0,
+        "supply_delivered_current_a": 0.0
+      },
+      "dc_curvature_relative_difference": -3.060572145041629e-05,
+      "dc_second_derivative_per_v": -7.574716931468828,
+      "dc_slope_v_per_v": -6.000870789211743,
+      "eight_cycle_measurement": {
+        "fundamental_peak_v": 0.11977277618169105,
+        "max_last_cycle_difference_v": 8.25823176509033e-09,
+        "stationary": true,
+        "thd_fraction": 0.006712069519206735
+      },
+      "limits": "One known five-unit nominal design. Same-host public recipe reproduction does not qualify a new population or high-amplitude range.",
+      "maximum_MOS_terminal_kcl_a": 2.6358987692196023e-16,
+      "maximum_terminal_span_v": 0.6212370991031863,
+      "new_run_id": "b8235ca80f3fafd72d61dbac2f49667f0c9cb1be2985bc628d918099468a0517",
+      "ngspice_version": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Fri Sep  4 11:07:24 UTC 2026\n******",
+      "old_eight_cycle_thd_fraction": 0.006712069519206735,
+      "op_output_differences_v": [
+        4.525269048372138e-13,
+        -9.35473920549157e-13,
+        -5.10702591327572e-15
+      ],
+      "original_sine_realization_id": "67bd4c801c2e0f10ddc49a92f3d76e2e08e047370c329693653ede3c98104c6f",
+      "physical_readback": "Pinned APM checks actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after; V/I, AC current and charge check actual passives.",
+      "resistor_readbacks": {
+        "Rbias": {
+          "declared_ohm": 10731.024577367358,
+          "observed_v_over_i_ohm": 10731.024577367358,
+          "relative_difference": 0.0
+        },
+        "Rf": {
+          "declared_ohm": 100000.0,
+          "observed_v_over_i_ohm": 100000.0000086305,
+          "relative_difference": 8.630496317607594e-11
+        },
+        "Rin": {
+          "declared_ohm": 9000.0,
+          "observed_v_over_i_ohm": 9000.00000000019,
+          "relative_difference": 2.1094237467877974e-14
+        },
+        "Rload": {
+          "declared_ohm": 100000.0,
+          "observed_v_over_i_ohm": 99999.9999992147,
+          "relative_difference": -7.85294052008112e-12
+        },
+        "Rs": {
+          "declared_ohm": 670.3660992954378,
+          "observed_v_over_i_ohm": 670.3660992954369,
+          "relative_difference": -1.3322676295501878e-15
+        },
+        "Rsrc": {
+          "declared_ohm": 1000.0,
+          "observed_v_over_i_ohm": 1000.000000000021,
+          "relative_difference": 2.1094237467877974e-14
+        }
+      },
+      "role": "Replay of known F75L conditions, not new scientific targets",
+      "rows": [
+        1,
+        1,
+        1,
+        401,
+        10011
+      ],
+      "status": "PASS"
+    },
+    "packages": [
+      "contourpy==1.3.0",
+      "cycler==0.12.1",
+      "fonttools==4.60.2",
+      "importlib_metadata==8.7.1",
+      "importlib_resources==6.5.2",
+      "kiwisolver==1.4.7",
+      "matplotlib==3.9.4",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.3.0",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.13.1",
+      "six==1.17.0",
+      "tomli==2.2.1",
+      "typing_extensions==4.16.0",
+      "zipp==3.23.1"
+    ],
+    "python": "Python 3.9.25",
+    "regenerated_summary_csv_sha256": {
+      "cycle-summary.csv": "bd7597029f56ad2a68a9b77e617e8719c57c62dffb37769354322740fe7bd359",
+      "harmonics.csv": "1424ef778d29e56fd8e3e8f0fdc1802653b9c9fa7a542574f598b906897ac913",
+      "local-network.csv": "9bc45a035abea7deb6605ba7b23cc32be53a09df5a0935643e78aa14b5f1f88b",
+      "quadratic-extrapolation.csv": "bcc94517aad637a8d83122a49bccdeb277be47f561c75b6891212e27c3eece5b",
+      "static-curvature.csv": "29a84854390c0a3fd1a7f803bce60afb8f22d1ee38039cb6652dd7eaeb8b797a",
+      "summary.json": "1481e77ca08fb2b8597f20a28dce93158be510da8adca81d09866c5c0d1a2c4b"
+    },
+    "regenerated_svg_sha256": {
+      "feedback-gate-motion.svg": "8b720699fdfc650d4b87ae2f096cfeac2d33b02e7ea454002d7ea77240bd07bb",
+      "local-gain-and-curvature.svg": "7aad4af256cd26e300a6cf6dea34392ebded65c7c62ee891ba0db980ebfd6867"
+    },
+    "retained_license_sha256": {
+      "licenses/LICENSE.md": "893f257c9147e98bed3f4dc8e2dcdc7cffb6468865584156a8383619ea4cc956",
+      "licenses/LICENSES/APM-Apache-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "licenses/LICENSES/ASSET_SOURCES.json": "fea45b418073e02c414b9efb27279cc6a63f706c4fbb1d591cff484d547793db",
+      "licenses/LICENSES/Anchor-MIT.txt": "6b33f0bf2de79ce6ee1165453b37b4f1deda813bea9356dec621835860f2bb68",
+      "licenses/LICENSES/Bootstrap-Icons-MIT.txt": "0fb3e11bd57e896c5a512afd64864d28a37de45d19835016c87ca1ad19ead969",
+      "licenses/LICENSES/Bootstrap-MIT.txt": "3d0b0c88216e4752b9afd3d24e36faaf27873b5a45a61458bb3c83e794c26832",
+      "licenses/LICENSES/Clipboard-MIT.txt": "a798e7b5fa604117d52d607e05f1cbac3b2fa5da087837f412a1a3c866b4b748",
+      "licenses/LICENSES/DejaVu.txt": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
+      "licenses/LICENSES/Headroom-MIT.txt": "acaab926214cf714b8c74718151734a4f4e71f4ba7ebb1fca497a446caa13881",
+      "licenses/LICENSES/MIT.txt": "0d8dd5c3644ce7fc551ae27cebfe7f67fb4af5138ac47d29b4afcaa07cc6398d",
+      "licenses/LICENSES/MathJax-Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "licenses/LICENSES/Popper-MIT.txt": "bf67e2c9b7974543bb18ced3a0b37f53729aaff953b442dd89a3adaf90fd93e8",
+      "licenses/LICENSES/Quarto-COPYRIGHT.txt": "b99ec68b0ae2766380ecd177de507b799d1e3f6b7334d940a57021d3e4299721",
+      "licenses/LICENSES/Quarto-MIT.txt": "6b985ce085f33a39f96d12321cfbcee03aa2ad4249755f534537f38019dfa123",
+      "licenses/LICENSES/Tippy-MIT.txt": "7f4929c55f525ae510a77c361496c5a86a092434a3681c95a4dc89e951c67e98",
+      "licenses/THIRD_PARTY_NOTICES.md": "3c1df6b935da5afa7b65e23db436539a7ace2baa63de64cfb50826fa58275dc8"
+    },
+    "schema": "ads.learning-signal-clean-public.v1",
+    "status": "PASS",
+    "tested_payload_sha256": {
+      "analyze.py": "f654fdffdf092bdf7a86f9c5a5f22d7e50e7c053e622cbc517606befa61fd45a",
+      "circuits/F75L-10m.cir": "6c853b066c7a91beee53329c8d8d2c19b6a235de35fa93b188594cd0ceae71f9",
+      "circuits/F75L-20m-refined.cir": "2dbb0fe7a5356b50be8ca3752d611ddf1c6d8d32bf8bf8af72f8af675880db71",
+      "circuits/F75L-20m.cir": "2dbb0fe7a5356b50be8ca3752d611ddf1c6d8d32bf8bf8af72f8af675880db71",
+      "circuits/R75-10m.cir": "a54b312531460c6105e4ffec7e1e371c9f29567dc664f03dde427fcc6e0cf36f",
+      "circuits/R75-20m-refined.cir": "1bce44731c0600614140244198a25c8b2c1cceff799094c88e39905c263635fa",
+      "circuits/R75-20m.cir": "1bce44731c0600614140244198a25c8b2c1cceff799094c88e39905c263635fa",
+      "circuits/static-F75L-+100u.cir": "82d6730f7a7bcf1600eb4ec5cecd59c07c600726ca9fbb1c182ec4524e3ab161",
+      "circuits/static-F75L--100u.cir": "82d6730f7a7bcf1600eb4ec5cecd59c07c600726ca9fbb1c182ec4524e3ab161",
+      "circuits/static-F75L-center.cir": "82d6730f7a7bcf1600eb4ec5cecd59c07c600726ca9fbb1c182ec4524e3ab161",
+      "circuits/static-R75-+100u.cir": "eb4b0493a3930f23d012d4d497da11697b74c7a7b01ccbf6fdcf737fc7c0b647",
+      "circuits/static-R75-+200u.cir": "eb4b0493a3930f23d012d4d497da11697b74c7a7b01ccbf6fdcf737fc7c0b647",
+      "circuits/static-R75--100u.cir": "eb4b0493a3930f23d012d4d497da11697b74c7a7b01ccbf6fdcf737fc7c0b647",
+      "circuits/static-R75--200u.cir": "eb4b0493a3930f23d012d4d497da11697b74c7a7b01ccbf6fdcf737fc7c0b647",
+      "circuits/static-R75-center.cir": "6b377b2d9def103caed4e183a5a2400fa6010f1002932c7b47b8612eadb79946",
+      "data/cycle-summary.csv": "bd7597029f56ad2a68a9b77e617e8719c57c62dffb37769354322740fe7bd359",
+      "data/dc-points.csv": "ebfb5ebb24fb7d6911e591d7b1068baa26ea0b3f18b1888ad9a74674afb47406",
+      "data/harmonics.csv": "1424ef778d29e56fd8e3e8f0fdc1802653b9c9fa7a542574f598b906897ac913",
+      "data/local-network.csv": "9bc45a035abea7deb6605ba7b23cc32be53a09df5a0935643e78aa14b5f1f88b",
+      "data/manifest.json": "2570420f94d998e4c130a71f899b50b4dcee19147fb123388bf8c0b4f1c3626a",
+      "data/port-cycles.npz": "ae76805b7c2c71ca1a4e867450a195c812c567751d396089e0ab257cce715d46",
+      "data/quadratic-extrapolation.csv": "bcc94517aad637a8d83122a49bccdeb277be47f561c75b6891212e27c3eece5b",
+      "data/source.json": "c86f8eebb70a333679d18a0ec3222853531ad505107c6b4702ee5817398401e3",
+      "data/static-curvature.csv": "29a84854390c0a3fd1a7f803bce60afb8f22d1ee38039cb6652dd7eaeb8b797a",
+      "data/static-source.json": "4c3bef8e94c11ebc3de3d573e22affaf5fcee9c1a9661bee8210bede7b78bec8",
+      "data/summary.json": "1481e77ca08fb2b8597f20a28dce93158be510da8adca81d09866c5c0d1a2c4b",
+      "plot.py": "a9ad577afbdd819a52076831645468e74344aaedb18e5d87409fb50511ef9ea7",
+      "replay-plan.json": "68d8163e52831db8cf5f0d112a9999a08e8ba41cd8e3efd73608761bc58c62d2",
+      "replay.py": "a89ad3833a87d79231f480435f73f547ed135106ccde4ec250b8d06d77672dc8",
+      "requirements.txt": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a"
+    }
+  },
+  "fft_vs_fourier_basis_max_v": 3.3306690738754696e-16,
+  "known_timestep_controls": [
+    {
+      "candidate": "R75",
+      "gate_peak_relative_change": 2.6456101529515053e-06,
+      "h2_relative_change": 1.0566615491480746e-05,
+      "mean_output_difference_v": -3.947892013300702e-11,
+      "thd_relative_change": 7.92238342328666e-06
+    },
+    {
+      "candidate": "F75L",
+      "gate_peak_relative_change": 2.9891452906216642e-06,
+      "h2_relative_change": 1.1936669027212687e-05,
+      "mean_output_difference_v": -8.323730593673417e-12,
+      "thd_relative_change": 9.126478534238203e-06
+    }
+  ],
+  "limits": [
+    "Sinusoid-inferred apparent curvature and the separately selected static finite differences are different estimates; both use known observations.",
+    "R75 has two saved static steps; F75L has one. No new static refinement or native condition was acquired.",
+    "One public cycle does not independently establish stationarity; the saved original eight-cycle assessment remains the source.",
+    "The quasistatic polynomial omits memory and higher orders; discrepancies and original physical failures remain.",
+    "R75 and F75L differ in complete design and resource allocation; their comparison does not isolate Rf alone."
+  ],
+  "native_old_sine_rows_checked": 83284,
+  "one_cycle_vs_original_eight_cycle_max_thd_fraction": 5.786526396933667e-10,
+  "role": "Known nominal saved-data explanation; no new scientific target or sample",
+  "schema": "learning.signal.evidence.v1",
+  "scientific_private_checkpoint": "5776db0c45bcb02c11f84677bb984a5b8a1a4479",
+  "selected_cycle_points": 6006,
+  "selected_old_sine_attempts": 6,
+  "selected_old_static_op_records": 8,
+  "status": "SCOPED_NUMERICAL_AND_PUBLIC_REPRODUCTION_CHECKS_PASS"
+}

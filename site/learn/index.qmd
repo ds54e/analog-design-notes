@@ -9,7 +9,7 @@ interfaces toward the questions an LDO would need answered. Each chapter makes
 a first prediction, checks selected observations, and uses the difference to
 make a design choice.
 
-**Learning edition v1.2.** The English chapters are the canonical route; the
+**Learning edition v1.3.** The English chapters are the canonical route; the
 [Japanese reading overview](../ja/learning-path.qmd) explains where to begin
 and how the evidence fits. The five detailed studies remain available with
 their original circuit files, definitions, downloads and results.
@@ -20,7 +20,9 @@ shows why a larger receiving capacitor slows response without repairing DC
 tracking error. This increment uses that result to forecast and check a
 12-versus-15-pF choice against an illustrative deadline. It also derives the
 finite reference's supply-error path and explains a narrower distribution
-with fewer fixed-window passes. All previous exact downloads remain available.
+with fewer fixed-window passes. The finite-signal explanation now connects
+independent saved DC curvature to harmonics, actual gate/source motion and
+input-current costs. All previous exact downloads remain available.
 
 ## The reading order
 
@@ -120,6 +122,13 @@ adds the supply/loss recalculation from the original public feedback ZIP and
 the two predeclared capacitor choices. It supplies three further graphs and
 one native 12-pF replay. The worked local supply estimate uses known OP data;
 the 12/15-pF forecasts were recorded before their later target conditions.
+
+The [signal explanation](../studies/learning-signal-v1/reproduce.qmd) adds
+six known sine cycles, eight selected static observations, two graphs and
+a known-input native F75L example. Its local curvature check is independent
+of the waveform-derived estimate; both are retrospective uses of old data.
+The original eight-cycle THD and the new single-cycle decomposition remain
+separate measurements.
 
 The progression is informed by the device–diode–amplifier–mirror–pair–OTA order
 in [Pretl, Koefinger and Dorrer's course](https://iic-jku.github.io/analog-circuit-design/aicd.html)

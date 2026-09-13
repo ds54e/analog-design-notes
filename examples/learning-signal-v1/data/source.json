@@ -1,0 +1,1246 @@
+{
+  "additional_saved_signals": "Actual gate/source nodes and NMOS D/S/G/B bank sums selected from the same original native records; the six already public columns match exactly.",
+  "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+  "cases": [
+    {
+      "amplitude_peak_v": 0.01,
+      "candidate": "R75",
+      "case": "R75-10m",
+      "circuit": "circuits/R75-10m.cir",
+      "circuit_sha256": "a54b312531460c6105e4ffec7e1e371c9f29567dc664f03dde427fcc6e0cf36f",
+      "original_attempt_sha256": "5d4a0923bd628bb662df02db83c8aec527b135cbffae0f582c273c9ebd637457",
+      "original_metrics": {
+        "Vdd_average_absorption_a": "0.0",
+        "Vdd_average_positive_delivery_a": "7.518201909962156e-05",
+        "Vdd_max_delivered_current_a": "8.436555582307754e-05",
+        "Vdd_min_delivered_current_a": "6.637393340163445e-05",
+        "Vin_average_absorption_a": "0.0",
+        "Vin_average_positive_delivery_a": "5.931495899129833e-09",
+        "Vin_max_delivered_current_a": "7.085684261662513e-09",
+        "Vin_min_delivered_current_a": "4.828682923343e-09",
+        "all_assessed_pass": "False",
+        "amplitude_peak_v": "0.01",
+        "bandwidth_hz": "25185642.22272122",
+        "candidate": "R75",
+        "capacitance_f": "1e-12",
+        "capacitor_current_max_a": "3.782961330948682e-09",
+        "capacitor_current_min_a": "-3.782953906486365e-09",
+        "current_a": "7.499999999999766e-05",
+        "dc_at_high_input_v": "",
+        "dc_at_low_input_v": "",
+        "excursion_outside_dc_interval_v": "",
+        "gain": "-5.999999999999699",
+        "input_fall_settling_s": "",
+        "input_rise_settling_s": "",
+        "kind": "sine",
+        "numerical_usable": "True",
+        "out_v": "0.5000000000000068",
+        "refined": "False",
+        "settling_band_v": "",
+        "sine_gain": "5.998269931987528",
+        "sine_max_v": "0.5574722608773472",
+        "sine_min_v": "0.4375186648604871",
+        "sine_stationary": "True",
+        "terminal_supported": "True",
+        "thd_fraction": "0.02087729585401895",
+        "transient_kcl_max_a": "8.131516293641283e-19"
+      },
+      "original_native_deck_sha256": "3d1e5a8ad19dce7c2cf8c6f0fec7affa6f2572a9c139e61320e6c7c733804fc4",
+      "original_realization_id": "cf830be2ace7a54158b73f7078fe38e5a870d1a306b0ab0f4d3be71ac9d2b4d4",
+      "original_request_sha256": "20a4344e2d542abdc0acbadd83c1906c15e58ce992153577de1434c1b27dc886",
+      "original_rows": [
+        1,
+        401,
+        10010
+      ],
+      "original_transient_sha256": "70e7a3def42e45e50ec61702ff2936fc83d1163f488aeb80731182daf1e99e5f",
+      "parameters": {
+        "amplitude": 0.01,
+        "cload": 1e-12,
+        "load": "resistor",
+        "nl": 0.4,
+        "nn": 6,
+        "nw": 3.8674887684728407,
+        "rd": 6667.191718846597,
+        "rload": 100000.0,
+        "rs": 171.81801356494375,
+        "rsrc": 1000.0,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/3",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/4",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn5"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/5",
+          "w_m": 3.867488768472841e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 from original native before/applied/after log; rechecked in this selection.",
+      "rebound_realization_id": "c9852810e67ec6bee9debbee2e9931f31935702c588f46d3fcffd0a0e8799f75",
+      "refined": false,
+      "reltol": 1e-07,
+      "role": "Known nominal observation; retrospective analysis only",
+      "selected_cycles": 1,
+      "selected_points_including_endpoint": 1001,
+      "temperature_c": 26.85,
+      "transient_recipe": {
+        "kind": "tran",
+        "set_sources": {},
+        "step": 1e-07,
+        "stop": 0.001,
+        "tmax": 1e-07,
+        "vectors": [
+          "v(gate)",
+          "v(in)",
+          "v(out)",
+          "v(source)",
+          "v(vdd)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vn3d)",
+          "i(Vn3g)",
+          "i(Vn3s)",
+          "i(Vn3b)",
+          "i(Vn4d)",
+          "i(Vn4g)",
+          "i(Vn4s)",
+          "i(Vn4b)",
+          "i(Vn5d)",
+          "i(Vn5g)",
+          "i(Vn5s)",
+          "i(Vn5b)",
+          "v(capnode)",
+          "i(Vcap)"
+        ]
+      }
+    },
+    {
+      "amplitude_peak_v": 0.02,
+      "candidate": "R75",
+      "case": "R75-20m",
+      "circuit": "circuits/R75-20m.cir",
+      "circuit_sha256": "1bce44731c0600614140244198a25c8b2c1cceff799094c88e39905c263635fa",
+      "original_attempt_sha256": "f428adebc45b91406aaae80e1d6d467cc6934dc76dc1514233fa77509f06d73a",
+      "original_metrics": {
+        "Vdd_average_absorption_a": "0.0",
+        "Vdd_average_positive_delivery_a": "7.574260738820287e-05",
+        "Vdd_max_delivered_current_a": "9.445754006113787e-05",
+        "Vdd_min_delivered_current_a": "5.851877982683226e-05",
+        "Vin_average_absorption_a": "0.0",
+        "Vin_average_positive_delivery_a": "6.011226712712895e-09",
+        "Vin_max_delivered_current_a": "8.385317459488895e-09",
+        "Vin_min_delivered_current_a": "3.855247768702781e-09",
+        "all_assessed_pass": "False",
+        "amplitude_peak_v": "0.02",
+        "bandwidth_hz": "25185642.22272122",
+        "candidate": "R75",
+        "capacitance_f": "1e-12",
+        "capacitor_current_max_a": "7.6409688468196e-09",
+        "capacitor_current_min_a": "-7.640970015484509e-09",
+        "current_a": "7.499999999999766e-05",
+        "dc_at_high_input_v": "",
+        "dc_at_low_input_v": "",
+        "excursion_outside_dc_interval_v": "",
+        "gain": "-5.999999999999699",
+        "input_fall_settling_s": "",
+        "input_rise_settling_s": "",
+        "kind": "sine",
+        "numerical_usable": "True",
+        "out_v": "0.5000000000000068",
+        "refined": "False",
+        "settling_band_v": "",
+        "sine_gain": "5.992789128446607",
+        "sine_max_v": "0.6098440757415367",
+        "sine_min_v": "0.3702334711217609",
+        "sine_stationary": "True",
+        "terminal_supported": "True",
+        "thd_fraction": "0.04155856813130364",
+        "transient_kcl_max_a": "8.673617379884035e-19"
+      },
+      "original_native_deck_sha256": "2d6da1a6165e8d64489a795a9adca358bf0ecee367bd0dc0cf48d9e148e126d0",
+      "original_realization_id": "cf830be2ace7a54158b73f7078fe38e5a870d1a306b0ab0f4d3be71ac9d2b4d4",
+      "original_request_sha256": "30af076b8655f466286c3117f2d222e0884fa2bd80a83213400c1dc9cd7cb341",
+      "original_rows": [
+        1,
+        401,
+        10010
+      ],
+      "original_transient_sha256": "d7c8c262a85a920c05818cfeddfd7168605d8bb846606cd9afb0aabea8420fbf",
+      "parameters": {
+        "amplitude": 0.02,
+        "cload": 1e-12,
+        "load": "resistor",
+        "nl": 0.4,
+        "nn": 6,
+        "nw": 3.8674887684728407,
+        "rd": 6667.191718846597,
+        "rload": 100000.0,
+        "rs": 171.81801356494375,
+        "rsrc": 1000.0,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/3",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/4",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn5"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/5",
+          "w_m": 3.867488768472841e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 from original native before/applied/after log; rechecked in this selection.",
+      "rebound_realization_id": "0e3c3992aa006254ef683348735b319f1980a6337db53957f471054675e1c9b3",
+      "refined": false,
+      "reltol": 1e-07,
+      "role": "Known nominal observation; retrospective analysis only",
+      "selected_cycles": 1,
+      "selected_points_including_endpoint": 1001,
+      "temperature_c": 26.85,
+      "transient_recipe": {
+        "kind": "tran",
+        "set_sources": {},
+        "step": 1e-07,
+        "stop": 0.001,
+        "tmax": 1e-07,
+        "vectors": [
+          "v(gate)",
+          "v(in)",
+          "v(out)",
+          "v(source)",
+          "v(vdd)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vn3d)",
+          "i(Vn3g)",
+          "i(Vn3s)",
+          "i(Vn3b)",
+          "i(Vn4d)",
+          "i(Vn4g)",
+          "i(Vn4s)",
+          "i(Vn4b)",
+          "i(Vn5d)",
+          "i(Vn5g)",
+          "i(Vn5s)",
+          "i(Vn5b)",
+          "v(capnode)",
+          "i(Vcap)"
+        ]
+      }
+    },
+    {
+      "amplitude_peak_v": 0.01,
+      "candidate": "F75L",
+      "case": "F75L-10m",
+      "circuit": "circuits/F75L-10m.cir",
+      "circuit_sha256": "6c853b066c7a91beee53329c8d8d2c19b6a235de35fa93b188594cd0ceae71f9",
+      "original_attempt_sha256": "164cf1f8623940427e8cdce1781d8dcdfcdae8b59a8f14805f489f82143906e1",
+      "original_metrics": {
+        "Vdd_average_absorption_a": "0.0",
+        "Vdd_average_positive_delivery_a": "7.499372295811467e-05",
+        "Vdd_max_delivered_current_a": "7.510692055259163e-05",
+        "Vdd_min_delivered_current_a": "7.487307482129894e-05",
+        "Vin_average_absorption_a": "4.815587900346634e-07",
+        "Vin_average_positive_delivery_a": "3.081549865426135e-08",
+        "Vin_max_delivered_current_a": "1.8726967468591944e-07",
+        "Vin_min_delivered_current_a": "-1.085261318573721e-06",
+        "all_assessed_pass": "True",
+        "amplitude_peak_v": "0.01",
+        "bandwidth_hz": "9031819.57583901",
+        "candidate": "F75L",
+        "capacitance_f": "1e-12",
+        "capacitor_current_max_a": "3.770727509240526e-09",
+        "capacitor_current_min_a": "-3.770807664645951e-09",
+        "current_a": "7.499737786299599e-05",
+        "dc_at_high_input_v": "",
+        "dc_at_low_input_v": "",
+        "excursion_outside_dc_interval_v": "",
+        "gain": "-6.000871492157971",
+        "input_fall_settling_s": "",
+        "input_rise_settling_s": "",
+        "kind": "sine",
+        "numerical_usable": "True",
+        "out_v": "0.5000466277256138",
+        "refined": "False",
+        "settling_band_v": "",
+        "sine_gain": "5.9980634530592765",
+        "sine_max_v": "0.5596342453414445",
+        "sine_min_v": "0.43969207452993275",
+        "sine_stationary": "True",
+        "terminal_supported": "True",
+        "thd_fraction": "0.0032003991378570552",
+        "transient_kcl_max_a": "2.585965118187777e-19"
+      },
+      "original_native_deck_sha256": "6d1c9b8b1fd9a2408eed9796e3192bf65c29b4bf25112ab09a7090b048de78b9",
+      "original_realization_id": "531cdd9a4bd877f10b7880e0d2d42cb6abff03230d491abdf05edd6b50a1971a",
+      "original_request_sha256": "a588c704534d2beb4a6c4f74ec53fe15c77146d62f915cb7d429f2bfab318170",
+      "original_rows": [
+        1,
+        401,
+        10010
+      ],
+      "original_transient_sha256": "888ced1c93588ae0897434e3d7f500470cad9009c7845a665483e2af45cc0738",
+      "parameters": {
+        "amplitude": 0.01,
+        "cload": 1e-12,
+        "load": "active",
+        "nl": 0.4,
+        "nn": 3,
+        "np": 1,
+        "nr": 1,
+        "nw": 3.9999999999997935,
+        "pl": 0.4,
+        "pw": 3.3333333333333335,
+        "rbias": 10731.024577367358,
+        "rf": 100000.0,
+        "rin": 9000.0,
+        "rl": 0.4,
+        "rload": 100000.0,
+        "rs": 670.3660992954378,
+        "rsrc": 1000.0,
+        "rw": 3.3333333333333335,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xr0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/reference/0",
+          "w_m": 3.3333333333333333e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xp0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/load/0",
+          "w_m": 3.3333333333333333e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 from original native before/applied/after log; rechecked in this selection.",
+      "rebound_realization_id": "c961f3e50423eaa3cc6060640610e7f42b5b761f486e9ee6d1d02872f57d4aaf",
+      "refined": false,
+      "reltol": 1e-07,
+      "role": "Known nominal observation; retrospective analysis only",
+      "selected_cycles": 1,
+      "selected_points_including_endpoint": 1001,
+      "temperature_c": 26.85,
+      "transient_recipe": {
+        "kind": "tran",
+        "set_sources": {},
+        "step": 1e-07,
+        "stop": 0.001,
+        "tmax": 1e-07,
+        "vectors": [
+          "v(vdd)",
+          "v(in)",
+          "v(drive)",
+          "v(gate)",
+          "v(out)",
+          "v(source)",
+          "v(pbias)",
+          "v(pdrive)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vbiasdiag)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vr0d)",
+          "i(Vr0g)",
+          "i(Vr0s)",
+          "i(Vr0b)",
+          "i(Vp0d)",
+          "i(Vp0g)",
+          "i(Vp0s)",
+          "i(Vp0b)",
+          "v(capnode)",
+          "i(Vcap)"
+        ]
+      }
+    },
+    {
+      "amplitude_peak_v": 0.02,
+      "candidate": "F75L",
+      "case": "F75L-20m",
+      "circuit": "circuits/F75L-20m.cir",
+      "circuit_sha256": "2dbb0fe7a5356b50be8ca3752d611ddf1c6d8d32bf8bf8af72f8af675880db71",
+      "original_attempt_sha256": "096af1a7f0d0e5de3feb251543b58201915ff6a691aab7aeee5eea7c29400c49",
+      "original_metrics": {
+        "Vdd_average_absorption_a": "0.0",
+        "Vdd_average_positive_delivery_a": "7.498136224984616e-05",
+        "Vdd_max_delivered_current_a": "7.520766386048178e-05",
+        "Vdd_min_delivered_current_a": "7.472038670841052e-05",
+        "Vin_average_absorption_a": "6.531274568600671e-07",
+        "Vin_average_positive_delivery_a": "2.0781174551017717e-07",
+        "Vin_max_delivered_current_a": "8.32248776965101e-07",
+        "Vin_min_delivered_current_a": "-1.7081403783208429e-06",
+        "all_assessed_pass": "True",
+        "amplitude_peak_v": "0.02",
+        "bandwidth_hz": "9031819.57583901",
+        "candidate": "F75L",
+        "capacitance_f": "1e-12",
+        "capacitor_current_max_a": "7.543147190694493e-09",
+        "capacitor_current_min_a": "-7.543456343825513e-09",
+        "current_a": "7.499737786299599e-05",
+        "dc_at_high_input_v": "",
+        "dc_at_low_input_v": "",
+        "excursion_outside_dc_interval_v": "",
+        "gain": "-6.000871492157971",
+        "input_fall_settling_s": "",
+        "input_rise_settling_s": "",
+        "kind": "sine",
+        "numerical_usable": "True",
+        "out_v": "0.5000466277256138",
+        "refined": "False",
+        "settling_band_v": "",
+        "sine_gain": "5.9886640492910805",
+        "sine_max_v": "0.6181317566337323",
+        "sine_min_v": "0.37876290089681375",
+        "sine_stationary": "True",
+        "terminal_supported": "True",
+        "thd_fraction": "0.006712069519206735",
+        "transient_kcl_max_a": "3.2324894849592237e-19"
+      },
+      "original_native_deck_sha256": "a19f4abb898d5ca955011706682eacea128f0fc4f6db20b76b55e78a6ceb5a91",
+      "original_realization_id": "531cdd9a4bd877f10b7880e0d2d42cb6abff03230d491abdf05edd6b50a1971a",
+      "original_request_sha256": "172fbccf89c386a33416ceb8b46562b63aeb4167c8e15a2b917a874a9e540bb3",
+      "original_rows": [
+        1,
+        401,
+        10011
+      ],
+      "original_transient_sha256": "f1f7a7a28623dc368de85d84b3608efac4f7b30b0298d1a2ceefdad84753410d",
+      "parameters": {
+        "amplitude": 0.02,
+        "cload": 1e-12,
+        "load": "active",
+        "nl": 0.4,
+        "nn": 3,
+        "np": 1,
+        "nr": 1,
+        "nw": 3.9999999999997935,
+        "pl": 0.4,
+        "pw": 3.3333333333333335,
+        "rbias": 10731.024577367358,
+        "rf": 100000.0,
+        "rin": 9000.0,
+        "rl": 0.4,
+        "rload": 100000.0,
+        "rs": 670.3660992954378,
+        "rsrc": 1000.0,
+        "rw": 3.3333333333333335,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xr0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/reference/0",
+          "w_m": 3.3333333333333333e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xp0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/load/0",
+          "w_m": 3.3333333333333333e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 from original native before/applied/after log; rechecked in this selection.",
+      "rebound_realization_id": "67bd4c801c2e0f10ddc49a92f3d76e2e08e047370c329693653ede3c98104c6f",
+      "refined": false,
+      "reltol": 1e-07,
+      "role": "Known nominal observation; retrospective analysis only",
+      "selected_cycles": 1,
+      "selected_points_including_endpoint": 1001,
+      "temperature_c": 26.85,
+      "transient_recipe": {
+        "kind": "tran",
+        "set_sources": {},
+        "step": 1e-07,
+        "stop": 0.001,
+        "tmax": 1e-07,
+        "vectors": [
+          "v(vdd)",
+          "v(in)",
+          "v(drive)",
+          "v(gate)",
+          "v(out)",
+          "v(source)",
+          "v(pbias)",
+          "v(pdrive)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vbiasdiag)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vr0d)",
+          "i(Vr0g)",
+          "i(Vr0s)",
+          "i(Vr0b)",
+          "i(Vp0d)",
+          "i(Vp0g)",
+          "i(Vp0s)",
+          "i(Vp0b)",
+          "v(capnode)",
+          "i(Vcap)"
+        ]
+      }
+    },
+    {
+      "amplitude_peak_v": 0.02,
+      "candidate": "R75",
+      "case": "R75-20m-refined",
+      "circuit": "circuits/R75-20m-refined.cir",
+      "circuit_sha256": "1bce44731c0600614140244198a25c8b2c1cceff799094c88e39905c263635fa",
+      "original_attempt_sha256": "b9893efbdcfdc61c0cea69d13e041d6d2ace76a5d942312989203903e936a78c",
+      "original_metrics": {
+        "Vdd_average_absorption_a": "0.0",
+        "Vdd_average_positive_delivery_a": "7.574261309994743e-05",
+        "Vdd_max_delivered_current_a": "9.445753111807557e-05",
+        "Vdd_min_delivered_current_a": "5.8518786224104794e-05",
+        "Vin_average_absorption_a": "0.0",
+        "Vin_average_positive_delivery_a": "6.0112259719729025e-09",
+        "Vin_max_delivered_current_a": "8.385319081672185e-09",
+        "Vin_min_delivered_current_a": "3.85524370083044e-09",
+        "all_assessed_pass": "False",
+        "amplitude_peak_v": "0.02",
+        "bandwidth_hz": "25185875.44696496",
+        "candidate": "R75",
+        "capacitance_f": "1e-12",
+        "capacitor_current_max_a": "7.640956578419802e-09",
+        "capacitor_current_min_a": "-7.64095017137111e-09",
+        "current_a": "7.499999999999766e-05",
+        "dc_at_high_input_v": "",
+        "dc_at_low_input_v": "",
+        "excursion_outside_dc_interval_v": "",
+        "gain": "-5.999999999999699",
+        "input_fall_settling_s": "",
+        "input_rise_settling_s": "",
+        "kind": "sine",
+        "numerical_usable": "True",
+        "out_v": "0.5000000000000068",
+        "refined": "True",
+        "settling_band_v": "",
+        "sine_gain": "5.992789128436764",
+        "sine_max_v": "0.6098440330896941",
+        "sine_min_v": "0.3702335307468718",
+        "sine_stationary": "True",
+        "terminal_supported": "True",
+        "thd_fraction": "0.04155889795285512",
+        "transient_kcl_max_a": "1.111307226797642e-18"
+      },
+      "original_native_deck_sha256": "184449b0fc30c558db82f4468bf39dcfdbcd80e7eebc256a10a0a58b6bdef54f",
+      "original_realization_id": "cf830be2ace7a54158b73f7078fe38e5a870d1a306b0ab0f4d3be71ac9d2b4d4",
+      "original_request_sha256": "59cb2092fabdb83b8996d9de0849277b029feb5511cb6cf00a83448bcd06a567",
+      "original_rows": [
+        1,
+        801,
+        20015
+      ],
+      "original_transient_sha256": "88aeac28b5ea43d70ff4049c4a4b23ffa6bf169198381f8db9ba3a5d7eafc5a0",
+      "parameters": {
+        "amplitude": 0.02,
+        "cload": 1e-12,
+        "load": "resistor",
+        "nl": 0.4,
+        "nn": 6,
+        "nw": 3.8674887684728407,
+        "rd": 6667.191718846597,
+        "rload": 100000.0,
+        "rs": 171.81801356494375,
+        "rsrc": 1000.0,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/3",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/4",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn5"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/5",
+          "w_m": 3.867488768472841e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 from original native before/applied/after log; rechecked in this selection.",
+      "rebound_realization_id": "7e51c451cbbf6365c269a9b53d53ac84303758c1cdf7ef15bdc9b4b5df40ae9a",
+      "refined": true,
+      "reltol": 1e-08,
+      "role": "Known nominal observation; retrospective analysis only",
+      "selected_cycles": 1,
+      "selected_points_including_endpoint": 1001,
+      "temperature_c": 26.85,
+      "transient_recipe": {
+        "kind": "tran",
+        "set_sources": {},
+        "step": 5e-08,
+        "stop": 0.001,
+        "tmax": 5e-08,
+        "vectors": [
+          "v(gate)",
+          "v(in)",
+          "v(out)",
+          "v(source)",
+          "v(vdd)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vn3d)",
+          "i(Vn3g)",
+          "i(Vn3s)",
+          "i(Vn3b)",
+          "i(Vn4d)",
+          "i(Vn4g)",
+          "i(Vn4s)",
+          "i(Vn4b)",
+          "i(Vn5d)",
+          "i(Vn5g)",
+          "i(Vn5s)",
+          "i(Vn5b)",
+          "v(capnode)",
+          "i(Vcap)"
+        ]
+      }
+    },
+    {
+      "amplitude_peak_v": 0.02,
+      "candidate": "F75L",
+      "case": "F75L-20m-refined",
+      "circuit": "circuits/F75L-20m-refined.cir",
+      "circuit_sha256": "2dbb0fe7a5356b50be8ca3752d611ddf1c6d8d32bf8bf8af72f8af675880db71",
+      "original_attempt_sha256": "36a861b33561a31e059c0bbc2751ebe74441b6806fe3c22d3e9dd97091f5a317",
+      "original_metrics": {
+        "Vdd_average_absorption_a": "0.0",
+        "Vdd_average_positive_delivery_a": "7.498136241016109e-05",
+        "Vdd_max_delivered_current_a": "7.520766393002863e-05",
+        "Vdd_min_delivered_current_a": "7.472038659828429e-05",
+        "Vin_average_absorption_a": "6.531250704860487e-07",
+        "Vin_average_positive_delivery_a": "2.0780929766845987e-07",
+        "Vin_max_delivered_current_a": "8.322492809566978e-07",
+        "Vin_min_delivered_current_a": "-1.7081408413492758e-06",
+        "all_assessed_pass": "True",
+        "amplitude_peak_v": "0.02",
+        "bandwidth_hz": "9032253.193085466",
+        "candidate": "F75L",
+        "capacitance_f": "1e-12",
+        "capacitor_current_max_a": "7.543126782817987e-09",
+        "capacitor_current_min_a": "-7.543442786660004e-09",
+        "current_a": "7.499737786299599e-05",
+        "dc_at_high_input_v": "",
+        "dc_at_low_input_v": "",
+        "excursion_outside_dc_interval_v": "",
+        "gain": "-6.000871492157971",
+        "input_fall_settling_s": "",
+        "input_rise_settling_s": "",
+        "kind": "sine",
+        "numerical_usable": "True",
+        "out_v": "0.5000466277256138",
+        "refined": "True",
+        "settling_band_v": "",
+        "sine_gain": "5.988664049255182",
+        "sine_max_v": "0.6181317880398192",
+        "sine_min_v": "0.3787628655060081",
+        "sine_stationary": "True",
+        "terminal_supported": "True",
+        "thd_fraction": "0.006712130897433909",
+        "transient_kcl_max_a": "4.919143841179349e-19"
+      },
+      "original_native_deck_sha256": "ac20451ed81eea0c114339b96d66a6f814a53ce09f1ebb1cba9a411b013be960",
+      "original_realization_id": "531cdd9a4bd877f10b7880e0d2d42cb6abff03230d491abdf05edd6b50a1971a",
+      "original_request_sha256": "e882c16e86ce3a467d18db88378a2c16a76a7707078df3bd7f9b9ed2f3920cf3",
+      "original_rows": [
+        1,
+        801,
+        20016
+      ],
+      "original_transient_sha256": "a07761070b307465416d12f115a6fc2d3406a875791c878d956570f1cdf1a759",
+      "parameters": {
+        "amplitude": 0.02,
+        "cload": 1e-12,
+        "load": "active",
+        "nl": 0.4,
+        "nn": 3,
+        "np": 1,
+        "nr": 1,
+        "nw": 3.9999999999997935,
+        "pl": 0.4,
+        "pw": 3.3333333333333335,
+        "rbias": 10731.024577367358,
+        "rf": 100000.0,
+        "rin": 9000.0,
+        "rl": 0.4,
+        "rload": 100000.0,
+        "rs": 670.3660992954378,
+        "rsrc": 1000.0,
+        "rw": 3.3333333333333335,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xr0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/reference/0",
+          "w_m": 3.3333333333333333e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xp0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/load/0",
+          "w_m": 3.3333333333333333e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 from original native before/applied/after log; rechecked in this selection.",
+      "rebound_realization_id": "cc4d02fcc5ffb9028652521e53058fc47391a0ea2e384dd8a7666559cb87d3b3",
+      "refined": true,
+      "reltol": 1e-08,
+      "role": "Known nominal observation; retrospective analysis only",
+      "selected_cycles": 1,
+      "selected_points_including_endpoint": 1001,
+      "temperature_c": 26.85,
+      "transient_recipe": {
+        "kind": "tran",
+        "set_sources": {},
+        "step": 5e-08,
+        "stop": 0.001,
+        "tmax": 5e-08,
+        "vectors": [
+          "v(vdd)",
+          "v(in)",
+          "v(drive)",
+          "v(gate)",
+          "v(out)",
+          "v(source)",
+          "v(pbias)",
+          "v(pdrive)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vbiasdiag)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vr0d)",
+          "i(Vr0g)",
+          "i(Vr0s)",
+          "i(Vr0b)",
+          "i(Vp0d)",
+          "i(Vp0g)",
+          "i(Vp0s)",
+          "i(Vp0b)",
+          "v(capnode)",
+          "i(Vcap)"
+        ]
+      }
+    }
+  ],
+  "columns": [
+    "time_s",
+    "input_v",
+    "output_v",
+    "gate_v",
+    "source_v",
+    "supply_delivered_current_a",
+    "input_delivered_current_a",
+    "capacitor_current_a",
+    "nmos_drain_current_a",
+    "nmos_source_current_a",
+    "nmos_gate_current_a",
+    "nmos_body_current_a"
+  ],
+  "cycle_selection": "Linear interpolation at the original public 1001-point 0.9..1.0-ms grid. One final cycle plus repeated endpoint, not eight cycles or new stationarity evidence.",
+  "model_hashes": {
+    "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+    "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+    "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+  },
+  "old_public_commit": "721a59b9c33146b6ff1d8662e6b9a5076aafe448",
+  "old_public_tag": "finite-feedback-v1.0",
+  "old_zip": "feedback-study-v1.0.zip",
+  "old_zip_sha256": "348d3f2c8cb3ef41b9c968f4bbb68c011c40cfb64ddda4138d2ff115c5e95bc6",
+  "port_cycles_sha256": "ae76805b7c2c71ca1a4e867450a195c812c567751d396089e0ab257cce715d46",
+  "role": "Known observations, not new acquisition",
+  "schema": "learning.nonlinearity.source.v1",
+  "selected_members_sha256": {
+    "circuits/F75L.cir": "82d6730f7a7bcf1600eb4ec5cecd59c07c600726ca9fbb1c182ec4524e3ab161",
+    "circuits/R75.cir": "6b377b2d9def103caed4e183a5a2400fa6010f1002932c7b47b8612eadb79946",
+    "data/ac.csv": "194fb06535994450eb23894a5fe2baa98642addf2066c851e15c6a279880ac00",
+    "data/configuration.json": "e9fabbf61daeecdbd75a6cbf1c207fb3a8c6c4f9ec4f7021a8bf7d507dde1ba5",
+    "data/dynamics.csv": "c196d1c0955dc4631757d743b5f9ffaa76cba8c76cdb92d52a44e1109b5396fc",
+    "data/manifest.json": "a902778b360a806f96287e1748a12f6fff9ccb7734cd385683953d6e1a605857",
+    "data/nominal-op.csv": "fb8374f84d709a52f90c40c398b8f1b643cef1c85e3eb72a71520de17fc6fd64",
+    "data/nominal.csv": "f3a69d18b889b62eb17f8c231fc37f5866ef814487aa4e66d1026b23f6da4051",
+    "data/sensitivities.csv": "e3fa1d1ec1d450f88e533cc4ac93e9a50d436d61bce637532fe1d3230519fab4",
+    "data/sine-waveforms.csv": "7fa6e27385c15a388ebc2a8008d3d616d31d6816781969db5b189ec14c3f4f53",
+    "measurements-v1.json": "3192b35472b7b68fcfcf08dfc683f709060d733f331c03c489fa2a9b10fe0139"
+  }
+}

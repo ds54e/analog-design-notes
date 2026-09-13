@@ -337,6 +337,99 @@ conditions used the known nominal units; they were not fresh physical samples.
 
 The existing common-source feedback study supplies a separate load/signal
 comparison. With 20-mV-peak input, R75 gave 4.156% THD while F75L gave 0.671%.
+Both target approximately −6 gain and 75 µA total delivered DC current, with
+1 V supply, 26.85 °C, 0.45-V input, 0.5-V output and 100 kΩ || 1 pF load.
+F75L uses the same 100-kΩ/10-kΩ feedback/input connection described in Part A,
+with 670.366-Ω source resistance and the larger PMOS units in
+[its exact circuit](../studies/finite-feedback/circuits/F75L.cir).
+Its three NMOS units are each W=4 µm, L=0.4 µm; Pref and Pload are each
+W=3.333333 µm, L=0.4 µm, with Rbias=10.731025 kΩ. Their terminal roles and
+body connections are those shown in Part A.
+
+Start with the voltage that actually reaches the transistor. Let $I_{in}$
+be positive when the external input source delivers current into the circuit.
+The two series input resistors give the exact port relation
+
+$$V_g=V_{in}-R_t I_{in}.$$
+
+With $I_g$ positive into the NMOS gates, gate KCL also gives
+
+$$I_{in}+\frac{V_o-V_g}{R_f}=I_g,\qquad
+V_g=\frac{R_fV_{in}+R_tV_o-R_tR_fI_g}{R_f+R_t}.$$
+
+If the gate-current term is small, the incremental result is
+$v_g\approx0.9091v_{in}+0.09091v_o$. A gain near −6 therefore gives
+$v_g\approx0.364v_{in}$. Source degeneration then raises the source as its
+current increases, further changing $v_{gs}=v_g-v_s$. These two feedback
+paths act at different nodes.
+
+The saved 20-mV cycles make those node motions concrete:
+
+| Fundamental peak | R75 | F75L |
+| --- | ---: | ---: |
+| External input, mV | 20.00 | 20.00 |
+| NMOS gate, mV | 19.998 | 7.290 |
+| NMOS source, mV | 3.295 | 1.816 |
+| Gate minus source, mV | 16.703 | 5.474 |
+
+The gate and source voltages are selected native observations. The input
+resistor identity above agrees with the actual gate waveform to below
+$10^{-11}$ V; the independent source-resistor/current check also passes.
+The $v_{gs}$ row is measured from the voltage difference before taking its
+fundamental, not by subtracting two amplitude magnitudes. Omitting gate current
+in F75L's divider gives up to 28.3 µV total voltage error here, or 3.42 µV
+after removing only that diagnostic's mean. The actual waveform and all
+primary output metrics keep their original centers.
+
+[![F75L reduces gate and gate-source signal motion, while its external input source both supplies and absorbs current.](figures/feedback-gate-motion.svg)](figures/feedback-gate-motion.svg)
+
+That smaller internal excursion has a port cost. During the known 20-mV
+cycle, F75L needs roughly **+0.832/−1.708 µA** of input delivery/absorption.
+R75's input instead supplies about 3.86–8.39 nA. A source that cannot absorb
+the returned current may no longer impose the assumed input voltage.
+The gain and distortion results depend on that finite interface.
+
+The connection also changes how curvature reaches the output. For a
+quasistatic explanation, define $f(u)$ as the output excursion when the gate
+is held at an independently specified excursion $u$, with Rs, the active
+load, reference and the actual Rf from output to gate retained. This is a
+diagnostic fixture definition. It is not a same-function competitor or an
+independently measured intrinsic MOS transfer.
+
+Neglecting the gate-current increment, write $\alpha=1-\beta$ and
+$y=f(\alpha x+\beta y)$. Differentiate this relation at the operating point:
+
+$$h'=\frac{\alpha f'}{1-\beta f'},\qquad
+h''=\frac{\alpha^2f''}{(1-\beta f')^3}.$$
+
+For F75L, the saved OP conductances give
+$f'=-(G_m-1/R_f)/(G_o+1/R_f)\approx-16.515$ and
+$1-\beta f'\approx2.501$. The resulting external slope is approximately
+−6.002, within 0.023% of the native local gain. The conditional multiplier
+from $f''$ to $h''$ is about 0.0528. This explains why reducing internal
+error motion can strongly reduce curvature transmission. It does not prove
+that R75 and F75L had the same underlying $f''$; their devices, current
+allocation and source resistance also differ. No phase-margin result follows
+from this static algebra.
+
+The independent saved ±0.1-mV DC points give F75L's complete-circuit
+$h''\approx-7.57495$ V$^{-1}$. Its quadratic 20-mV estimate is 0.631% THD,
+compared with the observed 0.671%. The third harmonic is 85.9 µV peak,
+and the second harmonic accounts for 98.84% of the harmonics-2–10
+squared-amplitude sum. Curvature inferred from the finite 20-mV sine is
+about 5.5% larger in magnitude than the local DC difference. Keep that
+departure: a small local derivative does not establish a wide linear range.
+The older 10-mV cycle gives another explicitly retrospective estimate,
+0.639%, without using the known 20-mV result to refit it.
+
+Both original 20-mV timestep controls and the new one-cycle/ten-harmonic
+decomposition retain the same pass/fail decisions. All six cycles and eight
+selected static records are old nominal evidence; no new cohort or
+fresh confirmation was acquired for this explanation. See the
+[signal explanation and exact inputs](../studies/learning-signal-v1/reproduce.qmd).
+
+### Keep the competing speed and noise costs
+
 At 8 pF, R75 had 3.226-MHz bandwidth versus F75L's 1.143 MHz; at 16 pF only
 R75 met the 1-MHz bandwidth criterion. With 10-ns 0.43↔0.47-V input edges
 and 8 pF, R75 reached its 1% actual-endpoint band in about 0.222/0.224 µs,
@@ -345,6 +438,12 @@ origins, input amplitudes and loads differ from the OTA example, so the numbers
 are not a shared-function ranking across the two circuit families.
 
 [![The published common-source candidates have distinct capacitive-load bandwidth limits.](../studies/finite-feedback/figures/capacitive-load.svg)](../studies/finite-feedback/figures/capacitive-load.svg)
+
+At the common 1-pF nominal condition, input noise is 7.092 µV RMS for R75
+and 20.458 µV for F75L over the original 1-kHz–1-MHz integration band.
+F75L uses less drawn MOS area here, 7.467 versus 9.282 µm², but about
+120.401 versus 6.839 kΩ of internal resistance. A lower THD figure does not
+erase those source, noise and passive costs.
 
 Choose feedback according to the job: F75L offers lower distortion than R75
 at the declared larger signal, while R75 retains stronger noise, accuracy and

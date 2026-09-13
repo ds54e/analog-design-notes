@@ -43,6 +43,8 @@ def main():
                  'learn/figures/initial-d1-load-response.svg','licenses/LICENSES/APM-Apache-2.0.txt']
     required += ['studies/learning-decisions-v1/reproduce.html','downloads/learning-decisions-v1.0.zip',
                  'learn/figures/supply-reference-paths.svg','learn/figures/initial-d1-load-budget.svg']
+    required += ['studies/learning-signal-v1/reproduce.html','downloads/learning-signal-v1.0.zip',
+                 'learn/figures/local-gain-and-curvature.svg','learn/figures/feedback-gate-motion.svg']
     for name in required:
         if not (root/name).is_file():broken.append(('required',name,'missing'))
     assert not broken,broken

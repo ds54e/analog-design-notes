@@ -30,6 +30,13 @@ over a declared input grid. A clamped differential null is yet another quantity.
 Calling all of these “offset” without the port and load would obscure the
 design question that chapter 5 made visible.
 
+The waveform-induced mean shift in
+[chapter 2](02-common-source.qmd#estimate-a-distortion-limit-from-the-complete-transfer)
+is a time average of one driven circuit. The means used below are averages
+of stationary DC errors over distinct saved realizations. Do not substitute
+the former for the latter or silently recenter a DC observation using its
+sine-wave mean.
+
 ## Predict with independent sources in the correct coordinates
 
 For a small output-current error in the active-load amplifier, chapter 3 gave

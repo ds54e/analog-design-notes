@@ -1,0 +1,15 @@
+{
+  "files": {
+    "cycle-summary.csv": "bd7597029f56ad2a68a9b77e617e8719c57c62dffb37769354322740fe7bd359",
+    "dc-points.csv": "ebfb5ebb24fb7d6911e591d7b1068baa26ea0b3f18b1888ad9a74674afb47406",
+    "harmonics.csv": "1424ef778d29e56fd8e3e8f0fdc1802653b9c9fa7a542574f598b906897ac913",
+    "local-network.csv": "9bc45a035abea7deb6605ba7b23cc32be53a09df5a0935643e78aa14b5f1f88b",
+    "port-cycles.npz": "ae76805b7c2c71ca1a4e867450a195c812c567751d396089e0ab257cce715d46",
+    "quadratic-extrapolation.csv": "bcc94517aad637a8d83122a49bccdeb277be47f561c75b6891212e27c3eece5b",
+    "source.json": "c86f8eebb70a333679d18a0ec3222853531ad505107c6b4702ee5817398401e3",
+    "static-curvature.csv": "29a84854390c0a3fd1a7f803bce60afb8f22d1ee38039cb6652dd7eaeb8b797a",
+    "static-source.json": "4c3bef8e94c11ebc3de3d573e22affaf5fcee9c1a9661bee8210bede7b78bec8",
+    "summary.json": "1481e77ca08fb2b8597f20a28dce93158be510da8adca81d09866c5c0d1a2c4b"
+  },
+  "schema": "learning.nonlinearity.manifest.v1"
+}

@@ -290,6 +290,61 @@ half a volt of usable swing in either direction: source motion, transistor
 headroom, load current and distortion intervene before a rail-only estimate
 becomes a design guarantee.
 
+### Estimate a distortion limit from the complete transfer
+
+Write the stationary output of this **whole circuit** as
+$V_o=h(V_{in})$, after solving the MOS and resistor current balances.
+The first derivative $h'$ is its external input-to-output slope; it is not
+the transconductance of one MOS. A second derivative $h''$ describes how that
+slope changes as the operating point moves. Its unit is V$^{-1}$.
+
+For a sufficiently small, slow input $x=a\cos\omega t$, expand about the
+same independently measured DC point:
+
+$$v_o(t)\approx V_{O0}+h'a\cos\omega t+
+\frac{h''a^2}{4}\left(1+\cos2\omega t\right).$$
+
+The quadratic term produces both a **time-average shift** and a second
+harmonic. To this order their signed cosine coefficients are equal, while
+the second-harmonic peak is $|h''|a^2/4$. Dividing by the fundamental peak
+$|h'|a$ gives
+
+$$\mathrm{THD}_2\approx\frac{|h''|a}{4|h'|}.$$
+
+This is a weak-curvature estimate, not the full ten-harmonic measurement.
+It neglects higher orders and memory. Negative curvature bends the output
+below its local straight-line estimate on both halves of the input cycle.
+
+R75 has an independent saved DC check. At input offsets ±0.1 mV about
+0.45 V, the observed outputs are 0.499399749 and 0.500599749 V; the central
+output is 0.500000000 V. The symmetric differences give
+$h'\approx-6.0000$ and $h''\approx-50.1781$ V$^{-1}$. The older ±0.2-mV
+pair changes the curvature by about 0.00047%. These are reanalyzed existing
+observations, not a newly acquired DC sweep.
+
+At 20-mV peak input, that DC estimate gives 4.182% second-harmonic distortion.
+The saved sine gives 4.156% total THD and a −4.990-mV time-average shift;
+the quadratic shift estimate is −5.018 mV. The second harmonic accounts for
+99.9898% of the measured harmonics-2–10 squared-amplitude sum.
+
+[![R75's finite transfer bends below its local tangent, and the second harmonic dominates its saved distortion.](figures/local-gain-and-curvature.svg)](figures/local-gain-and-curvature.svg)
+
+As a **retrospective design exercise**, a 2% distortion allowance gives a
+first input-peak estimate of $4|h'|(0.02)/|h''|\approx9.57$ mV. That explains
+why the known 5-mV case has useful margin and the 10-mV case fails. It does
+not rewrite the historical design process or guarantee every signal up to
+9.57 mV. The actual load, frequency, higher-order response and terminal
+headroom still have to support the required waveform.
+
+The new harmonic decomposition uses one saved final cycle, excluding its
+repeated endpoint. It agrees with the original eight-cycle THD within
+$6\times10^{-10}$ in THD fraction for the selected cases; it does not replace
+that original stationarity check. The
+[selected static points, cycles and calculation](../studies/learning-signal-v1/reproduce.qmd)
+retain both definitions. Chapter 5 returns to this mechanism after the mirror
+and differential-stage chapters, and shows what an output-to-gate connection
+changes inside a finite amplifier.
+
 ## Make a conditional design choice
 
 For this nominal job, R75 buys lower noise, lower current-error sensitivity,

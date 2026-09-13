@@ -13,15 +13,15 @@ change the decision.
 [**Read the entry page and eight chapters**](learn/index.qmd) ·
 [日本語の読み方](ja/learning-path.qmd)
 
-**Learning edition v1.2 · 2026-09-13.** Original explanations connect first
+**Learning edition v1.3 · 2026-09-13.** Original explanations connect first
 predictions with selected saved observations and finite design costs. Basic
 KCL/KVL is introduced at the entry; no simulator installation is needed to read.
 
 Work from required current and gm to supported dimensions, mirror accuracy,
-and a finite OTA's response. New in this increment: use the prior 5/25-pF
-result to choose and check a receiving capacitor against a deadline; derive
-the finite reference's supply-error path; distinguish lower error spread
-from more circuits meeting a fixed accuracy requirement.
+and a finite OTA's response. The route connects receiving-capacitor choices,
+finite-reference supply error and fixed accuracy requirements. New in this
+increment: estimate finite-signal distortion from a complete circuit's local
+curvature, then trace the gate/source motion and input-current cost of feedback.
 
 | Follow the circuit | Make the next judgment |
 | --- | --- |
@@ -41,7 +41,10 @@ adds the sizing/mirror observations, separately planned receiving-port example,
 five graphs and a small native 25-pF replay. The
 [design-decisions supplement](studies/learning-decisions-v1/reproduce.qmd)
 adds supply/loss calculations and the predeclared 12/15-pF choice, with three
-graphs and a native 12-pF replay. All seven earlier ZIPs are retained.
+graphs and a native 12-pF replay. The
+[signal explanation](studies/learning-signal-v1/reproduce.qmd) adds two graphs,
+selected known static/cycle observations and a small native F75L replay.
+All eight earlier ZIPs are retained.
 
 ## Detailed studies {#detailed-studies}
 

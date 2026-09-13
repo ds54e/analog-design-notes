@@ -4,7 +4,7 @@ Read the [site](https://ds54e.github.io/analog-design-notes/), start the
 [eight-chapter learning route](https://ds54e.github.io/analog-design-notes/learn/),
 or use the [Japanese reading overview](https://ds54e.github.io/analog-design-notes/ja/learning-path.html).
 
-Learning edition **v1.2** connects MOS operating points, common-source stages,
+Learning edition **v1.3** connects MOS operating points, common-source stages,
 mirrors, differential pairs/OTAs, feedback, errors and supply/startup to the
 remaining interfaces of an LDO. Its [original selected evidence package](examples/learning-path-v1/README.md)
 contains four archived nominal examples, current-balance calculations and eight
@@ -14,6 +14,9 @@ adds worked sizing/mirror data and a separately planned same-initial-core
 The [design-decisions supplement](examples/learning-decisions-v1/README.md)
 derives the finite reference's supply path, compares fixed-target losses,
 and checks a predeclared 12/15-pF choice against an illustrative deadline.
+The [signal explanation](examples/learning-signal-v1/README.md) connects saved
+DC curvature to finite harmonics, actual gate/source motion and input-current
+costs, with two further graphs and a known-input native F75L replay.
 These are learning increments; the five
 studies below retain their original histories and exact downloads.
 
@@ -54,8 +57,8 @@ Reader corrections belong in Issues; they are applied to that canonical source
 before export. The immutable research tags are
 `gain-operating-point-accuracy-v1.0`, `passive-sensitivity-v1.0`,
 `active-allocation-v1.0`, `finite-feedback-v1.0` and `power-sequencing-v1.0`.
-The earlier edition tags `learning-path-v1.0` and `learning-path-v1.1` are
-retained; the new edition tag is `learning-path-v1.2`. Versioned
+The earlier edition tags `learning-path-v1.0`, `learning-path-v1.1` and
+`learning-path-v1.2` are retained; the new edition tag is `learning-path-v1.3`. Versioned
 downloads are static checked artifacts; the first release's ZIP bytes are preserved.
 
 Maintainers render with Quarto **1.10.18**:
