@@ -1,0 +1,51 @@
+{
+  "cases": {
+    "C-high-common-mode": {
+      "acquisition_input_sha256": "f67dfed98afd7831f811f00e8ee7bb8c53ca7f6026809a51c216024f22dc35f9",
+      "attempt_sha256": "add24a654c1edeb42bef57e389f847d7cd7349abf33aa5b180b06c1578174c26",
+      "circuit_sha256": "1d4eeb52844a80ac00092b939a14c3760653e07823bbd1420c6f15006cc58a35",
+      "file": "C-high-common-mode.npz",
+      "native_deck_sha256": "a86549fbd0218c55018801fa8c2e4da05767cf8e65e0e06b32b4700560f9d640",
+      "native_text_sha256": {
+        "analysis0": "6feaf884874e51944e28d83674ef4887d11938eab407da1250f9f733d652bfd6"
+      },
+      "physical_readback": "Actual six MOS models/W/L/m/nf/DELVTO/MULU0 before/applied/after rechecked from the native log. All raw coordinates are saved zeros; no new draw.",
+      "realization_id": "04553d4cc666c2c4b19d339456b0fb438df1b4c17ebd0a8d2db3e1e9f8afa56c",
+      "request_id": "704392960c843da0c5fdf720a63aed42c1b830bbf0378181701a93117b6ad324",
+      "rows": [
+        1
+      ],
+      "sha256": "e968879e640340444854c8a3ca87fba335b6076af70c118ca71d6cb72bad4397",
+      "status": "COMPLETE_AND_EXPOSED",
+      "target_started_utc": "2026-09-13T16:06:57.467264+00:00"
+    },
+    "D1-high-command": {
+      "acquisition_input_sha256": "f8b44ff35655d476e132e22f510ba91b83212c3bca40d4076737c81b23b9a86a",
+      "attempt_sha256": "1933ce18cb2f6203a5f82a154f4c3f4fd26aba5da9c28fc0f273c0a6d9da856a",
+      "circuit_sha256": "6c8d5df03985aeb97714cedf920c7018f216b1b2ebead5aa1042e8ad6534d085",
+      "file": "D1-high-command.npz",
+      "native_deck_sha256": "b85c3d4eadc50f4a5de3738c85dde9d674b9a3c78279b2f7f8b1320345c059ac",
+      "native_text_sha256": {
+        "analysis0": "c993571c7501e64d81fefe887ee831019f00cf96dc6412f5af0f51e984926617",
+        "analysis1": "6a5925779842a4ccb0e7b48f4b75df87161b65d70b29c70e479af2b2698d7a09"
+      },
+      "physical_readback": "Actual six MOS models/W/L/m/nf/DELVTO/MULU0 before/applied/after rechecked from the native log. All raw coordinates are saved zeros; no new draw.",
+      "realization_id": "31b3f5131d81b4b7f20bf30c822e76c7ff1a266b034ccbed7c9a8fc97b8046b1",
+      "request_id": "9184411d5a53048f4b71bffa1ecefddb171165a4ac1ac2d6bf64993c8abbc53f",
+      "rows": [
+        1,
+        361
+      ],
+      "sha256": "6d5cfd57ba0913a070a27d9598cc5e4befef234158cf157148ffd85a7f1fef1e",
+      "status": "COMPLETE_AND_EXPOSED",
+      "target_started_utc": "2026-09-13T16:06:57.835635+00:00"
+    }
+  },
+  "freeze_sha256": "3d68c64363d0a5709b44e14f65c906793333a3f19b2507e5e609c42f7538c27d",
+  "plan_sha256": "8510ea863ba91d4a5ddb8920805dd2c50ef8056bda4a56f031c64a7cd306cd24",
+  "role": "Two predeclared nominal conditions, now exposed. Measurement checks are a separate saved-data step.",
+  "rows": 363,
+  "schema": "learning.initial-d1-common-mode.observations.v1",
+  "selected_utc": "2026-09-13T16:08:18.168057+00:00",
+  "status": "SELECTED_AFTER_IDENTITY_AND_COMPLETENESS_CHECKS"
+}

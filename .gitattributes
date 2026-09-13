@@ -1,1 +1,2 @@
 * text=auto eol=lf
+examples/learning-common-mode-v1/data/*.csv -text !eol

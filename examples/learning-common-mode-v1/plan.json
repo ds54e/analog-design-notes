@@ -1,0 +1,576 @@
+{
+  "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+  "cases": {
+    "C-high-common-mode": {
+      "analyses": [
+        {
+          "elements": {
+            "Cload": 5e-12,
+            "Rload": 1000000.0
+          },
+          "kind": "op",
+          "set_sources": {
+            "Vcm": 0.7,
+            "Vdd": 1.0,
+            "Vdiff": 0.1,
+            "Vout": 0.7
+          },
+          "vectors": [
+            "v(bias)",
+            "v(cm)",
+            "v(diff)",
+            "v(inn)",
+            "v(inp)",
+            "v(mirror)",
+            "v(out)",
+            "v(tail)",
+            "v(vdd)",
+            "i(Vdd)",
+            "i(Vcm)",
+            "i(Vdiff)",
+            "i(Vout)",
+            "i(VtM1b)",
+            "i(VtM1d)",
+            "i(VtM1g)",
+            "i(VtM1s)",
+            "i(VtM2b)",
+            "i(VtM2d)",
+            "i(VtM2g)",
+            "i(VtM2s)",
+            "i(VtM3b)",
+            "i(VtM3d)",
+            "i(VtM3g)",
+            "i(VtM3s)",
+            "i(VtM4b)",
+            "i(VtM4d)",
+            "i(VtM4g)",
+            "i(VtM4s)",
+            "i(VtM5b)",
+            "i(VtM5d)",
+            "i(VtM5g)",
+            "i(VtM5s)",
+            "i(VtM6b)",
+            "i(VtM6d)",
+            "i(VtM6g)",
+            "i(VtM6s)",
+            "@m.xm1.mapm045_vtg_core[gm]",
+            "@m.xm1.mapm045_vtg_core[gds]",
+            "@m.xm1.mapm045_vtg_core[gmbs]",
+            "@m.xm1.mapm045_vtg_core[vth]",
+            "@m.xm1.mapm045_vtg_core[vdsat]",
+            "@m.xm2.mapm045_vtg_core[gm]",
+            "@m.xm2.mapm045_vtg_core[gds]",
+            "@m.xm2.mapm045_vtg_core[gmbs]",
+            "@m.xm2.mapm045_vtg_core[vth]",
+            "@m.xm2.mapm045_vtg_core[vdsat]",
+            "@m.xm3.mapm045_vtg_core[gm]",
+            "@m.xm3.mapm045_vtg_core[gds]",
+            "@m.xm3.mapm045_vtg_core[gmbs]",
+            "@m.xm3.mapm045_vtg_core[vth]",
+            "@m.xm3.mapm045_vtg_core[vdsat]",
+            "@m.xm4.mapm045_vtg_core[gm]",
+            "@m.xm4.mapm045_vtg_core[gds]",
+            "@m.xm4.mapm045_vtg_core[gmbs]",
+            "@m.xm4.mapm045_vtg_core[vth]",
+            "@m.xm4.mapm045_vtg_core[vdsat]",
+            "@m.xm5.mapm045_vtg_core[gm]",
+            "@m.xm5.mapm045_vtg_core[gds]",
+            "@m.xm5.mapm045_vtg_core[gmbs]",
+            "@m.xm5.mapm045_vtg_core[vth]",
+            "@m.xm5.mapm045_vtg_core[vdsat]",
+            "@m.xm6.mapm045_vtg_core[gm]",
+            "@m.xm6.mapm045_vtg_core[gds]",
+            "@m.xm6.mapm045_vtg_core[gmbs]",
+            "@m.xm6.mapm045_vtg_core[vth]",
+            "@m.xm6.mapm045_vtg_core[vdsat]",
+            "@cload[capacitance]",
+            "@rload[resistance]",
+            "@rbias[resistance]"
+          ]
+        }
+      ],
+      "circuit": "circuits/C-high-common-mode.cir",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "expected_source_nodes_v": {
+        "cm": 0.7,
+        "diff": 0.1,
+        "inn": 0.65,
+        "inp": 0.75,
+        "out": 0.7,
+        "vdd": 1.0
+      },
+      "prior_case": "C-source-0p70",
+      "prior_realization_id": "2771d73d417fc435d0efc7767c8897cdbddb162e979ffa5b00aa1f3c8313b1cf",
+      "role": "One changed-common-mode output clamp; ideal fixed inputs/output"
+    },
+    "D1-high-command": {
+      "analyses": [
+        {
+          "elements": {
+            "Cload": 5e-12,
+            "Rload": 1000000.0
+          },
+          "kind": "op",
+          "set_sources": {
+            "Iinj": 0.0,
+            "Vdd": 1.0,
+            "Vin": 0.7,
+            "Vinj": 0.0,
+            "Voffset": 0.0
+          },
+          "vectors": [
+            "v(bias)",
+            "v(feedback)",
+            "v(inn)",
+            "v(inp)",
+            "v(input_access)",
+            "v(mirror)",
+            "v(out)",
+            "v(source)",
+            "v(tail)",
+            "v(vdd)",
+            "i(Vdd)",
+            "i(Vin)",
+            "i(Voffset)",
+            "i(Vfeedback)",
+            "i(Vinj)",
+            "i(VtM1b)",
+            "i(VtM1d)",
+            "i(VtM1g)",
+            "i(VtM1s)",
+            "i(VtM2b)",
+            "i(VtM2d)",
+            "i(VtM2g)",
+            "i(VtM2s)",
+            "i(VtM3b)",
+            "i(VtM3d)",
+            "i(VtM3g)",
+            "i(VtM3s)",
+            "i(VtM4b)",
+            "i(VtM4d)",
+            "i(VtM4g)",
+            "i(VtM4s)",
+            "i(VtM5b)",
+            "i(VtM5d)",
+            "i(VtM5g)",
+            "i(VtM5s)",
+            "i(VtM6b)",
+            "i(VtM6d)",
+            "i(VtM6g)",
+            "i(VtM6s)",
+            "@m.xm1.mapm045_vtg_core[gm]",
+            "@m.xm1.mapm045_vtg_core[gds]",
+            "@m.xm1.mapm045_vtg_core[gmbs]",
+            "@m.xm1.mapm045_vtg_core[vth]",
+            "@m.xm1.mapm045_vtg_core[vdsat]",
+            "@m.xm2.mapm045_vtg_core[gm]",
+            "@m.xm2.mapm045_vtg_core[gds]",
+            "@m.xm2.mapm045_vtg_core[gmbs]",
+            "@m.xm2.mapm045_vtg_core[vth]",
+            "@m.xm2.mapm045_vtg_core[vdsat]",
+            "@m.xm3.mapm045_vtg_core[gm]",
+            "@m.xm3.mapm045_vtg_core[gds]",
+            "@m.xm3.mapm045_vtg_core[gmbs]",
+            "@m.xm3.mapm045_vtg_core[vth]",
+            "@m.xm3.mapm045_vtg_core[vdsat]",
+            "@m.xm4.mapm045_vtg_core[gm]",
+            "@m.xm4.mapm045_vtg_core[gds]",
+            "@m.xm4.mapm045_vtg_core[gmbs]",
+            "@m.xm4.mapm045_vtg_core[vth]",
+            "@m.xm4.mapm045_vtg_core[vdsat]",
+            "@m.xm5.mapm045_vtg_core[gm]",
+            "@m.xm5.mapm045_vtg_core[gds]",
+            "@m.xm5.mapm045_vtg_core[gmbs]",
+            "@m.xm5.mapm045_vtg_core[vth]",
+            "@m.xm5.mapm045_vtg_core[vdsat]",
+            "@m.xm6.mapm045_vtg_core[gm]",
+            "@m.xm6.mapm045_vtg_core[gds]",
+            "@m.xm6.mapm045_vtg_core[gmbs]",
+            "@m.xm6.mapm045_vtg_core[vth]",
+            "@m.xm6.mapm045_vtg_core[vdsat]",
+            "@cload[capacitance]",
+            "@rload[resistance]",
+            "@rbias[resistance]",
+            "@rsource[resistance]"
+          ]
+        },
+        {
+          "ac_sources": {
+            "Iinj": 0,
+            "Vdd": 0,
+            "Vin": 1,
+            "Vinj": 0,
+            "Voffset": 0
+          },
+          "elements": {
+            "Cload": 5e-12,
+            "Rload": 1000000.0
+          },
+          "kind": "ac",
+          "points_per_decade": 60,
+          "set_sources": {
+            "Iinj": 0.0,
+            "Vdd": 1.0,
+            "Vin": 0.7,
+            "Vinj": 0.0,
+            "Voffset": 0.0
+          },
+          "start": 1000.0,
+          "stop": 1000000000.0,
+          "vectors": [
+            "v(bias)",
+            "v(feedback)",
+            "v(inn)",
+            "v(inp)",
+            "v(input_access)",
+            "v(mirror)",
+            "v(out)",
+            "v(source)",
+            "v(tail)",
+            "v(vdd)",
+            "i(Vdd)",
+            "i(Vin)",
+            "i(Voffset)",
+            "i(Vfeedback)",
+            "i(Vinj)",
+            "i(VtM1b)",
+            "i(VtM1d)",
+            "i(VtM1g)",
+            "i(VtM1s)",
+            "i(VtM2b)",
+            "i(VtM2d)",
+            "i(VtM2g)",
+            "i(VtM2s)",
+            "i(VtM3b)",
+            "i(VtM3d)",
+            "i(VtM3g)",
+            "i(VtM3s)",
+            "i(VtM4b)",
+            "i(VtM4d)",
+            "i(VtM4g)",
+            "i(VtM4s)",
+            "i(VtM5b)",
+            "i(VtM5d)",
+            "i(VtM5g)",
+            "i(VtM5s)",
+            "i(VtM6b)",
+            "i(VtM6d)",
+            "i(VtM6g)",
+            "i(VtM6s)"
+          ]
+        }
+      ],
+      "circuit": "circuits/D1-high-command.cir",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "expected_source_nodes_v": {
+        "source": 0.7,
+        "vdd": 1.0
+      },
+      "prior_case": "D1-5p",
+      "prior_realization_id": "65efa54678ea74a7c699d6059431abfb710d765a049e28ba4c8065e64f07b35b",
+      "role": "One high-command functional initial-D1 OP and local AC; no transient"
+    }
+  },
+  "created_utc": "2026-09-13T16:04:35.420258+00:00",
+  "fixed": {
+    "cload_f": 5e-12,
+    "rbias_ohm": 273692.63541213644,
+    "rload_ohm": 1000000.0,
+    "rsource_ohm": 10000.0,
+    "vdd_v": 1.0
+  },
+  "identity": "learning.initial-d1-common-mode.v1",
+  "limits": [
+    "Same six nominal zero-raw units with distinct complete condition/fixture realizations; no new physical population or range qualification.",
+    "C clamp keeps differential input/output fixed while common mode changes. D1 ties the negative input to output and has a finite input source: these are different fixtures.",
+    "AC is a local signal response at the new OP; it is not a loop return ratio, phase margin, finite excursion or recovery measurement.",
+    "A fixed5pF capacitor is not a full pass-gate charge model or an LDO.",
+    "All former study confirmations are known development evidence for new decisions; old self-bias and September12 research remain paused."
+  ],
+  "measurement_script_sha256": "dbb09770e3f38d2c0c8e233f8be42609612df01d9a44ff8e2291a315f062851e",
+  "measurements": {
+    "capacitor_ac_relative": 1e-05,
+    "kcl_max_a": 1e-10,
+    "passive_parameter_relative": 2e-11,
+    "passive_vi_relative": 1e-05,
+    "source_voltage_v": 1e-09,
+    "terminal_span_max_v": 1.00000001,
+    "vi_minimum_current_a": 1e-14
+  },
+  "model_hashes": {
+    "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+    "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+    "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+  },
+  "native_concurrency": 1,
+  "new_target_exposure_at_freeze": 0,
+  "ngspice_version": 47,
+  "physical_units": [
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm1"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/input_plus",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm2"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/input_minus",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm3"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/load_reference",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm4"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/load_output",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm5"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/tail",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 4e-07,
+      "path": [
+        "xm6"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/bias_reference",
+      "w_m": 1e-06
+    }
+  ],
+  "prospective_interpretation": "The old rigid tail shift exceeds VDD. Expect reduced current, but do not assert an exact common-mode boundary. A saved local D1 output screen0.6917831849864216V is compared without refitting; no new binary tracking requirement.",
+  "schema": "learning.initial-d1-common-mode.plan.v1",
+  "selected_input_sha256": {
+    "circuits/C-high-common-mode.cir": "1d4eeb52844a80ac00092b939a14c3760653e07823bbd1420c6f15006cc58a35",
+    "circuits/D1-high-command.cir": "6c8d5df03985aeb97714cedf920c7018f216b1b2ebead5aa1042e8ad6534d085",
+    "data/prior.json": "7689e1212bddd05cc60b7af217ce80778cc716deaeb5efd21e886a4d36494d76",
+    "data/source.json": "907fc3e6881392196a5bd02ed193f5240a01fce4a8cb156f8da19ca6cce361ad"
+  },
+  "status": "FROZEN_BEFORE_TARGET_EXPOSURE",
+  "stopping_rule": "Exactly two conditions, two OP rows and361AC rows. At most one identical retry per condition in a new attempt only for a diagnosed technical execution failure; no outcome-driven extension or parameter/threshold change.",
+  "temperature_c": 26.85,
+  "unchanged_learning_t0": "2026-09-13T06:47:07Z"
+}

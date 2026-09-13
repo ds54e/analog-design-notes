@@ -1,0 +1,14 @@
+{
+  "files": {
+    "C-high-common-mode.npz": "e968879e640340444854c8a3ca87fba335b6076af70c118ca71d6cb72bad4397",
+    "D1-high-command.npz": "6d5cfd57ba0913a070a27d9598cc5e4befef234158cf157148ffd85a7f1fef1e",
+    "index.json": "7a320c5e46f4169f6f5310950a6c0dd3d0a24c1f9f9760994c233591d1dd06a4",
+    "network.csv": "a263e3317060003acb26043aa35766a62bc6637a4a4d7302d350610defc416cd",
+    "network.json": "90bde182e65c1b9675cf7f8472772d1df1917be47385332c36ecabf2aaeed8f0",
+    "operating-points.csv": "93ef4180180e352721529bb7c170b73c44c7d7df456469685b1570d7c1e094f7",
+    "prior.json": "7689e1212bddd05cc60b7af217ce80778cc716deaeb5efd21e886a4d36494d76",
+    "source.json": "907fc3e6881392196a5bd02ed193f5240a01fce4a8cb156f8da19ca6cce361ad",
+    "summary.json": "2f2bc91ca6c5f1facd7e37ae295af53eed3866c122f2e82639e910c8939e4803"
+  },
+  "schema": "learning.initial-d1-common-mode.files.v1"
+}

@@ -264,6 +264,57 @@ their complete fixtures and saved realization identities differ. The later
 archived “selected D1” and its 25-pF transfer use a different selection history
 and are not evidence for this initial circuit.
 
+### A high output clamp does not establish high input common mode
+
+The earlier C clamp can source current at a 0.7-V output while its gates stay
+at 0.35/0.25 V. In a buffer commanded toward 0.7 V, both input voltages move
+upward. That consumes a different part of the voltage budget. A separate
+[two-condition plan](../studies/learning-common-mode-v1/plan.json) tests this
+distinction using the same six initial units, bias resistor, supply and load.
+
+Start with a first voltage estimate. The old sourcing clamp's tail is
+0.759046 V and P2 has VSG=0.509046 V. Translating both gates upward by 0.4 V
+while keeping that VSG would require a 1.159046-V tail, above VDD. The old
+operating voltages cannot persist. This estimate predicts a headroom problem;
+it does not calculate the new current, because body bias, drain voltages and
+the current split also change.
+
+The new C observation fixes output at 0.7 V and the full input difference at
++0.1 V, but changes common mode to 0.7 V. Its gates are now 0.75/0.65 V:
+
+| At the same C output/differential clamp | Known CM 0.3 V | New CM 0.7 V |
+| --- | ---: | ---: |
+| Tail node, V | 0.759046 | 0.992123 |
+| Tail P5 VSD, mV | 240.954 | 7.877 |
+| Sourcing P2 VSG, V | 0.509046 | 0.342123 |
+| Sourcing P2 VSD, V | 0.059046 | 0.292123 |
+| Tail current, µA | 13.995 | 1.809 |
+| Net sourcing after 1 MΩ, µA | 7.862 | 0.779 |
+
+P2 has **more drain-to-source voltage**, yet supplies less current. Its gate
+drive has fallen, and P5 has only 7.9 mV left across it. Rbias and VDD remain
+fixed; the reference node moves by only about 7.7 µV. Calling the output
+PMOS “in saturation” would miss the limiting tail and input conditions.
+The new clamp still has positive net current; the result is reduced capability,
+not a claim that all conduction ceases above one sharp common-mode boundary.
+
+[![At the same C output clamp, raised input common mode reduces current. The functional D1 response also changes when its command rises.](figures/common-mode-interface.svg)](figures/common-mode-interface.svg)
+
+Now make the separately planned **functional D1** observation. A 0.7-V source
+produces **0.663495 V** output, a −36.505-mV tracking error. The positive gate
+is 0.699999 V, so the 10-kΩ source's 1.26-µV drop explains very little of this
+error. The actual input common mode is 0.681747 V and difference is 36.504 mV.
+Tail current is only 1.770 µA; VDD supplies 3.780 µA including the reference.
+The lower consumption accompanies a changed operating point and weaker response.
+
+Before that observation, extending the old 0.3-V local gain across a 0.4-V
+change gave a deliberately provisional output screen of 0.691783 V. It missed
+the new output by 28.289 mV. A local derivative is not a global buffer law.
+The [exact two fixtures, observations and reproduction](../studies/learning-common-mode-v1/reproduce.qmd)
+retain the failed extrapolation and all numerical checks. These two points do
+not locate an exact common-mode limit. Chapter 5 next explains why even the
+local feedback gain has changed at this new operating point.
+
 The [selected arrays, definitions and calculations](../studies/learning-path-v1/reproduce.qmd)
 support the original A/B/C/D1 examples; the new clamp observations have their
 own [supplement and frozen plan](../studies/learning-day-v1/reproduce.qmd).

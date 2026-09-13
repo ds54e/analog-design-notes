@@ -152,6 +152,56 @@ The near agreement is a local explanation, not an assertion that C's loaded
 null is exactly D1's source-to-output offset. Nor would a larger open-loop gain
 automatically remove an intrinsic input-referred device offset.
 
+### Keep both input coefficients when common mode changes
+
+The [high-command example](04-differential-pair-and-ota.qmd#a-high-output-clamp-does-not-establish-high-input-common-mode)
+adds a useful counterexample. At a 0.7-V source, initial D1 has a 0.663495-V
+output and only about 0.516 V/V local signal gain. Its feedback sign is still
+correct. The operating point has changed enough that a single unchanged
+“OTA gain” no longer describes the two input paths.
+
+For small perturbations about a particular biased state, write the loaded
+output as
+
+$$v_o=A_+v_+ + A_-v_-.$$
+
+Each coefficient holds the other input perturbation at zero. This means zero
+*increment*, not grounding its DC gate. With unity feedback $v_-=v_o$,
+
+$$h=\frac{v_o}{v_+}=\frac{A_+}{1-A_-}.$$
+
+The familiar $A/(1+A)$ form additionally assumes $A_+=A$ and $A_-=-A$.
+Writing $v_\pm=v_{cm}\pm v_d/2$ reveals the omitted path:
+$v_o=(A_++A_-)v_{cm}+(A_+-A_-)v_d/2$. The buffer's feedback input moves
+both its differential and common-mode increments.
+
+A **retrospective low-frequency calculation** uses the observed gm, gmb and
+gds values at each actual D1 operating point. It solves KCL at `tail`,
+`mirror` and `out`; a separate construction stamps all six MOS devices and
+the reference node. Both algebraic routes agree. They retain body derivatives
+and Rload, while omitting capacitance and leakage derivatives. The input
+resistor then has no incremental gate-current drop in this approximation.
+
+| D1 source bias | Calculated A+ | Calculated A− | Calculated h | Observed h at 1 kHz |
+| --- | ---: | ---: | ---: | ---: |
+| Known 0.3 V | +61.545 | −61.582 | 0.983429 | 0.983317 |
+| New 0.7 V | +12.117 | −22.474 | 0.516195 | 0.515957 |
+
+The coefficients are derived at the retained operating point, not measured
+gains of a separately opened and rebiased circuit. The resulting h agrees
+with the real part of native 1-kHz gain within 0.047%; the omitted effects
+remain a limit of the approximation.
+
+At the higher command, the tail device's gds has risen from 2.033 to
+220.618 µS while the input pair's combined source-voltage coefficient
+$\sum(g_m+g_{mb}+g_{ds})$ has fallen from 314.282 to 49.495 µS.
+The tail is strongly tied to the AC-grounded supply through its incremental
+conductance, and the two input branches have unequal operating currents.
+The complete node calculation explains the changed paths; it does not
+attribute the changed behavior to a single isolated parameter change. The
+[selected equations and replay](../studies/learning-common-mode-v1/reproduce.qmd)
+preserve that distinction and the failed large-range linear extrapolation.
+
 **Reading stop:** you can now identify the correcting path, its finite loading
 and what error it fails to cancel. Continue when those three circuits and their
 different input ports are clear.
@@ -171,6 +221,22 @@ For initial D1 at the central input, the observed 1-kHz signal magnitude is
 actual low-frequency magnitude, not an assumed exact gain of one. This is
 $V_O/V_{source}$ with its complete functional feedback connection intact.
 It does not measure a broken-loop return ratio.
+
+The high-command example gives a second way to reduce bandwidth without
+changing the capacitor. Compare it with the separate 25-pF observation:
+
+| Initial D1 condition | 1-kHz gain magnitude, V/V | Relative −3-dB bandwidth, MHz | DC source-to-output error, mV |
+| --- | ---: | ---: | ---: |
+| 0.3-V source, 5 pF | 0.983317 | 4.241 | −1.544 |
+| 0.3-V source, 25 pF | 0.983317 | 0.848 | −1.544 |
+| 0.7-V source, 5 pF | 0.515957 | 0.863 | −36.505 |
+
+The last two bandwidths are close, but their precision and local gain are
+different. One change stores more charge at the old DC operating point;
+the other changes headroom and current at the same 5-pF load. A bandwidth
+number alone cannot rank these interfaces. The new high-command case has
+OP/AC observations only; it does not supply a measured large-step settling
+time or overload-recovery claim.
 
 A return-ratio measurement asks how an injected perturbation travels around
 a specified loop and returns, with the operating point and loading preserved.

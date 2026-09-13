@@ -109,6 +109,22 @@ to 7.862 µA at 0.70 V. At −0.10-V drive it can remove 10.928 µA at 0.35 V
 but only 7.803 µA at 0.05 V. These are diagnostic fixed-input clamp states,
 not the functional buffer driven over that entire output range.
 
+Input common mode must be specified separately from the output-control voltage.
+The [two new high-voltage conditions](04-differential-pair-and-ota.qmd#a-high-output-clamp-does-not-establish-high-input-common-mode)
+show why. With output still clamped at 0.7 V, raising C's input common mode
+from 0.3 to 0.7 V reduces net sourcing from 7.862 to 0.779 µA; the high-side
+tail has only 7.9 mV left. A functional initial-D1 buffer commanded to 0.7 V
+instead finds a 0.663495-V output and much smaller local gain. Neither the
+old low-voltage error nor its 5/25-pF response can be carried over unchanged.
+
+In the conceptual regulator above, however, `sense` and `reference` could
+remain near 0.3 V while `ctrl` moves toward 0.7 V. That is closer to C's
+separate input/output ports than to a buffer that ties one input directly to
+its output. The high-command D1 result therefore does **not** rule out a
+0.7-V control output at low input common mode. It says to specify and test
+both voltage interfaces together with required source/sink current and charge.
+No integrated regulator has been simulated in this example.
+
 Together the observations require a receiving-port specification with both
 voltage and current directions. A pass gate needing more charge, a voltage
 closer to a rail, or rapid recovery after a prolonged overload has a different
@@ -119,8 +135,8 @@ plan; it never borrows the later archive's selected-D1 transfer.
 
 | Interface or decision | Evidence available in this edition | What remains to be demonstrated |
 | --- | --- | --- |
-| Input comparison | A/B current steering; finite-tail common-mode dependence; C's PMOS-input sign at 0.3 V. | Reference/sense voltage ranges over the intended regulator supply and temperature domain. |
-| Low-voltage buffer accuracy | Initial D1: source 0.25–0.35 V, output 0.249311–0.347634 V, worst error 2.366 mV. | Required regulator accuracy after reference, divider loading and pass-device operating point are included. |
+| Input comparison | A/B current steering; finite-tail common-mode dependence; C's PMOS-input sign at 0.3 V; same-output C clamp at 0.7-V common mode shows a current/headroom loss. | Reference/sense voltage ranges over the intended regulator supply and temperature domain; no continuous common-mode range is qualified. |
+| Buffer accuracy | Initial D1: source 0.25–0.35 V, output 0.249311–0.347634 V, worst error 2.366 mV. A separate 0.7-V command gives 0.663495 V output and 36.505-mV error. | Required regulator accuracy after reference, divider loading and pass-device operating point are included; buffer command and regulator control output are different interfaces. |
 | Amplifier resource cost | Same six-device initial core, 5.2 µm² drawn MOS area; at most 16.085 µA VDD current on its saved input grid. | Total regulator budget, including reference, divider, startup, compensation and any driver stage. |
 | Receiving-port charge | Same initial-D1 1-MΩ/5-versus-25-pF steps, independent DC endpoints and one timestep refinement; six C-fixture current/headroom clamps; predeclared 12/15-pF checks of a 500-ns illustrative deadline. | Actual pass-gate voltage/charge trajectory, required delivery/absorption and overload recovery. |
 | Supply and sequencing | Published A75/R75/F75L driven/clamped source histories and current peaks. | Floating pins, current-limited sources, arbitrary stored charge and startup of the integrated regulator. |

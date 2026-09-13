@@ -1,0 +1,15 @@
+{
+  "package": "learning-day-v1.0.zip",
+  "package_sha256": "ddfbad7a06c9c45a94fa4f0379a421816f04d3fa1c56bd21ec8a09ac99f13b15",
+  "public_commit": "8c053bb8597635aef5faae94b81b150f14453716",
+  "public_tag": "learning-path-v1.1",
+  "role": "Previously exposed nominal development observations; only selected central OP/AC and one output clamp are adopted. Original full records and freeze are unchanged.",
+  "schema": "learning.initial-d1-common-mode.source.v1",
+  "selected_zip_members": {
+    "circuits/interface-C-source-0p70.cir": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+    "circuits/interface-D1-5p.cir": "8b741d0c57391fc82ae893b84f2fdcb59e83bb8b79e11f13e074a481ec26f11d",
+    "data/interface-C-source-0p70.npz": "791027b84342b6adfe07d123b81a0a7bd5a52579e0b14ce736de4f5c8170366e",
+    "data/interface-D1-5p.npz": "4a73846f58815b37e6ffe90297e515df7e96ff00265310277a7d43ad9ca10fab",
+    "data/interface-inputs.json": "ae9934b7515f55d2f76adbe55404826f95a4c2937517ed7f22f545dcd860b963"
+  }
+}

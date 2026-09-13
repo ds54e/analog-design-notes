@@ -47,6 +47,8 @@ def main():
                  'learn/figures/local-gain-and-curvature.svg','learn/figures/feedback-gate-motion.svg']
     required += ['studies/learning-noise-v1/reproduce.html','downloads/learning-noise-v1.0.zip',
                  'learn/figures/resistor-noise-paths.svg']
+    required += ['studies/learning-common-mode-v1/reproduce.html','downloads/learning-common-mode-v1.0.zip',
+                 'learn/figures/common-mode-interface.svg']
     for name in required:
         if not (root/name).is_file():broken.append(('required',name,'missing'))
     assert not broken,broken

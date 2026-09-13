@@ -1,0 +1,50 @@
+{
+  "assumptions": [
+    "Low frequency; all capacitances and gate/body leakage derivatives neglected.",
+    "VDD is AC ground; the finite reference makes bias AC ground when its gate leakage is neglected.",
+    "Input resistance has no low-frequency drop when gate leakage derivatives are omitted. Actual DC source drop remains in the measured table.",
+    "Ap/Am are model-derived partial coefficients at the retained D1 operating point, not measured gains of a newly rebiased open circuit.",
+    "Use h=Ap/(1-Am). Substituting one generic differential gain into A/(1+A) also assumes equal and opposite input coefficients."
+  ],
+  "cases": [
+    {
+      "body_derivatives_retained": true,
+      "case": "known-central-0p3",
+      "direct_gain": 0.9834291960522861,
+      "gain": 0.9834291960522862,
+      "input_source_coefficient_s": 0.000314281644210578,
+      "minus": -61.58204786069125,
+      "mirror_per_input": -0.011458673950761226,
+      "native_one_khz_imag": -0.00023242489068392818,
+      "native_one_khz_real": 0.9833173168832835,
+      "plus": 61.54501301494529,
+      "relative_error_to_native_real": 0.00011377727929917647,
+      "stamped_gain": 0.9834291960522861,
+      "tail_conductance_fraction": 0.0064285157586151396,
+      "tail_gds_s": 2.0334364809128687e-06,
+      "tail_per_input": 0.8309537249714071
+    },
+    {
+      "body_derivatives_retained": true,
+      "case": "new-high-command-0p7",
+      "direct_gain": 0.5161951834147923,
+      "gain": 0.5161951834147922,
+      "input_source_coefficient_s": 4.949486861568207e-05,
+      "minus": -22.47371059554715,
+      "mirror_per_input": -0.8471860539039171,
+      "native_one_khz_imag": -0.0006012353174118154,
+      "native_one_khz_real": 0.5159566646501477,
+      "plus": 12.117016346294212,
+      "relative_error_to_native_real": 0.00046228449206342503,
+      "stamped_gain": 0.5161951834147923,
+      "tail_conductance_fraction": 0.8167622918256184,
+      "tail_gds_s": 0.00022061803068220348,
+      "tail_per_input": 0.10112332860629544
+    }
+  ],
+  "limits": "The comparison checks local signal gain near1kHz; it does not predict broadband poles, finite overload/recovery, common-mode rejection statistics or a full operating range.",
+  "measurements_sha256": "2f2bc91ca6c5f1facd7e37ae295af53eed3866c122f2e82639e910c8939e4803",
+  "role": "Retrospective explanation using already observed OP derivatives; no new native target or prior prediction.",
+  "schema": "learning.initial-d1-common-mode.network.v1",
+  "status": "ALGEBRA_CHECKS_PASS"
+}

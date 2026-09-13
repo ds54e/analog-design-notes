@@ -1,0 +1,179 @@
+---
+title: "Reproduce the initial-OTA common-mode example"
+---
+
+This supplement separates the voltage at an OTA's receiving port from the
+common mode at its input pair. It accompanies chapters 4, 5 and 8, using the
+same six physical units as the initial C/D1 examples. The two new nominal
+conditions are complete and exposed; their first inputs and measurement
+definitions remain frozen.
+
+Download [the selected package](../../downloads/learning-common-mode-v1.0.zip)
+or inspect [the public example files](https://github.com/ds54e/analog-design-notes/tree/main/examples/learning-common-mode-v1).
+The [original learning-day supplement](../learning-day-v1/reproduce.qmd)
+retains the earlier 5/25-pF and six output-clamp observations. Their exact
+ZIP bytes, meanings and exposure history are unchanged.
+
+## Retrieve the exact prior inputs
+
+The required prior package is
+[learning-day-v1.0.zip](../../downloads/learning-day-v1.0.zip), SHA256
+`ddfbad7a06c9c45a94fa4f0379a421816f04d3fa1c56bd21ec8a09ac99f13b15`,
+published at commit `8c053bb8597635aef5faae94b81b150f14453716`, tag
+`learning-path-v1.1`. [source.json](data/source.json) names five exact selected
+members: the original configuration, two circuit bodies and two observation
+files. The analysis uses the known C-source-0p70 OP and D1-5p central OP/AC.
+It does not adopt other trajectories as new evidence.
+
+The [prior-only calculation](data/prior.json) was saved before the new targets.
+It records the old C tail and current and a deliberately local D1 output
+screen of 0.691783 V at a 0.7-V command. That screen is a large extrapolation
+from the known 0.3-V bias, not a guarantee. The new measured output is
+0.663495 V; the 28.289-mV discrepancy remains in the result.
+
+## The two fixtures and their identities
+
+The [scientific plan](plan.json) was committed before acquisition and binds
+the exact inputs and original measurement script. It uses APM v5.0.0,
+APM045/VTG, 1 V and 26.85 °C, with the same six saved zero-raw MOS units.
+Rbias is 273692.63541213644 Ω, Rload is 1 MΩ and Cload is 5 pF.
+
+| New condition | Exact circuit | Native analyses | What changes |
+| --- | --- | --- | --- |
+| C-high-common-mode | [C clamp](circuits/C-high-common-mode.cir) | One OP | Common mode becomes 0.7 V; differential input stays +0.1 V and output clamp stays 0.7 V. |
+| D1-high-command | [Functional buffer](circuits/D1-high-command.cir) | One OP and 361 AC points | Source command becomes 0.7 V; the negative input still follows output and source resistance stays 10 kΩ. Unused PWL text is removed from this stationary fixture. |
+
+The different fixtures have different complete realization/request identities.
+The device inventory, geometry and six saved raw coordinate pairs remain
+unchanged. No device is redrawn or rebiased individually. The historical
+selected-D1 mirror correction and its 25-pF transfer are not used.
+
+[index.json](data/index.json) preserves target start times, bound identities,
+native deck/output hashes and compact observations. Both conditions passed
+numerical checks on their first attempts; there were no retries or partial
+native attempts. Native output completeness, source/model/input binding and
+actual MOS readbacks were checked before measurement. A completion marker
+alone was not used as evidence.
+
+## Recalculate the observations and figures
+
+Extract the selected ZIP into a new directory; it contains `example/`.
+The saved-data calculation needs Python 3.9 or later and the pinned
+packages in the example's requirements.
+
+~~~bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r example/requirements.txt
+curl --fail --location https://ds54e.github.io/analog-design-notes/downloads/learning-day-v1.0.zip --output learning-day-v1.0.zip
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/analyze.py --source-zip learning-day-v1.0.zip --output "$PWD/analysis-001"
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/explain.py --source-zip learning-day-v1.0.zip --output "$PWD/network-001"
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/plot.py --source-zip learning-day-v1.0.zip --output "$PWD/figures-001"
+~~~
+
+Expected output is `summary.json`, `operating-points.csv`, `network.json`,
+`network.csv` and `common-mode-interface.svg`/PNG. Existing output directories
+are refused. The manifest and source hashes preserve the inputs; calculations
+write new destinations rather than overwriting the selected observations.
+The two CSV tables retain the measurement writer's CRLF record separators;
+the package and Git attributes preserve those exact bytes.
+
+The DC analysis checks all MOS/node current balances, actual source voltages,
+MOS terminal domains, native passive parameter readback and independent
+resistor V/I. D1's AC current balance checks the actual capacitor against
+`Icap/(j*2*pi*f*Vout)` over 100 kHz–10 MHz. Its bandwidth is the first downward
+−3.000-dB crossing relative to its observed 1-kHz magnitude, interpolated in
+dB/log frequency, matching the earlier learning bridge definition.
+
+At C's new common mode, expect tail current 1.809 µA and net sourcing after
+Rload 0.779 µA, versus the known 13.995 and 7.862 µA. P2's VSD increases
+from 0.059 to 0.292 V while the tail's VSD falls to 7.877 mV. At D1's new
+command, expect 0.663495-V output, −36.505-mV tracking error, 0.515957 local
+gain and 0.862968-MHz bandwidth. These are observed values, not a newly
+invented tracking specification or a continuous range qualification.
+
+## Derive the local feedback response from the observed OP
+
+The separate `explain.py` calculation is **retrospective**. It uses the
+already observed gm, gmb and gds values and ignores capacitance and leakage
+derivatives. The fixed supply is AC ground. In this approximation the finite
+reference fixes the bias increment at zero and no gate current drops voltage
+across Rsource. Actual DC source drop remains in the measured table.
+
+Let `t`, `x` and `o` denote tail, mirror and output increments, and define
+$S_j=g_{mj}+g_{mbj}+g_{dsj}$ for the two input PMOS devices. Drain current is
+positive into the MOS, so for P1
+$i_{d1}=g_{ds1}v_x+g_{m1}v_+-S_1v_t$; P2 has the analogous output/negative
+input expression. The three KCL equations are
+
+$$\begin{aligned}
+(S_1+S_2+g_{ds5})v_t-g_{ds1}v_x-g_{ds2}v_o
+&=g_{m1}v_+ + g_{m2}v_-,\\
+-S_1v_t+(g_{ds1}+g_{m3}+g_{ds3})v_x
+&=-g_{m1}v_+,\\
+-S_2v_t+g_{m4}v_x+(g_{ds2}+g_{ds4}+1/R_L)v_o
+&=-g_{m2}v_-.
+\end{aligned}$$
+
+First solve for the two coefficients in $v_o=A_+v_++A_-v_-$. Then substitute
+$v_-=v_o$ to obtain $h=A_+/(1-A_-)$. A separate generic six-MOS drain/source
+stamp retains the fourth bias node and checks the same closed connection.
+The two algebra routes agree near numerical precision.
+
+At the central/high-command OPs this gives h=0.983429/0.516195, within
+0.047% of the real part of native 1-kHz gain. At high command A+=12.117 and
+A−=−22.474; replacing them with equal and opposite coefficients would discard
+a substantial common-mode path. These are model-derived partial coefficients
+at the retained operating point, not native gains of a newly opened/rebiased
+OTA, a measured return ratio or a full-frequency stability proof.
+
+## Replay one high-command buffer with public APM
+
+Retrieve public APM v5.0.0, commit
+`381517fda5107fabf98af7801d5a5103f38e230c`, and install ngspice **47** separately.
+SPICE acquisition is outside the static website build.
+
+~~~bash
+git clone --branch v5.0.0 --depth 1 https://github.com/ds54e/analog-process-models.git apm-v5
+git -C apm-v5 rev-parse HEAD
+ngspice --version
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/replay.py --source-zip learning-day-v1.0.zip --apm "$PWD/apm-v5" --binary /usr/local/bin/ngspice --output "$PWD/native-replay-001"
+~~~
+
+Adjust only the binary path to the installed ngspice 47. This one example
+replays D1-high-command's OP/AC through the public recipe API. It saves a
+relocated physical realization and compares actual terminal observations
+with the selected condition. The public API does not expose the ADS adapter's
+extra parameter vectors: the replay instead checks actual resistor V/I,
+complex capacitor current/voltage and MOS/node KCL. APM checks each actual
+MOS model, W/L/m/nf and DELVTO/MULU0 before/applied/after analysis.
+
+The [replay plan](replay-plan.json) is explicitly dated after scientific
+exposure. Repeating this deterministic condition is reproduction, not fresh
+confirmation. It does not rerun the original common-mode plan, the whole v2
+archive or the other studies.
+
+A fresh Python 3.9.25 environment and a new directory reproduced all four
+summary/CSV files and the SVG byte for byte. Public APM at the pinned commit
+and ngspice 47 reproduced the high-command OP and 361 AC points: every selected
+terminal voltage/current matched the saved native values, with zero reported
+absolute difference. Actual resistor V/I, capacitor AC current/voltage and
+MOS/node KCL checks passed. The relocated run identity is
+`2e649d415df5d803239c3ccccee525955be10a99e424512320edfe66ec7e7847`.
+This is public-input reproduction on the same execution host.
+
+## Scope and recovery
+
+The [evidence record](evidence.json) separates the first observations, the
+retrospective algebra and public-input reproduction. All native attempts,
+logs and input identities are retained in the research experiment store;
+the public package carries the selected observations needed by the claims.
+
+In an LDO, reference and sensed inputs could stay near 0.3 V while the
+amplifier control output moves toward 0.7 V. The high-command buffer result
+does not prohibit that different interface. It demonstrates why input common
+mode, output voltage and required current/charge need separate specifications.
+No high-command transient or overload recovery was measured; no full pass-gate,
+regulator, Local population, layout or silicon qualification is claimed.
+The old self-bias equality failure remains unresolved and outside this example.
+These checks are internal work on the execution host, without prior human
+review or independent scientific replication.

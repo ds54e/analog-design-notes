@@ -1,0 +1,14 @@
+{
+  "case": "D1-high-command",
+  "checks": "Native model/physical readback, full OP/AC axes and selected terminal comparison, DC V/I of three resistors, MOS/node KCL, AC Cload current/voltage.",
+  "created_utc": "2026-09-13T16:21:36.221300+00:00",
+  "role": "Known-input public replay after the two scientific conditions were exposed; no fresh target.",
+  "schema": "learning.initial-d1-common-mode.replay-plan.v1",
+  "scientific_plan_sha256": "8510ea863ba91d4a5ddb8920805dd2c50ef8056bda4a56f031c64a7cd306cd24",
+  "script_sha256": "9328c1199bc27bc6cefce4c58b5bbd731a716b7e660b966eb761958c4e57870d",
+  "stopping_rule": "One public known-input replay in a new output directory; retain any failure and diagnose before retry. No new scientific condition or threshold change.",
+  "tolerances": {
+    "current_absolute_a": 1e-10,
+    "voltage_absolute_v": 1e-06
+  }
+}

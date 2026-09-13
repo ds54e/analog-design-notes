@@ -8,7 +8,7 @@ then follows mirrors, differential operation, feedback, uncertainty and supply
 interfaces toward the questions an LDO would need answered. Each chapter connects
 an estimate, selected observations and a design judgment.
 
-**Learning edition v1.4.** The English chapters are the canonical route; the
+**Learning edition v1.5.** The English chapters are the canonical route; the
 [Japanese reading overview](../ja/learning-path.qmd) explains where to begin
 and how the evidence fits. The five detailed studies remain available with
 their original circuit files, definitions, downloads and results.
@@ -22,8 +22,11 @@ finite reference's supply-error path and explains a narrower distribution
 with fewer fixed-window passes. The finite-signal explanation now connects
 independent saved DC curvature to harmonics, actual gate/source motion and
 input-current costs. Chapter 6 then traces one resistor’s noise through both
-of its terminals and quantifies the passive noise cost. All previous exact
-downloads remain available.
+of its terminals and quantifies the passive noise cost. A two-condition
+common-mode example then tests why an output clamp's current capability does
+not define the input range of a buffer. It connects changed tail headroom,
+unequal input paths and weaker feedback response. All previous exact downloads
+remain available.
 
 ## The reading order
 
@@ -136,6 +139,12 @@ adds the selected complex output-current transfers, partial noise calculation
 and graph. One predeclared direct branch-current diagnostic checks the
 coherent two-terminal path; its public replay needs one OP and one AC sweep.
 The existing total-noise observations remain separate from that new path test.
+
+The [common-mode supplement](../studies/learning-common-mode-v1/reproduce.qmd)
+adds two initial-core OP/AC conditions, a separate retrospective node calculation,
+one figure and a known-input high-command D1 replay. It retains the failed
+large-range local extrapolation and distinguishes a buffer's moving input from
+an LDO's separately specified sense/reference and control ports.
 
 The progression is informed by the device–diode–amplifier–mirror–pair–OTA order
 in [Pretl, Koefinger and Dorrer's course](https://iic-jku.github.io/analog-circuit-design/aicd.html)

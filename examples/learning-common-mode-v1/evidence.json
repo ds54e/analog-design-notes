@@ -1,0 +1,126 @@
+{
+  "clean_public_reproduction": {
+    "APM_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "APM_retrieval": "Public v5.0.0 clone with global/system Git config, credential helper, extra headers, askpass and prompting disabled; pin verified; exact research/research_spice imports checked before native execution.",
+    "anonymous_inputs": {
+      "authentication": "Public HTTPS with no Authorization header, token, cookies or session.",
+      "bytes": 4070216,
+      "checked_utc": "2026-09-13T16:39:01.724902+00:00",
+      "sha256": "ddfbad7a06c9c45a94fa4f0379a421816f04d3fa1c56bd21ec8a09ac99f13b15",
+      "status": 200,
+      "url": "https://ds54e.github.io/analog-design-notes/downloads/learning-day-v1.0.zip"
+    },
+    "checked_utc": "2026-09-13T16:42:00.578534+00:00",
+    "limits": "Fresh Python environment and new directory with selected candidate ZIP, anonymous public inputs and existing ngspice47 on this same host; not a clean OS or independent scientific replication. Final README/evidence metadata are outside executable payload hashes.",
+    "native": {
+      "MOS_readback": "Pinned public APM checks actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after.",
+      "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+      "bandwidth": {
+        "bracket_hz": [
+          857695.8985908863,
+          891250.9381337373
+        ],
+        "definition": "First downward -3.000-dB crossing relative to |H(1 kHz)|; dB interpolation in log frequency, as learning.bridge.v1.",
+        "hz": 862967.5579755451,
+        "status": "CROSSING"
+      },
+      "binary_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "capacitor_ac_relative_error": 3.3306690738754696e-16,
+      "differences": {
+        "0": {
+          "kind": "op",
+          "maximum_current_difference_a": 0.0,
+          "maximum_voltage_difference_v": 0.0,
+          "rows": 1
+        },
+        "1": {
+          "kind": "ac",
+          "maximum_current_difference_a": 0.0,
+          "maximum_voltage_difference_v": 0.0,
+          "rows": 361
+        }
+      },
+      "error_v": -0.03650537193059433,
+      "gain_one_khz": [
+        0.5159566646501477,
+        -0.0006012353174118154
+      ],
+      "input_node_KCL_a": 0.0,
+      "limits": "One stationary high-command OP/AC example on the same core. No transient, common-mode range qualification, noise population, regulator or independent scientific replication.",
+      "maximum_MOS_KCL_a": 3.3019038349867136e-16,
+      "maximum_terminal_span_v": 0.7345259696838546,
+      "new_run_id": "2e649d415df5d803239c3ccccee525955be10a99e424512320edfe66ec7e7847",
+      "ngspice_version": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Fri Sep  4 11:07:24 UTC 2026\n******",
+      "original_realization_id": "31b3f5131d81b4b7f20bf30c822e76c7ff1a266b034ccbed7c9a8fc97b8046b1",
+      "output_node_KCL_a": 0.0,
+      "output_v": 0.6634946280694057,
+      "passive_readback": "Measured DC V/I for all three resistors and complex AC current/voltage for Cload; no copied expected values as observations.",
+      "realization_id": "1347aed00c693d9463744b08be5cf69a134b680ad6f7717eb3f69e326fb84c0b",
+      "replay_plan_sha256": "aa1da1754ebc0f77ac347546a70fb276abc4fefed3990a58420bdfe2ecc4eb58",
+      "resistor_vi_readback": {
+        "Rbias": {
+          "expected_ohm": 273692.63541213644,
+          "observed_v_over_i_ohm": 273692.6354529585,
+          "relative_difference": 1.4915291224326666e-10
+        },
+        "Rload": {
+          "expected_ohm": 1000000.0,
+          "observed_v_over_i_ohm": 1000000.0,
+          "relative_difference": 0.0
+        },
+        "Rsource": {
+          "expected_ohm": 10000.0,
+          "observed_v_over_i_ohm": 9999.999999901778,
+          "relative_difference": -9.82214309885876e-12
+        }
+      },
+      "role": "One previously exposed high-command initial-D1 reproduction; not new scientific confirmation.",
+      "schema": "learning.initial-d1-common-mode.public-replay.v1",
+      "scientific_plan_sha256": "8510ea863ba91d4a5ddb8920805dd2c50ef8056bda4a56f031c64a7cd306cd24",
+      "status": "PASS"
+    },
+    "prior_candidate_failures": "clean001 lacked SciPy; clean002 lacked Python3.9 TOML fallback. Both failed before creating a native directory. Full established requirements pass in clean003; prior logs remain intact.",
+    "python": "Python 3.9.25",
+    "regenerated_summary_csv_sha256": {
+      "network.csv": "a263e3317060003acb26043aa35766a62bc6637a4a4d7302d350610defc416cd",
+      "network.json": "90bde182e65c1b9675cf7f8472772d1df1917be47385332c36ecabf2aaeed8f0",
+      "operating-points.csv": "93ef4180180e352721529bb7c170b73c44c7d7df456469685b1570d7c1e094f7",
+      "summary.json": "2f2bc91ca6c5f1facd7e37ae295af53eed3866c122f2e82639e910c8939e4803"
+    },
+    "regenerated_svg_sha256": {
+      "common-mode-interface.svg": "253dbc2feca8fa35f15e20eca80c8f64f33bf4d155f13f7556501b280481ee36"
+    },
+    "schema": "ads.learning-common-mode-clean-public.v1",
+    "status": "PASS",
+    "tested_payload_files": 19
+  },
+  "first_acquisition": {
+    "completed": 2,
+    "conditions": 2,
+    "exposure": "Both conditions now exposed. Saved six-unit nominal coordinates remain unchanged; complete fixture identities differ.",
+    "failed": 0,
+    "interrupted": 0,
+    "plan_sha256": "8510ea863ba91d4a5ddb8920805dd2c50ef8056bda4a56f031c64a7cd306cd24",
+    "pretarget_private_commit": "ee3acb0e0bbd6005d44554415fd44f6e0c9e78b3",
+    "retried": 0,
+    "rows": [
+      1,
+      1,
+      361
+    ]
+  },
+  "frozen_measurements": "data/summary.json",
+  "limits": [
+    "Same six nominal zero-raw units with distinct complete condition/fixture realizations; no new physical population or range qualification.",
+    "C clamp keeps differential input/output fixed while common mode changes. D1 ties the negative input to output and has a finite input source: these are different fixtures.",
+    "AC is a local signal response at the new OP; it is not a loop return ratio, phase margin, finite excursion or recovery measurement.",
+    "A fixed5pF capacitor is not a full pass-gate charge model or an LDO.",
+    "All former study confirmations are known development evidence for new decisions; old self-bias and September12 research remain paused."
+  ],
+  "network_native_one_khz_max_relative_error": 0.00046228449206342503,
+  "observations": "data/index.json",
+  "retrospective_network": "data/network.json",
+  "schema": "learning.initial-d1-common-mode.evidence.v1",
+  "source": "data/source.json",
+  "status": "SCIENTIFIC_RETROSPECTIVE_AND_PUBLIC_REPRODUCTION_CHECKS_PASS"
+}
