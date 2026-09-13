@@ -1,0 +1,271 @@
+{
+  "clean_public_reproduction": {
+    "APM_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "anonymous_inputs": "Public original feedback ZIP over ordinary HTTPS; public APM clone with global/system Git configuration, credential helpers, extra headers and prompting disabled.",
+    "candidate_archive_sha256": "9bdb717e9b022914432a46b0438e6d5b5917eb509c57ab9c32154e5331d3b5d9",
+    "checked_utc": "2026-09-13T13:15:35.977672+00:00",
+    "limits": "Fresh Python environment and new directory with selected candidate ZIP, anonymous public inputs and existing ngspice47 on this same host; not a clean OS or independent scientific replication. Final README/evidence metadata are outside executable payload hashes.",
+    "native": {
+      "MOS_readback": "Pinned APM verifies actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after each analysis.",
+      "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+      "bandwidth": {
+        "bracket_hz": [
+          1711328.3041617635,
+          1778279.4100389048
+        ],
+        "definition": "First downward -3.000-dB crossing relative to |H(1 kHz)|; dB interpolation in log frequency, as learning.bridge.v1.",
+        "hz": 1766516.923915224,
+        "status": "CROSSING"
+      },
+      "binary_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "capacitor_ac_current_readback_max_relative_error": 3.4842138903693277e-16,
+      "capacitor_charge_relative_residual": 1.2674725447765273e-09,
+      "case": "D1-budget-12p",
+      "deadline_result": "MEETS",
+      "deadline_s": 5e-07,
+      "differences": {
+        "0": {
+          "kind": "op",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 1,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        },
+        "1": {
+          "kind": "op",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 1,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        },
+        "2": {
+          "kind": "op",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 1,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        },
+        "3": {
+          "kind": "ac",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 361,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        },
+        "4": {
+          "kind": "tran",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 4333,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        }
+      },
+      "limits": "One nominal 12-pF initial-D1 OP/AC/standard-step replay against the predeclared illustrative deadline. No Local cohort, full pass-gate charge, LDO, old selected-D1 transfer or independent scientific replication.",
+      "maximum_MOS_KCL_residual_a": 8.425606132927976e-16,
+      "maximum_terminal_span_v": 0.7506885370551604,
+      "new_run_id": "0c909654e672957490120797bd2c7569753fb01f8295ae7483a5ace1825137a3",
+      "ngspice_version": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Fri Sep  4 11:07:24 UTC 2026\n******",
+      "original_realization_id": "4931d9d586765f8dd369aa3b123f88dc0b7ddbb06d8be95934c3deea1e1bc90f",
+      "passive_readback": "Public API: observed DC V/I for three resistors; complex AC current/voltage and transient charge for Cload. Native parameter vectors are not exposed by this replay.",
+      "resistor_readback": {
+        "Rbias": {
+          "expected_ohm": 273692.63541213644,
+          "observed_v_over_i_ohm": 273692.635362977,
+          "relative_difference": -1.796155446598391e-10
+        },
+        "Rload": {
+          "expected_ohm": 1000000.0,
+          "observed_v_over_i_ohm": 1000000.0000000001,
+          "relative_difference": 2.220446049250313e-16
+        },
+        "Rsource": {
+          "expected_ohm": 10000.0,
+          "observed_v_over_i_ohm": 10000.000000003549,
+          "relative_difference": 3.5482727867020003e-13
+        }
+      },
+      "settling": {
+        "fall": {
+          "band_v": 0.0009832206519110758,
+          "bracket_s": [
+            4.2043232816114695e-07,
+            4.224323281611471e-07
+          ],
+          "final_observed_error_v": -2.85493850782359e-13,
+          "horizon_s": 8.5e-06,
+          "observed_until_s": 3.99375e-06,
+          "origin_s": 4.50625e-06,
+          "status": "OBSERVED_FINAL_ENTRY",
+          "target_v": 0.24931146294517909,
+          "time_s": 4.224323281611471e-07
+        },
+        "rise": {
+          "band_v": 0.0009832206519110758,
+          "bracket_s": [
+            4.2622226891199787e-07,
+            4.282222689119979e-07
+          ],
+          "final_observed_error_v": 1.0835776720341528e-13,
+          "horizon_s": 4.5e-06,
+          "observed_until_s": 3.9937500000000005e-06,
+          "origin_s": 5.0625e-07,
+          "status": "OBSERVED_FINAL_ENTRY",
+          "target_v": 0.3476335281362867,
+          "time_s": 4.282222689119979e-07
+        }
+      },
+      "status": "PASS"
+    },
+    "packages": [
+      "contourpy==1.3.0",
+      "cycler==0.12.1",
+      "fonttools==4.60.2",
+      "importlib_metadata==8.7.1",
+      "importlib_resources==6.5.2",
+      "kiwisolver==1.4.7",
+      "matplotlib==3.9.4",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.3.0",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.13.1",
+      "six==1.17.0",
+      "tomli==2.2.1",
+      "typing_extensions==4.16.0",
+      "zipp==3.23.1"
+    ],
+    "python": "Python 3.9.25",
+    "regenerated_summary_csv_sha256": {
+      "analysis/known-errors.csv": "ac23a56e9e290a7ec211679b90881c223d53dbcbe4b145150d2749632ab43ce0",
+      "analysis/loss-summary.csv": "e72f6c39a8037d1cde4da936b57cbf72e2d3b63dd67deed3cb4bd284ff6fa189",
+      "analysis/paired-supply.csv": "e2062ee9124478e1acbd41bb60752d181e6645b13541815d0e09a2c8de4bc988",
+      "analysis/summary.json": "7537aea558537fcd5a754700b7bb613f1a1447f0b83104e9c8cba0f411e8ef27",
+      "analysis/supply-paths.csv": "03c97713d43d6a252e286c7552594515870404dc234ff8b4f17eec1ee9c806e0",
+      "load-budget-summary.json": "23e2b2760e6b9aa451ba43fec7bcc563a52dd058b63eaa372d811cc9933948a0"
+    },
+    "regenerated_svg_sha256": {
+      "fixed-target-loss.svg": "1bdd90fe1f2bcbf55f8fbc93bcc70e91f25c2731960b9281b26bfe87eecdf367",
+      "initial-d1-load-budget.svg": "802181012e407e49a5d030a5956ebbdce0584b674ce1560398c5e61b895c13c5",
+      "supply-reference-paths.svg": "023e598ab54691b9d8915eac95c58c4d782bd37f2917e8c5b95edea18cbe2c6b"
+    },
+    "schema": "ads.learning-decisions-clean-public.v1",
+    "status": "PASS",
+    "tested_payload_sha256": {
+      "analyze.py": "6adc7c704a2479583e240608d4a1b25d9a0e1a38085690ffeb937892ea1132ac",
+      "circuits/interface-D1-budget-12p.cir": "0a14eab51bea0ec03186c8f51f75b3318dc45f49f7a4616f175fb1cdd32bc0a5",
+      "circuits/interface-D1-budget-15p.cir": "c8b831990a6f0bc9effe12cb9ca719a9a21b70b11d7fa212ac90a67491939b2b",
+      "data/interface-D1-budget-12p.npz": "a24f0a0d2400173b62854930b6743f946fab70a5079fcd8426bd92266907742e",
+      "data/interface-D1-budget-15p.npz": "1be8083865d3181f155f64039589cafb12ce57c5261c388b90a0c538e9c91400",
+      "data/interface-inputs.json": "80002c3aac0a9276f4891c0c1cfdf06dcf31b9c7b2c272321bb6d6fc7891d42f",
+      "data/interface-manifest.json": "5f137537e0d33f9bd3cde34f9c9d3b2bbbcbbf8c5feaf4545ba398df151a1e49",
+      "data/known-errors.csv": "ac23a56e9e290a7ec211679b90881c223d53dbcbe4b145150d2749632ab43ce0",
+      "data/loss-summary.csv": "e72f6c39a8037d1cde4da936b57cbf72e2d3b63dd67deed3cb4bd284ff6fa189",
+      "data/manifest.json": "18b54d92a2b0717640a22467bca5a445dbe274482eaac60f71354071fad9f0a6",
+      "data/paired-supply.csv": "e2062ee9124478e1acbd41bb60752d181e6645b13541815d0e09a2c8de4bc988",
+      "data/source.json": "e38fdc862adb45a42c70e3f1139476f6f3f117cc09c9b57b889d7c861d4465e7",
+      "data/summary.json": "7537aea558537fcd5a754700b7bb613f1a1447f0b83104e9c8cba0f411e8ef27",
+      "data/supply-paths.csv": "03c97713d43d6a252e286c7552594515870404dc234ff8b4f17eec1ee9c806e0",
+      "data/training-interface-summary.json": "4d04f2f9a04fab8cd36119a887999142aaa6ca927d7f62cbd7426f663c0c445a",
+      "load-budget-plan.json": "4be9c9db61ab0911db19b5685662d7f1d543b5e1493ab97d3a5153bac9ce1a9a",
+      "load-budget-summary.json": "23e2b2760e6b9aa451ba43fec7bcc563a52dd058b63eaa372d811cc9933948a0",
+      "load_budget.py": "08178f340e76795e7a0b6c276fcec14fa1388f8c1d38f710ca4a8d2458cb2e01",
+      "measurement_v1.py": "eba53e2c5bcbc861a822c13e34ca5402bfc3d19cf5ad8f72133be0e45d21216d",
+      "plot.py": "c299900ebf3485a10677a7dd101237d31a437d93af18233d6dd93cda6bb9049a",
+      "plot_budget.py": "e198787813f0c4aa9acfa4ba9179d340541e049f7d9b822db38aa330116c949a",
+      "replay_budget.py": "1c70d5bede3b9ca589d9db0d95cba5ca5f2cd1fc6f5f0ea89182619faa3376ca",
+      "requirements.txt": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a"
+    }
+  },
+  "edition": "learning-path-v1.2",
+  "limits": [
+    "Known OP nodal approximation neglects leakage derivatives and capacitance; it is not a new confirmation.",
+    "Original local supply slopes use backward perturbations at the 1-V model boundary; the reduced calculation is a derivative.",
+    "Retain original mean, sample SD, RMS, MAE, center and five-check definitions; no re-centering or statistical refit.",
+    "Fixed modeled physical coordinates are not manufacturing yield, and changed inventories are not identical complete physical circuits.",
+    "A 500-ns deadline to actual OP endpoints does not remove the finite DC tracking error.",
+    "Two discrete capacitor conditions on the original trajectory do not establish a continuous allowable-C boundary.",
+    "The capacitor is a fixed diagnostic load, not a transistor pass-gate model or complete LDO.",
+    "No new population, arbitrary initial charge, other supply/temperature or history is assessed."
+  ],
+  "load_budget": {
+    "completed": 2,
+    "exposure": "Both declared conditions now observed; preserve the 15-pF deadline miss. No changed core, deadline, band, time origin or horizon.",
+    "failed_acquisitions": 0,
+    "input_barrier_sha256": "31f3fc3de5d7e1daaaa0596743c84b5a5b3e8e420803e02d0d1180a5b3b26b6d",
+    "interrupted": 0,
+    "measurement_version": "learning.initial-d1-interface.measure.v1",
+    "new_conditions": 2,
+    "physical_units": 6,
+    "plan_created_utc": "2026-09-13T12:52:29.396265+00:00",
+    "plan_identity": "learning.initial-d1-load-budget.nominal.v1",
+    "pretarget_private_commit": "2df19ddb4a34c792a8666c9e91b3f113824d179c",
+    "profile": "ARTIFICIAL, same six zero-raw initial-D1 units",
+    "results": {
+      "D1-budget-12p": {
+        "bandwidth_hz": 1766516.923915224,
+        "brackets_s": {
+          "fall": [
+            4.2043232816114695e-07,
+            4.224323281611471e-07
+          ],
+          "rise": [
+            4.2622226891199787e-07,
+            4.282222689119979e-07
+          ]
+        },
+        "charge_residual": 1.2674725447765273e-09,
+        "dc_difference_v": 0.0,
+        "forecast": "MEETS",
+        "status": "MEETS"
+      },
+      "D1-budget-15p": {
+        "bandwidth_hz": 1413251.2981526728,
+        "brackets_s": {
+          "fall": [
+            5.257698290890552e-07,
+            5.277698290890553e-07
+          ],
+          "rise": [
+            5.317801921197919e-07,
+            5.337801921197919e-07
+          ]
+        },
+        "charge_residual": 9.196977228571315e-10,
+        "dc_difference_v": 0.0,
+        "forecast": "MISSES",
+        "status": "MISSES"
+      }
+    },
+    "retries": 0,
+    "selected_rows": 9392,
+    "target_started_utc": {
+      "D1-budget-12p": "2026-09-13T12:56:12.100378+00:00",
+      "D1-budget-15p": "2026-09-13T12:56:30.174633+00:00"
+    }
+  },
+  "model": {
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "apm_version": "5.0.0",
+    "family": "APM045/VTG",
+    "ngspice": 47
+  },
+  "package": "learning-decisions-v1.0",
+  "review_roles": "Internal AI numerical/editorial checks, no prior human review or independent scientific replication.",
+  "roles": {
+    "load_budget": "Two prospective capacitor conditions on the known initial nominal six-unit core; forecasts frozen before these targets.",
+    "supply_loss": "Retrospective reanalysis of known public feedback observations, not a new confirmation."
+  },
+  "schema": "adn.learning-decisions-evidence.v1",
+  "status": "NUMERICAL_EVIDENCE_AND_CLEAN_PUBLIC_INPUT_REPLAY_CHECKED",
+  "supply_loss": {
+    "checks": {
+      "A75_supply_gain_and_band_failures_retained": true,
+      "F75_noncenter_failures": 0,
+      "matrix_vs_reduced_max_relative_difference": 7.777499194236233e-16,
+      "mse_decomposition": "Independent sample identity checked without recentering actual errors.",
+      "original_four_metric_and_five_test_counts": "Reproduced for all four circuits and two conditions.",
+      "original_native_paths_max_relative_discrepancy": 0.00029535362220600714,
+      "plots": "Two regenerated SVGs visually inspected."
+    },
+    "known_condition_rows": 4168,
+    "new_acquisitions": 0,
+    "original_archive_sha256": "348d3f2c8cb3ef41b9c968f4bbb68c011c40cfb64ddda4138d2ff115c5e95bc6",
+    "selected_source_members": 15
+  }
+}

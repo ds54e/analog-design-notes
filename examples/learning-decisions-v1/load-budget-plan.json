@@ -1,0 +1,316 @@
+{
+  "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+  "cases": [
+    {
+      "ac": {
+        "points_per_decade": 60,
+        "start_hz": 1000.0,
+        "stop_hz": 1000000000.0
+      },
+      "ac_input_v": 0.3,
+      "cload_f": 1.2e-11,
+      "fixture": "D1",
+      "id": "D1-budget-12p",
+      "op_input_v": [
+        0.25,
+        0.3,
+        0.35
+      ],
+      "pwl": [
+        [
+          0.0,
+          0.25
+        ],
+        [
+          5e-07,
+          0.25
+        ],
+        [
+          5.125e-07,
+          0.35
+        ],
+        [
+          4.5e-06,
+          0.35
+        ],
+        [
+          4.5125e-06,
+          0.25
+        ],
+        [
+          8.5e-06,
+          0.25
+        ]
+      ],
+      "role": "Prospective capacitor/deadline illustration on the same known six-unit initial D1 core.",
+      "stop_s": 8.5e-06,
+      "tmax_s": 2e-09
+    },
+    {
+      "ac": {
+        "points_per_decade": 60,
+        "start_hz": 1000.0,
+        "stop_hz": 1000000000.0
+      },
+      "ac_input_v": 0.3,
+      "cload_f": 1.5e-11,
+      "fixture": "D1",
+      "id": "D1-budget-15p",
+      "op_input_v": [
+        0.25,
+        0.3,
+        0.35
+      ],
+      "pwl": [
+        [
+          0.0,
+          0.25
+        ],
+        [
+          5e-07,
+          0.25
+        ],
+        [
+          5.125e-07,
+          0.35
+        ],
+        [
+          4.5e-06,
+          0.35
+        ],
+        [
+          4.5125e-06,
+          0.25
+        ],
+        [
+          8.5e-06,
+          0.25
+        ]
+      ],
+      "role": "Prospective capacitor/deadline illustration on the same known six-unit initial D1 core.",
+      "stop_s": 8.5e-06,
+      "tmax_s": 2e-09
+    }
+  ],
+  "created_utc": "2026-09-13T12:52:29.396265+00:00",
+  "day_t0_utc": "2026-09-13T06:47:07Z",
+  "deadline": {
+    "band": "Unchanged 1% of actual independent-OP output step.",
+    "classification": "MEETS if final-entry upper bracket <= deadline; MISSES if lower bracket > deadline; a spanning bracket is UNRESOLVED_AT_TIME_RESOLUTION. Right-censored/nonsettling cannot pass. Both directions must meet.",
+    "role": "New illustrative receiving-port deadline, not an original historical D1 requirement or overall accuracy specification.",
+    "seconds": 5e-07
+  },
+  "fixed": {
+    "drawn_mos_area_um2": 5.2,
+    "rbias_ohm": 273692.63541213644,
+    "rload_ohm": 1000000.0,
+    "rsource_functional_ohm": 10000.0,
+    "vdd_v": 1.0
+  },
+  "identity": "learning.initial-d1-load-budget.nominal.v1",
+  "known_evidence": {
+    "edition_tag": "learning-path-v1.1",
+    "exposure": "All prior learning/feedback/initial-D1 observations are known. New 12/15-pF target conditions are unexposed when this plan is frozen; nominal physical units are the already known six zero-raw units.",
+    "public_commit": "8c053bb8597635aef5faae94b81b150f14453716",
+    "public_zip": "learning-day-v1.0.zip",
+    "public_zip_sha256": "ddfbad7a06c9c45a94fa4f0379a421816f04d3fa1c56bd21ec8a09ac99f13b15",
+    "training_cases": {
+      "D1-25p": {
+        "bandwidth_hz": 847733.1194217268,
+        "cload_f": 2.5e-11,
+        "entry_upper_s": {
+          "fall": 8.809413294353781e-07,
+          "rise": 8.913098979278719e-07
+        }
+      },
+      "D1-5p": {
+        "bandwidth_hz": 4241447.8066823725,
+        "cload_f": 5e-12,
+        "entry_upper_s": {
+          "fall": 1.7720305016594013e-07,
+          "rise": 1.7946475047498851e-07
+        }
+      }
+    },
+    "training_inputs_sha256": "ae9934b7515f55d2f76adbe55404826f95a4c2937517ed7f22f545dcd860b963",
+    "training_summary_sha256": "4d04f2f9a04fab8cd36119a887999142aaa6ca927d7f62cbd7426f663c0c445a"
+  },
+  "measurement_dependency": {
+    "original_module_sha256": "bb90226a2c4720f916ea88f38ed4595e4adcad63420a5f2134dc0291d83e1dd5",
+    "selected_function_sha256": {
+      "bandwidth": "72f94fbe8cc2c3d050d0dff6d3e91ce57d378913f0e7f442b84ced272e5b6e51",
+      "columns": "91dfa9a355116dd9a9f6b837fb0dd2ffd6ec77b51d7ab7faef186f9f5f874dab",
+      "final_entry": "b6fb4a1b4d79b05a578bc7538f086162d0c39e8bb579e50275ffa30b859baa12",
+      "integrate": "b02e11f9d68618d2204fa3916bc8b7e2bc058a0668a1b7f8dfdd2326e7f84412",
+      "measure_case": "5cd8f7cb62796bd9b2b021226f66400e7d5a56eaad8ed6e52f18670b1387e9c2"
+    },
+    "selected_module_sha256": "eba53e2c5bcbc861a822c13e34ca5402bfc3d19cf5ad8f72133be0e45d21216d",
+    "transformation": "Only exact five function definitions selected, with NumPy import and a provenance docstring. No formula change.",
+    "version": "learning.initial-d1-interface.measure.v1"
+  },
+  "measurements": {
+    "charge_relative_residual_max": 0.001,
+    "dc_load_difference_tolerance_v": 1e-06,
+    "kcl_max_a": 1e-10,
+    "net_capacitor_current": "-i(VtM2d)-i(VtM4d)-v(out)/Rload+i(Vfeedback)",
+    "passive_readback_relative_tolerance": 2e-11,
+    "plateau_horizon_s": [
+      4.5e-06,
+      8.5e-06
+    ],
+    "pwl_max_error_v": 1e-09,
+    "refinement_time_tolerance": {
+      "absolute_s": 4e-09,
+      "relative": 0.01
+    },
+    "step_band_fraction_of_independent_op_output_difference": 0.01,
+    "terminal_span_max_v": 1.00000001,
+    "time_origin": "Input 50% edge crossing; observed final-entry outside/inside bracket, through plateau horizon.",
+    "version": "learning.initial-d1-interface.measure.v1"
+  },
+  "model_hashes": {
+    "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+    "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+    "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+  },
+  "native_concurrency": 1,
+  "ngspice_major": 47,
+  "original_sources": {
+    "C": {
+      "circuit_sha256": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "original_realization_id": "85baada66986fe6841f23eaabe3ef7a9a45aaa0b8b83be7b17681783e67ab6f0",
+      "run_id": "c184dfb0718be074769744d04cbff220a528570962a642c1813a7dfabc571723",
+      "stem": "C-area-base"
+    },
+    "D1": {
+      "circuit_sha256": "8b741d0c57391fc82ae893b84f2fdcb59e83bb8b79e11f13e074a481ec26f11d",
+      "original_realization_id": "03b9f79db92bb415e9662bff244272fb7919bf081933202511e19677cc33bedf",
+      "run_id": "759d43d86d2956084d3c83625e438fe2451de3595c04eaa7fe8a628ebf8a1304",
+      "stem": "D1-initial-14u"
+    }
+  },
+  "physical_devices": [
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm1"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/input_plus",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm2"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/input_minus",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm3"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/load_reference",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm4"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/load_output",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm5"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/tail",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 4e-07,
+      "path": [
+        "xm6"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/bias_reference",
+      "w_m": 1e-06
+    }
+  ],
+  "profile_tier": "ARTIFICIAL",
+  "prospective_estimates": {
+    "capacitance_allowance_estimate_f": 1.3930312183218494e-11,
+    "cases": {
+      "D1-budget-12p": {
+        "cload_f": 1.2e-11,
+        "constant_10ua_charge_scale_s": 1.2000000000000002e-07,
+        "load_dominant_bandwidth_hz": 1767269.9194509883,
+        "one_pole_1pct_time_s": 4.1472759243654083e-07,
+        "predicted_deadline_result": "MEETS",
+        "scaled_entry_upper_estimate_s": {
+          "fall": 4.252873203982564e-07,
+          "rise": 4.3071540113997254e-07
+        }
+      },
+      "D1-budget-15p": {
+        "cload_f": 1.5e-11,
+        "constant_10ua_charge_scale_s": 1.5e-07,
+        "load_dominant_bandwidth_hz": 1413815.9355607908,
+        "one_pole_1pct_time_s": 5.18409490545676e-07,
+        "predicted_deadline_result": "MISSES",
+        "scaled_entry_upper_estimate_s": {
+          "fall": 5.316091504978204e-07,
+          "rise": 5.383942514249656e-07
+        }
+      }
+    },
+    "dc": "Capacitance should not change the three stationary endpoints; report their original finite DC tracking error separately.",
+    "method": "Each edge uses the larger prior 5/25-pF entry-upper-bracket time per farad. It is conservative relative to those training points only, not a universal upper bound.",
+    "seconds_per_farad": {
+      "fall": 35440.61003318803,
+      "rise": 35892.95009499771
+    }
+  },
+  "schema": "ads.initial-d1-load-budget.plan.v1",
+  "status": "FROZEN_BEFORE_NEW_CAPACITOR_TARGETS",
+  "stopping_rule": "Exactly the two declared research cases. Preserve an incomplete/unusable attempt; at most one necessary identical-input retry per case after diagnosis, in a new directory. No new capacitor, core tuning, threshold relaxation, redraw or outcome-driven extension. Ambiguity stays unresolved.",
+  "temperature_c": 26.85
+}

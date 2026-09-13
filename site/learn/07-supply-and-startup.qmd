@@ -14,30 +14,105 @@ choosing the upstream supply, input driver or reference.
 ## A reference resistor does not create a supply-independent current
 
 In the active-load stages, diode-connected PMOS units and a resistor to ground
-set `pbias`. A supply increase raises the PMOS source. The reference node moves
-too, but generally not enough to keep the output device's source-to-gate voltage
-constant. Two paths remain: direct PMOS output conductance, and gate-control
-change transmitted through the finite reference.
+set `pbias`. Each reference PMOS has D=G=`pbias`, S=B=`vdd`; the output PMOS
+has D=`out`, G=`pdrive`, S=B=`vdd`. A zero-volt diagnostic source connects
+`pbias` to `pdrive` in the unperturbed circuit. Rbias connects `pbias` to ground.
+See the exact [A75](../studies/finite-feedback/circuits/A75.cir) and
+[F75L](../studies/finite-feedback/circuits/F75L.cir) bodies.
 
-With $G_R\approx\sum(g_{mR}+g_{dsR})$, the local estimate is
+Hold the external input at 0.45 V relative to ground, with its source resistance
+and the output load unchanged. Raise the supply slightly. The reference sources
+rise, increasing the current available to Rbias. The reference node must rise
+until the diode-connected devices and resistor balance again. But some extra
+voltage is needed across Rbias to carry that extra current, so `pbias` generally
+does not track the supply one-for-one. The output PMOS's source-to-gate voltage
+therefore changes too.
 
-$$\frac{\partial V_O}{\partial V_{DD}}
-\simeq Z_O\left(g_{dsP}+\frac{g_{mP}}{1+R_{bias}G_R}\right).$$
+We can calculate that motion from chapter 3's diode connection. Let
+$G_R=\sum(g_{mR}+g_{dsR})$ for the reference units and $G_b=1/R_{bias}$.
+For small perturbations about the known operating point, reference-node KCL is
 
-Increasing reference unit count while reducing its resistor inversely can leave
-$R_{bias}G_R$ nearly unchanged. This explains why A37 and A75 both have line
-slopes near 1.998 V/V despite A75's extra reference current. The resistor-load
-R37/R75 slopes are about 0.867/0.922 V/V. F75S/F75L reduce the active-load path
-but still have about 1.224/1.259 V/V. These are local derivatives near the
-1-V nominal supply, with backward perturbations to stay inside the model's
-terminal-voltage domain.
+$$G_R(\delta v_{DD}-\delta v_b)=G_b\delta v_b.$$
 
-A first estimate for F75L under a −30-mV supply change is about −37.8 mV
-output change. The independently observed 0.97-V case gives 0.462088 V output,
-approximately −38 mV from its nominal center. It fails the original ±25-mV
-center requirement despite usable numerics and passing gain/bandwidth checks.
-This is a physical condition limit in the modeled circuit, not something to
-remove by subtracting the new mean.
+Here $v_b$ denotes `pbias`. Source and body move together, so this reference
+calculation has no changing PMOS source-to-body voltage. Neglecting leakage
+derivatives and capacitance gives
+
+$$\frac{\delta v_b}{\delta v_{DD}}=\frac{G_R}{G_R+G_b},\qquad
+q\equiv\frac{\delta v_{SG,P}}{\delta v_{DD}}
+=\frac{G_b}{G_R+G_b}=\frac{1}{1+R_{bias}G_R}.$$
+
+For F75L, the saved OP gives $G_R=304.126$ µS and Rbias=10.7310 kΩ.
+Thus `pbias` tracks about **0.76546 V/V**, leaving **0.23454 V/V** at the
+output PMOS's source-to-gate control. A finite reference that moves a lot
+can still leave a substantial control-voltage error.
+
+Define output PMOS current as positive from its source toward `out`. Its local
+change is
+
+$$\delta i_P=g_{mP}(\delta v_{DD}-\delta v_b)
+             +g_{dsP}(\delta v_{DD}-\delta v_o).$$
+
+The $-g_{dsP}\delta v_o$ term belongs in the output-node conductance. After
+including that conductance, the NMOS source feedback, Rload and any finite Rf
+path in $Z_O$, the remaining supply-driven injection is
+
+$$K_{DD}\delta v_{DD}=(g_{dsP}+g_{mP}q)\delta v_{DD},\qquad
+\delta v_o=Z_OK_{DD}\delta v_{DD}.$$
+
+$Z_O$ is the measured or locally calculated response to an independent current
+injected into `out`, with the external input held fixed. Its finite-feedback
+denominator was derived in chapter 5. Do not count $g_{dsP}$ twice by adding
+another output shunt after using that $Z_O$. A resistor-loaded stage instead
+has $K_{DD}=1/R_D$, with $1/R_D$ already included in its output conductance.
+
+The known four-circuit records make the two factors concrete:
+
+| Circuit | Reference control fraction $q$, V/V | OP estimate $K_{DD}$, µA/V | OP estimate $Z_O$, kΩ | Observed supply slope, V/V |
+| --- | ---: | ---: | ---: | ---: |
+| A75 | 0.12599 | 22.077 | 90.523 | 1.99819 |
+| R75 | — | 149.988 | 6.144 | 0.92156 |
+| F75S | 0.23097 | 72.471 | 16.889 | 1.22413 |
+| F75L | 0.23454 | 72.522 | 17.362 | 1.25882 |
+
+[![The finite reference drives most of the active-load supply response even after output feedback.](figures/supply-reference-paths.svg)](figures/supply-reference-paths.svg)
+
+From A75 to F75S, $Z_O$ falls by about 5.36 times, but supply-induced current
+per volt rises by about 3.28 times. The line sensitivity therefore improves by
+only about 1.63 times. This is a finite redesign with different bias/operating
+points, not an Rf-only intervention. F75L's two contributions to its calculated
+1.25915-V/V slope are **1.22573 V/V through reference control** and only
+**0.03342 V/V directly through PMOS output conductance**. Reducing the latter
+alone would leave the dominant path.
+
+An ideal intervention that held the load's VSG constant while preserving the
+same OP would remove the first term. That local estimate identifies a useful
+reference requirement; it is not a demonstrated finite reference circuit.
+Similarly, chapter 3's A37→A75 reference replication reduces an uncertainty
+source but approximately preserves $R_{bias}G_R$: more units and an inversely
+smaller resistor leave the nominal supply path nearly unchanged. Both original
+line slopes remain near 1.998 V/V.
+
+This is a **retrospective OP-based explanation**. A separate four-node KCL
+matrix agrees with the reduced expressions to floating-point precision.
+Compared with the original native input/current/gate-drop/supply diagnostics,
+the largest local discrepancy is below 0.03%. The saved supply diagnostics
+use backward steps at the 1-V boundary; F75S/F75L use 0.5/0.25-mV steps.
+The approximation omits leakage derivatives and capacitance, and it does not
+predict a whole voltage or frequency domain from one OP.
+
+For a worked finite extrapolation, F75L's OP estimate gives a −37.774-mV
+output change when supply falls by 30 mV. Starting at its 0.500047-V nominal
+output gives **0.462272 V**. The already known 0.97-V observation is
+**0.462088 V**, about 0.185 mV lower. This comparison checks the usefulness of
+the local explanation; neither record is a fresh target of this edition.
+The circuit still fails the original ±25-mV center requirement despite usable
+numerics and passing gain/bandwidth checks. Subtracting its new mean would
+change the task that chapter 6 kept fixed.
+
+The [public recalculation](../studies/learning-decisions-v1/reproduce.qmd)
+contains the actual OP inputs, separate nodal and reduced calculations,
+native-derivative comparison and finite extrapolation residuals.
 
 At 85 °C, F75L's nominal-device output is 0.538840 V and its gain is about
 −5.310. That separately tested point is not a temperature population model or

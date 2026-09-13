@@ -1,0 +1,8 @@
+{
+  "files": {
+    "interface-D1-budget-12p.npz": "a24f0a0d2400173b62854930b6743f946fab70a5079fcd8426bd92266907742e",
+    "interface-D1-budget-15p.npz": "1be8083865d3181f155f64039589cafb12ce57c5261c388b90a0c538e9c91400",
+    "interface-inputs.json": "80002c3aac0a9276f4891c0c1cfdf06dcf31b9c7b2c272321bb6d6fc7891d42f"
+  },
+  "schema": "learning.interface-data.v1"
+}

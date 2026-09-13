@@ -1,0 +1,15 @@
+{
+  "files": {
+    "interface-D1-budget-12p.npz": "a24f0a0d2400173b62854930b6743f946fab70a5079fcd8426bd92266907742e",
+    "interface-D1-budget-15p.npz": "1be8083865d3181f155f64039589cafb12ce57c5261c388b90a0c538e9c91400",
+    "interface-inputs.json": "80002c3aac0a9276f4891c0c1cfdf06dcf31b9c7b2c272321bb6d6fc7891d42f",
+    "interface-manifest.json": "5f137537e0d33f9bd3cde34f9c9d3b2bbbcbbf8c5feaf4545ba398df151a1e49",
+    "known-errors.csv": "ac23a56e9e290a7ec211679b90881c223d53dbcbe4b145150d2749632ab43ce0",
+    "loss-summary.csv": "e72f6c39a8037d1cde4da936b57cbf72e2d3b63dd67deed3cb4bd284ff6fa189",
+    "paired-supply.csv": "e2062ee9124478e1acbd41bb60752d181e6645b13541815d0e09a2c8de4bc988",
+    "source.json": "e38fdc862adb45a42c70e3f1139476f6f3f117cc09c9b57b889d7c861d4465e7",
+    "summary.json": "7537aea558537fcd5a754700b7bb613f1a1447f0b83104e9c8cba0f411e8ef27",
+    "supply-paths.csv": "03c97713d43d6a252e286c7552594515870404dc234ff8b4f17eec1ee9c806e0",
+    "training-interface-summary.json": "4d04f2f9a04fab8cd36119a887999142aaa6ca927d7f62cbd7426f663c0c445a"
+  }
+}

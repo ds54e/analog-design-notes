@@ -1,0 +1,5 @@
+candidate,paired_coordinates,mean_supply_error_change_v,sd_supply_error_change_v,nominal_device_local_change_estimate_v,role
+A75,521,-0.05982899213136407,0.0020344950094350303,-0.05995419076200326,Known paired observations; the nominal-device derivative is not a complete per-realization predictor.
+R75,521,-0.02764106728878958,1.0341060230054749e-05,-0.027646982706305064,Known paired observations; the nominal-device derivative is not a complete per-realization predictor.
+F75S,521,-0.03691986769168262,0.00036110122850007456,-0.03671849106403471,Known paired observations; the nominal-device derivative is not a complete per-realization predictor.
+F75L,521,-0.03795364795030349,0.0002724668872769688,-0.03777439566796369,Known paired observations; the nominal-device derivative is not a complete per-realization predictor.

@@ -1,0 +1,28 @@
+{
+  "archive_sha256": "348d3f2c8cb3ef41b9c968f4bbb68c011c40cfb64ddda4138d2ff115c5e95bc6",
+  "files": {
+    "circuits/A75.cir": "2d2a3ad9c83aa3780d9ed13e05a4d7e263596359e4f81e9440b8dc347510a2ef",
+    "circuits/F75L.cir": "82d6730f7a7bcf1600eb4ec5cecd59c07c600726ca9fbb1c182ec4524e3ab161",
+    "circuits/F75S.cir": "d8842d41f6d37970a883c1e5f20dcf3cc5625e15733a47c953fed07c74e3fa7e",
+    "circuits/R75.cir": "6b377b2d9def103caed4e183a5a2400fa6010f1002932c7b47b8612eadb79946",
+    "confirmation-plan.json": "ec5bfdb9291ba8eb683d1a9cbdd6df6cd117ffce4c3399c01df9a6ffddd2e561",
+    "contract-v1.json": "1d1acedf6fe688662d4be74918f05ff516b096b07a4c87ea1b84afe4871ff17a",
+    "data/conditions.csv": "8d2795bde67c35fcb19a047cea211572c348218ffc8f3639b365e3fc4fee5fb4",
+    "data/configuration.json": "e9fabbf61daeecdbd75a6cbf1c207fb3a8c6c4f9ec4f7021a8bf7d507dde1ba5",
+    "data/confirmation.csv": "c7c4b69a9d327d86e6e51080c6dbdc2f0606e34cb33ad8c7386c32eb9d948f5a",
+    "data/manifest.json": "a902778b360a806f96287e1748a12f6fff9ccb7734cd385683953d6e1a605857",
+    "data/nominal-op.csv": "fb8374f84d709a52f90c40c398b8f1b643cef1c85e3eb72a71520de17fc6fd64",
+    "data/nominal.csv": "f3a69d18b889b62eb17f8c231fc37f5866ef814487aa4e66d1026b23f6da4051",
+    "data/sensitivities.csv": "e3fa1d1ec1d450f88e533cc4ac93e9a50d436d61bce637532fe1d3230519fab4",
+    "data/statistics.json": "aa90db3cd93beedfcb771a62b2780de3bf2bb438f0fe2a311ace60ee90b8b901",
+    "measurements-v1.json": "3192b35472b7b68fcfcf08dfc683f709060d733f331c03c489fa2a9b10fe0139"
+  },
+  "package": "feedback-study-v1.0.zip",
+  "public_commit": "721a59b9c33146b6ff1d8662e6b9a5076aafe448",
+  "public_tag": "finite-feedback-v1.0",
+  "role": "Retrospective reanalysis of known public observations; original confirmations are not fresh again.",
+  "schema": "learning.decisions.inputs.v1",
+  "scope": "Four nominal OP/circuit records and 4,168 known DC/AC/current conditions on 521 paired coordinates. No new targets, recentering, trimming or native acquisition.",
+  "selected_utc": "2026-09-13T12:33:36.732190+00:00",
+  "url": "https://ds54e.github.io/analog-design-notes/downloads/feedback-study-v1.0.zip"
+}

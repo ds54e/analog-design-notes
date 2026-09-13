@@ -41,6 +41,8 @@ def main():
         'ja/learning-path.html','studies/learning-path-v1/reproduce.html','downloads/learning-path-v1.0.zip']
     required += ['studies/learning-day-v1/reproduce.html','downloads/learning-day-v1.0.zip',
                  'learn/figures/initial-d1-load-response.svg','licenses/LICENSES/APM-Apache-2.0.txt']
+    required += ['studies/learning-decisions-v1/reproduce.html','downloads/learning-decisions-v1.0.zip',
+                 'learn/figures/supply-reference-paths.svg','learn/figures/initial-d1-load-budget.svg']
     for name in required:
         if not (root/name).is_file():broken.append(('required',name,'missing'))
     assert not broken,broken

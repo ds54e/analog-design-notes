@@ -286,6 +286,55 @@ recovery still needs a declared excursion, duration, return condition and
 independent final state. No complete pass-device gate model or arbitrary-load
 stability claim follows from the fixed-capacitor example.
 
+### Choose a receiving load against a deadline
+
+A response plot becomes a design choice only after the receiving interface
+states what it needs. Consider this **new illustrative requirement**: enter
+the same actual-endpoint 1% band within **0.5 µs** after either input's 50%
+crossing, and remain there through the existing plateau horizon. This was
+declared before the next two capacitor conditions were observed. It is not an
+original archived D1 requirement or a replacement for its DC tracking error.
+
+For a first design estimate, take the larger known entry-upper-bracket time
+per farad from the 5/25-pF cases, separately for rise and fall. The worse
+direction gives about **35.893 ns/pF**, suggesting
+
+$$C_{L,estimate}\approx\frac{500\,\mathrm{ns}}{35.893\,\mathrm{ns/pF}}
+=13.93\,\mathrm{pF}.$$
+
+That scaling is conservative relative to the two training points. It is not
+a proven bound between or beyond them. Before further acquisition, the finite
+plan chose **12 pF below** and **15 pF above** that provisional allowance,
+with every device, bias, resistor, input trajectory and measurement unchanged.
+The independent single-pole estimates were 414.7/518.4 ns; the empirical
+scaling forecasts below retain the known trajectory's slower final approach.
+
+| Same initial six-unit core | Prior worst-direction estimate, ns | Observed rise bracket, ns | Observed fall bracket, ns | 500-ns deadline |
+| --- | ---: | ---: | ---: | --- |
+| 12 pF | 430.7 | 426.2–428.2 | 420.4–422.4 | Meets in both directions |
+| 15 pF | 538.4 | 531.8–533.8 | 525.8–527.8 | Misses in both directions |
+
+[![The two predeclared capacitor choices land on opposite sides of the illustrative deadline.](figures/initial-d1-load-budget.svg)](figures/initial-d1-load-budget.svg)
+
+Both observed brackets lie fully on the forecast side of the deadline, with
+2-ns sampling brackets much smaller than the margin. The 12-pF worst upper
+bracket leaves about **71.8 ns** before the deadline; even the 15-pF rising
+lower bracket is **31.8 ns late**. No extra capacitor, relaxed band or changed
+horizon was added afterward. Bandwidth was 1.7665/1.4133 MHz, close to the
+predeclared inverse-capacitance estimates, and the three DC outputs remained
+identical to the known 5-pF results. KCL, actual capacitance readback and
+integrated charge checks pass for both attempts.
+
+For this trajectory and these fixed conditions, **12 pF is the supported
+choice between the two tested values**. The 13.93-pF calculation remains an
+estimate, not a newly measured continuous maximum. A gate needing a different
+voltage excursion or voltage-dependent charge still has a different interface.
+The [frozen plan, selected inputs and reproduction](../studies/learning-decisions-v1/reproduce.qmd)
+preserve the forecasts and the valid 15-pF deadline failure. These new
+conditions used the known nominal units; they were not fresh physical samples.
+
+### Compare speed and distortion in the common-source job
+
 The existing common-source feedback study supplies a separate load/signal
 comparison. With 20-mV-peak input, R75 gave 4.156% THD while F75L gave 0.671%.
 At 8 pF, R75 had 3.226-MHz bandwidth versus F75L's 1.143 MHz; at 16 pF only

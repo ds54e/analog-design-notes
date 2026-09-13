@@ -93,10 +93,56 @@ observations exist on six coordinates; their smaller scope is retained in the
 [detailed study](../studies/finite-feedback/index.qmd).
 
 At 0.97 V, F75L has slightly lower MAE than F75S, yet fewer five-test passes:
-147 versus 165. Both distributions have shifted below the fixed center.
-Narrowing a distribution around a displaced mean need not put more circuits
-inside the required ±25-mV window. Removing that shift in postprocessing would
-answer a trimmed question that these circuits were not designed to perform.
+147 versus 165. To understand that result, keep the mean as well as the spread.
+For these $n$ observations, with sample SD $s$ computed using divisor $n-1$,
+
+$$\operatorname{RMS}^2=\overline e^{\,2}+\frac{n-1}{n}s^2.$$
+
+This identity follows by writing $e_i=(e_i-\overline e)+\overline e$ and using
+$\sum_i(e_i-\overline e)=0$. It decomposes the **mean square**, not a sum of
+RMS magnitudes. It assumes no normal distribution and removes no error from
+the actual observations.
+
+| Circuit and supply | Mean error, mV | Sample SD, mV | RMS, mV | MAE, mV | Inside ±25 mV |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| F75S, 1.00 V | −1.536 | 32.545 | 32.550 | 25.716 | 290 / 521 |
+| F75L, 1.00 V | −1.550 | 24.299 | 24.325 | 19.275 | 369 / 521 |
+| F75S, 0.97 V | −38.456 | 32.252 | 50.170 | 41.685 | 165 / 521 |
+| F75L, 0.97 V | −39.504 | 24.066 | 46.245 | 40.403 | 147 / 521 |
+
+The displacement of F75L's mean from the target accounts for about **73.0% of
+its mean-square error** at 0.97 V, compared with 0.406% at nominal. Improving its modeled spread alone
+therefore addresses a smaller part of the changed-condition RMS error.
+There is no corresponding additive decomposition of MAE into those same two
+terms, and a pass count depends on the entire distribution relative to the
+fixed window.
+
+[![Empirical cumulative fractions show where the fixed precision window lies before and after the supply change.](figures/fixed-target-loss.svg)](figures/fixed-target-loss.svg)
+
+To read the plot, subtract the cumulative fraction just below −25 mV from
+the fraction at +25 mV. That is the fraction inside the original center band.
+At 0.97 V, F75S has **342 below / 165 inside / 14 above**; F75L has
+**374 below / 147 inside / 0 above**. Both the mean and the shape differ;
+the data do not isolate a variance-only intervention. The comparison does
+demonstrate that smaller SD, RMS and MAE can coexist with fewer fixed-window
+passes. All four remaining gain/bandwidth/current checks pass for these two
+circuits in both supply conditions, so their five-test counts equal the
+center-only counts here. That equality is observed in this cohort, not a
+general replacement of five checks by one.
+
+The physical investment is also specific. F75S→F75L adds about 1.94 µm² of
+drawn MOS area (5.531→7.467 µm²), keeps nearly 75 µA nominal positive-delivered
+current, and lowers nominal input noise from 23.537 to 20.458 µV RMS. Both
+retain about 120.4 kΩ of internal resistance and the finite input-current
+interface. The investment helps the nominal loss; it does not remove the
+reference-origin supply path examined in chapter 7. Removing the supply shift
+in postprocessing would answer a trimmed question that these circuits were
+not designed to perform.
+
+The [selected recalculation](../studies/learning-decisions-v1/reproduce.qmd)
+checks the original assignments, metrics and performance flags directly from
+the immutable public feedback ZIP. It adds this explanation without changing
+the original study's data or definitions.
 
 The original studies froze circuits, physical inputs, conditions, measurements,
 useful-effect thresholds and stopping counts before their confirmation targets.

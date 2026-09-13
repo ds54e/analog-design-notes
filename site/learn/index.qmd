@@ -9,16 +9,18 @@ interfaces toward the questions an LDO would need answered. Each chapter makes
 a first prediction, checks selected observations, and uses the difference to
 make a design choice.
 
-**Learning edition v1.1.** The English chapters are the canonical route; the
+**Learning edition v1.2.** The English chapters are the canonical route; the
 [Japanese reading overview](../ja/learning-path.qmd) explains where to begin
 and how the evidence fits. The five detailed studies remain available with
 their original circuit files, definitions, downloads and results.
 
-This increment develops the worked current/gm/width argument and measured
-mirror/headroom limits. A new, separately planned **initial-D1 5/25-pF example**
+The route develops the worked current/gm/width argument and measured
+mirror/headroom limits. Its separately planned **initial-D1 5/25-pF example**
 shows why a larger receiving capacitor slows response without repairing DC
-tracking error. The first edition and its exact evidence download remain
-available alongside the [learning-day supplement](../studies/learning-day-v1/reproduce.qmd).
+tracking error. This increment uses that result to forecast and check a
+12-versus-15-pF choice against an illustrative deadline. It also derives the
+finite reference's supply-error path and explains a narrower distribution
+with fewer fixed-window passes. All previous exact downloads remain available.
 
 ## The reading order
 
@@ -112,6 +114,12 @@ selected historical sizing/mirror observations and the nine declared nominal
 receiving-port cases, with separate graph calculations and a public 25-pF
 OP/AC/step replay. Its new identifiers preserve the first package's bytes and
 the distinction between archival explanation and newly planned observation.
+
+The [design-decisions supplement](../studies/learning-decisions-v1/reproduce.qmd)
+adds the supply/loss recalculation from the original public feedback ZIP and
+the two predeclared capacitor choices. It supplies three further graphs and
+one native 12-pF replay. The worked local supply estimate uses known OP data;
+the 12/15-pF forecasts were recorded before their later target conditions.
 
 The progression is informed by the device–diode–amplifier–mirror–pair–OTA order
 in [Pretl, Koefinger and Dorrer's course](https://iic-jku.github.io/analog-circuit-design/aicd.html)

@@ -94,6 +94,14 @@ from 0.492 to 2.458 pC. The new 25-pF peak charging current is about
 10.24 µA and falls as feedback reduces the error. More stored charge at the
 same finite current costs response time; it does not repair DC precision.
 
+Chapter 5 then [turns that relation into a load choice](05-feedback-and-response.qmd#choose-a-receiving-load-against-a-deadline).
+For an explicitly illustrative 500-ns actual-endpoint deadline, known 5/25-pF
+data suggested a provisional 13.93-pF allowance. Two conditions chosen before
+observation put 12 pF inside the deadline (worst bracket 426–428 ns) and 15 pF
+outside it (532–534 ns). This supports the tested 12-pF choice at the retained
+conditions. It neither establishes the exact maximum capacitance nor converts
+a fixed capacitor into a pass-device charge model.
+
 The [new C-fixture clamps](04-differential-pair-and-ota.qmd#what-happens-when-the-receiving-voltage-moves)
 also put numbers on the voltage dependence. At fixed +0.10-V differential
 drive, net current after the 1-MΩ load falls from 10.284 µA at 0.35-V output
@@ -114,7 +122,7 @@ plan; it never borrows the later archive's selected-D1 transfer.
 | Input comparison | A/B current steering; finite-tail common-mode dependence; C's PMOS-input sign at 0.3 V. | Reference/sense voltage ranges over the intended regulator supply and temperature domain. |
 | Low-voltage buffer accuracy | Initial D1: source 0.25–0.35 V, output 0.249311–0.347634 V, worst error 2.366 mV. | Required regulator accuracy after reference, divider loading and pass-device operating point are included. |
 | Amplifier resource cost | Same six-device initial core, 5.2 µm² drawn MOS area; at most 16.085 µA VDD current on its saved input grid. | Total regulator budget, including reference, divider, startup, compensation and any driver stage. |
-| Receiving-port charge | Same initial-D1 1-MΩ/5-versus-25-pF steps, independent DC endpoints and one timestep refinement; six new C-fixture current/headroom clamps. | Actual pass-gate voltage/charge trajectory, required delivery/absorption and overload recovery. |
+| Receiving-port charge | Same initial-D1 1-MΩ/5-versus-25-pF steps, independent DC endpoints and one timestep refinement; six C-fixture current/headroom clamps; predeclared 12/15-pF checks of a 500-ns illustrative deadline. | Actual pass-gate voltage/charge trajectory, required delivery/absorption and overload recovery. |
 | Supply and sequencing | Published A75/R75/F75L driven/clamped source histories and current peaks. | Floating pins, current-limited sources, arbitrary stored charge and startup of the integrated regulator. |
 | Dynamics and stability | Particular closed-loop signal/step observations under their stated loads. | Regulator return ratio, all relevant crossings, compensation and load/input transients across the chosen domain. |
 | Statistical accuracy | Original finite Local source-transfer studies and labeled synthetic resistor scenarios. | A justified combined device/passive/spatial/reference model, layout/PEX effects and silicon validation. |
@@ -138,9 +146,12 @@ output stage or bias allocation may be required. That is a new design question,
 not a reason to stretch the present claims.
 
 Another question is whether the reference-origin supply path dominates the
-eventual error budget. If it does, the unfinished self-bias prototype would
-first need its saved equality-check failure diagnosed on its own terms. Its
-startup and temperature behavior cannot be inferred from the completed
+eventual error budget. Chapter 7's finite-reference KCL demonstrates that path
+in the common-source examples; it does not yet measure a complete regulator's
+error budget. Choosing a new reference would require its own bounded circuit
+question. Any later use of the unfinished self-bias prototype would first
+require its saved equality-check failure to be diagnosed on its own terms.
+Its startup and temperature behavior cannot be inferred from the completed
 amplifier sequencing study. A third question is how much passive absolute
 accuracy and ratio tracking the sense network actually needs. The synthetic
 scenarios teach how to ask that question; they do not provide foundry statistics.
