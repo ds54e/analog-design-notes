@@ -117,8 +117,24 @@ the amplifier, the source moves. An input rise increases drain current; `Rs`
 raises the source, reducing the increase in $V_{GS}$ and also changing body
 bias. This is **source degeneration**, one specific negative-feedback path.
 
-With the supply treated as AC ground, negligible gate current, and capacitance
-temporarily omitted, eliminate $v_s$ from the small-signal equations:
+With the supply treated as AC ground, negligible gate/body leakage, and
+capacitance temporarily omitted, the three useful node equations are
+
+$$v_s=R_S i_n,\qquad v_g\simeq v_{in},$$
+
+$$i_n=g_m(v_{in}-v_s)+g_{ds}(v_o-v_s)-g_{mb}v_s,$$
+
+$$\left(1/R_D+1/R_L\right)v_o+i_n=0.$$
+
+The second line uses $v_{bs}=-v_s$ because the body is fixed at ground. The last
+line says that, with the supply held fixed, an increased NMOS sink current must
+be balanced by a lower output voltage. Substituting the source-node equation
+into the current equation gives
+
+$$\left[1+R_S(g_m+g_{mb}+g_{ds})\right]i_n=g_m v_{in}+g_{ds}v_o.$$
+
+Source motion reduces both the input-current response and the drain-voltage
+response. Now eliminate $i_n$ using output KCL:
 
 $$D=1+R_S(g_m+g_{mb}+g_{ds}),\qquad g_{m,eff}=g_m/D,$$
 
@@ -131,9 +147,74 @@ $-g_mR_D$ misses the external load, finite transistor output conductance and
 source motion. For R37, ignoring the latter two effects first suggests that
 gain magnitude 6 needs about 510 µS. Inserting the saved $g_m$, $g_{mb}=126.451$
 µS and $g_{ds}=1.573$ µS gives $D=1.05584$ and $A_v=-6.00066$.
-The actual 1-kHz AC result is −6.00000. The approximately 0.011% difference
+The actual 1-kHz AC result is −6.00000. This calculation uses the saved OP
+derivatives and is a **retrospective explanation** of the completed circuit,
+not a prospective prediction of an unseen target. The approximately 0.011% difference
 sets the scale of this useful low-frequency approximation; it is not proof
 that the same formula describes high-frequency or large-signal operation.
+
+## Work backward from the job to supported dimensions
+
+Here is a **retrospective reconstruction** of the sizing argument, using the
+original development observations. It explains the choices; it does not
+invent a pre-experiment prediction log. The first estimate needs three numbers:
+$I_N\approx32.5$ µA after subtracting the load current,
+$R_D\approx(1-0.5)\,\mathrm V/(37.5\,\mu\mathrm A)=13.333$ kΩ, and
+$g_{m,eff}\approx6(1/R_D+1/R_L)=510$ µS before accounting for $g_{ds}$.
+The required efficiency is therefore approximately $510/32.5=15.69$ V⁻¹.
+Positive source degeneration will require still more bare-device gm.
+
+The saved feasibility experiment held a single 2-µm-wide NMOS at $V_D=0.5$ V,
+$V_S=V_B=0$, with three gate voltages and four supported lengths. At the
+required 0.45-V gate voltage, the 0.12-µm device gave $g_m/I_D=15.978$ V⁻¹.
+Scaling its measured current and derivatives to 32.5 µA gives an optimistic
+gain magnitude of only **5.817** once its finite $g_{ds}$ is included. At
+0.40 µm, the corresponding estimate is **6.251**, leaving a little room for
+source feedback. These are width-scaling estimates from grounded-source
+observations, not observations of either finished amplifier.
+
+[![The saved device trials show that higher current density reduces required width but can leave insufficient gain efficiency.](figures/sizing-estimate.svg)](figures/sizing-estimate.svg)
+
+The 0.40-µm, 2-µm-wide device takes 7.758 µA at that grounded-source bias.
+Linear width scaling therefore suggests total width
+$2\,\mu\mathrm m\times32.5/7.758\approx8.378$ µm. The pinned research
+contract supports **individual** widths 1–4 µm and lengths 0.12–0.40 µm,
+so this total requires at least three units. A plotted estimate below 1 µm
+is likewise only an algebraic extrapolation; it is not a supported newly
+simulated unit. Neither the four-length grid nor choosing its longest length
+proves a global optimum.
+
+Adding Rs raises the source, reduces $V_{GS}$ and changes body bias. Width
+must be revisited to restore current, while Rs must obtain the wanted effective
+gm. The original finite solve varied **unit width, Rs and Rd together**, with
+output center, signed gain and total positive delivered current as separate
+residuals. Its first and final saved observations show why all three matter:
+
+| Known design point | Unit count × width, µm | Rs, Ω | Output, V | Gain at 1 kHz | Total current, µA |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| R37 first trial | 3 × 2.900 | 70.000 | 0.502794 | −5.99535 | 37.294 |
+| R37 solved | 3 × 2.94722 | 82.602 | 0.500000 | −6.00000 | 37.500 |
+| R75 first trial | 6 × 3.900 | 120.000 | 0.467609 | −6.70302 | 79.861 |
+| R75 solved | 6 × 3.86749 | 171.818 | 0.500000 | −6.00000 | 75.000 |
+
+R37's first gain was already close, but its center and current were not the
+chosen operating point. R75's first candidate missed all three. A plausible
+width and a functioning transistor are therefore insufficient stopping rules.
+The exact selected [circuits, observations and calculation](../studies/learning-day-v1/reproduce.qmd)
+retain the original 10-mV development stimulus in these circuit bodies. The
+OP and AC columns above do not establish performance at that finite amplitude;
+the failed 10-mV distortion check appears below. The later common 5-mV stimulus
+has its own preserved study identity.
+
+For 75 µA total, subtracting the same 5-µA load leaves 70 µA in the bank.
+$R_D\approx6.667$ kΩ now makes the external conductance 160 µS and the first
+effective-gm estimate 960 µS. Grounded-source width scaling suggests 18.045 µm
+(at least five supported units). The actual six-unit design uses 23.205 µm
+because its source rises 12.027 mV, versus 2.685 mV in R37, and the complete
+current/gain solution changes. The original choice of six units is a retained
+design choice, not a demonstrated minimum inventory. Actual drawn MOS area
+grows **2.62 times** when total current doubles. That cost accompanies the
+benefits in the next comparison.
 
 ## Spend more current in a redesigned signal branch
 

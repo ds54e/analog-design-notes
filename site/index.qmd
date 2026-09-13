@@ -13,9 +13,13 @@ change the decision.
 [**Read the entry page and eight chapters**](learn/index.qmd) ·
 [日本語の読み方](ja/learning-path.qmd)
 
-**Learning edition v1.0 · 2026-09-13.** Original explanations connect first
+**Learning edition v1.1 · 2026-09-13.** Original explanations connect first
 predictions with selected saved observations and finite design costs. Basic
 KCL/KVL is introduced at the entry; no simulator installation is needed to read.
+
+New in this increment: work from required current and gm to actual supported
+dimensions; see how mirror accuracy depends on output voltage; compare the
+same initial OTA at 5/25 pF and explain its unchanged DC error and slower response.
 
 | Follow the circuit | Make the next judgment |
 | --- | --- |
@@ -30,7 +34,9 @@ KCL/KVL is introduced at the entry; no simulator installation is needed to read.
 
 The [learning reproduction package](studies/learning-path-v1/reproduce.qmd)
 contains selected differential-pair/OTA inputs, calculations and eight graph
-examples. The earlier studies and downloads remain the detailed evidence layer.
+examples. The new [learning-day supplement](studies/learning-day-v1/reproduce.qmd)
+adds the sizing/mirror observations, separately planned receiving-port example,
+five new graphs and a small native 25-pF replay. All six earlier ZIPs are retained.
 
 ## Detailed studies {#detailed-studies}
 

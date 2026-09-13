@@ -1,0 +1,254 @@
+{
+  "checked_routes": [
+    "Saved model/geometry/raw and passive readback",
+    "Four-terminal and output/input KCL",
+    "Integrated terminal current versus capacitor voltage charge",
+    "Complex AC output current/voltage readback of capacitance",
+    "Independent OP endpoints and a predeclared timestep refinement"
+  ],
+  "clean_public_reproduction": {
+    "APM_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "anonymous_model_acquisition": "Git global/system credential configuration disabled; credential helper and extra HTTP headers cleared; terminal/askpass prompting disabled.",
+    "checked_utc": "2026-09-13T12:09:17.780165+00:00",
+    "limits": "Fresh Python environment and anonymous public APM clone from extracted selected ZIP; existing ngspice 47 on the same host, not a clean-OS installation or independent replication. Final receipt/README bytes are outside the executable payload comparison.",
+    "native": {
+      "MOS_readback": "Pinned APM verifies actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after each analysis.",
+      "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+      "bandwidth": {
+        "bracket_hz": [
+          825404.185268011,
+          857695.8985908863
+        ],
+        "definition": "First downward -3.000-dB crossing relative to |H(1 kHz)|; dB interpolation in log frequency, as learning.bridge.v1.",
+        "hz": 847733.1194217268,
+        "status": "CROSSING"
+      },
+      "capacitor_ac_current_readback_max_relative_error": 2.4795890365903392e-16,
+      "capacitor_charge_relative_residual": 1.1668772741689242e-09,
+      "case": "D1-25p",
+      "differences": {
+        "0": {
+          "kind": "op",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 1,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        },
+        "1": {
+          "kind": "op",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 1,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        },
+        "2": {
+          "kind": "op",
+          "maximum_output_absolute_difference": 0.0,
+          "rows": 1,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        },
+        "3": {
+          "kind": "ac",
+          "maximum_output_absolute_difference": 2.7755575615628914e-16,
+          "rows": 361,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        },
+        "4": {
+          "kind": "tran",
+          "maximum_output_absolute_difference": 1.8896550990632477e-11,
+          "rows": 4332,
+          "units": "V/V for unit AC; V for OP/transient. Adaptive transient values linearly compared at saved time coordinates."
+        }
+      },
+      "limits": "One nominal 25-pF initial-D1 OP/AC/standard-step replay. No Local cohort, full pass-gate charge, LDO, old selected-D1 transfer or independent scientific replication.",
+      "maximum_MOS_KCL_residual_a": 1.450879347220102e-15,
+      "maximum_terminal_span_v": 0.7506885370551474,
+      "new_run_id": "93b5a6d9e22881174399b59aef9dbf8468dd803a40f9a5693bf2f7d1d7848f28",
+      "original_realization_id": "10ff06bab3ca114b89ac09ca1bedde9e98613cad100084934b37b16d1e985e0d",
+      "passive_readback": "Public API: observed DC V/I for three resistors; complex AC current/voltage and transient charge for Cload. Native parameter vectors are not exposed by this replay.",
+      "resistor_readback": {
+        "Rbias": {
+          "expected_ohm": 273692.63541213644,
+          "observed_v_over_i_ohm": 273692.635362977,
+          "relative_difference": -1.796155446598391e-10
+        },
+        "Rload": {
+          "expected_ohm": 1000000.0,
+          "observed_v_over_i_ohm": 1000000.0000000001,
+          "relative_difference": 2.220446049250313e-16
+        },
+        "Rsource": {
+          "expected_ohm": 10000.0,
+          "observed_v_over_i_ohm": 10000.000000003549,
+          "relative_difference": 3.5482727867020003e-13
+        }
+      },
+      "settling": {
+        "fall": {
+          "band_v": 0.0009832206519110758,
+          "bracket_s": [
+            8.78941328272129e-07,
+            8.809413282721291e-07
+          ],
+          "final_observed_error_v": 5.677583403418396e-11,
+          "horizon_s": 8.5e-06,
+          "observed_until_s": 3.99375e-06,
+          "origin_s": 4.50625e-06,
+          "status": "OBSERVED_FINAL_ENTRY",
+          "target_v": 0.24931146294517909,
+          "time_s": 8.809413282721291e-07
+        },
+        "rise": {
+          "band_v": 0.0009832206519110758,
+          "bracket_s": [
+            8.893098976581678e-07,
+            8.913098976581677e-07
+          ],
+          "final_observed_error_v": -6.624517601139246e-11,
+          "horizon_s": 4.5e-06,
+          "observed_until_s": 3.9937500000000005e-06,
+          "origin_s": 5.0625e-07,
+          "status": "OBSERVED_FINAL_ENTRY",
+          "target_v": 0.3476335281362867,
+          "time_s": 8.913098976581677e-07
+        }
+      },
+      "status": "PASS"
+    },
+    "packages": [
+      "contourpy==1.3.0",
+      "cycler==0.12.1",
+      "fonttools==4.60.2",
+      "importlib_metadata==8.7.1",
+      "importlib_resources==6.5.2",
+      "kiwisolver==1.4.7",
+      "matplotlib==3.9.4",
+      "numpy==1.26.4",
+      "packaging==26.3",
+      "pillow==11.3.0",
+      "pyparsing==3.3.2",
+      "python-dateutil==2.9.0.post0",
+      "scipy==1.13.1",
+      "six==1.17.0",
+      "tomli==2.2.1",
+      "typing_extensions==4.16.0",
+      "zipp==3.23.1"
+    ],
+    "public_APM_repository": "https://github.com/ds54e/analog-process-models.git",
+    "python": "3.9.25 (main, Aug  6 2026, 00:00:00) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-14)]",
+    "regenerated_svg_sha256": {
+      "initial-d1-clamped-current.svg": "dcbd46b4366ab63ad4690750bd94d38ea2e69b90d064b0699e6ba218ed848288",
+      "initial-d1-load-response.svg": "eadcb341fd4a63d98957bc645b2ec482a78061c6f03922c183ac0ca651e383f4",
+      "initial-d1-step-current.svg": "69669b2ea4a85b6340e5387e17eb771d17e4b2ec9a6cf2390f54c7372578a32f",
+      "mirror-compliance.svg": "e8e4cc958ba9551cb91be948a557df33f6a4c386ff6d33aca4a28ce3a759d530",
+      "sizing-estimate.svg": "408876b07eb1b95309ccc1b597f9ae6078a65ef81b39ddec4076d3546cad0410"
+    },
+    "schema": "ads.learning-day-clean-public.v1",
+    "status": "PASS",
+    "summary_and_csv_sha256": {
+      "clamps.csv": "4a73da4e04e20d881f37e74c45a55fb94a126946c4e1a60ea221e1cf9f4b4815",
+      "design-summary.json": "1cef19c8567ebafd8ddb06bfd83b159dbdb84f2aff734194f7b2d5bc76c59022",
+      "feasibility.csv": "9983654f8a21e584dec1ced6c40eb6cb25aafa8f3c3568cbccf5af30aa485c70",
+      "interface-summary.json": "4d04f2f9a04fab8cd36119a887999142aaa6ca927d7f62cbd7426f663c0c445a",
+      "mirror.csv": "988b94cc7ee802871538341b30bdbe59b01aa7673b7f00d614a2322e9300eeed"
+    },
+    "tested_candidate_archive_sha256": "c1e83532c88b4282fb9c6d3ab4facfd553892c950a73d174c7431595ee49cd9c",
+    "tested_payload_sha256": {
+      "circuits/R37-final.cir": "7090efc470c998c399284b065fa92628bb87498ad694f1264f78db2612cc27e0",
+      "circuits/R37-trial-000.cir": "d15a991dca559ac60d29a586c12a942b96db15d96434b5d6716382d4350ac035",
+      "circuits/R75-final.cir": "eb4b0493a3930f23d012d4d497da11697b74c7a7b01ccbf6fdcf737fc7c0b647",
+      "circuits/R75-trial-000.cir": "e63d2d84704026b4dae05fd190500a8fc09b878a4d0c1870a5116a212dd5a59e",
+      "circuits/feasibility-L0.12.cir": "46e0e9332806a895756f120ab3a95c001609f6bc935756ef6f73f71a4f729187",
+      "circuits/feasibility-L0.24.cir": "c3190cd99a0f72e515e53d01fd0f0004ab83f4984b429e0172e0c81007b6187f",
+      "circuits/feasibility-L0.32.cir": "4d4b6f3bec99d4ab936e612a4c642cebf41074d1c94413c5ac840adf8409f664",
+      "circuits/feasibility-L0.40.cir": "39501c10177e0b9423b885ac71fc61eed21fb91f5e3747161c36eba8d8bd103e",
+      "circuits/interface-C-sink-0p05.cir": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "circuits/interface-C-sink-0p25.cir": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "circuits/interface-C-sink-0p35.cir": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "circuits/interface-C-source-0p25.cir": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "circuits/interface-C-source-0p35.cir": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "circuits/interface-C-source-0p70.cir": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "circuits/interface-D1-25p-refined.cir": "f98dd60c9445698b110c9d4f12002cb5f9cf696482e0aeae79a02b07c9c28528",
+      "circuits/interface-D1-25p.cir": "f98dd60c9445698b110c9d4f12002cb5f9cf696482e0aeae79a02b07c9c28528",
+      "circuits/interface-D1-5p.cir": "8b741d0c57391fc82ae893b84f2fdcb59e83bb8b79e11f13e074a481ec26f11d",
+      "circuits/mirror-source-transfer.cir": "6cc4ce68c95af226b5966a82a0d6a850b7ed888e3be01caede56218de205f0ea",
+      "clamps.csv": "4a73da4e04e20d881f37e74c45a55fb94a126946c4e1a60ea221e1cf9f4b4815",
+      "data/R37-final.npz": "3aaa1414a2551d6cbe163322f48a2699c8d63bdc57e9804ed43d59cf3df8e596",
+      "data/R37-trial-000.npz": "cf3c590f305b959f266d1ecf1a704e695718e787d09f9362f5e6fc163cc83c30",
+      "data/R75-final.npz": "78e20485ef47ae33524fa78be00e460f645ebbdfb9a1f8f31ed19c51b576bf1d",
+      "data/R75-trial-000.npz": "7368c9b43301b109c20d5c6917b44cee8c60e9cad1c7c34ee96e238c5e77eb14",
+      "data/design-inputs.json": "513b46b84ffab51c6eaa3f5788ade18c29fa888ccea0cb9fef1fd766f51fedc2",
+      "data/design-manifest.json": "37dbb9b5101fc388a9282d14ff34f580614d8034363e26032b016f6f1405f29f",
+      "data/feasibility-L0.12.npz": "590ce716ad0cd582f8bd858f3b5b9f6467b5ed165abc3a272af167b3d5e7de07",
+      "data/feasibility-L0.24.npz": "d250a52e8dab9aabca10f944bed58dd431b8f308373be49621b832891b974320",
+      "data/feasibility-L0.32.npz": "0acddf36b51d1a1a7115308038a90353d354c8248a443216fcbe1c0851b77dc0",
+      "data/feasibility-L0.40.npz": "dfd6b283adc3de3c34bbda2d8b3c733664a1a27c4990d341b359bbdbcdc8137a",
+      "data/headroom-A.npz": "996cd06c71281a3fa8449216fd7929b888f2be0959adcbfa5de55be98d995b2c",
+      "data/headroom-B.npz": "dc57d0a5ad4a7f8b4dbd9273292d235dfc569bdae9c99c9a4aa0a09d9e2513b1",
+      "data/headroom-C.npz": "85ee2310a012ec40afba3c36b506db6ddb443e8035ceda6021bdcb453265a236",
+      "data/headroom-inputs.json": "412e41f9547f925b6febaa0edcc4a79b049ea9b6e381aaccf204a09d71a044ec",
+      "data/interface-C-sink-0p05.npz": "284f5b89cbe580bac40809f25a90cc9d737bd7599ea07517dbcd777f5ebeeae2",
+      "data/interface-C-sink-0p25.npz": "d34ae4ae76176e22a9e35f3939d994360dcd89bdb6ddf10326b9f72fe2c69c3e",
+      "data/interface-C-sink-0p35.npz": "8754b9935e2c8460c9fb8b73a27c4e35de63ab9be0a05d5993b87f7930f41013",
+      "data/interface-C-source-0p25.npz": "4cc43d0d8ae6e7a719010d91a3add0d016ed8d9711d8d874a68fbb98a2a8db7e",
+      "data/interface-C-source-0p35.npz": "4070b999d4a8442e75f6f862ed2541b32b2d18c359828f39eae6957f1e9a5b22",
+      "data/interface-C-source-0p70.npz": "791027b84342b6adfe07d123b81a0a7bd5a52579e0b14ce736de4f5c8170366e",
+      "data/interface-D1-25p-refined.npz": "667ae21f2daeefdb9388d4580875e86860d3c8ec12c57b4dee03898ed25c9464",
+      "data/interface-D1-25p.npz": "8a6a634b3c353b2bcd6e36e5f53790a3563446155623d3133edda8e6ab2261a3",
+      "data/interface-D1-5p.npz": "4a73846f58815b37e6ffe90297e515df7e96ff00265310277a7d43ad9ca10fab",
+      "data/interface-inputs.json": "ae9934b7515f55d2f76adbe55404826f95a4c2937517ed7f22f545dcd860b963",
+      "data/interface-manifest.json": "5c18f0f8b7b82644a693d6631def3b8de6395153517d8ea1894fd07922218e8c",
+      "data/manifest.json": "97815fd8e90c634601f59c8a0c53c553c2ce5282a50bd302d1ff8c185091c5f1",
+      "data/mirror-source-transfer.npz": "7d72c74755c7f8f29277aa16065318ee16acbd66e0b62b968b524e8fb7fa93e8",
+      "design-summary.json": "1cef19c8567ebafd8ddb06bfd83b159dbdb84f2aff734194f7b2d5bc76c59022",
+      "design.py": "5530a11dbab4f4f9e29c092159688819eda8a7e48e3193081b87865cef4e19de",
+      "feasibility.csv": "9983654f8a21e584dec1ced6c40eb6cb25aafa8f3c3568cbccf5af30aa485c70",
+      "interface-summary.json": "4d04f2f9a04fab8cd36119a887999142aaa6ca927d7f62cbd7426f663c0c445a",
+      "interface.py": "bb90226a2c4720f916ea88f38ed4595e4adcad63420a5f2134dc0291d83e1dd5",
+      "mirror.csv": "988b94cc7ee802871538341b30bdbe59b01aa7673b7f00d614a2322e9300eeed",
+      "plot_design.py": "df78d0361a6fe0f825f0b90557638356c70d5a3602c66af75fce46eb1f9213fb",
+      "plot_interface.py": "33263371b35dccee3bcdaf2c329f1482cb7e4bc115e7fd69d7b3df82bc1e7d74",
+      "receiving-port-estimate-note.json": "3aa480e545cb2e266a2baaac63c76b43c23eec37343906545d2420f2632bac33",
+      "receiving-port-plan.json": "05699f74d215331c2e27fe973e925b4cb0f8a2445e56036e41d2c5bc5508dc56",
+      "replay_interface.py": "8fed953d90d4a2d59ab7e7401fa6283445b0e353643fc40a503e359ff73d5245",
+      "requirements.txt": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a"
+    }
+  },
+  "edition": "learning-path-v1.1",
+  "historical_selection": {
+    "cases": 9,
+    "role": "Known preparation and development observations; retrospective sizing/compliance explanation. Mirror is nonzero-raw SOURCE_TRANSFER_HYPOTHESIS, other selected examples nominal.",
+    "rows": 1671
+  },
+  "limitations": [
+    "Finite nominal examples and selected known source-transfer realization; no population/yield or silicon qualification.",
+    "Clamped output points differ from functional feedback and do not qualify a continuous voltage range.",
+    "Fixed capacitor is not a full pass-gate charge model or an LDO.",
+    "Original six ZIPs and old definitions remain intact; old self-bias failure unresolved."
+  ],
+  "model": {
+    "apm": "5.0.0",
+    "commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "family": "VTG",
+    "ngspice": "47",
+    "technology": "APM045",
+    "temperature_c": 26.85
+  },
+  "package": "learning-day-v1.0",
+  "receiving_port": {
+    "failures": [],
+    "first_target_started_utc": "2026-09-13T11:35:36.006012+00:00",
+    "last_target_started_utc": "2026-09-13T11:36:26.805449+00:00",
+    "measurement_version": "learning.initial-d1-interface.measure.v1",
+    "physical_units_per_case": 6,
+    "plan_sha256": "05699f74d215331c2e27fe973e925b4cb0f8a2445e56036e41d2c5bc5508dc56",
+    "pre_target_commit": "4b44b5aa79009fd39e5bbf56e5bb4c1c2e0db2ce",
+    "prepared_utc": "2026-09-13T11:32:34.434771+00:00",
+    "profile_tier": "ARTIFICIAL; every saved raw [0,0]",
+    "research_attempts": 9,
+    "same_core_and_no_draw_trim_or_rebias": true,
+    "selected_rows": 18337,
+    "status": "COMPLETE_AT_DECLARED_NOMINAL_STOP"
+  },
+  "review_roles": "Same Codex agent conducted writing, acquisition and internal numerical review; no prior human scientific approval or independent replication.",
+  "schema": "adn.learning-day-evidence.v1",
+  "status": "NUMERICAL_EVIDENCE_AND_CLEAN_PUBLIC_INPUT_REPLAY_CHECKED"
+}

@@ -1,0 +1,3 @@
+Vin gate 0 .55
+Vout out 0 .5
+Xn out gate 0 0 apm045_vtg_nmos w=2u l=0.23999999999999999u

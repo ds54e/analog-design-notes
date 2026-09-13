@@ -39,6 +39,8 @@ def main():
         'learn/03-mirrors-and-bias.html','learn/04-differential-pair-and-ota.html','learn/05-feedback-and-response.html',
         'learn/06-errors-and-resources.html','learn/07-supply-and-startup.html','learn/08-toward-an-ldo.html',
         'ja/learning-path.html','studies/learning-path-v1/reproduce.html','downloads/learning-path-v1.0.zip']
+    required += ['studies/learning-day-v1/reproduce.html','downloads/learning-day-v1.0.zip',
+                 'learn/figures/initial-d1-load-response.svg','licenses/LICENSES/APM-Apache-2.0.txt']
     for name in required:
         if not (root/name).is_file():broken.append(('required',name,'missing'))
     assert not broken,broken

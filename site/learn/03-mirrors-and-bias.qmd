@@ -42,6 +42,38 @@ infinite output resistance. Cascoding can reduce output-voltage dependence,
 but consumes additional headroom and bias resources. It is a later design
 choice, not a free repair to this example.
 
+### Put an accuracy requirement on the copying job
+
+A saved preparation example makes compliance concrete. Two NMOS units each
+have $W/L=2/0.24$ µm, source and body grounded. An ideal 30-µA reference feeds
+the diode-connected unit; an external voltage source clamps the other drain
+from 0.30 to 0.80 V in 10-mV steps. Supply is 1 V and temperature 26.85 °C.
+The reference source and output clamp are deliberate diagnostic interfaces,
+not a complete finite reference generator.
+
+[![The same saved mirror changes copying error with output voltage, crossing an illustrative one-percent band.](figures/mirror-compliance.svg)](figures/mirror-compliance.svg)
+
+Define the copying error as $I_{out}/(30\,\mu\mathrm A)-1$, with output sink
+current positive. The saved observations are −0.434% at 0.30 V, +0.928% at
+0.50 V and +2.505% at 0.80 V. The reference node stays near 0.506717 V.
+Using **±1% as a retrospective teaching requirement**, the sampled points
+0.30–0.51 V fit; the higher sampled points do not. We did not observe voltages
+below 0.30 V, so this does not locate the low-voltage compliance knee or prove
+continuous behavior outside the grid.
+
+This is one saved **SOURCE_TRANSFER_HYPOTHESIS** realization with nonzero
+threshold/mobility coordinates, distinct from the zero-raw nominal resistor
+and OTA cases. Output-voltage dependence and this realization's device
+differences both contribute to the error; the trace does not isolate their
+separate causes or establish a population distribution. The [exact circuit,
+raw values and all 51 points](../studies/learning-day-v1/reproduce.qmd)
+are retained. The unmodified mirror circuit is an APM example under Apache-2.0.
+
+The useful decision is whether the required current accuracy survives the
+**actual receiving node's voltage range**. Equal gate voltages alone cannot
+answer it. When the mirror becomes an amplifier load, its current error must
+also be multiplied by the receiving node's finite voltage sensitivity.
+
 ## Reverse the polarity to supply the amplifier output
 
 The finite active-load amplifier **A37** uses PMOS devices near VDD. Two

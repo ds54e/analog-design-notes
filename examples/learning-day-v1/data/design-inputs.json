@@ -1,0 +1,2362 @@
+{
+  "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+  "cases": {
+    "R37-final": {
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 4.0000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 2.9472200135876367e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 4.0000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 2.9472200135876367e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 4.0000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 2.9472200135876367e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 4.0000000000000003e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 2.9472200135876367e-06,
+        "after1_1_delvto": 0.0,
+        "after1_1_l": 4.0000000000000003e-07,
+        "after1_1_m": 1.0,
+        "after1_1_mulu0": 1.0,
+        "after1_1_nf": 1.0,
+        "after1_1_w": 2.9472200135876367e-06,
+        "after1_2_delvto": 0.0,
+        "after1_2_l": 4.0000000000000003e-07,
+        "after1_2_m": 1.0,
+        "after1_2_mulu0": 1.0,
+        "after1_2_nf": 1.0,
+        "after1_2_w": 2.9472200135876367e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 4.0000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 2.9472200135876367e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 4.0000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 2.9472200135876367e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 4.0000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 2.9472200135876367e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 4.0000000000000003e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 2.9472200135876367e-06,
+        "applied1_1_delvto": 0.0,
+        "applied1_1_l": 4.0000000000000003e-07,
+        "applied1_1_m": 1.0,
+        "applied1_1_mulu0": 1.0,
+        "applied1_1_nf": 1.0,
+        "applied1_1_w": 2.9472200135876367e-06,
+        "applied1_2_delvto": 0.0,
+        "applied1_2_l": 4.0000000000000003e-07,
+        "applied1_2_m": 1.0,
+        "applied1_2_mulu0": 1.0,
+        "applied1_2_nf": 1.0,
+        "applied1_2_w": 2.9472200135876367e-06
+      },
+      "analyses": [
+        {
+          "columns": 35,
+          "native_text_sha256": "4624adf3c00343b232230fd69ed0c4f14688cec388be40f07016c56ee734a573",
+          "original_analysis_index": 0,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {},
+            "vectors": [
+              "v(gate)",
+              "v(in)",
+              "v(out)",
+              "v(source)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Vn0d)",
+              "i(Vn0g)",
+              "i(Vn0s)",
+              "i(Vn0b)",
+              "i(Vn1d)",
+              "i(Vn1g)",
+              "i(Vn1s)",
+              "i(Vn1b)",
+              "i(Vn2d)",
+              "i(Vn2g)",
+              "i(Vn2s)",
+              "i(Vn2b)",
+              "@m.xn0.mapm045_vtg_core[gm]",
+              "@m.xn0.mapm045_vtg_core[gds]",
+              "@m.xn0.mapm045_vtg_core[gmbs]",
+              "@m.xn0.mapm045_vtg_core[vdsat]",
+              "@m.xn0.mapm045_vtg_core[vth]",
+              "@m.xn1.mapm045_vtg_core[gm]",
+              "@m.xn1.mapm045_vtg_core[gds]",
+              "@m.xn1.mapm045_vtg_core[gmbs]",
+              "@m.xn1.mapm045_vtg_core[vdsat]",
+              "@m.xn1.mapm045_vtg_core[vth]",
+              "@m.xn2.mapm045_vtg_core[gm]",
+              "@m.xn2.mapm045_vtg_core[gds]",
+              "@m.xn2.mapm045_vtg_core[gmbs]",
+              "@m.xn2.mapm045_vtg_core[vdsat]",
+              "@m.xn2.mapm045_vtg_core[vth]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 11,
+          "native_text_sha256": "b2d261a285f6f40e3073c96cc057b77b1104eb43dd02b85302a26cb831d24d73",
+          "original_analysis_index": 1,
+          "recipe": {
+            "kind": "ac",
+            "points_per_decade": 80,
+            "set_sources": {},
+            "start": 1000.0,
+            "stop": 100000000.0,
+            "vectors": [
+              "v(in)",
+              "v(gate)",
+              "v(out)",
+              "i(Vdd)",
+              "i(Vin)"
+            ]
+          },
+          "rows": 401
+        }
+      ],
+      "array_file": "R37-final.npz",
+      "array_sha256": "3aaa1414a2551d6cbe163322f48a2699c8d63bdc57e9804ed43d59cf3df8e596",
+      "circuit_file": "R37-final.cir",
+      "circuit_sha256": "7090efc470c998c399284b065fa92628bb87498ad694f1264f78db2612cc27e0",
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 2.9472200135876367e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 2.9472200135876367e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 2.9472200135876367e-06
+        }
+      ],
+      "metadata": {
+        "native_vectors": [
+          "@m.xn0.mapm045_vtg_core[gm]",
+          "@m.xn0.mapm045_vtg_core[gds]",
+          "@m.xn0.mapm045_vtg_core[gmbs]",
+          "@m.xn0.mapm045_vtg_core[vdsat]",
+          "@m.xn0.mapm045_vtg_core[vth]",
+          "@m.xn1.mapm045_vtg_core[gm]",
+          "@m.xn1.mapm045_vtg_core[gds]",
+          "@m.xn1.mapm045_vtg_core[gmbs]",
+          "@m.xn1.mapm045_vtg_core[vdsat]",
+          "@m.xn1.mapm045_vtg_core[vth]",
+          "@m.xn2.mapm045_vtg_core[gm]",
+          "@m.xn2.mapm045_vtg_core[gds]",
+          "@m.xn2.mapm045_vtg_core[gmbs]",
+          "@m.xn2.mapm045_vtg_core[vdsat]",
+          "@m.xn2.mapm045_vtg_core[vth]"
+        ],
+        "parameters": {
+          "amplitude": 0.01,
+          "cload": 1e-12,
+          "load": "resistor",
+          "nl": 0.4,
+          "nn": 3,
+          "nw": 2.947220013587637,
+          "rd": 13334.31065400406,
+          "rload": 100000.0,
+          "rs": 82.60180830529637,
+          "rsrc": 1000.0,
+          "vdd": 1.0,
+          "vin": 0.45
+        },
+        "resources": {
+          "drawn_mos_area_um2": 3.5366640163051644,
+          "fixed_external": {
+            "Cload_f": 1e-12,
+            "Rload_ohm": 100000.0,
+            "Rsrc_ohm": 1000.0
+          },
+          "internal_capacitance_f": 0,
+          "internal_resistance_sum_ohm": 13416.912462309358,
+          "internal_resistors_ohm": {
+            "Rd": 13334.31065400406,
+            "Rs": 82.60180830529637
+          },
+          "physical_units": 3,
+          "real_external_ports": [
+            "Vdd",
+            "Vin"
+          ],
+          "zero_valued_instrumentation": [
+            "Idist"
+          ]
+        },
+        "sensors": {
+          "xn0": [
+            "Vn0d",
+            "Vn0g",
+            "Vn0s",
+            "Vn0b"
+          ],
+          "xn1": [
+            "Vn1d",
+            "Vn1g",
+            "Vn1s",
+            "Vn1b"
+          ],
+          "xn2": [
+            "Vn2d",
+            "Vn2g",
+            "Vn2s",
+            "Vn2b"
+          ]
+        },
+        "terminals": {
+          "xn0": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn1": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn2": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ]
+        },
+        "vectors": [
+          "v(gate)",
+          "v(in)",
+          "v(out)",
+          "v(source)",
+          "v(vdd)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)"
+        ]
+      },
+      "model_hashes": {
+        "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+        "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+        "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+      },
+      "ngspice_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "original_realization_id": "fe80fa7707e535be00d5b644471df9efd4a555b59a92406344c0ddbbadc52764",
+      "original_request_id": "1b53245b723d0ccc6d5c77c2666f8b669acd3d6d3bf17ee5c83281b58e6ee0b1",
+      "original_started_utc": "2026-09-12T14:53:42.322726+00:00",
+      "profile_tier": "NOMINAL",
+      "source_realization_sha256": "7c3d9a1ae9c228bc639b9cfde570dc86be1244473e615962ca7ef41c3159afe3",
+      "source_record_sha256": "bfeaa3fda26d5f4b25246a6d065e8a71405dfb1bcf30be412746074a40ad4f6b",
+      "source_request_sha256": "496255fffcaa2434eaec81ed3c225aea40394a2a91bd75028e04baa3a76a88d8",
+      "temperature_c": 26.85
+    },
+    "R37-trial-000": {
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 4.0000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 2.8999999999999998e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 4.0000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 2.8999999999999998e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 4.0000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 2.8999999999999998e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 4.0000000000000003e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 2.8999999999999998e-06,
+        "after1_1_delvto": 0.0,
+        "after1_1_l": 4.0000000000000003e-07,
+        "after1_1_m": 1.0,
+        "after1_1_mulu0": 1.0,
+        "after1_1_nf": 1.0,
+        "after1_1_w": 2.8999999999999998e-06,
+        "after1_2_delvto": 0.0,
+        "after1_2_l": 4.0000000000000003e-07,
+        "after1_2_m": 1.0,
+        "after1_2_mulu0": 1.0,
+        "after1_2_nf": 1.0,
+        "after1_2_w": 2.8999999999999998e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 4.0000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 2.8999999999999998e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 4.0000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 2.8999999999999998e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 4.0000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 2.8999999999999998e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 4.0000000000000003e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 2.8999999999999998e-06,
+        "applied1_1_delvto": 0.0,
+        "applied1_1_l": 4.0000000000000003e-07,
+        "applied1_1_m": 1.0,
+        "applied1_1_mulu0": 1.0,
+        "applied1_1_nf": 1.0,
+        "applied1_1_w": 2.8999999999999998e-06,
+        "applied1_2_delvto": 0.0,
+        "applied1_2_l": 4.0000000000000003e-07,
+        "applied1_2_m": 1.0,
+        "applied1_2_mulu0": 1.0,
+        "applied1_2_nf": 1.0,
+        "applied1_2_w": 2.8999999999999998e-06
+      },
+      "analyses": [
+        {
+          "columns": 35,
+          "native_text_sha256": "0c78c4e83dee3f9f7527e0b9f7665fd5f1b4f0154249eceaf886301f1b2dfd34",
+          "original_analysis_index": 0,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {},
+            "vectors": [
+              "v(gate)",
+              "v(in)",
+              "v(out)",
+              "v(source)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Vn0d)",
+              "i(Vn0g)",
+              "i(Vn0s)",
+              "i(Vn0b)",
+              "i(Vn1d)",
+              "i(Vn1g)",
+              "i(Vn1s)",
+              "i(Vn1b)",
+              "i(Vn2d)",
+              "i(Vn2g)",
+              "i(Vn2s)",
+              "i(Vn2b)",
+              "@m.xn0.mapm045_vtg_core[gm]",
+              "@m.xn0.mapm045_vtg_core[gds]",
+              "@m.xn0.mapm045_vtg_core[gmbs]",
+              "@m.xn0.mapm045_vtg_core[vdsat]",
+              "@m.xn0.mapm045_vtg_core[vth]",
+              "@m.xn1.mapm045_vtg_core[gm]",
+              "@m.xn1.mapm045_vtg_core[gds]",
+              "@m.xn1.mapm045_vtg_core[gmbs]",
+              "@m.xn1.mapm045_vtg_core[vdsat]",
+              "@m.xn1.mapm045_vtg_core[vth]",
+              "@m.xn2.mapm045_vtg_core[gm]",
+              "@m.xn2.mapm045_vtg_core[gds]",
+              "@m.xn2.mapm045_vtg_core[gmbs]",
+              "@m.xn2.mapm045_vtg_core[vdsat]",
+              "@m.xn2.mapm045_vtg_core[vth]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 11,
+          "native_text_sha256": "141878e98b72adb2b955856066313302b4c779a35bd5e2151b68eee186a87737",
+          "original_analysis_index": 1,
+          "recipe": {
+            "kind": "ac",
+            "points_per_decade": 80,
+            "set_sources": {},
+            "start": 1000.0,
+            "stop": 100000000.0,
+            "vectors": [
+              "v(in)",
+              "v(gate)",
+              "v(out)",
+              "i(Vdd)",
+              "i(Vin)"
+            ]
+          },
+          "rows": 401
+        }
+      ],
+      "array_file": "R37-trial-000.npz",
+      "array_sha256": "cf3c590f305b959f266d1ecf1a704e695718e787d09f9362f5e6fc163cc83c30",
+      "circuit_file": "R37-trial-000.cir",
+      "circuit_sha256": "d15a991dca559ac60d29a586c12a942b96db15d96434b5d6716382d4350ac035",
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 2.8999999999999998e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 2.8999999999999998e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 2.8999999999999998e-06
+        }
+      ],
+      "metadata": {
+        "native_vectors": [
+          "@m.xn0.mapm045_vtg_core[gm]",
+          "@m.xn0.mapm045_vtg_core[gds]",
+          "@m.xn0.mapm045_vtg_core[gmbs]",
+          "@m.xn0.mapm045_vtg_core[vdsat]",
+          "@m.xn0.mapm045_vtg_core[vth]",
+          "@m.xn1.mapm045_vtg_core[gm]",
+          "@m.xn1.mapm045_vtg_core[gds]",
+          "@m.xn1.mapm045_vtg_core[gmbs]",
+          "@m.xn1.mapm045_vtg_core[vdsat]",
+          "@m.xn1.mapm045_vtg_core[vth]",
+          "@m.xn2.mapm045_vtg_core[gm]",
+          "@m.xn2.mapm045_vtg_core[gds]",
+          "@m.xn2.mapm045_vtg_core[gmbs]",
+          "@m.xn2.mapm045_vtg_core[vdsat]",
+          "@m.xn2.mapm045_vtg_core[vth]"
+        ],
+        "parameters": {
+          "amplitude": 0.01,
+          "cload": 1e-12,
+          "load": "resistor",
+          "nl": 0.4,
+          "nn": 3,
+          "nw": 2.9,
+          "rd": 13333.0,
+          "rload": 100000.0,
+          "rs": 70.0,
+          "rsrc": 1000.0,
+          "vdd": 1.0,
+          "vin": 0.45
+        },
+        "resources": {
+          "drawn_mos_area_um2": 3.4799999999999995,
+          "fixed_external": {
+            "Cload_f": 1e-12,
+            "Rload_ohm": 100000.0,
+            "Rsrc_ohm": 1000.0
+          },
+          "internal_capacitance_f": 0,
+          "internal_resistance_sum_ohm": 13403.0,
+          "internal_resistors_ohm": {
+            "Rd": 13333.0,
+            "Rs": 70.0
+          },
+          "physical_units": 3,
+          "real_external_ports": [
+            "Vdd",
+            "Vin"
+          ],
+          "zero_valued_instrumentation": [
+            "Idist"
+          ]
+        },
+        "sensors": {
+          "xn0": [
+            "Vn0d",
+            "Vn0g",
+            "Vn0s",
+            "Vn0b"
+          ],
+          "xn1": [
+            "Vn1d",
+            "Vn1g",
+            "Vn1s",
+            "Vn1b"
+          ],
+          "xn2": [
+            "Vn2d",
+            "Vn2g",
+            "Vn2s",
+            "Vn2b"
+          ]
+        },
+        "terminals": {
+          "xn0": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn1": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn2": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ]
+        },
+        "vectors": [
+          "v(gate)",
+          "v(in)",
+          "v(out)",
+          "v(source)",
+          "v(vdd)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)"
+        ]
+      },
+      "model_hashes": {
+        "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+        "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+        "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+      },
+      "ngspice_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "original_realization_id": "ce6aee5a1d6feca20b00ff8e0f8d1fca5d2320ffb9ab1f631ead1075fd044037",
+      "original_request_id": "5aa714f738bc2e24a179b97085dcdd4566c0a891d9ea703af7334796c8ebb6ee",
+      "original_started_utc": "2026-09-12T14:53:40.820558+00:00",
+      "profile_tier": "NOMINAL",
+      "source_realization_sha256": "c6a89b9564672c9f6003278620ac94a6ec635a750bf50d82e3ee4d2cd74de99f",
+      "source_record_sha256": "7d6247229392f1fe298e543e17791275add6bb1027ed5490e303ccea7bd40ed5",
+      "source_request_sha256": "e931b869a1c14aa283da2c65151c2bb0eae83a3df8a84b0ef8a2dd2e3e4aa629",
+      "temperature_c": 26.85
+    },
+    "R75-final": {
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 4.0000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 3.867488768472841e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 4.0000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 3.867488768472841e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 4.0000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 3.867488768472841e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 4.0000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 3.867488768472841e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 4.0000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 3.867488768472841e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 3.867488768472841e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 4.0000000000000003e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 3.867488768472841e-06,
+        "after1_1_delvto": 0.0,
+        "after1_1_l": 4.0000000000000003e-07,
+        "after1_1_m": 1.0,
+        "after1_1_mulu0": 1.0,
+        "after1_1_nf": 1.0,
+        "after1_1_w": 3.867488768472841e-06,
+        "after1_2_delvto": 0.0,
+        "after1_2_l": 4.0000000000000003e-07,
+        "after1_2_m": 1.0,
+        "after1_2_mulu0": 1.0,
+        "after1_2_nf": 1.0,
+        "after1_2_w": 3.867488768472841e-06,
+        "after1_3_delvto": 0.0,
+        "after1_3_l": 4.0000000000000003e-07,
+        "after1_3_m": 1.0,
+        "after1_3_mulu0": 1.0,
+        "after1_3_nf": 1.0,
+        "after1_3_w": 3.867488768472841e-06,
+        "after1_4_delvto": 0.0,
+        "after1_4_l": 4.0000000000000003e-07,
+        "after1_4_m": 1.0,
+        "after1_4_mulu0": 1.0,
+        "after1_4_nf": 1.0,
+        "after1_4_w": 3.867488768472841e-06,
+        "after1_5_delvto": 0.0,
+        "after1_5_l": 4.0000000000000003e-07,
+        "after1_5_m": 1.0,
+        "after1_5_mulu0": 1.0,
+        "after1_5_nf": 1.0,
+        "after1_5_w": 3.867488768472841e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 4.0000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 3.867488768472841e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 4.0000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 3.867488768472841e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 4.0000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 3.867488768472841e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 4.0000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 3.867488768472841e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 4.0000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 3.867488768472841e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 3.867488768472841e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 4.0000000000000003e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 3.867488768472841e-06,
+        "applied1_1_delvto": 0.0,
+        "applied1_1_l": 4.0000000000000003e-07,
+        "applied1_1_m": 1.0,
+        "applied1_1_mulu0": 1.0,
+        "applied1_1_nf": 1.0,
+        "applied1_1_w": 3.867488768472841e-06,
+        "applied1_2_delvto": 0.0,
+        "applied1_2_l": 4.0000000000000003e-07,
+        "applied1_2_m": 1.0,
+        "applied1_2_mulu0": 1.0,
+        "applied1_2_nf": 1.0,
+        "applied1_2_w": 3.867488768472841e-06,
+        "applied1_3_delvto": 0.0,
+        "applied1_3_l": 4.0000000000000003e-07,
+        "applied1_3_m": 1.0,
+        "applied1_3_mulu0": 1.0,
+        "applied1_3_nf": 1.0,
+        "applied1_3_w": 3.867488768472841e-06,
+        "applied1_4_delvto": 0.0,
+        "applied1_4_l": 4.0000000000000003e-07,
+        "applied1_4_m": 1.0,
+        "applied1_4_mulu0": 1.0,
+        "applied1_4_nf": 1.0,
+        "applied1_4_w": 3.867488768472841e-06,
+        "applied1_5_delvto": 0.0,
+        "applied1_5_l": 4.0000000000000003e-07,
+        "applied1_5_m": 1.0,
+        "applied1_5_mulu0": 1.0,
+        "applied1_5_nf": 1.0,
+        "applied1_5_w": 3.867488768472841e-06
+      },
+      "analyses": [
+        {
+          "columns": 62,
+          "native_text_sha256": "1154f9543039f58f189150f14f2b8f5f05d421a2ca7ae27ace3dddc06e0ec5f9",
+          "original_analysis_index": 0,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {},
+            "vectors": [
+              "v(gate)",
+              "v(in)",
+              "v(out)",
+              "v(source)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Vn0d)",
+              "i(Vn0g)",
+              "i(Vn0s)",
+              "i(Vn0b)",
+              "i(Vn1d)",
+              "i(Vn1g)",
+              "i(Vn1s)",
+              "i(Vn1b)",
+              "i(Vn2d)",
+              "i(Vn2g)",
+              "i(Vn2s)",
+              "i(Vn2b)",
+              "i(Vn3d)",
+              "i(Vn3g)",
+              "i(Vn3s)",
+              "i(Vn3b)",
+              "i(Vn4d)",
+              "i(Vn4g)",
+              "i(Vn4s)",
+              "i(Vn4b)",
+              "i(Vn5d)",
+              "i(Vn5g)",
+              "i(Vn5s)",
+              "i(Vn5b)",
+              "@m.xn0.mapm045_vtg_core[gm]",
+              "@m.xn0.mapm045_vtg_core[gds]",
+              "@m.xn0.mapm045_vtg_core[gmbs]",
+              "@m.xn0.mapm045_vtg_core[vdsat]",
+              "@m.xn0.mapm045_vtg_core[vth]",
+              "@m.xn1.mapm045_vtg_core[gm]",
+              "@m.xn1.mapm045_vtg_core[gds]",
+              "@m.xn1.mapm045_vtg_core[gmbs]",
+              "@m.xn1.mapm045_vtg_core[vdsat]",
+              "@m.xn1.mapm045_vtg_core[vth]",
+              "@m.xn2.mapm045_vtg_core[gm]",
+              "@m.xn2.mapm045_vtg_core[gds]",
+              "@m.xn2.mapm045_vtg_core[gmbs]",
+              "@m.xn2.mapm045_vtg_core[vdsat]",
+              "@m.xn2.mapm045_vtg_core[vth]",
+              "@m.xn3.mapm045_vtg_core[gm]",
+              "@m.xn3.mapm045_vtg_core[gds]",
+              "@m.xn3.mapm045_vtg_core[gmbs]",
+              "@m.xn3.mapm045_vtg_core[vdsat]",
+              "@m.xn3.mapm045_vtg_core[vth]",
+              "@m.xn4.mapm045_vtg_core[gm]",
+              "@m.xn4.mapm045_vtg_core[gds]",
+              "@m.xn4.mapm045_vtg_core[gmbs]",
+              "@m.xn4.mapm045_vtg_core[vdsat]",
+              "@m.xn4.mapm045_vtg_core[vth]",
+              "@m.xn5.mapm045_vtg_core[gm]",
+              "@m.xn5.mapm045_vtg_core[gds]",
+              "@m.xn5.mapm045_vtg_core[gmbs]",
+              "@m.xn5.mapm045_vtg_core[vdsat]",
+              "@m.xn5.mapm045_vtg_core[vth]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 11,
+          "native_text_sha256": "8e295327fd5d152c64b1bf631969efd0736cdbda202b6ad9790a9fb46fc89333",
+          "original_analysis_index": 1,
+          "recipe": {
+            "kind": "ac",
+            "points_per_decade": 80,
+            "set_sources": {},
+            "start": 1000.0,
+            "stop": 100000000.0,
+            "vectors": [
+              "v(in)",
+              "v(gate)",
+              "v(out)",
+              "i(Vdd)",
+              "i(Vin)"
+            ]
+          },
+          "rows": 401
+        }
+      ],
+      "array_file": "R75-final.npz",
+      "array_sha256": "78e20485ef47ae33524fa78be00e460f645ebbdfb9a1f8f31ed19c51b576bf1d",
+      "circuit_file": "R75-final.cir",
+      "circuit_sha256": "eb4b0493a3930f23d012d4d497da11697b74c7a7b01ccbf6fdcf737fc7c0b647",
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/3",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/4",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn5"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/5",
+          "w_m": 3.867488768472841e-06
+        }
+      ],
+      "metadata": {
+        "native_vectors": [
+          "@m.xn0.mapm045_vtg_core[gm]",
+          "@m.xn0.mapm045_vtg_core[gds]",
+          "@m.xn0.mapm045_vtg_core[gmbs]",
+          "@m.xn0.mapm045_vtg_core[vdsat]",
+          "@m.xn0.mapm045_vtg_core[vth]",
+          "@m.xn1.mapm045_vtg_core[gm]",
+          "@m.xn1.mapm045_vtg_core[gds]",
+          "@m.xn1.mapm045_vtg_core[gmbs]",
+          "@m.xn1.mapm045_vtg_core[vdsat]",
+          "@m.xn1.mapm045_vtg_core[vth]",
+          "@m.xn2.mapm045_vtg_core[gm]",
+          "@m.xn2.mapm045_vtg_core[gds]",
+          "@m.xn2.mapm045_vtg_core[gmbs]",
+          "@m.xn2.mapm045_vtg_core[vdsat]",
+          "@m.xn2.mapm045_vtg_core[vth]",
+          "@m.xn3.mapm045_vtg_core[gm]",
+          "@m.xn3.mapm045_vtg_core[gds]",
+          "@m.xn3.mapm045_vtg_core[gmbs]",
+          "@m.xn3.mapm045_vtg_core[vdsat]",
+          "@m.xn3.mapm045_vtg_core[vth]",
+          "@m.xn4.mapm045_vtg_core[gm]",
+          "@m.xn4.mapm045_vtg_core[gds]",
+          "@m.xn4.mapm045_vtg_core[gmbs]",
+          "@m.xn4.mapm045_vtg_core[vdsat]",
+          "@m.xn4.mapm045_vtg_core[vth]",
+          "@m.xn5.mapm045_vtg_core[gm]",
+          "@m.xn5.mapm045_vtg_core[gds]",
+          "@m.xn5.mapm045_vtg_core[gmbs]",
+          "@m.xn5.mapm045_vtg_core[vdsat]",
+          "@m.xn5.mapm045_vtg_core[vth]"
+        ],
+        "parameters": {
+          "amplitude": 0.01,
+          "cload": 1e-12,
+          "load": "resistor",
+          "nl": 0.4,
+          "nn": 6,
+          "nw": 3.8674887684728407,
+          "rd": 6667.191718846597,
+          "rload": 100000.0,
+          "rs": 171.81801356494375,
+          "rsrc": 1000.0,
+          "vdd": 1.0,
+          "vin": 0.45
+        },
+        "resources": {
+          "drawn_mos_area_um2": 9.281973044334817,
+          "fixed_external": {
+            "Cload_f": 1e-12,
+            "Rload_ohm": 100000.0,
+            "Rsrc_ohm": 1000.0
+          },
+          "internal_capacitance_f": 0,
+          "internal_resistance_sum_ohm": 6839.00973241154,
+          "internal_resistors_ohm": {
+            "Rd": 6667.191718846597,
+            "Rs": 171.81801356494375
+          },
+          "physical_units": 6,
+          "real_external_ports": [
+            "Vdd",
+            "Vin"
+          ],
+          "zero_valued_instrumentation": [
+            "Idist"
+          ]
+        },
+        "sensors": {
+          "xn0": [
+            "Vn0d",
+            "Vn0g",
+            "Vn0s",
+            "Vn0b"
+          ],
+          "xn1": [
+            "Vn1d",
+            "Vn1g",
+            "Vn1s",
+            "Vn1b"
+          ],
+          "xn2": [
+            "Vn2d",
+            "Vn2g",
+            "Vn2s",
+            "Vn2b"
+          ],
+          "xn3": [
+            "Vn3d",
+            "Vn3g",
+            "Vn3s",
+            "Vn3b"
+          ],
+          "xn4": [
+            "Vn4d",
+            "Vn4g",
+            "Vn4s",
+            "Vn4b"
+          ],
+          "xn5": [
+            "Vn5d",
+            "Vn5g",
+            "Vn5s",
+            "Vn5b"
+          ]
+        },
+        "terminals": {
+          "xn0": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn1": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn2": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn3": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn4": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn5": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ]
+        },
+        "vectors": [
+          "v(gate)",
+          "v(in)",
+          "v(out)",
+          "v(source)",
+          "v(vdd)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vn3d)",
+          "i(Vn3g)",
+          "i(Vn3s)",
+          "i(Vn3b)",
+          "i(Vn4d)",
+          "i(Vn4g)",
+          "i(Vn4s)",
+          "i(Vn4b)",
+          "i(Vn5d)",
+          "i(Vn5g)",
+          "i(Vn5s)",
+          "i(Vn5b)"
+        ]
+      },
+      "model_hashes": {
+        "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+        "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+        "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+      },
+      "ngspice_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "original_realization_id": "e8c01078f318801fe89e4e9edf442bc5d21718453097b461d0f5314b7adf7960",
+      "original_request_id": "5695eae597f5ef6676c98943beae81d842042b340e44fa3e1ef4946db2dcd61b",
+      "original_started_utc": "2026-09-12T15:14:16.259852+00:00",
+      "profile_tier": "NOMINAL",
+      "source_realization_sha256": "f2049bc0d5578c5e6a8b6f0e83330a2f474d9f9590b6fbe9076083c2510be87d",
+      "source_record_sha256": "4c02d90f4ba06b87f4e33609fa030fbbab2db6350dc88e8f09f597978f7872f4",
+      "source_request_sha256": "7203a0a913e4a78a189933fc7c0437d4a8bf5f18f5049f8b131b2754ffb50411",
+      "temperature_c": 26.85
+    },
+    "R75-trial-000": {
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 4.0000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 3.9e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 4.0000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 3.9e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 4.0000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 3.9e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 4.0000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 3.9e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 4.0000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 3.9e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 3.9e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 4.0000000000000003e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 3.9e-06,
+        "after1_1_delvto": 0.0,
+        "after1_1_l": 4.0000000000000003e-07,
+        "after1_1_m": 1.0,
+        "after1_1_mulu0": 1.0,
+        "after1_1_nf": 1.0,
+        "after1_1_w": 3.9e-06,
+        "after1_2_delvto": 0.0,
+        "after1_2_l": 4.0000000000000003e-07,
+        "after1_2_m": 1.0,
+        "after1_2_mulu0": 1.0,
+        "after1_2_nf": 1.0,
+        "after1_2_w": 3.9e-06,
+        "after1_3_delvto": 0.0,
+        "after1_3_l": 4.0000000000000003e-07,
+        "after1_3_m": 1.0,
+        "after1_3_mulu0": 1.0,
+        "after1_3_nf": 1.0,
+        "after1_3_w": 3.9e-06,
+        "after1_4_delvto": 0.0,
+        "after1_4_l": 4.0000000000000003e-07,
+        "after1_4_m": 1.0,
+        "after1_4_mulu0": 1.0,
+        "after1_4_nf": 1.0,
+        "after1_4_w": 3.9e-06,
+        "after1_5_delvto": 0.0,
+        "after1_5_l": 4.0000000000000003e-07,
+        "after1_5_m": 1.0,
+        "after1_5_mulu0": 1.0,
+        "after1_5_nf": 1.0,
+        "after1_5_w": 3.9e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 4.0000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 3.9e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 4.0000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 3.9e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 4.0000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 3.9e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 4.0000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 3.9e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 4.0000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 3.9e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 3.9e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 4.0000000000000003e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 3.9e-06,
+        "applied1_1_delvto": 0.0,
+        "applied1_1_l": 4.0000000000000003e-07,
+        "applied1_1_m": 1.0,
+        "applied1_1_mulu0": 1.0,
+        "applied1_1_nf": 1.0,
+        "applied1_1_w": 3.9e-06,
+        "applied1_2_delvto": 0.0,
+        "applied1_2_l": 4.0000000000000003e-07,
+        "applied1_2_m": 1.0,
+        "applied1_2_mulu0": 1.0,
+        "applied1_2_nf": 1.0,
+        "applied1_2_w": 3.9e-06,
+        "applied1_3_delvto": 0.0,
+        "applied1_3_l": 4.0000000000000003e-07,
+        "applied1_3_m": 1.0,
+        "applied1_3_mulu0": 1.0,
+        "applied1_3_nf": 1.0,
+        "applied1_3_w": 3.9e-06,
+        "applied1_4_delvto": 0.0,
+        "applied1_4_l": 4.0000000000000003e-07,
+        "applied1_4_m": 1.0,
+        "applied1_4_mulu0": 1.0,
+        "applied1_4_nf": 1.0,
+        "applied1_4_w": 3.9e-06,
+        "applied1_5_delvto": 0.0,
+        "applied1_5_l": 4.0000000000000003e-07,
+        "applied1_5_m": 1.0,
+        "applied1_5_mulu0": 1.0,
+        "applied1_5_nf": 1.0,
+        "applied1_5_w": 3.9e-06
+      },
+      "analyses": [
+        {
+          "columns": 62,
+          "native_text_sha256": "894de834f1e1c2e59dff0e90c42b2d02407d678ba73ed4e129512ae6f57550ed",
+          "original_analysis_index": 0,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {},
+            "vectors": [
+              "v(gate)",
+              "v(in)",
+              "v(out)",
+              "v(source)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Vn0d)",
+              "i(Vn0g)",
+              "i(Vn0s)",
+              "i(Vn0b)",
+              "i(Vn1d)",
+              "i(Vn1g)",
+              "i(Vn1s)",
+              "i(Vn1b)",
+              "i(Vn2d)",
+              "i(Vn2g)",
+              "i(Vn2s)",
+              "i(Vn2b)",
+              "i(Vn3d)",
+              "i(Vn3g)",
+              "i(Vn3s)",
+              "i(Vn3b)",
+              "i(Vn4d)",
+              "i(Vn4g)",
+              "i(Vn4s)",
+              "i(Vn4b)",
+              "i(Vn5d)",
+              "i(Vn5g)",
+              "i(Vn5s)",
+              "i(Vn5b)",
+              "@m.xn0.mapm045_vtg_core[gm]",
+              "@m.xn0.mapm045_vtg_core[gds]",
+              "@m.xn0.mapm045_vtg_core[gmbs]",
+              "@m.xn0.mapm045_vtg_core[vdsat]",
+              "@m.xn0.mapm045_vtg_core[vth]",
+              "@m.xn1.mapm045_vtg_core[gm]",
+              "@m.xn1.mapm045_vtg_core[gds]",
+              "@m.xn1.mapm045_vtg_core[gmbs]",
+              "@m.xn1.mapm045_vtg_core[vdsat]",
+              "@m.xn1.mapm045_vtg_core[vth]",
+              "@m.xn2.mapm045_vtg_core[gm]",
+              "@m.xn2.mapm045_vtg_core[gds]",
+              "@m.xn2.mapm045_vtg_core[gmbs]",
+              "@m.xn2.mapm045_vtg_core[vdsat]",
+              "@m.xn2.mapm045_vtg_core[vth]",
+              "@m.xn3.mapm045_vtg_core[gm]",
+              "@m.xn3.mapm045_vtg_core[gds]",
+              "@m.xn3.mapm045_vtg_core[gmbs]",
+              "@m.xn3.mapm045_vtg_core[vdsat]",
+              "@m.xn3.mapm045_vtg_core[vth]",
+              "@m.xn4.mapm045_vtg_core[gm]",
+              "@m.xn4.mapm045_vtg_core[gds]",
+              "@m.xn4.mapm045_vtg_core[gmbs]",
+              "@m.xn4.mapm045_vtg_core[vdsat]",
+              "@m.xn4.mapm045_vtg_core[vth]",
+              "@m.xn5.mapm045_vtg_core[gm]",
+              "@m.xn5.mapm045_vtg_core[gds]",
+              "@m.xn5.mapm045_vtg_core[gmbs]",
+              "@m.xn5.mapm045_vtg_core[vdsat]",
+              "@m.xn5.mapm045_vtg_core[vth]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 11,
+          "native_text_sha256": "e61558b54e775d78fce462f0d2ce57908bf3cbb52d55b131af55be77b8a8648e",
+          "original_analysis_index": 1,
+          "recipe": {
+            "kind": "ac",
+            "points_per_decade": 80,
+            "set_sources": {},
+            "start": 1000.0,
+            "stop": 100000000.0,
+            "vectors": [
+              "v(in)",
+              "v(gate)",
+              "v(out)",
+              "i(Vdd)",
+              "i(Vin)"
+            ]
+          },
+          "rows": 401
+        }
+      ],
+      "array_file": "R75-trial-000.npz",
+      "array_sha256": "7368c9b43301b109c20d5c6917b44cee8c60e9cad1c7c34ee96e238c5e77eb14",
+      "circuit_file": "R75-trial-000.cir",
+      "circuit_sha256": "e63d2d84704026b4dae05fd190500a8fc09b878a4d0c1870a5116a212dd5a59e",
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.9e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.9e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.9e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/3",
+          "w_m": 3.9e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/4",
+          "w_m": 3.9e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn5"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/5",
+          "w_m": 3.9e-06
+        }
+      ],
+      "metadata": {
+        "native_vectors": [
+          "@m.xn0.mapm045_vtg_core[gm]",
+          "@m.xn0.mapm045_vtg_core[gds]",
+          "@m.xn0.mapm045_vtg_core[gmbs]",
+          "@m.xn0.mapm045_vtg_core[vdsat]",
+          "@m.xn0.mapm045_vtg_core[vth]",
+          "@m.xn1.mapm045_vtg_core[gm]",
+          "@m.xn1.mapm045_vtg_core[gds]",
+          "@m.xn1.mapm045_vtg_core[gmbs]",
+          "@m.xn1.mapm045_vtg_core[vdsat]",
+          "@m.xn1.mapm045_vtg_core[vth]",
+          "@m.xn2.mapm045_vtg_core[gm]",
+          "@m.xn2.mapm045_vtg_core[gds]",
+          "@m.xn2.mapm045_vtg_core[gmbs]",
+          "@m.xn2.mapm045_vtg_core[vdsat]",
+          "@m.xn2.mapm045_vtg_core[vth]",
+          "@m.xn3.mapm045_vtg_core[gm]",
+          "@m.xn3.mapm045_vtg_core[gds]",
+          "@m.xn3.mapm045_vtg_core[gmbs]",
+          "@m.xn3.mapm045_vtg_core[vdsat]",
+          "@m.xn3.mapm045_vtg_core[vth]",
+          "@m.xn4.mapm045_vtg_core[gm]",
+          "@m.xn4.mapm045_vtg_core[gds]",
+          "@m.xn4.mapm045_vtg_core[gmbs]",
+          "@m.xn4.mapm045_vtg_core[vdsat]",
+          "@m.xn4.mapm045_vtg_core[vth]",
+          "@m.xn5.mapm045_vtg_core[gm]",
+          "@m.xn5.mapm045_vtg_core[gds]",
+          "@m.xn5.mapm045_vtg_core[gmbs]",
+          "@m.xn5.mapm045_vtg_core[vdsat]",
+          "@m.xn5.mapm045_vtg_core[vth]"
+        ],
+        "parameters": {
+          "amplitude": 0.01,
+          "cload": 1e-12,
+          "load": "resistor",
+          "nl": 0.4,
+          "nn": 6,
+          "nw": 3.9,
+          "rd": 6667.0,
+          "rload": 100000.0,
+          "rs": 120.0,
+          "rsrc": 1000.0,
+          "vdd": 1.0,
+          "vin": 0.45
+        },
+        "resources": {
+          "drawn_mos_area_um2": 9.36,
+          "fixed_external": {
+            "Cload_f": 1e-12,
+            "Rload_ohm": 100000.0,
+            "Rsrc_ohm": 1000.0
+          },
+          "internal_capacitance_f": 0,
+          "internal_resistance_sum_ohm": 6787.0,
+          "internal_resistors_ohm": {
+            "Rd": 6667.0,
+            "Rs": 120.0
+          },
+          "physical_units": 6,
+          "real_external_ports": [
+            "Vdd",
+            "Vin"
+          ],
+          "zero_valued_instrumentation": [
+            "Idist"
+          ]
+        },
+        "sensors": {
+          "xn0": [
+            "Vn0d",
+            "Vn0g",
+            "Vn0s",
+            "Vn0b"
+          ],
+          "xn1": [
+            "Vn1d",
+            "Vn1g",
+            "Vn1s",
+            "Vn1b"
+          ],
+          "xn2": [
+            "Vn2d",
+            "Vn2g",
+            "Vn2s",
+            "Vn2b"
+          ],
+          "xn3": [
+            "Vn3d",
+            "Vn3g",
+            "Vn3s",
+            "Vn3b"
+          ],
+          "xn4": [
+            "Vn4d",
+            "Vn4g",
+            "Vn4s",
+            "Vn4b"
+          ],
+          "xn5": [
+            "Vn5d",
+            "Vn5g",
+            "Vn5s",
+            "Vn5b"
+          ]
+        },
+        "terminals": {
+          "xn0": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn1": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn2": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn3": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn4": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ],
+          "xn5": [
+            "out",
+            "gate",
+            "source",
+            "0"
+          ]
+        },
+        "vectors": [
+          "v(gate)",
+          "v(in)",
+          "v(out)",
+          "v(source)",
+          "v(vdd)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vn3d)",
+          "i(Vn3g)",
+          "i(Vn3s)",
+          "i(Vn3b)",
+          "i(Vn4d)",
+          "i(Vn4g)",
+          "i(Vn4s)",
+          "i(Vn4b)",
+          "i(Vn5d)",
+          "i(Vn5g)",
+          "i(Vn5s)",
+          "i(Vn5b)"
+        ]
+      },
+      "model_hashes": {
+        "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+        "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+        "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+      },
+      "ngspice_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "original_realization_id": "850355d68c53a5e93e7c7d923054cc8b6899f34e00c571ebf7c0ba161522e4d3",
+      "original_request_id": "483d520336fcb5d3cca0df2cdc119df317774b894b0013de8865cf6872127089",
+      "original_started_utc": "2026-09-12T15:14:13.915708+00:00",
+      "profile_tier": "NOMINAL",
+      "source_realization_sha256": "2417254a7cb5ce5fa40ad67e647407bfa67ff1a38a6343f1a128c6b2f2d2c429",
+      "source_record_sha256": "b8b4a75a96715d549f7eb8ab8e7cadb6c8cf59da8bddc2070deebd59ef6ca63e",
+      "source_request_sha256": "8474645fd1ddfe81578b976c1cc372e3f86f367aef5f904e43b75ddfc69622cf",
+      "temperature_c": 26.85
+    },
+    "feasibility-L0.12": {
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 1.2000000000000002e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 2e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 1.2000000000000002e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 2e-06,
+        "after2_0_delvto": 0.0,
+        "after2_0_l": 1.2000000000000002e-07,
+        "after2_0_m": 1.0,
+        "after2_0_mulu0": 1.0,
+        "after2_0_nf": 1.0,
+        "after2_0_w": 2e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 1.2000000000000002e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 2e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 1.2000000000000002e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 2e-06,
+        "applied2_0_delvto": 0.0,
+        "applied2_0_l": 1.2000000000000002e-07,
+        "applied2_0_m": 1.0,
+        "applied2_0_mulu0": 1.0,
+        "applied2_0_nf": 1.0,
+        "applied2_0_w": 2e-06
+      },
+      "analyses": [
+        {
+          "columns": 6,
+          "native_text_sha256": "84c79cfbfccc552041fdf2d1c210997716b80285f60ce061516f8f54ad678374",
+          "original_analysis_index": 0,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.45
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 6,
+          "native_text_sha256": "1d6936e8f0b7af552ac5f381d0b61117f0ba54971676f801d8bc6abd819f0d97",
+          "original_analysis_index": 1,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.5
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 6,
+          "native_text_sha256": "290872b3b76c3907d52fd40ec9c037b8405ef9342cdb7193f66c823731b670f0",
+          "original_analysis_index": 2,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.55
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "feasibility-L0.12.npz",
+      "array_sha256": "590ce716ad0cd582f8bd858f3b5b9f6467b5ed165abc3a272af167b3d5e7de07",
+      "circuit_file": "feasibility-L0.12.cir",
+      "circuit_sha256": "46e0e9332806a895756f120ab3a95c001609f6bc935756ef6f73f71a4f729187",
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 1.2e-07,
+          "path": [
+            "xn"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/feasibility/n",
+          "w_m": 2e-06
+        }
+      ],
+      "metadata": {},
+      "model_hashes": {
+        "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+        "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+        "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+      },
+      "ngspice_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "original_realization_id": "094fbf0f8479d4930991c613f6d28f694976c0976fbb8b59541a23b638bf770d",
+      "original_request_id": "42d7727b58afbcafee4ace9c6400369197fb6fbb76df1e39f9c950f49b91cefa",
+      "original_started_utc": "2026-09-12T14:49:19.966590+00:00",
+      "profile_tier": "NOMINAL",
+      "source_realization_sha256": "ebf9faeca765f8b5c79fa051478dd189c3a7aa727e9f1562480a6c23e02532a8",
+      "source_record_sha256": "9fd6fe2cca5227cf51c8aad40cf76964ab92bdc88f995bd680946ea08feb7b38",
+      "source_request_sha256": "b106c601a187303fc00d3626a49234a5055f97b0d3826641dffd151f0875caf1",
+      "temperature_c": 26.85
+    },
+    "feasibility-L0.24": {
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 2e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 2.4000000000000003e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 2e-06,
+        "after2_0_delvto": 0.0,
+        "after2_0_l": 2.4000000000000003e-07,
+        "after2_0_m": 1.0,
+        "after2_0_mulu0": 1.0,
+        "after2_0_nf": 1.0,
+        "after2_0_w": 2e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 2e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 2.4000000000000003e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 2e-06,
+        "applied2_0_delvto": 0.0,
+        "applied2_0_l": 2.4000000000000003e-07,
+        "applied2_0_m": 1.0,
+        "applied2_0_mulu0": 1.0,
+        "applied2_0_nf": 1.0,
+        "applied2_0_w": 2e-06
+      },
+      "analyses": [
+        {
+          "columns": 6,
+          "native_text_sha256": "6683109857fa988747cde36511d7c91399ae398cf50b2881d519751afa5b15f2",
+          "original_analysis_index": 0,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.45
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 6,
+          "native_text_sha256": "7a1068e791631da1c09dafe3180e48f94f80f98c2e8af0a65a2f63881bea2963",
+          "original_analysis_index": 1,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.5
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 6,
+          "native_text_sha256": "bfd7cf7f66cc5ae7384eab147190937b517ebec9196092d92b77f4a7e0258c23",
+          "original_analysis_index": 2,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.55
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "feasibility-L0.24.npz",
+      "array_sha256": "d250a52e8dab9aabca10f944bed58dd431b8f308373be49621b832891b974320",
+      "circuit_file": "feasibility-L0.24.cir",
+      "circuit_sha256": "c3190cd99a0f72e515e53d01fd0f0004ab83f4984b429e0172e0c81007b6187f",
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xn"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/feasibility/n",
+          "w_m": 2e-06
+        }
+      ],
+      "metadata": {},
+      "model_hashes": {
+        "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+        "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+        "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+      },
+      "ngspice_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "original_realization_id": "7fff7db5f5adbcfa552dd7bc25d98778b591ae8b863671a013bcd307c1ebf216",
+      "original_request_id": "de09a8ee7e928af8caa1891ea4d99eee6714ed13412c2978c5b3125ef3b46b92",
+      "original_started_utc": "2026-09-12T14:49:20.020716+00:00",
+      "profile_tier": "NOMINAL",
+      "source_realization_sha256": "5a71972d9f84d7885654ab1c2ceb0a379f177b35d85ef98e69c0f2226f62e00c",
+      "source_record_sha256": "178a061cc3dcff566e3764218c85b54411c216d50ea096d8f40bd0abc1aa2e00",
+      "source_request_sha256": "3f3f2c7602f1bac4e83ff4e94007e139046d9d5b9388a4be2c998ff6d747b3b9",
+      "temperature_c": 26.85
+    },
+    "feasibility-L0.32": {
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 3.2e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 2e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 3.2e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 2e-06,
+        "after2_0_delvto": 0.0,
+        "after2_0_l": 3.2e-07,
+        "after2_0_m": 1.0,
+        "after2_0_mulu0": 1.0,
+        "after2_0_nf": 1.0,
+        "after2_0_w": 2e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 3.2e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 2e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 3.2e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 2e-06,
+        "applied2_0_delvto": 0.0,
+        "applied2_0_l": 3.2e-07,
+        "applied2_0_m": 1.0,
+        "applied2_0_mulu0": 1.0,
+        "applied2_0_nf": 1.0,
+        "applied2_0_w": 2e-06
+      },
+      "analyses": [
+        {
+          "columns": 6,
+          "native_text_sha256": "aea35503b1576fec70f2dc6f78ffee8d1dd6898330a4d91c849e7424368830ba",
+          "original_analysis_index": 0,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.45
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 6,
+          "native_text_sha256": "c7a6665aca82c12e08a1a1737de6f738c59d8b98a6979382b1bd3d39f0d7a6d8",
+          "original_analysis_index": 1,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.5
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 6,
+          "native_text_sha256": "3245ce38d6250f92c4eeb5e5796a71ed16d44663700c861bcbd054958bff9f0f",
+          "original_analysis_index": 2,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.55
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "feasibility-L0.32.npz",
+      "array_sha256": "0acddf36b51d1a1a7115308038a90353d354c8248a443216fcbe1c0851b77dc0",
+      "circuit_file": "feasibility-L0.32.cir",
+      "circuit_sha256": "4d4b6f3bec99d4ab936e612a4c642cebf41074d1c94413c5ac840adf8409f664",
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 3.2e-07,
+          "path": [
+            "xn"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/feasibility/n",
+          "w_m": 2e-06
+        }
+      ],
+      "metadata": {},
+      "model_hashes": {
+        "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+        "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+        "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+      },
+      "ngspice_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "original_realization_id": "835b4ac987f7f248670f5fb199671224a70fe2453ad918387d0c9a111cb768f1",
+      "original_request_id": "dc78b597dd678199c20898cf562d78573031702d23c3ce67a66317b5026663eb",
+      "original_started_utc": "2026-09-12T14:49:20.053978+00:00",
+      "profile_tier": "NOMINAL",
+      "source_realization_sha256": "4a4c16861639155e42235e14b73bdbc9c5b9ed2a999bceb0da7726aaa1880955",
+      "source_record_sha256": "4ce2d3f5efd7597aba3f58a7871575e8e504dc5088a90f77600497ce8171778f",
+      "source_request_sha256": "14b90ed09585cefabf0b96ac85c2391ab800d0599cbfadf50d7d72077beb6ef0",
+      "temperature_c": 26.85
+    },
+    "feasibility-L0.40": {
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 4.0000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 2e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 4.0000000000000003e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 2e-06,
+        "after2_0_delvto": 0.0,
+        "after2_0_l": 4.0000000000000003e-07,
+        "after2_0_m": 1.0,
+        "after2_0_mulu0": 1.0,
+        "after2_0_nf": 1.0,
+        "after2_0_w": 2e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 4.0000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 2e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 4.0000000000000003e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 2e-06,
+        "applied2_0_delvto": 0.0,
+        "applied2_0_l": 4.0000000000000003e-07,
+        "applied2_0_m": 1.0,
+        "applied2_0_mulu0": 1.0,
+        "applied2_0_nf": 1.0,
+        "applied2_0_w": 2e-06
+      },
+      "analyses": [
+        {
+          "columns": 6,
+          "native_text_sha256": "d672f0b75781da0210ebf51bbd24b4920824b2fd862d3f4bad586e65800e7d0b",
+          "original_analysis_index": 0,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.45
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 6,
+          "native_text_sha256": "e086782bc03b9a543f51a3abe255b51dd9dbc776acdf25e3b4ec8ef863b7a1be",
+          "original_analysis_index": 1,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.5
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "columns": 6,
+          "native_text_sha256": "635d4cd10d6ef2ae4d3fd003de2b9f4fd59e6f571f2c2741e1d22aebe5d270ec",
+          "original_analysis_index": 2,
+          "recipe": {
+            "kind": "op",
+            "set_sources": {
+              "Vin": 0.55
+            },
+            "vectors": [
+              "v(gate)",
+              "v(out)",
+              "i(Vout)",
+              "@m.xn.mapm045_vtg_core[gm]",
+              "@m.xn.mapm045_vtg_core[gds]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "feasibility-L0.40.npz",
+      "array_sha256": "dfd6b283adc3de3c34bbda2d8b3c733664a1a27c4990d341b359bbdbcdc8137a",
+      "circuit_file": "feasibility-L0.40.cir",
+      "circuit_sha256": "39501c10177e0b9423b885ac71fc61eed21fb91f5e3747161c36eba8d8bd103e",
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/feasibility/n",
+          "w_m": 2e-06
+        }
+      ],
+      "metadata": {},
+      "model_hashes": {
+        "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+        "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+        "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+      },
+      "ngspice_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "original_realization_id": "93bc5d994cf8885cb6dbecca6ef3cc6ef7d73cc33936db89899e7fa8a2bedfae",
+      "original_request_id": "9debcde64fe6ccf8f6317780ad198822c3ee8a2e51baaa75ef079ebac59aa10d",
+      "original_started_utc": "2026-09-12T14:49:20.087656+00:00",
+      "profile_tier": "NOMINAL",
+      "source_realization_sha256": "9f2b948d50c0949d2202a717d9b749f4e2e62391c16c832eda1a6d3c8f81e5a6",
+      "source_record_sha256": "4caab8f7e7ae2fd5721dfcf85b723fef5153b8e15c4200c661a4e02caa3e207f",
+      "source_request_sha256": "f4ab80f3949d60054240702715bddf63b3576cb8575c3d33f967fa47c18c8c1d",
+      "temperature_c": 26.85
+    },
+    "mirror-source-transfer": {
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0028874092167826848,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0087485679660562,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 2e-06,
+        "after0_1_delvto": 0.0019133203337966572,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.003730611127825,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 2e-06,
+        "applied0_0_delvto": 0.0028874092167826848,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0087485679660562,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 2e-06,
+        "applied0_1_delvto": 0.0019133203337966572,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.003730611127825,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 2e-06
+      },
+      "analyses": [
+        {
+          "columns": 3,
+          "native_text_sha256": "db1c69b56d503daa6bd4d4d2e74d44b5005ab1e4e5c082cda0de104dd0a6c15c",
+          "original_analysis_index": 0,
+          "recipe": {
+            "kind": "dc",
+            "source": "Vout",
+            "start": 0.3,
+            "step": 0.01,
+            "stop": 0.8,
+            "vectors": [
+              "v(ref)",
+              "i(Vout)"
+            ]
+          },
+          "rows": 51
+        }
+      ],
+      "array_file": "mirror-source-transfer.npz",
+      "array_sha256": "7d72c74755c7f8f29277aa16065318ee16acbd66e0b62b968b524e8fb7fa93e8",
+      "circuit_file": "mirror-source-transfer.cir",
+      "circuit_sha256": "6cc4ce68c95af226b5966a82a0d6a850b7ed888e3be01caede56218de205f0ea",
+      "devices": [
+        {
+          "device_realization_id": "9e0077ce72b0d9a6f08c6a1e833f1eb20796375c616265fe31606d46859105e2",
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "latent_draw_id": "3db89fa4e9c284aada043308d7cad75ba4f2bd6474fa66bc9b8610a0425e734e",
+          "mapping_id": "28b645603c468ed336684d861a641e6b4624941e2536de13cfdf3347146f14c3",
+          "path": [
+            "xtop",
+            "xreference"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0028874092167826848,
+            0.008710520988677882
+          ],
+          "status": "RESOLVED",
+          "target": [
+            0.0028886293695227785,
+            0.0029019812379024513
+          ],
+          "uid": "mirror/reference",
+          "w_m": 2e-06,
+          "z": [
+            0.5371669688341777,
+            0.3230161511496031
+          ]
+        },
+        {
+          "device_realization_id": "4f7ecdc4b4e16071617719d8858af3684bd2f22482da630c36d3f1bd86d81664",
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "latent_draw_id": "80fd8e0737e66288b3e0ed0b45e2a996e07dba5f817121dca38341449d621d20",
+          "mapping_id": "28b645603c468ed336684d861a641e6b4624941e2536de13cfdf3347146f14c3",
+          "path": [
+            "xtop",
+            "xoutput"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0019133203337966575,
+            0.0037236696567278476
+          ],
+          "status": "RESOLVED",
+          "target": [
+            0.0019252833718853138,
+            7.723738308037034e-05
+          ],
+          "uid": "mirror/output",
+          "w_m": 2e-06,
+          "z": [
+            0.3580239971018974,
+            0.008597203138887885
+          ]
+        }
+      ],
+      "metadata": {},
+      "model_hashes": {
+        "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+        "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+        "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+      },
+      "ngspice_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "original_realization_id": "a89bdda5a8fb4acb717f880edf10cf9c6b980c36c3a5b7663c3be62ff2b98b60",
+      "original_request_id": "3f92c8df49dd2978f411fdb8302845e12785c070d959631558c56d6763e3a225",
+      "original_run_id": "f9ebe3d0e88e599e5fb896d7df8b542e214483694175b7236bc63ac26bbc7938",
+      "profile_tier": "SOURCE_TRANSFER_HYPOTHESIS",
+      "source_realization_sha256": "fa91a33f3365d66e620c62e22f4e4de6b64ff5cc7c17a23a20d02f5c51dca7b0",
+      "source_record_sha256": "64f21a5bb0fb55cbb134185c7319c0e40cd4ec222ee971f145572e5063df0d78",
+      "source_request_sha256": "d0464c8146c99dcdcfc441725621caf8039b95035287be9cfcc6d6d2dd1429a3",
+      "source_terms": "Unmodified APM example circuit: Apache-2.0, Analog Process Models contributors; see circuit SPDX header and THIRD_PARTY_NOTICES.md.",
+      "temperature_c": 26.85
+    }
+  },
+  "claim_role": "Retrospective design reconstruction from selected known preparation/development observations. No new confirmation.",
+  "schema": "learning.design-inputs.v1"
+}

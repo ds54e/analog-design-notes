@@ -1,0 +1,31 @@
+{
+  "files": {
+    "R37-final.npz": "3aaa1414a2551d6cbe163322f48a2699c8d63bdc57e9804ed43d59cf3df8e596",
+    "R37-trial-000.npz": "cf3c590f305b959f266d1ecf1a704e695718e787d09f9362f5e6fc163cc83c30",
+    "R75-final.npz": "78e20485ef47ae33524fa78be00e460f645ebbdfb9a1f8f31ed19c51b576bf1d",
+    "R75-trial-000.npz": "7368c9b43301b109c20d5c6917b44cee8c60e9cad1c7c34ee96e238c5e77eb14",
+    "design-inputs.json": "513b46b84ffab51c6eaa3f5788ade18c29fa888ccea0cb9fef1fd766f51fedc2",
+    "design-manifest.json": "37dbb9b5101fc388a9282d14ff34f580614d8034363e26032b016f6f1405f29f",
+    "feasibility-L0.12.npz": "590ce716ad0cd582f8bd858f3b5b9f6467b5ed165abc3a272af167b3d5e7de07",
+    "feasibility-L0.24.npz": "d250a52e8dab9aabca10f944bed58dd431b8f308373be49621b832891b974320",
+    "feasibility-L0.32.npz": "0acddf36b51d1a1a7115308038a90353d354c8248a443216fcbe1c0851b77dc0",
+    "feasibility-L0.40.npz": "dfd6b283adc3de3c34bbda2d8b3c733664a1a27c4990d341b359bbdbcdc8137a",
+    "headroom-A.npz": "996cd06c71281a3fa8449216fd7929b888f2be0959adcbfa5de55be98d995b2c",
+    "headroom-B.npz": "dc57d0a5ad4a7f8b4dbd9273292d235dfc569bdae9c99c9a4aa0a09d9e2513b1",
+    "headroom-C.npz": "85ee2310a012ec40afba3c36b506db6ddb443e8035ceda6021bdcb453265a236",
+    "headroom-inputs.json": "412e41f9547f925b6febaa0edcc4a79b049ea9b6e381aaccf204a09d71a044ec",
+    "interface-C-sink-0p05.npz": "284f5b89cbe580bac40809f25a90cc9d737bd7599ea07517dbcd777f5ebeeae2",
+    "interface-C-sink-0p25.npz": "d34ae4ae76176e22a9e35f3939d994360dcd89bdb6ddf10326b9f72fe2c69c3e",
+    "interface-C-sink-0p35.npz": "8754b9935e2c8460c9fb8b73a27c4e35de63ab9be0a05d5993b87f7930f41013",
+    "interface-C-source-0p25.npz": "4cc43d0d8ae6e7a719010d91a3add0d016ed8d9711d8d874a68fbb98a2a8db7e",
+    "interface-C-source-0p35.npz": "4070b999d4a8442e75f6f862ed2541b32b2d18c359828f39eae6957f1e9a5b22",
+    "interface-C-source-0p70.npz": "791027b84342b6adfe07d123b81a0a7bd5a52579e0b14ce736de4f5c8170366e",
+    "interface-D1-25p-refined.npz": "667ae21f2daeefdb9388d4580875e86860d3c8ec12c57b4dee03898ed25c9464",
+    "interface-D1-25p.npz": "8a6a634b3c353b2bcd6e36e5f53790a3563446155623d3133edda8e6ab2261a3",
+    "interface-D1-5p.npz": "4a73846f58815b37e6ffe90297e515df7e96ff00265310277a7d43ad9ca10fab",
+    "interface-inputs.json": "ae9934b7515f55d2f76adbe55404826f95a4c2937517ed7f22f545dcd860b963",
+    "interface-manifest.json": "5c18f0f8b7b82644a693d6631def3b8de6395153517d8ea1894fd07922218e8c",
+    "mirror-source-transfer.npz": "7d72c74755c7f8f29277aa16065318ee16acbd66e0b62b968b524e8fb7fa93e8"
+  },
+  "schema": "adn.learning-day-selected-data.v1"
+}

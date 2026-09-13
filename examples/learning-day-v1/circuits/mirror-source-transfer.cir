@@ -1,0 +1,11 @@
+* SPDX-FileCopyrightText: 2026 APM contributors
+* SPDX-License-Identifier: Apache-2.0
+* 1:1 NMOS mirror; ideal excluded bias sources and output clamp.
+Vdd vdd 0 1
+Iref vdd ref 30u
+Vout out 0 0.5
+Xtop ref out 0 mirror
+.subckt mirror ref out s
+Xreference ref ref s s apm045_vtg_nmos w=2u l=.24u
+Xoutput out ref s s apm045_vtg_nmos w=2u l=.24u
+.ends mirror

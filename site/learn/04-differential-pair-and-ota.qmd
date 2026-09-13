@@ -104,6 +104,25 @@ a common-mode change into differential output; B's zero-raw symmetry is not a
 measurement of that distribution. Judge the headroom and current paths before
 using an impressive nominal cancellation number.
 
+The same saved sweep gives a useful voltage budget, without guessing a sharp
+threshold at which the tail becomes ideal:
+
+| B input common mode, V | Tail drain voltage, V | Input VGS, V | Input VDS, V | Tail current, µA |
+| --- | ---: | ---: | ---: | ---: |
+| 0.40 | 0.02940 | 0.37060 | 0.72999 | 5.347 |
+| 0.50 | 0.08817 | 0.41183 | 0.48886 | 9.400 |
+| 0.60 | 0.16756 | 0.43244 | 0.38247 | 10.000 |
+| 0.90 | 0.41453 | 0.48547 | 0.12588 | 10.215 |
+
+At 0.40-V common mode, the input transistors still have substantial VDS,
+but the tail transistor has only 29.4 mV across drain and source. Its gate
+bias remains nearly unchanged at 0.42611 V. Current falls to about half the
+nominal value. At the other end, raising common mode gives the tail more
+voltage while reducing the input pair's VDS. Headroom moves between devices;
+it is not one scalar margin attached to the whole amplifier. These are
+selected [saved node/current observations](../studies/learning-day-v1/reproduce.qmd),
+not newly acquired common-mode points.
+
 ## C: change the interface and combine the branch currents
 
 The next example asks for a single-ended output near 0.3 V. It changes to
@@ -134,6 +153,16 @@ they are not an invisible ideal 14-µA source. At the central clamped point,
 the saved `tail`, `mirror` and `bias` nodes are approximately 0.756744,
 0.377742 and 0.550117 V respectively.
 
+Now the voltage budget has reversed polarity. At equal 0.3-V inputs,
+$V_{SG}$ of each input PMOS is $0.756744-0.3=0.456744$ V. The high-side
+tail PMOS retains $V_{SD}=1-0.756744=0.243256$ V. The input PMOS feeding
+the mirror has $V_{SD}=0.379001$ V, and the branch feeding the clamped
+0.3-V output has $V_{SD}=0.456744$ V. The output NMOS has 0.3 V across it.
+These actual differences explain how this topology accommodates its low
+input/output interface. They do not establish rail-to-rail operation. Simply
+subtracting 0.3 V from B's 0.6-V gates while demanding unchanged current would
+consume the lower tail's headroom; it is not the circuit change performed here.
+
 Trace the sign physically. Raising `inp` reduces P1's source-to-gate voltage,
 so less current enters the diode-connected N3. The mirror node falls, reducing
 N4's sink current. The other input branch supplies relatively more current
@@ -151,6 +180,48 @@ Rload. Their ratio predicts a positive loaded gain near **61.39**. The different
 input voltage that makes $I_{avail}=0$ is about −0.672 mV, whereas the input
 needed to supply the 0.3-µA resistor load is about +1.612 mV. The next chapter
 uses those different null conditions to explain finite buffer precision.
+
+### What happens when the receiving voltage moves?
+
+A new, [predeclared finite example](../studies/learning-day-v1/receiving-port-plan.json)
+keeps this initial six-unit core and fixes common mode at 0.30 V. It chooses
+full differential inputs ±0.10 V and six output clamps to check both current
+directions across the buffer's output neighborhood and near a limiting rail.
+At +0.10 V, the gates are 0.35/0.25 V; at −0.10 V, they are reversed. The
+output clamp is a separate port, so changing it does not change these gate
+voltages. This differs from D1's moving negative feedback input below.
+
+[![Six new fixed-common-mode C clamps show reduced available current near the limiting output rail.](figures/initial-d1-clamped-current.svg)](figures/initial-d1-clamped-current.svg)
+
+| Full input difference, V | Output clamp, V | Available OTA current, µA | Net after the 1-MΩ load, µA |
+| --- | ---: | ---: | ---: |
+| +0.10 | 0.25 | +10.679 | +10.429 |
+| +0.10 | 0.35 | +10.634 | +10.284 |
+| +0.10 | 0.70 | +8.562 | +7.862 |
+| −0.10 | 0.35 | −10.578 | −10.928 |
+| −0.10 | 0.25 | −10.449 | −10.699 |
+| −0.10 | 0.05 | −7.753 | −7.803 |
+
+Positive net current can charge a capacitor at that clamped operating state;
+negative current can discharge it. Rload subtracts current in both cases:
+it consumes part of the source current and helps remove charge during sinking.
+The ideal clamp supplies or absorbs the remaining imbalance. These are actual
+discrete observations, not a continuous 0.05–0.70-V buffer specification.
+
+At the upper +0.10-V-drive point, P2 has only **59.0 mV VSD**. Moving the
+clamp from 0.35 to 0.70 V reduces its supplied current from 12.332 to
+11.314 µA. The tail and mirror nodes also move; N4's competing sink current
+increases from 1.698 to 2.751 µA. Both measured changes reduce the available
+current. The finite mirror/core cannot be replaced by a fixed current limit
+attached only to P2. At the lower negative-drive clamp, N4 has 50 mV VDS
+and sinks 9.487 µA, versus 12.276 µA at 0.35 V. The opposite PMOS still
+supplies 1.734 µA, leaving only 7.753 µA net OTA sinking capability.
+
+The [exact new fixtures and all terminal observations](../studies/learning-day-v1/reproduce.qmd)
+preserve these operating points. Current loss is a physical result within
+the checked model domain, not a reason to increase bias until a preferred
+answer appears. Now release the clamp and let feedback change the input
+difference as the output moves.
 
 ## Initial D1: let feedback find the output
 
@@ -194,6 +265,8 @@ archived “selected D1” and its 25-pF transfer use a different selection hist
 and are not evidence for this initial circuit.
 
 The [selected arrays, definitions and calculations](../studies/learning-path-v1/reproduce.qmd)
-support every numerical example on this page. Next, separate the remaining
-DC precision error from frequency/time response in
+support the original A/B/C/D1 examples; the new clamp observations have their
+own [supplement and frozen plan](../studies/learning-day-v1/reproduce.qmd).
+Next, keep this same core and separate DC precision error from the measured
+effect of changing its capacitor in
 [chapter 5](05-feedback-and-response.qmd).

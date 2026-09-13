@@ -1,0 +1,41 @@
+* Analog Design Lab v2.0: one-stage P-input OTA with counted finite bias, clamped
+* Zero-volt MOS sensors point into each terminal; bodies/loads are explicit.
+Vdd vdd 0 DC 1 AC 0
+Vcm cm 0 DC 0.29999999999999999 AC 0
+Vdiff diff 0 DC 0 AC 1
+Eplus inp cm diff 0 0.5
+Eminus inn cm diff 0 -0.5
+Vout out 0 DC 0.29999999999999999 AC 0
+VtM1d mirror m1d 0
+VtM1g inp m1g 0
+VtM1s tail m1s 0
+VtM1b vdd m1b 0
+xm1 m1d m1g m1s m1b apm045_vtg_pmos w=3.9999999999999998e-06 l=2.3999999999999998e-07
+VtM2d out m2d 0
+VtM2g inn m2g 0
+VtM2s tail m2s 0
+VtM2b vdd m2b 0
+xm2 m2d m2g m2s m2b apm045_vtg_pmos w=3.9999999999999998e-06 l=2.3999999999999998e-07
+VtM3d mirror m3d 0
+VtM3g mirror m3g 0
+VtM3s 0 m3s 0
+VtM3b 0 m3b 0
+xm3 m3d m3g m3s m3b apm045_vtg_nmos w=3.9999999999999998e-06 l=2.3999999999999998e-07
+VtM4d out m4d 0
+VtM4g mirror m4g 0
+VtM4s 0 m4s 0
+VtM4b 0 m4b 0
+xm4 m4d m4g m4s m4b apm045_vtg_nmos w=3.9999999999999998e-06 l=2.3999999999999998e-07
+VtM5d tail m5d 0
+VtM5g bias m5g 0
+VtM5s vdd m5s 0
+VtM5b vdd m5b 0
+xm5 m5d m5g m5s m5b apm045_vtg_pmos w=3.9999999999999998e-06 l=2.3999999999999998e-07
+VtM6d bias m6d 0
+VtM6g bias m6g 0
+VtM6s vdd m6s 0
+VtM6b vdd m6b 0
+xm6 m6d m6g m6s m6b apm045_vtg_pmos w=9.9999999999999995e-07 l=3.9999999999999998e-07
+Rbias bias 0 273692.63541213644
+Rload out 0 1000000
+Cload out 0 4.9999999999999997e-12

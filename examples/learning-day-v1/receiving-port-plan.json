@@ -1,0 +1,356 @@
+{
+  "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+  "cases": [
+    {
+      "ac": {
+        "points_per_decade": 60,
+        "start_hz": 1000.0,
+        "stop_hz": 1000000000.0
+      },
+      "ac_input_v": 0.3,
+      "cload_f": 5e-12,
+      "fixture": "D1",
+      "id": "D1-5p",
+      "op_input_v": [
+        0.25,
+        0.3,
+        0.35
+      ],
+      "pwl": [
+        [
+          0.0,
+          0.25
+        ],
+        [
+          5e-07,
+          0.25
+        ],
+        [
+          5.125e-07,
+          0.35
+        ],
+        [
+          4.5e-06,
+          0.35
+        ],
+        [
+          4.5125e-06,
+          0.25
+        ],
+        [
+          8.5e-06,
+          0.25
+        ]
+      ],
+      "role": "Same-core capacitive-load comparison",
+      "stop_s": 8.5e-06,
+      "tmax_s": 2e-09
+    },
+    {
+      "ac": {
+        "points_per_decade": 60,
+        "start_hz": 1000.0,
+        "stop_hz": 1000000000.0
+      },
+      "ac_input_v": 0.3,
+      "cload_f": 2.5e-11,
+      "fixture": "D1",
+      "id": "D1-25p",
+      "op_input_v": [
+        0.25,
+        0.3,
+        0.35
+      ],
+      "pwl": [
+        [
+          0.0,
+          0.25
+        ],
+        [
+          5e-07,
+          0.25
+        ],
+        [
+          5.125e-07,
+          0.35
+        ],
+        [
+          4.5e-06,
+          0.35
+        ],
+        [
+          4.5125e-06,
+          0.25
+        ],
+        [
+          8.5e-06,
+          0.25
+        ]
+      ],
+      "role": "Same-core capacitive-load comparison",
+      "stop_s": 8.5e-06,
+      "tmax_s": 2e-09
+    },
+    {
+      "ac": {
+        "points_per_decade": 60,
+        "start_hz": 1000.0,
+        "stop_hz": 1000000000.0
+      },
+      "ac_input_v": 0.3,
+      "cload_f": 2.5e-11,
+      "fixture": "D1",
+      "id": "D1-25p-refined",
+      "op_input_v": [
+        0.25,
+        0.3,
+        0.35
+      ],
+      "pwl": [
+        [
+          0.0,
+          0.25
+        ],
+        [
+          5e-07,
+          0.25
+        ],
+        [
+          5.125e-07,
+          0.35
+        ],
+        [
+          4.5e-06,
+          0.35
+        ],
+        [
+          4.5125e-06,
+          0.25
+        ],
+        [
+          8.5e-06,
+          0.25
+        ]
+      ],
+      "role": "Predeclared timestep control",
+      "stop_s": 8.5e-06,
+      "tmax_s": 1e-09
+    },
+    {
+      "cload_f": 5e-12,
+      "common_mode_v": 0.3,
+      "fixture": "C",
+      "full_differential_v": 0.1,
+      "id": "C-source-0p25",
+      "output_clamp_v": 0.25,
+      "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+    },
+    {
+      "cload_f": 5e-12,
+      "common_mode_v": 0.3,
+      "fixture": "C",
+      "full_differential_v": 0.1,
+      "id": "C-source-0p35",
+      "output_clamp_v": 0.35,
+      "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+    },
+    {
+      "cload_f": 5e-12,
+      "common_mode_v": 0.3,
+      "fixture": "C",
+      "full_differential_v": 0.1,
+      "id": "C-source-0p70",
+      "output_clamp_v": 0.7,
+      "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+    },
+    {
+      "cload_f": 5e-12,
+      "common_mode_v": 0.3,
+      "fixture": "C",
+      "full_differential_v": -0.1,
+      "id": "C-sink-0p35",
+      "output_clamp_v": 0.35,
+      "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+    },
+    {
+      "cload_f": 5e-12,
+      "common_mode_v": 0.3,
+      "fixture": "C",
+      "full_differential_v": -0.1,
+      "id": "C-sink-0p25",
+      "output_clamp_v": 0.25,
+      "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+    },
+    {
+      "cload_f": 5e-12,
+      "common_mode_v": 0.3,
+      "fixture": "C",
+      "full_differential_v": -0.1,
+      "id": "C-sink-0p05",
+      "output_clamp_v": 0.05,
+      "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+    }
+  ],
+  "created_utc": "2026-09-13T11:32:01.098155+00:00",
+  "day_t0_utc": "2026-09-13T06:47:07Z",
+  "fixed": {
+    "drawn_mos_area_um2": 5.2,
+    "rbias_ohm": 273692.63541213644,
+    "rload_ohm": 1000000.0,
+    "rsource_functional_ohm": 10000.0,
+    "vdd_v": 1.0
+  },
+  "identity": "initial-d1-interface-001",
+  "known_evidence": "All selected first-edition evidence is previously exposed. New nominal conditions do not create a fresh physical population. Selected-D1 25-pF archive excluded.",
+  "measurements": {
+    "charge_relative_residual_max": 0.001,
+    "dc_load_difference_tolerance_v": 1e-06,
+    "kcl_max_a": 1e-10,
+    "net_capacitor_current": "-i(VtM2d)-i(VtM4d)-v(out)/Rload+i(Vfeedback)",
+    "passive_readback_relative_tolerance": 2e-11,
+    "plateau_horizon_s": [
+      4.5e-06,
+      8.5e-06
+    ],
+    "pwl_max_error_v": 1e-09,
+    "refinement_time_tolerance": {
+      "absolute_s": 4e-09,
+      "relative": 0.01
+    },
+    "step_band_fraction_of_independent_op_output_difference": 0.01,
+    "terminal_span_max_v": 1.00000001,
+    "time_origin": "Input 50% edge crossing; observed final-entry outside/inside bracket, through plateau horizon.",
+    "version": "learning.initial-d1-interface.measure.v1"
+  },
+  "model_hashes": {
+    "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+    "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+    "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+  },
+  "native_concurrency": 1,
+  "ngspice_major": 47,
+  "original_sources": {
+    "C": {
+      "circuit_sha256": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "original_realization_id": "85baada66986fe6841f23eaabe3ef7a9a45aaa0b8b83be7b17681783e67ab6f0",
+      "run_id": "c184dfb0718be074769744d04cbff220a528570962a642c1813a7dfabc571723",
+      "stem": "C-area-base"
+    },
+    "D1": {
+      "circuit_sha256": "8b741d0c57391fc82ae893b84f2fdcb59e83bb8b79e11f13e074a481ec26f11d",
+      "original_realization_id": "03b9f79db92bb415e9662bff244272fb7919bf081933202511e19677cc33bedf",
+      "run_id": "759d43d86d2956084d3c83625e438fe2451de3595c04eaa7fe8a628ebf8a1304",
+      "stem": "D1-initial-14u"
+    }
+  },
+  "physical_devices": [
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm1"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/input_plus",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm2"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/input_minus",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm3"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/load_reference",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm4"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/load_output",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm5"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/tail",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 4e-07,
+      "path": [
+        "xm6"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/bias_reference",
+      "w_m": 1e-06
+    }
+  ],
+  "profile_tier": "ARTIFICIAL",
+  "prospective_estimates": {
+    "charge_for_0p1v_c": {
+      "25p": 2.5e-12,
+      "5p": 5e-13
+    },
+    "constant_10ua_charge_time_s": {
+      "25p": 2.5e-07,
+      "5p": 5e-08
+    },
+    "dc": "Ideal fixed capacitance should not change equilibrium outputs/finite tracking error.",
+    "dominant_load_25pf_bandwidth_hz": 848289.5614163431,
+    "headroom": "Source current should decrease at high selected clamp, sink magnitude at low selected clamp; no exact compliance boundary forecast.",
+    "known_5pf_bandwidth_hz": 4241447.807081715,
+    "one_pole_1pct_time_s": {
+      "25p": 8.640158174947775e-07,
+      "5p": 1.7280316349895548e-07
+    },
+    "training_source": "Original initial-D1 central 5-pF AC; C at Vout=0.3 and full differential sweep, all known."
+  },
+  "schema": "learning.initial-d1-interface.plan.v1",
+  "status": "FROZEN_BEFORE_NEW_TARGET_ACQUISITION",
+  "stopping_rule": "Three declared functional attempts and six OP clamps; no search/trim/sample extension. One identical-input retry allowed for an identified technical failure in a new destination. Preserve physical failures and inconclusive diagnostics.",
+  "temperature_c": 26.85
+}

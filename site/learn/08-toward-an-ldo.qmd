@@ -11,8 +11,8 @@ reference, move a pass-device control voltage, and deliver load current while
 maintaining accuracy and a controlled response. A good amplifier at one bias
 point is only one part of that chain.
 
-This chapter states that chain, makes a few bounded predictions from the saved
-OTA observations, and marks the interfaces still unproved. It does not report
+This chapter states that chain, uses the checked finite OTA receiving-port
+example, and marks the interfaces still unproved. It does not report
 a completed LDO or a new OTA optimization campaign.
 
 ## Trace a complete correction path
@@ -85,17 +85,27 @@ the charge-only estimate would be 50 ns. Those are arithmetic scales, not a
 prediction of D1's measured settling: current changes with input difference
 and output voltage, and the final accuracy band must also be reached.
 
-The saved initial-D1 buffer takes roughly 175–180 ns to enter its stated 1%
-band for the 0.25↔0.35-V input steps into 1 MΩ ∥ 5 pF. Its charge balance is
-checked from terminal currents. The C diagnostic shows available current near
-±11.7 µA only at an output clamped to 0.3 V and a large differential drive.
-Neither result establishes that this current remains available near a rail or
-through a real pass gate's nonlinear charge trajectory.
+The new [same-core 5/25-pF comparison](05-feedback-and-response.qmd#change-only-the-receiving-capacitor)
+now tests this distinction directly. Both loads give the same finite DC
+tracking error, including about −2.366 mV at a 0.35-V source. Increasing the
+capacitor to 25 pF lowers central bandwidth from 4.241 to 0.848 MHz and moves
+the rising 1% entry from about 179 to 891 ns. The actual required charge grows
+from 0.492 to 2.458 pC. The new 25-pF peak charging current is about
+10.24 µA and falls as feedback reduces the error. More stored charge at the
+same finite current costs response time; it does not repair DC precision.
 
-No 25-pF initial-D1 result is claimed. The later archive's selected-D1 load
-transfer belongs to a different selection history. Keeping the actual
-inventory and receiving port visible is more useful than silently borrowing
-that result to make the application appear complete.
+The [new C-fixture clamps](04-differential-pair-and-ota.qmd#what-happens-when-the-receiving-voltage-moves)
+also put numbers on the voltage dependence. At fixed +0.10-V differential
+drive, net current after the 1-MΩ load falls from 10.284 µA at 0.35-V output
+to 7.862 µA at 0.70 V. At −0.10-V drive it can remove 10.928 µA at 0.35 V
+but only 7.803 µA at 0.05 V. These are diagnostic fixed-input clamp states,
+not the functional buffer driven over that entire output range.
+
+Together the observations require a receiving-port specification with both
+voltage and current directions. A pass gate needing more charge, a voltage
+closer to a rail, or rapid recovery after a prolonged overload has a different
+job. The new 25-pF result uses the **initial six-unit D1** and its own frozen
+plan; it never borrows the later archive's selected-D1 transfer.
 
 ## What the present evidence supports
 
@@ -104,7 +114,7 @@ that result to make the application appear complete.
 | Input comparison | A/B current steering; finite-tail common-mode dependence; C's PMOS-input sign at 0.3 V. | Reference/sense voltage ranges over the intended regulator supply and temperature domain. |
 | Low-voltage buffer accuracy | Initial D1: source 0.25–0.35 V, output 0.249311–0.347634 V, worst error 2.366 mV. | Required regulator accuracy after reference, divider loading and pass-device operating point are included. |
 | Amplifier resource cost | Same six-device initial core, 5.2 µm² drawn MOS area; at most 16.085 µA VDD current on its saved input grid. | Total regulator budget, including reference, divider, startup, compensation and any driver stage. |
-| Receiving-port charge | Initial-D1 1-MΩ/5-pF step and C's clamped current sweep, with original circuit identities. | Actual gate-voltage trajectory, nonlinear gate charge, required delivery/absorption, saturation and recovery. |
+| Receiving-port charge | Same initial-D1 1-MΩ/5-versus-25-pF steps, independent DC endpoints and one timestep refinement; six new C-fixture current/headroom clamps. | Actual pass-gate voltage/charge trajectory, required delivery/absorption and overload recovery. |
 | Supply and sequencing | Published A75/R75/F75L driven/clamped source histories and current peaks. | Floating pins, current-limited sources, arbitrary stored charge and startup of the integrated regulator. |
 | Dynamics and stability | Particular closed-loop signal/step observations under their stated loads. | Regulator return ratio, all relevant crossings, compensation and load/input transients across the chosen domain. |
 | Statistical accuracy | Original finite Local source-transfer studies and labeled synthetic resistor scenarios. | A justified combined device/passive/spatial/reference model, layout/PEX effects and silicon validation. |
@@ -112,8 +122,9 @@ that result to make the application appear complete.
 The [exact C](../studies/learning-path-v1/circuits/C-area-base.cir) and
 [initial-D1](../studies/learning-path-v1/circuits/D1-initial-14u.cir) inputs,
 [selected observations](../studies/learning-path-v1/summary.json) and
-[public reproduction](../studies/learning-path-v1/reproduce.qmd) support the
-bounded OTA entries. The table describes measured scope, not a list of items
+[public reproduction](../studies/learning-path-v1/reproduce.qmd) retain the
+original OTA bridge. The [learning-day supplement](../studies/learning-day-v1/reproduce.qmd)
+contains the new unchanged-core load/clamp observations. The table describes measured scope, not a list of items
 that can be assumed to pass by choosing a conventional schematic.
 
 ## Choose the next design question from the interface gap

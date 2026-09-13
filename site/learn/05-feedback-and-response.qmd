@@ -66,8 +66,20 @@ gate leakage for this low-frequency calculation, gate KCL gives
 
 $$v_g=(1-\beta)v_{in}+\beta v_o.$$
 
-Substitute it into output KCL, including current through Rf. The resulting
-signal gain and output-current disturbance path are
+The corresponding output KCL is
+
+$$G_o v_o+G_m v_g+\frac{v_o-v_g}{R_f}=i_{dist},$$
+
+where $i_{dist}$ is positive when injected into the output. $G_o$ includes the
+finite signal/load-device conductances and Rload, but not Rf a second time.
+Hold the supply and reference setting fixed for this signal/disturbance
+calculation. Substitute the gate equation and collect the output terms:
+
+$$\left[G_o+\frac{1}{R_f+R_t}+G_m\beta\right]v_o
+=-\frac{G_mR_f-1}{R_f+R_t}v_{in}+i_{dist}.$$
+
+Setting the disturbance or input separately to zero gives the signal gain
+and output-current disturbance path:
 
 $$A_v=-\frac{G_mR_f-1}{G_o(R_f+R_t)+1+G_mR_t},$$
 
@@ -154,8 +166,6 @@ $H(s)\approx H(0)/(1+s\tau)$ with $f_p\approx1/(2\pi\tau)$. It can organize
 a first estimate, but the physical circuit has more than one charge-storage
 node and a finite input source.
 
-[![Initial D1's saved signal response at 0.3-V input and 5-pF load.](figures/buffer-response.svg)](figures/buffer-response.svg)
-
 For initial D1 at the central input, the observed 1-kHz signal magnitude is
 0.983317 V/V and the first −3-dB crossing is 4.241 MHz. The reference is the
 actual low-frequency magnitude, not an assumed exact gain of one. This is
@@ -197,26 +207,84 @@ about 2.366 mV. Reaching the band around an actual endpoint does not erase
 that DC tracking error. Similarly, an observation that begins inside a band
 has an “already in band” status, not a resolved sub-timestep settling time.
 
-### Current limit, slew and recovery are additional questions
+### Change only the receiving capacitor
+
+The new **initial-d1-interface-001** example preserves all six initial devices,
+bias, source impedance, 1-MΩ resistor and input history. It changes Cload from
+5 to **25 pF**, chosen to separate a substantial charging cost from the DC
+task. It is not the later archive's selected-D1 load transfer. The
+[finite plan and pre-exposure estimates](../studies/learning-day-v1/receiving-port-plan.json)
+were saved and privately committed before these new targets were run.
+
+Before observation, the known 5-pF response suggested a 25-pF bandwidth of
+$4.24145/5\approx0.84829$ MHz if the external capacitor dominated. The
+single-pole 1% timescale would grow from about 0.173 to **0.864 µs**.
+Capacitance carries no stationary current, so changing it alone should leave
+the DC error unchanged. These are prospective estimates for the new load,
+using known 5-pF evidence as their starting point.
+
+| Same initial-D1 task | New 5-pF observation | New 25-pF observation |
+| --- | ---: | ---: |
+| Output for a 0.30-V DC source, V | 0.298456258 | 0.298456258 |
+| Largest DC error at 0.25/0.30/0.35-V sources, mV | 2.36647 | 2.36647 |
+| Central signal bandwidth, MHz | 4.241448 | 0.847733 |
+| Rising 1% entry bracket, ns | 177.5–179.5 | 889.3–891.3 |
+| Falling 1% entry bracket, ns | 175.2–177.2 | 878.9–880.9 |
+| Actual capacitor charge excursion, pC | 0.49161 | 2.45805 |
+
+[![Increasing only the initial-D1 capacitor lowers bandwidth and slows the step while leaving the finite DC endpoint unchanged.](figures/initial-d1-load-response.svg)](figures/initial-d1-load-response.svg)
+
+The DC outputs are identical in the stored solves at all three selected
+inputs. The observed bandwidth ratio is 0.199869, close to the estimated 0.2.
+Both transient plateaus remain in their independent-OP 1% band through
+3.99375 µs after their input 50% crossings. A predeclared 1-ns maximum-step
+repeat places the 25-pF rise at 889.6–890.6 ns and fall at 879.2–880.2 ns,
+consistent with the 2-ns primary brackets. These are a numerical refinement
+and a finite nominal trajectory, not a new device population.
+
+Here bandwidth follows the first learning edition's **−3.000-dB crossing**,
+interpolated in dB versus log frequency. The older ADS amplifier studies use
+the half-power magnitude $1/\sqrt{2}$ and interpolate magnitude versus log
+frequency. Those nearby conventions are retained separately; the 5/25-pF
+comparison above uses one definition throughout. Its settling endpoints are
+new separate OP solves; the old archived DC-sweep endpoints remain unchanged.
+
+### Follow the changing current through the step
 
 At an output capacitor,
 
 $$C_L\frac{dV_O}{dt}=I_{avail}-I_R-I_{feedback}.$$
 
-For initial D1, integrating the measured MOS terminal and external branch
-currents closes the $C_L\Delta V$ charge balance with normalized residual
-about $3.7\times10^{-9}$ on the saved trace. Intrinsic MOS charge is already
-included in those terminal currents; adding it again would double-count it.
-This checks a numerical charge identity, not a complete pass-device gate model.
+Here $I_{feedback}$ is positive **leaving** `out` through the feedback wire.
+The recorded source `Vfeedback(feedback,out)=0` uses the opposite current
+direction. Therefore the exact measured right side is
+$-i(VtM2d)-i(VtM4d)-V_O/R_L+i(Vfeedback)$, not an unsigned tail current.
+Integrating it closes the $C_L\Delta V$ charge identity with normalized
+residuals about $3.7\times10^{-9}$ and $1.2\times10^{-9}$ for the new
+5/25-pF primary traces. Intrinsic MOS charge is already included in the
+terminal currents; adding it again would double-count it. An independent
+AC current/voltage calculation also recovers the specified Cload. These
+checks establish numerical consistency for a fixed capacitor.
 
 When an amplifier can supply only a bounded net current, $dV/dt$ is bounded
 by $I/C$. That large-signal limit is different from small-signal bandwidth.
-The clamped C example supplies/sinks roughly +11.76/−11.63 µA across its
-±120-mV differential sweep **at a 0.3-V output**. It is useful scale information,
-not a measured constant slew current throughout D1's moving-output trajectory.
-Overload recovery would additionally require a declared excursion, duration,
-return condition and independently established final state. These four selected
-cases do not qualify arbitrary overload recovery.
+The first charge-only estimate, 10 µA charging through 0.1 V, was 50 ns for
+5 pF and 250 ns for 25 pF. The actual 1% times are much longer. In the new
+25-pF trace the net capacitor current peaks near **+10.243/−10.612 µA**, then
+shrinks as the output approaches its endpoint and the feedback input reduces
+the differential error. The remaining error is close to an exponential over
+most of the plotted interval, rather than a constant-current ramp all the way
+to the accuracy band.
+
+[![The normalized error and measured net capacitor current show why a constant-current charge estimate is shorter than the actual settling time.](figures/initial-d1-step-current.svg)](figures/initial-d1-step-current.svg)
+
+This supports a useful design judgment: the single-pole timescale organizes
+this trajectory to within a few percent, while $C\Delta V/I$ is a charge
+scale that omits the final approach. Chapter 4's clamped current changes also
+show why neither estimate qualifies an arbitrary voltage excursion. Overload
+recovery still needs a declared excursion, duration, return condition and
+independent final state. No complete pass-device gate model or arbitrary-load
+stability claim follows from the fixed-capacitor example.
 
 The existing common-source feedback study supplies a separate load/signal
 comparison. With 20-mV-peak input, R75 gave 4.156% THD while F75L gave 0.671%.

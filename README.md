@@ -4,11 +4,14 @@ Read the [site](https://ds54e.github.io/analog-design-notes/), start the
 [eight-chapter learning route](https://ds54e.github.io/analog-design-notes/learn/),
 or use the [Japanese reading overview](https://ds54e.github.io/analog-design-notes/ja/learning-path.html).
 
-Learning edition **v1.0** connects MOS operating points, common-source stages,
+Learning edition **v1.1** connects MOS operating points, common-source stages,
 mirrors, differential pairs/OTAs, feedback, errors and supply/startup to the
-remaining interfaces of an LDO. Its [new selected evidence package](examples/learning-path-v1/README.md)
+remaining interfaces of an LDO. Its [original selected evidence package](examples/learning-path-v1/README.md)
 contains four archived nominal examples, current-balance calculations and eight
-regenerable graphs. It is not a new completed research campaign; the five
+regenerable graphs. The [learning-day supplement](examples/learning-day-v1/README.md)
+adds worked sizing/mirror data and a separately planned same-initial-core
+5/25-pF receiving-port comparison with five new graphs and a native replay.
+These are learning increments; the five
 studies below retain their original histories and exact downloads.
 
 The power-sequencing study explains input delivery/absorption and supply
@@ -48,7 +51,8 @@ Reader corrections belong in Issues; they are applied to that canonical source
 before export. The immutable research tags are
 `gain-operating-point-accuracy-v1.0`, `passive-sensitivity-v1.0`,
 `active-allocation-v1.0`, `finite-feedback-v1.0` and `power-sequencing-v1.0`.
-The new edition tag is `learning-path-v1.0`. Versioned
+The original edition tag `learning-path-v1.0` is retained; the new edition tag
+is `learning-path-v1.1`. Versioned
 downloads are static checked artifacts; the first release's ZIP bytes are preserved.
 
 Maintainers render with Quarto **1.10.18**:

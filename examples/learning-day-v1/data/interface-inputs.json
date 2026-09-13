@@ -1,0 +1,6115 @@
+{
+  "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+  "barrier_sha256": "f4b9d1b1909c14de9b6a8da563d81e4830eb7df6c9e2c1e00915132074e129c7",
+  "cases": {
+    "C-sink-0p05": {
+      "acquisition_numerical_usability": "NUMERICALLY_USABLE",
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 4e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 4e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 2.4000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 4e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 2.4000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 4e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 2.4000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 4e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 1e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 4e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 4e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 2.4000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 4e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 2.4000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 4e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 2.4000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 4e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 1e-06
+      },
+      "analyses": [
+        {
+          "analysis_index": 0,
+          "columns": 71,
+          "native_text_sha256": "3abd3c8bfa82e438629b22ddb4d99d55adcc1dd4792a1ef29f98182d5048a4a4",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Vcm": 0.3,
+              "Vdd": 1.0,
+              "Vdiff": -0.1,
+              "Vout": 0.05
+            },
+            "vectors": [
+              "v(bias)",
+              "v(cm)",
+              "v(diff)",
+              "v(inn)",
+              "v(inp)",
+              "v(mirror)",
+              "v(out)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vcm)",
+              "i(Vdiff)",
+              "i(Vout)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "interface-C-sink-0p05.npz",
+      "array_sha256": "284f5b89cbe580bac40809f25a90cc9d737bd7599ea07517dbcd777f5ebeeae2",
+      "case": {
+        "cload_f": 5e-12,
+        "common_mode_v": 0.3,
+        "fixture": "C",
+        "full_differential_v": -0.1,
+        "id": "C-sink-0p05",
+        "output_clamp_v": 0.05,
+        "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+      },
+      "circuit_file": "interface-C-sink-0p05.cir",
+      "circuit_sha256": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "original_attempt_sha256": "b7ec88bce34438ea621b63b9d658b8524c2bdadc4b26d9b64ac61f863c0a747a",
+      "original_realization_id": "fbce7ec19b428c08684fff574dc2fe4be7d232b4dcde9cd530d833f40b161745",
+      "physical_devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "profile_tier": "ARTIFICIAL",
+      "request_id": "870cc89c1ad28d061daa8e77f5d4cb49378a31b5e7b299616c84363a4edf61e2",
+      "target_started_utc": "2026-09-13T11:36:26.805449+00:00",
+      "terminals": {
+        "xm1": [
+          "mirror",
+          "inp",
+          "tail",
+          "vdd"
+        ],
+        "xm2": [
+          "out",
+          "inn",
+          "tail",
+          "vdd"
+        ],
+        "xm3": [
+          "mirror",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm4": [
+          "out",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm5": [
+          "tail",
+          "bias",
+          "vdd",
+          "vdd"
+        ],
+        "xm6": [
+          "bias",
+          "bias",
+          "vdd",
+          "vdd"
+        ]
+      }
+    },
+    "C-sink-0p25": {
+      "acquisition_numerical_usability": "NUMERICALLY_USABLE",
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 4e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 4e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 2.4000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 4e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 2.4000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 4e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 2.4000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 4e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 1e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 4e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 4e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 2.4000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 4e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 2.4000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 4e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 2.4000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 4e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 1e-06
+      },
+      "analyses": [
+        {
+          "analysis_index": 0,
+          "columns": 71,
+          "native_text_sha256": "e557d468fc3183fa575c1a9aee2b137149cd345108de3716a39a8c3545e46a43",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Vcm": 0.3,
+              "Vdd": 1.0,
+              "Vdiff": -0.1,
+              "Vout": 0.25
+            },
+            "vectors": [
+              "v(bias)",
+              "v(cm)",
+              "v(diff)",
+              "v(inn)",
+              "v(inp)",
+              "v(mirror)",
+              "v(out)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vcm)",
+              "i(Vdiff)",
+              "i(Vout)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "interface-C-sink-0p25.npz",
+      "array_sha256": "d34ae4ae76176e22a9e35f3939d994360dcd89bdb6ddf10326b9f72fe2c69c3e",
+      "case": {
+        "cload_f": 5e-12,
+        "common_mode_v": 0.3,
+        "fixture": "C",
+        "full_differential_v": -0.1,
+        "id": "C-sink-0p25",
+        "output_clamp_v": 0.25,
+        "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+      },
+      "circuit_file": "interface-C-sink-0p25.cir",
+      "circuit_sha256": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "original_attempt_sha256": "01e24b877bb45e815cabe857b293152024d46a5060f026fc15e49b4f9fb818a5",
+      "original_realization_id": "b51f2d226e1f0d2f9732eb6828d393a3bcdd93463c32591cf0d56433c2c8691b",
+      "physical_devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "profile_tier": "ARTIFICIAL",
+      "request_id": "97bb969d4aaedbecf3e3323d61e8c298772ac5cbc5b8b5d4b59dd6837df106f6",
+      "target_started_utc": "2026-09-13T11:36:26.117436+00:00",
+      "terminals": {
+        "xm1": [
+          "mirror",
+          "inp",
+          "tail",
+          "vdd"
+        ],
+        "xm2": [
+          "out",
+          "inn",
+          "tail",
+          "vdd"
+        ],
+        "xm3": [
+          "mirror",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm4": [
+          "out",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm5": [
+          "tail",
+          "bias",
+          "vdd",
+          "vdd"
+        ],
+        "xm6": [
+          "bias",
+          "bias",
+          "vdd",
+          "vdd"
+        ]
+      }
+    },
+    "C-sink-0p35": {
+      "acquisition_numerical_usability": "NUMERICALLY_USABLE",
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 4e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 4e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 2.4000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 4e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 2.4000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 4e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 2.4000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 4e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 1e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 4e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 4e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 2.4000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 4e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 2.4000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 4e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 2.4000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 4e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 1e-06
+      },
+      "analyses": [
+        {
+          "analysis_index": 0,
+          "columns": 71,
+          "native_text_sha256": "5c79f5f5e202cdc138775604dd45f20860685b41ba25cba81d586ccd7a082e0c",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Vcm": 0.3,
+              "Vdd": 1.0,
+              "Vdiff": -0.1,
+              "Vout": 0.35
+            },
+            "vectors": [
+              "v(bias)",
+              "v(cm)",
+              "v(diff)",
+              "v(inn)",
+              "v(inp)",
+              "v(mirror)",
+              "v(out)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vcm)",
+              "i(Vdiff)",
+              "i(Vout)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "interface-C-sink-0p35.npz",
+      "array_sha256": "8754b9935e2c8460c9fb8b73a27c4e35de63ab9be0a05d5993b87f7930f41013",
+      "case": {
+        "cload_f": 5e-12,
+        "common_mode_v": 0.3,
+        "fixture": "C",
+        "full_differential_v": -0.1,
+        "id": "C-sink-0p35",
+        "output_clamp_v": 0.35,
+        "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+      },
+      "circuit_file": "interface-C-sink-0p35.cir",
+      "circuit_sha256": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "original_attempt_sha256": "f7e5424ff4e28ae0f202987a3ee6b2770b700c371fa44df2c9a63d31c072a09d",
+      "original_realization_id": "ea7bc43d8defe52e8b3753e3be5d0c37987889a34fada127454f30b666666a7b",
+      "physical_devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "profile_tier": "ARTIFICIAL",
+      "request_id": "f6899494c4dc368afbd11e46702bcae7ded6eb869cd8b910f78df73fe9fcf65e",
+      "target_started_utc": "2026-09-13T11:36:25.429892+00:00",
+      "terminals": {
+        "xm1": [
+          "mirror",
+          "inp",
+          "tail",
+          "vdd"
+        ],
+        "xm2": [
+          "out",
+          "inn",
+          "tail",
+          "vdd"
+        ],
+        "xm3": [
+          "mirror",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm4": [
+          "out",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm5": [
+          "tail",
+          "bias",
+          "vdd",
+          "vdd"
+        ],
+        "xm6": [
+          "bias",
+          "bias",
+          "vdd",
+          "vdd"
+        ]
+      }
+    },
+    "C-source-0p25": {
+      "acquisition_numerical_usability": "NUMERICALLY_USABLE",
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 4e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 4e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 2.4000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 4e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 2.4000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 4e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 2.4000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 4e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 1e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 4e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 4e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 2.4000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 4e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 2.4000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 4e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 2.4000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 4e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 1e-06
+      },
+      "analyses": [
+        {
+          "analysis_index": 0,
+          "columns": 71,
+          "native_text_sha256": "b9301fb87302cf78b250b87aa38cc085d7f9519f77acbc1d4f55f58af31dc5ee",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Vcm": 0.3,
+              "Vdd": 1.0,
+              "Vdiff": 0.1,
+              "Vout": 0.25
+            },
+            "vectors": [
+              "v(bias)",
+              "v(cm)",
+              "v(diff)",
+              "v(inn)",
+              "v(inp)",
+              "v(mirror)",
+              "v(out)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vcm)",
+              "i(Vdiff)",
+              "i(Vout)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "interface-C-source-0p25.npz",
+      "array_sha256": "4cc43d0d8ae6e7a719010d91a3add0d016ed8d9711d8d874a68fbb98a2a8db7e",
+      "case": {
+        "cload_f": 5e-12,
+        "common_mode_v": 0.3,
+        "fixture": "C",
+        "full_differential_v": 0.1,
+        "id": "C-source-0p25",
+        "output_clamp_v": 0.25,
+        "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+      },
+      "circuit_file": "interface-C-source-0p25.cir",
+      "circuit_sha256": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "original_attempt_sha256": "5918ff33bd0274b053da36335b6fb8598584458483660cbc92262662b775d845",
+      "original_realization_id": "dae120ff68dd163adb3f841a0b695bf9eb3e7f54842ee22cc7dd305d66905635",
+      "physical_devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "profile_tier": "ARTIFICIAL",
+      "request_id": "3cf9c82f22d7edc2d6c237f06dab7c3afbb6e7d9e8f5580892b114e73941685a",
+      "target_started_utc": "2026-09-13T11:36:23.279330+00:00",
+      "terminals": {
+        "xm1": [
+          "mirror",
+          "inp",
+          "tail",
+          "vdd"
+        ],
+        "xm2": [
+          "out",
+          "inn",
+          "tail",
+          "vdd"
+        ],
+        "xm3": [
+          "mirror",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm4": [
+          "out",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm5": [
+          "tail",
+          "bias",
+          "vdd",
+          "vdd"
+        ],
+        "xm6": [
+          "bias",
+          "bias",
+          "vdd",
+          "vdd"
+        ]
+      }
+    },
+    "C-source-0p35": {
+      "acquisition_numerical_usability": "NUMERICALLY_USABLE",
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 4e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 4e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 2.4000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 4e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 2.4000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 4e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 2.4000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 4e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 1e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 4e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 4e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 2.4000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 4e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 2.4000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 4e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 2.4000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 4e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 1e-06
+      },
+      "analyses": [
+        {
+          "analysis_index": 0,
+          "columns": 71,
+          "native_text_sha256": "f2cb6a061e33ec6a100d41d29cde9179db891c7018bbee103012467a3e767de4",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Vcm": 0.3,
+              "Vdd": 1.0,
+              "Vdiff": 0.1,
+              "Vout": 0.35
+            },
+            "vectors": [
+              "v(bias)",
+              "v(cm)",
+              "v(diff)",
+              "v(inn)",
+              "v(inp)",
+              "v(mirror)",
+              "v(out)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vcm)",
+              "i(Vdiff)",
+              "i(Vout)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "interface-C-source-0p35.npz",
+      "array_sha256": "4070b999d4a8442e75f6f862ed2541b32b2d18c359828f39eae6957f1e9a5b22",
+      "case": {
+        "cload_f": 5e-12,
+        "common_mode_v": 0.3,
+        "fixture": "C",
+        "full_differential_v": 0.1,
+        "id": "C-source-0p35",
+        "output_clamp_v": 0.35,
+        "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+      },
+      "circuit_file": "interface-C-source-0p35.cir",
+      "circuit_sha256": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "original_attempt_sha256": "0a80912922c182e157a05f046a63e77245381668c660354207258199da90c5ae",
+      "original_realization_id": "633a20ba236439e713f1d59b5604a697e8d8ccc46166046ac8fd539d62196b32",
+      "physical_devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "profile_tier": "ARTIFICIAL",
+      "request_id": "8be2fdb3793e100f9a7453fddf5c14d888707d0c8494fa2ce1e05ad7ded6e9e3",
+      "target_started_utc": "2026-09-13T11:36:23.971748+00:00",
+      "terminals": {
+        "xm1": [
+          "mirror",
+          "inp",
+          "tail",
+          "vdd"
+        ],
+        "xm2": [
+          "out",
+          "inn",
+          "tail",
+          "vdd"
+        ],
+        "xm3": [
+          "mirror",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm4": [
+          "out",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm5": [
+          "tail",
+          "bias",
+          "vdd",
+          "vdd"
+        ],
+        "xm6": [
+          "bias",
+          "bias",
+          "vdd",
+          "vdd"
+        ]
+      }
+    },
+    "C-source-0p70": {
+      "acquisition_numerical_usability": "NUMERICALLY_USABLE",
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 4e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 4e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 2.4000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 4e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 2.4000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 4e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 2.4000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 4e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 1e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 4e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 4e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 2.4000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 4e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 2.4000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 4e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 2.4000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 4e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 1e-06
+      },
+      "analyses": [
+        {
+          "analysis_index": 0,
+          "columns": 71,
+          "native_text_sha256": "8d9fcb8c247c05ae06d7456095aaaa05349857c4e620c5a43bad1040e2e09a6d",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Vcm": 0.3,
+              "Vdd": 1.0,
+              "Vdiff": 0.1,
+              "Vout": 0.7
+            },
+            "vectors": [
+              "v(bias)",
+              "v(cm)",
+              "v(diff)",
+              "v(inn)",
+              "v(inp)",
+              "v(mirror)",
+              "v(out)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vcm)",
+              "i(Vdiff)",
+              "i(Vout)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]"
+            ]
+          },
+          "rows": 1
+        }
+      ],
+      "array_file": "interface-C-source-0p70.npz",
+      "array_sha256": "791027b84342b6adfe07d123b81a0a7bd5a52579e0b14ce736de4f5c8170366e",
+      "case": {
+        "cload_f": 5e-12,
+        "common_mode_v": 0.3,
+        "fixture": "C",
+        "full_differential_v": 0.1,
+        "id": "C-source-0p70",
+        "output_clamp_v": 0.7,
+        "role": "Finite diagnostic clamp; not a qualified continuous buffer voltage range"
+      },
+      "circuit_file": "interface-C-source-0p70.cir",
+      "circuit_sha256": "1318e852680a635a0f5a0748d74dd707b7957fcef16d7f4b5689ceee121a359e",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "original_attempt_sha256": "0f21d3371b3d0e15f3eee85681059f53ae3216eb710f1f0822dba6cfd4aae219",
+      "original_realization_id": "2771d73d417fc435d0efc7767c8897cdbddb162e979ffa5b00aa1f3c8313b1cf",
+      "physical_devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "profile_tier": "ARTIFICIAL",
+      "request_id": "01119c6237a24bcc4e2c60c2f480922e27d84b3dab50f7621a2e989f1aef1491",
+      "target_started_utc": "2026-09-13T11:36:24.658962+00:00",
+      "terminals": {
+        "xm1": [
+          "mirror",
+          "inp",
+          "tail",
+          "vdd"
+        ],
+        "xm2": [
+          "out",
+          "inn",
+          "tail",
+          "vdd"
+        ],
+        "xm3": [
+          "mirror",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm4": [
+          "out",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm5": [
+          "tail",
+          "bias",
+          "vdd",
+          "vdd"
+        ],
+        "xm6": [
+          "bias",
+          "bias",
+          "vdd",
+          "vdd"
+        ]
+      }
+    },
+    "D1-25p": {
+      "acquisition_numerical_usability": "NUMERICALLY_USABLE",
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 4e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 4e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 2.4000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 4e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 2.4000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 4e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 2.4000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 4e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 1e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 2.4000000000000003e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 4e-06,
+        "after1_1_delvto": 0.0,
+        "after1_1_l": 2.4000000000000003e-07,
+        "after1_1_m": 1.0,
+        "after1_1_mulu0": 1.0,
+        "after1_1_nf": 1.0,
+        "after1_1_w": 4e-06,
+        "after1_2_delvto": 0.0,
+        "after1_2_l": 2.4000000000000003e-07,
+        "after1_2_m": 1.0,
+        "after1_2_mulu0": 1.0,
+        "after1_2_nf": 1.0,
+        "after1_2_w": 4e-06,
+        "after1_3_delvto": 0.0,
+        "after1_3_l": 2.4000000000000003e-07,
+        "after1_3_m": 1.0,
+        "after1_3_mulu0": 1.0,
+        "after1_3_nf": 1.0,
+        "after1_3_w": 4e-06,
+        "after1_4_delvto": 0.0,
+        "after1_4_l": 2.4000000000000003e-07,
+        "after1_4_m": 1.0,
+        "after1_4_mulu0": 1.0,
+        "after1_4_nf": 1.0,
+        "after1_4_w": 4e-06,
+        "after1_5_delvto": 0.0,
+        "after1_5_l": 4.0000000000000003e-07,
+        "after1_5_m": 1.0,
+        "after1_5_mulu0": 1.0,
+        "after1_5_nf": 1.0,
+        "after1_5_w": 1e-06,
+        "after2_0_delvto": 0.0,
+        "after2_0_l": 2.4000000000000003e-07,
+        "after2_0_m": 1.0,
+        "after2_0_mulu0": 1.0,
+        "after2_0_nf": 1.0,
+        "after2_0_w": 4e-06,
+        "after2_1_delvto": 0.0,
+        "after2_1_l": 2.4000000000000003e-07,
+        "after2_1_m": 1.0,
+        "after2_1_mulu0": 1.0,
+        "after2_1_nf": 1.0,
+        "after2_1_w": 4e-06,
+        "after2_2_delvto": 0.0,
+        "after2_2_l": 2.4000000000000003e-07,
+        "after2_2_m": 1.0,
+        "after2_2_mulu0": 1.0,
+        "after2_2_nf": 1.0,
+        "after2_2_w": 4e-06,
+        "after2_3_delvto": 0.0,
+        "after2_3_l": 2.4000000000000003e-07,
+        "after2_3_m": 1.0,
+        "after2_3_mulu0": 1.0,
+        "after2_3_nf": 1.0,
+        "after2_3_w": 4e-06,
+        "after2_4_delvto": 0.0,
+        "after2_4_l": 2.4000000000000003e-07,
+        "after2_4_m": 1.0,
+        "after2_4_mulu0": 1.0,
+        "after2_4_nf": 1.0,
+        "after2_4_w": 4e-06,
+        "after2_5_delvto": 0.0,
+        "after2_5_l": 4.0000000000000003e-07,
+        "after2_5_m": 1.0,
+        "after2_5_mulu0": 1.0,
+        "after2_5_nf": 1.0,
+        "after2_5_w": 1e-06,
+        "after3_0_delvto": 0.0,
+        "after3_0_l": 2.4000000000000003e-07,
+        "after3_0_m": 1.0,
+        "after3_0_mulu0": 1.0,
+        "after3_0_nf": 1.0,
+        "after3_0_w": 4e-06,
+        "after3_1_delvto": 0.0,
+        "after3_1_l": 2.4000000000000003e-07,
+        "after3_1_m": 1.0,
+        "after3_1_mulu0": 1.0,
+        "after3_1_nf": 1.0,
+        "after3_1_w": 4e-06,
+        "after3_2_delvto": 0.0,
+        "after3_2_l": 2.4000000000000003e-07,
+        "after3_2_m": 1.0,
+        "after3_2_mulu0": 1.0,
+        "after3_2_nf": 1.0,
+        "after3_2_w": 4e-06,
+        "after3_3_delvto": 0.0,
+        "after3_3_l": 2.4000000000000003e-07,
+        "after3_3_m": 1.0,
+        "after3_3_mulu0": 1.0,
+        "after3_3_nf": 1.0,
+        "after3_3_w": 4e-06,
+        "after3_4_delvto": 0.0,
+        "after3_4_l": 2.4000000000000003e-07,
+        "after3_4_m": 1.0,
+        "after3_4_mulu0": 1.0,
+        "after3_4_nf": 1.0,
+        "after3_4_w": 4e-06,
+        "after3_5_delvto": 0.0,
+        "after3_5_l": 4.0000000000000003e-07,
+        "after3_5_m": 1.0,
+        "after3_5_mulu0": 1.0,
+        "after3_5_nf": 1.0,
+        "after3_5_w": 1e-06,
+        "after4_0_delvto": 0.0,
+        "after4_0_l": 2.4000000000000003e-07,
+        "after4_0_m": 1.0,
+        "after4_0_mulu0": 1.0,
+        "after4_0_nf": 1.0,
+        "after4_0_w": 4e-06,
+        "after4_1_delvto": 0.0,
+        "after4_1_l": 2.4000000000000003e-07,
+        "after4_1_m": 1.0,
+        "after4_1_mulu0": 1.0,
+        "after4_1_nf": 1.0,
+        "after4_1_w": 4e-06,
+        "after4_2_delvto": 0.0,
+        "after4_2_l": 2.4000000000000003e-07,
+        "after4_2_m": 1.0,
+        "after4_2_mulu0": 1.0,
+        "after4_2_nf": 1.0,
+        "after4_2_w": 4e-06,
+        "after4_3_delvto": 0.0,
+        "after4_3_l": 2.4000000000000003e-07,
+        "after4_3_m": 1.0,
+        "after4_3_mulu0": 1.0,
+        "after4_3_nf": 1.0,
+        "after4_3_w": 4e-06,
+        "after4_4_delvto": 0.0,
+        "after4_4_l": 2.4000000000000003e-07,
+        "after4_4_m": 1.0,
+        "after4_4_mulu0": 1.0,
+        "after4_4_nf": 1.0,
+        "after4_4_w": 4e-06,
+        "after4_5_delvto": 0.0,
+        "after4_5_l": 4.0000000000000003e-07,
+        "after4_5_m": 1.0,
+        "after4_5_mulu0": 1.0,
+        "after4_5_nf": 1.0,
+        "after4_5_w": 1e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 4e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 4e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 2.4000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 4e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 2.4000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 4e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 2.4000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 4e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 1e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 2.4000000000000003e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 4e-06,
+        "applied1_1_delvto": 0.0,
+        "applied1_1_l": 2.4000000000000003e-07,
+        "applied1_1_m": 1.0,
+        "applied1_1_mulu0": 1.0,
+        "applied1_1_nf": 1.0,
+        "applied1_1_w": 4e-06,
+        "applied1_2_delvto": 0.0,
+        "applied1_2_l": 2.4000000000000003e-07,
+        "applied1_2_m": 1.0,
+        "applied1_2_mulu0": 1.0,
+        "applied1_2_nf": 1.0,
+        "applied1_2_w": 4e-06,
+        "applied1_3_delvto": 0.0,
+        "applied1_3_l": 2.4000000000000003e-07,
+        "applied1_3_m": 1.0,
+        "applied1_3_mulu0": 1.0,
+        "applied1_3_nf": 1.0,
+        "applied1_3_w": 4e-06,
+        "applied1_4_delvto": 0.0,
+        "applied1_4_l": 2.4000000000000003e-07,
+        "applied1_4_m": 1.0,
+        "applied1_4_mulu0": 1.0,
+        "applied1_4_nf": 1.0,
+        "applied1_4_w": 4e-06,
+        "applied1_5_delvto": 0.0,
+        "applied1_5_l": 4.0000000000000003e-07,
+        "applied1_5_m": 1.0,
+        "applied1_5_mulu0": 1.0,
+        "applied1_5_nf": 1.0,
+        "applied1_5_w": 1e-06,
+        "applied2_0_delvto": 0.0,
+        "applied2_0_l": 2.4000000000000003e-07,
+        "applied2_0_m": 1.0,
+        "applied2_0_mulu0": 1.0,
+        "applied2_0_nf": 1.0,
+        "applied2_0_w": 4e-06,
+        "applied2_1_delvto": 0.0,
+        "applied2_1_l": 2.4000000000000003e-07,
+        "applied2_1_m": 1.0,
+        "applied2_1_mulu0": 1.0,
+        "applied2_1_nf": 1.0,
+        "applied2_1_w": 4e-06,
+        "applied2_2_delvto": 0.0,
+        "applied2_2_l": 2.4000000000000003e-07,
+        "applied2_2_m": 1.0,
+        "applied2_2_mulu0": 1.0,
+        "applied2_2_nf": 1.0,
+        "applied2_2_w": 4e-06,
+        "applied2_3_delvto": 0.0,
+        "applied2_3_l": 2.4000000000000003e-07,
+        "applied2_3_m": 1.0,
+        "applied2_3_mulu0": 1.0,
+        "applied2_3_nf": 1.0,
+        "applied2_3_w": 4e-06,
+        "applied2_4_delvto": 0.0,
+        "applied2_4_l": 2.4000000000000003e-07,
+        "applied2_4_m": 1.0,
+        "applied2_4_mulu0": 1.0,
+        "applied2_4_nf": 1.0,
+        "applied2_4_w": 4e-06,
+        "applied2_5_delvto": 0.0,
+        "applied2_5_l": 4.0000000000000003e-07,
+        "applied2_5_m": 1.0,
+        "applied2_5_mulu0": 1.0,
+        "applied2_5_nf": 1.0,
+        "applied2_5_w": 1e-06,
+        "applied3_0_delvto": 0.0,
+        "applied3_0_l": 2.4000000000000003e-07,
+        "applied3_0_m": 1.0,
+        "applied3_0_mulu0": 1.0,
+        "applied3_0_nf": 1.0,
+        "applied3_0_w": 4e-06,
+        "applied3_1_delvto": 0.0,
+        "applied3_1_l": 2.4000000000000003e-07,
+        "applied3_1_m": 1.0,
+        "applied3_1_mulu0": 1.0,
+        "applied3_1_nf": 1.0,
+        "applied3_1_w": 4e-06,
+        "applied3_2_delvto": 0.0,
+        "applied3_2_l": 2.4000000000000003e-07,
+        "applied3_2_m": 1.0,
+        "applied3_2_mulu0": 1.0,
+        "applied3_2_nf": 1.0,
+        "applied3_2_w": 4e-06,
+        "applied3_3_delvto": 0.0,
+        "applied3_3_l": 2.4000000000000003e-07,
+        "applied3_3_m": 1.0,
+        "applied3_3_mulu0": 1.0,
+        "applied3_3_nf": 1.0,
+        "applied3_3_w": 4e-06,
+        "applied3_4_delvto": 0.0,
+        "applied3_4_l": 2.4000000000000003e-07,
+        "applied3_4_m": 1.0,
+        "applied3_4_mulu0": 1.0,
+        "applied3_4_nf": 1.0,
+        "applied3_4_w": 4e-06,
+        "applied3_5_delvto": 0.0,
+        "applied3_5_l": 4.0000000000000003e-07,
+        "applied3_5_m": 1.0,
+        "applied3_5_mulu0": 1.0,
+        "applied3_5_nf": 1.0,
+        "applied3_5_w": 1e-06,
+        "applied4_0_delvto": 0.0,
+        "applied4_0_l": 2.4000000000000003e-07,
+        "applied4_0_m": 1.0,
+        "applied4_0_mulu0": 1.0,
+        "applied4_0_nf": 1.0,
+        "applied4_0_w": 4e-06,
+        "applied4_1_delvto": 0.0,
+        "applied4_1_l": 2.4000000000000003e-07,
+        "applied4_1_m": 1.0,
+        "applied4_1_mulu0": 1.0,
+        "applied4_1_nf": 1.0,
+        "applied4_1_w": 4e-06,
+        "applied4_2_delvto": 0.0,
+        "applied4_2_l": 2.4000000000000003e-07,
+        "applied4_2_m": 1.0,
+        "applied4_2_mulu0": 1.0,
+        "applied4_2_nf": 1.0,
+        "applied4_2_w": 4e-06,
+        "applied4_3_delvto": 0.0,
+        "applied4_3_l": 2.4000000000000003e-07,
+        "applied4_3_m": 1.0,
+        "applied4_3_mulu0": 1.0,
+        "applied4_3_nf": 1.0,
+        "applied4_3_w": 4e-06,
+        "applied4_4_delvto": 0.0,
+        "applied4_4_l": 2.4000000000000003e-07,
+        "applied4_4_m": 1.0,
+        "applied4_4_mulu0": 1.0,
+        "applied4_4_nf": 1.0,
+        "applied4_4_w": 4e-06,
+        "applied4_5_delvto": 0.0,
+        "applied4_5_l": 4.0000000000000003e-07,
+        "applied4_5_m": 1.0,
+        "applied4_5_mulu0": 1.0,
+        "applied4_5_nf": 1.0,
+        "applied4_5_w": 1e-06
+      },
+      "analyses": [
+        {
+          "analysis_index": 0,
+          "columns": 74,
+          "native_text_sha256": "8941039ec36e5ee80317f193dd579fa9f3445dc165bfea078981be4f207127da",
+          "recipe": {
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.25,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]",
+              "@rsource[resistance]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "analysis_index": 1,
+          "columns": 74,
+          "native_text_sha256": "63dca04171a07e62f2662a28e3ef9a95265d5d19fdf319b16a1cac6b5edc0de5",
+          "recipe": {
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.3,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]",
+              "@rsource[resistance]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "analysis_index": 2,
+          "columns": 74,
+          "native_text_sha256": "b67ac016bdd3060bd6d3b438ce7ae1f093c284583ff134753332482e66fc280c",
+          "recipe": {
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.35,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]",
+              "@rsource[resistance]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "analysis_index": 3,
+          "columns": 79,
+          "native_text_sha256": "808947249f798ad95598abdfabd3cb856e89d97b208847b2123ed840719ba854",
+          "recipe": {
+            "ac_sources": {
+              "Iinj": 0,
+              "Vdd": 0,
+              "Vin": 1,
+              "Vinj": 0,
+              "Voffset": 0
+            },
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "ac",
+            "points_per_decade": 60,
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.3,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "start": 1000.0,
+            "stop": 1000000000.0,
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)"
+            ]
+          },
+          "rows": 361
+        },
+        {
+          "analysis_index": 4,
+          "columns": 40,
+          "native_text_sha256": "147a1faac8f947acc0588d2c32c164657506d51094de46f165f8daefa104e7e3",
+          "recipe": {
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "tran",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.3,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "step": 2e-09,
+            "stop": 8.5e-06,
+            "tmax": 2e-09,
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)"
+            ]
+          },
+          "rows": 4332
+        }
+      ],
+      "array_file": "interface-D1-25p.npz",
+      "array_sha256": "8a6a634b3c353b2bcd6e36e5f53790a3563446155623d3133edda8e6ab2261a3",
+      "case": {
+        "ac": {
+          "points_per_decade": 60,
+          "start_hz": 1000.0,
+          "stop_hz": 1000000000.0
+        },
+        "ac_input_v": 0.3,
+        "cload_f": 2.5e-11,
+        "fixture": "D1",
+        "id": "D1-25p",
+        "op_input_v": [
+          0.25,
+          0.3,
+          0.35
+        ],
+        "pwl": [
+          [
+            0.0,
+            0.25
+          ],
+          [
+            5e-07,
+            0.25
+          ],
+          [
+            5.125e-07,
+            0.35
+          ],
+          [
+            4.5e-06,
+            0.35
+          ],
+          [
+            4.5125e-06,
+            0.25
+          ],
+          [
+            8.5e-06,
+            0.25
+          ]
+        ],
+        "role": "Same-core capacitive-load comparison",
+        "stop_s": 8.5e-06,
+        "tmax_s": 2e-09
+      },
+      "circuit_file": "interface-D1-25p.cir",
+      "circuit_sha256": "f98dd60c9445698b110c9d4f12002cb5f9cf696482e0aeae79a02b07c9c28528",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "original_attempt_sha256": "5d586a9ae805f8fcd9bc6d6ebf3dd9a552ce6270c794412fbd5190056900de9d",
+      "original_realization_id": "10ff06bab3ca114b89ac09ca1bedde9e98613cad100084934b37b16d1e985e0d",
+      "physical_devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "profile_tier": "ARTIFICIAL",
+      "request_id": "2f1c4d8a8348d1fa2eda25346636ad8bd475c767f467642fb99a3d151a33e562",
+      "target_started_utc": "2026-09-13T11:36:19.410189+00:00",
+      "terminals": {
+        "xm1": [
+          "mirror",
+          "inp",
+          "tail",
+          "vdd"
+        ],
+        "xm2": [
+          "out",
+          "inn",
+          "tail",
+          "vdd"
+        ],
+        "xm3": [
+          "mirror",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm4": [
+          "out",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm5": [
+          "tail",
+          "bias",
+          "vdd",
+          "vdd"
+        ],
+        "xm6": [
+          "bias",
+          "bias",
+          "vdd",
+          "vdd"
+        ]
+      }
+    },
+    "D1-25p-refined": {
+      "acquisition_numerical_usability": "NUMERICALLY_USABLE",
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 4e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 4e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 2.4000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 4e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 2.4000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 4e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 2.4000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 4e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 1e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 2.4000000000000003e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 4e-06,
+        "after1_1_delvto": 0.0,
+        "after1_1_l": 2.4000000000000003e-07,
+        "after1_1_m": 1.0,
+        "after1_1_mulu0": 1.0,
+        "after1_1_nf": 1.0,
+        "after1_1_w": 4e-06,
+        "after1_2_delvto": 0.0,
+        "after1_2_l": 2.4000000000000003e-07,
+        "after1_2_m": 1.0,
+        "after1_2_mulu0": 1.0,
+        "after1_2_nf": 1.0,
+        "after1_2_w": 4e-06,
+        "after1_3_delvto": 0.0,
+        "after1_3_l": 2.4000000000000003e-07,
+        "after1_3_m": 1.0,
+        "after1_3_mulu0": 1.0,
+        "after1_3_nf": 1.0,
+        "after1_3_w": 4e-06,
+        "after1_4_delvto": 0.0,
+        "after1_4_l": 2.4000000000000003e-07,
+        "after1_4_m": 1.0,
+        "after1_4_mulu0": 1.0,
+        "after1_4_nf": 1.0,
+        "after1_4_w": 4e-06,
+        "after1_5_delvto": 0.0,
+        "after1_5_l": 4.0000000000000003e-07,
+        "after1_5_m": 1.0,
+        "after1_5_mulu0": 1.0,
+        "after1_5_nf": 1.0,
+        "after1_5_w": 1e-06,
+        "after2_0_delvto": 0.0,
+        "after2_0_l": 2.4000000000000003e-07,
+        "after2_0_m": 1.0,
+        "after2_0_mulu0": 1.0,
+        "after2_0_nf": 1.0,
+        "after2_0_w": 4e-06,
+        "after2_1_delvto": 0.0,
+        "after2_1_l": 2.4000000000000003e-07,
+        "after2_1_m": 1.0,
+        "after2_1_mulu0": 1.0,
+        "after2_1_nf": 1.0,
+        "after2_1_w": 4e-06,
+        "after2_2_delvto": 0.0,
+        "after2_2_l": 2.4000000000000003e-07,
+        "after2_2_m": 1.0,
+        "after2_2_mulu0": 1.0,
+        "after2_2_nf": 1.0,
+        "after2_2_w": 4e-06,
+        "after2_3_delvto": 0.0,
+        "after2_3_l": 2.4000000000000003e-07,
+        "after2_3_m": 1.0,
+        "after2_3_mulu0": 1.0,
+        "after2_3_nf": 1.0,
+        "after2_3_w": 4e-06,
+        "after2_4_delvto": 0.0,
+        "after2_4_l": 2.4000000000000003e-07,
+        "after2_4_m": 1.0,
+        "after2_4_mulu0": 1.0,
+        "after2_4_nf": 1.0,
+        "after2_4_w": 4e-06,
+        "after2_5_delvto": 0.0,
+        "after2_5_l": 4.0000000000000003e-07,
+        "after2_5_m": 1.0,
+        "after2_5_mulu0": 1.0,
+        "after2_5_nf": 1.0,
+        "after2_5_w": 1e-06,
+        "after3_0_delvto": 0.0,
+        "after3_0_l": 2.4000000000000003e-07,
+        "after3_0_m": 1.0,
+        "after3_0_mulu0": 1.0,
+        "after3_0_nf": 1.0,
+        "after3_0_w": 4e-06,
+        "after3_1_delvto": 0.0,
+        "after3_1_l": 2.4000000000000003e-07,
+        "after3_1_m": 1.0,
+        "after3_1_mulu0": 1.0,
+        "after3_1_nf": 1.0,
+        "after3_1_w": 4e-06,
+        "after3_2_delvto": 0.0,
+        "after3_2_l": 2.4000000000000003e-07,
+        "after3_2_m": 1.0,
+        "after3_2_mulu0": 1.0,
+        "after3_2_nf": 1.0,
+        "after3_2_w": 4e-06,
+        "after3_3_delvto": 0.0,
+        "after3_3_l": 2.4000000000000003e-07,
+        "after3_3_m": 1.0,
+        "after3_3_mulu0": 1.0,
+        "after3_3_nf": 1.0,
+        "after3_3_w": 4e-06,
+        "after3_4_delvto": 0.0,
+        "after3_4_l": 2.4000000000000003e-07,
+        "after3_4_m": 1.0,
+        "after3_4_mulu0": 1.0,
+        "after3_4_nf": 1.0,
+        "after3_4_w": 4e-06,
+        "after3_5_delvto": 0.0,
+        "after3_5_l": 4.0000000000000003e-07,
+        "after3_5_m": 1.0,
+        "after3_5_mulu0": 1.0,
+        "after3_5_nf": 1.0,
+        "after3_5_w": 1e-06,
+        "after4_0_delvto": 0.0,
+        "after4_0_l": 2.4000000000000003e-07,
+        "after4_0_m": 1.0,
+        "after4_0_mulu0": 1.0,
+        "after4_0_nf": 1.0,
+        "after4_0_w": 4e-06,
+        "after4_1_delvto": 0.0,
+        "after4_1_l": 2.4000000000000003e-07,
+        "after4_1_m": 1.0,
+        "after4_1_mulu0": 1.0,
+        "after4_1_nf": 1.0,
+        "after4_1_w": 4e-06,
+        "after4_2_delvto": 0.0,
+        "after4_2_l": 2.4000000000000003e-07,
+        "after4_2_m": 1.0,
+        "after4_2_mulu0": 1.0,
+        "after4_2_nf": 1.0,
+        "after4_2_w": 4e-06,
+        "after4_3_delvto": 0.0,
+        "after4_3_l": 2.4000000000000003e-07,
+        "after4_3_m": 1.0,
+        "after4_3_mulu0": 1.0,
+        "after4_3_nf": 1.0,
+        "after4_3_w": 4e-06,
+        "after4_4_delvto": 0.0,
+        "after4_4_l": 2.4000000000000003e-07,
+        "after4_4_m": 1.0,
+        "after4_4_mulu0": 1.0,
+        "after4_4_nf": 1.0,
+        "after4_4_w": 4e-06,
+        "after4_5_delvto": 0.0,
+        "after4_5_l": 4.0000000000000003e-07,
+        "after4_5_m": 1.0,
+        "after4_5_mulu0": 1.0,
+        "after4_5_nf": 1.0,
+        "after4_5_w": 1e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 4e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 4e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 2.4000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 4e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 2.4000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 4e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 2.4000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 4e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 1e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 2.4000000000000003e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 4e-06,
+        "applied1_1_delvto": 0.0,
+        "applied1_1_l": 2.4000000000000003e-07,
+        "applied1_1_m": 1.0,
+        "applied1_1_mulu0": 1.0,
+        "applied1_1_nf": 1.0,
+        "applied1_1_w": 4e-06,
+        "applied1_2_delvto": 0.0,
+        "applied1_2_l": 2.4000000000000003e-07,
+        "applied1_2_m": 1.0,
+        "applied1_2_mulu0": 1.0,
+        "applied1_2_nf": 1.0,
+        "applied1_2_w": 4e-06,
+        "applied1_3_delvto": 0.0,
+        "applied1_3_l": 2.4000000000000003e-07,
+        "applied1_3_m": 1.0,
+        "applied1_3_mulu0": 1.0,
+        "applied1_3_nf": 1.0,
+        "applied1_3_w": 4e-06,
+        "applied1_4_delvto": 0.0,
+        "applied1_4_l": 2.4000000000000003e-07,
+        "applied1_4_m": 1.0,
+        "applied1_4_mulu0": 1.0,
+        "applied1_4_nf": 1.0,
+        "applied1_4_w": 4e-06,
+        "applied1_5_delvto": 0.0,
+        "applied1_5_l": 4.0000000000000003e-07,
+        "applied1_5_m": 1.0,
+        "applied1_5_mulu0": 1.0,
+        "applied1_5_nf": 1.0,
+        "applied1_5_w": 1e-06,
+        "applied2_0_delvto": 0.0,
+        "applied2_0_l": 2.4000000000000003e-07,
+        "applied2_0_m": 1.0,
+        "applied2_0_mulu0": 1.0,
+        "applied2_0_nf": 1.0,
+        "applied2_0_w": 4e-06,
+        "applied2_1_delvto": 0.0,
+        "applied2_1_l": 2.4000000000000003e-07,
+        "applied2_1_m": 1.0,
+        "applied2_1_mulu0": 1.0,
+        "applied2_1_nf": 1.0,
+        "applied2_1_w": 4e-06,
+        "applied2_2_delvto": 0.0,
+        "applied2_2_l": 2.4000000000000003e-07,
+        "applied2_2_m": 1.0,
+        "applied2_2_mulu0": 1.0,
+        "applied2_2_nf": 1.0,
+        "applied2_2_w": 4e-06,
+        "applied2_3_delvto": 0.0,
+        "applied2_3_l": 2.4000000000000003e-07,
+        "applied2_3_m": 1.0,
+        "applied2_3_mulu0": 1.0,
+        "applied2_3_nf": 1.0,
+        "applied2_3_w": 4e-06,
+        "applied2_4_delvto": 0.0,
+        "applied2_4_l": 2.4000000000000003e-07,
+        "applied2_4_m": 1.0,
+        "applied2_4_mulu0": 1.0,
+        "applied2_4_nf": 1.0,
+        "applied2_4_w": 4e-06,
+        "applied2_5_delvto": 0.0,
+        "applied2_5_l": 4.0000000000000003e-07,
+        "applied2_5_m": 1.0,
+        "applied2_5_mulu0": 1.0,
+        "applied2_5_nf": 1.0,
+        "applied2_5_w": 1e-06,
+        "applied3_0_delvto": 0.0,
+        "applied3_0_l": 2.4000000000000003e-07,
+        "applied3_0_m": 1.0,
+        "applied3_0_mulu0": 1.0,
+        "applied3_0_nf": 1.0,
+        "applied3_0_w": 4e-06,
+        "applied3_1_delvto": 0.0,
+        "applied3_1_l": 2.4000000000000003e-07,
+        "applied3_1_m": 1.0,
+        "applied3_1_mulu0": 1.0,
+        "applied3_1_nf": 1.0,
+        "applied3_1_w": 4e-06,
+        "applied3_2_delvto": 0.0,
+        "applied3_2_l": 2.4000000000000003e-07,
+        "applied3_2_m": 1.0,
+        "applied3_2_mulu0": 1.0,
+        "applied3_2_nf": 1.0,
+        "applied3_2_w": 4e-06,
+        "applied3_3_delvto": 0.0,
+        "applied3_3_l": 2.4000000000000003e-07,
+        "applied3_3_m": 1.0,
+        "applied3_3_mulu0": 1.0,
+        "applied3_3_nf": 1.0,
+        "applied3_3_w": 4e-06,
+        "applied3_4_delvto": 0.0,
+        "applied3_4_l": 2.4000000000000003e-07,
+        "applied3_4_m": 1.0,
+        "applied3_4_mulu0": 1.0,
+        "applied3_4_nf": 1.0,
+        "applied3_4_w": 4e-06,
+        "applied3_5_delvto": 0.0,
+        "applied3_5_l": 4.0000000000000003e-07,
+        "applied3_5_m": 1.0,
+        "applied3_5_mulu0": 1.0,
+        "applied3_5_nf": 1.0,
+        "applied3_5_w": 1e-06,
+        "applied4_0_delvto": 0.0,
+        "applied4_0_l": 2.4000000000000003e-07,
+        "applied4_0_m": 1.0,
+        "applied4_0_mulu0": 1.0,
+        "applied4_0_nf": 1.0,
+        "applied4_0_w": 4e-06,
+        "applied4_1_delvto": 0.0,
+        "applied4_1_l": 2.4000000000000003e-07,
+        "applied4_1_m": 1.0,
+        "applied4_1_mulu0": 1.0,
+        "applied4_1_nf": 1.0,
+        "applied4_1_w": 4e-06,
+        "applied4_2_delvto": 0.0,
+        "applied4_2_l": 2.4000000000000003e-07,
+        "applied4_2_m": 1.0,
+        "applied4_2_mulu0": 1.0,
+        "applied4_2_nf": 1.0,
+        "applied4_2_w": 4e-06,
+        "applied4_3_delvto": 0.0,
+        "applied4_3_l": 2.4000000000000003e-07,
+        "applied4_3_m": 1.0,
+        "applied4_3_mulu0": 1.0,
+        "applied4_3_nf": 1.0,
+        "applied4_3_w": 4e-06,
+        "applied4_4_delvto": 0.0,
+        "applied4_4_l": 2.4000000000000003e-07,
+        "applied4_4_m": 1.0,
+        "applied4_4_mulu0": 1.0,
+        "applied4_4_nf": 1.0,
+        "applied4_4_w": 4e-06,
+        "applied4_5_delvto": 0.0,
+        "applied4_5_l": 4.0000000000000003e-07,
+        "applied4_5_m": 1.0,
+        "applied4_5_mulu0": 1.0,
+        "applied4_5_nf": 1.0,
+        "applied4_5_w": 1e-06
+      },
+      "analyses": [
+        {
+          "analysis_index": 0,
+          "columns": 74,
+          "native_text_sha256": "8941039ec36e5ee80317f193dd579fa9f3445dc165bfea078981be4f207127da",
+          "recipe": {
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.25,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]",
+              "@rsource[resistance]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "analysis_index": 1,
+          "columns": 74,
+          "native_text_sha256": "63dca04171a07e62f2662a28e3ef9a95265d5d19fdf319b16a1cac6b5edc0de5",
+          "recipe": {
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.3,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]",
+              "@rsource[resistance]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "analysis_index": 2,
+          "columns": 74,
+          "native_text_sha256": "b67ac016bdd3060bd6d3b438ce7ae1f093c284583ff134753332482e66fc280c",
+          "recipe": {
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.35,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]",
+              "@rsource[resistance]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "analysis_index": 3,
+          "columns": 79,
+          "native_text_sha256": "808947249f798ad95598abdfabd3cb856e89d97b208847b2123ed840719ba854",
+          "recipe": {
+            "ac_sources": {
+              "Iinj": 0,
+              "Vdd": 0,
+              "Vin": 1,
+              "Vinj": 0,
+              "Voffset": 0
+            },
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "ac",
+            "points_per_decade": 60,
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.3,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "start": 1000.0,
+            "stop": 1000000000.0,
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)"
+            ]
+          },
+          "rows": 361
+        },
+        {
+          "analysis_index": 4,
+          "columns": 40,
+          "native_text_sha256": "dfda15c41113037cbe6c594335e45f77200f2db5db265fd0e0190275edd0a48f",
+          "recipe": {
+            "elements": {
+              "Cload": 2.5e-11,
+              "Rload": 1000000.0
+            },
+            "kind": "tran",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.3,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "step": 1e-09,
+            "stop": 8.5e-06,
+            "tmax": 1e-09,
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)"
+            ]
+          },
+          "rows": 8570
+        }
+      ],
+      "array_file": "interface-D1-25p-refined.npz",
+      "array_sha256": "667ae21f2daeefdb9388d4580875e86860d3c8ec12c57b4dee03898ed25c9464",
+      "case": {
+        "ac": {
+          "points_per_decade": 60,
+          "start_hz": 1000.0,
+          "stop_hz": 1000000000.0
+        },
+        "ac_input_v": 0.3,
+        "cload_f": 2.5e-11,
+        "fixture": "D1",
+        "id": "D1-25p-refined",
+        "op_input_v": [
+          0.25,
+          0.3,
+          0.35
+        ],
+        "pwl": [
+          [
+            0.0,
+            0.25
+          ],
+          [
+            5e-07,
+            0.25
+          ],
+          [
+            5.125e-07,
+            0.35
+          ],
+          [
+            4.5e-06,
+            0.35
+          ],
+          [
+            4.5125e-06,
+            0.25
+          ],
+          [
+            8.5e-06,
+            0.25
+          ]
+        ],
+        "role": "Predeclared timestep control",
+        "stop_s": 8.5e-06,
+        "tmax_s": 1e-09
+      },
+      "circuit_file": "interface-D1-25p-refined.cir",
+      "circuit_sha256": "f98dd60c9445698b110c9d4f12002cb5f9cf696482e0aeae79a02b07c9c28528",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "original_attempt_sha256": "727b629c91ee6475089c8aeb4742419958f110be6d5392ebeef8cbe127dd600f",
+      "original_realization_id": "5acd4f50110305967a579eab341aac6abd069bb4e640bcee8e5b7dec45fa92c7",
+      "physical_devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "profile_tier": "ARTIFICIAL",
+      "request_id": "9fb9570bf91f35cfd5526a0f59a2ca3e72da316e89c383503f5f6b95bc1fb1bd",
+      "target_started_utc": "2026-09-13T11:36:20.998833+00:00",
+      "terminals": {
+        "xm1": [
+          "mirror",
+          "inp",
+          "tail",
+          "vdd"
+        ],
+        "xm2": [
+          "out",
+          "inn",
+          "tail",
+          "vdd"
+        ],
+        "xm3": [
+          "mirror",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm4": [
+          "out",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm5": [
+          "tail",
+          "bias",
+          "vdd",
+          "vdd"
+        ],
+        "xm6": [
+          "bias",
+          "bias",
+          "vdd",
+          "vdd"
+        ]
+      }
+    },
+    "D1-5p": {
+      "acquisition_numerical_usability": "NUMERICALLY_USABLE",
+      "actual_parameter_readbacks": {
+        "after0_0_delvto": 0.0,
+        "after0_0_l": 2.4000000000000003e-07,
+        "after0_0_m": 1.0,
+        "after0_0_mulu0": 1.0,
+        "after0_0_nf": 1.0,
+        "after0_0_w": 4e-06,
+        "after0_1_delvto": 0.0,
+        "after0_1_l": 2.4000000000000003e-07,
+        "after0_1_m": 1.0,
+        "after0_1_mulu0": 1.0,
+        "after0_1_nf": 1.0,
+        "after0_1_w": 4e-06,
+        "after0_2_delvto": 0.0,
+        "after0_2_l": 2.4000000000000003e-07,
+        "after0_2_m": 1.0,
+        "after0_2_mulu0": 1.0,
+        "after0_2_nf": 1.0,
+        "after0_2_w": 4e-06,
+        "after0_3_delvto": 0.0,
+        "after0_3_l": 2.4000000000000003e-07,
+        "after0_3_m": 1.0,
+        "after0_3_mulu0": 1.0,
+        "after0_3_nf": 1.0,
+        "after0_3_w": 4e-06,
+        "after0_4_delvto": 0.0,
+        "after0_4_l": 2.4000000000000003e-07,
+        "after0_4_m": 1.0,
+        "after0_4_mulu0": 1.0,
+        "after0_4_nf": 1.0,
+        "after0_4_w": 4e-06,
+        "after0_5_delvto": 0.0,
+        "after0_5_l": 4.0000000000000003e-07,
+        "after0_5_m": 1.0,
+        "after0_5_mulu0": 1.0,
+        "after0_5_nf": 1.0,
+        "after0_5_w": 1e-06,
+        "after1_0_delvto": 0.0,
+        "after1_0_l": 2.4000000000000003e-07,
+        "after1_0_m": 1.0,
+        "after1_0_mulu0": 1.0,
+        "after1_0_nf": 1.0,
+        "after1_0_w": 4e-06,
+        "after1_1_delvto": 0.0,
+        "after1_1_l": 2.4000000000000003e-07,
+        "after1_1_m": 1.0,
+        "after1_1_mulu0": 1.0,
+        "after1_1_nf": 1.0,
+        "after1_1_w": 4e-06,
+        "after1_2_delvto": 0.0,
+        "after1_2_l": 2.4000000000000003e-07,
+        "after1_2_m": 1.0,
+        "after1_2_mulu0": 1.0,
+        "after1_2_nf": 1.0,
+        "after1_2_w": 4e-06,
+        "after1_3_delvto": 0.0,
+        "after1_3_l": 2.4000000000000003e-07,
+        "after1_3_m": 1.0,
+        "after1_3_mulu0": 1.0,
+        "after1_3_nf": 1.0,
+        "after1_3_w": 4e-06,
+        "after1_4_delvto": 0.0,
+        "after1_4_l": 2.4000000000000003e-07,
+        "after1_4_m": 1.0,
+        "after1_4_mulu0": 1.0,
+        "after1_4_nf": 1.0,
+        "after1_4_w": 4e-06,
+        "after1_5_delvto": 0.0,
+        "after1_5_l": 4.0000000000000003e-07,
+        "after1_5_m": 1.0,
+        "after1_5_mulu0": 1.0,
+        "after1_5_nf": 1.0,
+        "after1_5_w": 1e-06,
+        "after2_0_delvto": 0.0,
+        "after2_0_l": 2.4000000000000003e-07,
+        "after2_0_m": 1.0,
+        "after2_0_mulu0": 1.0,
+        "after2_0_nf": 1.0,
+        "after2_0_w": 4e-06,
+        "after2_1_delvto": 0.0,
+        "after2_1_l": 2.4000000000000003e-07,
+        "after2_1_m": 1.0,
+        "after2_1_mulu0": 1.0,
+        "after2_1_nf": 1.0,
+        "after2_1_w": 4e-06,
+        "after2_2_delvto": 0.0,
+        "after2_2_l": 2.4000000000000003e-07,
+        "after2_2_m": 1.0,
+        "after2_2_mulu0": 1.0,
+        "after2_2_nf": 1.0,
+        "after2_2_w": 4e-06,
+        "after2_3_delvto": 0.0,
+        "after2_3_l": 2.4000000000000003e-07,
+        "after2_3_m": 1.0,
+        "after2_3_mulu0": 1.0,
+        "after2_3_nf": 1.0,
+        "after2_3_w": 4e-06,
+        "after2_4_delvto": 0.0,
+        "after2_4_l": 2.4000000000000003e-07,
+        "after2_4_m": 1.0,
+        "after2_4_mulu0": 1.0,
+        "after2_4_nf": 1.0,
+        "after2_4_w": 4e-06,
+        "after2_5_delvto": 0.0,
+        "after2_5_l": 4.0000000000000003e-07,
+        "after2_5_m": 1.0,
+        "after2_5_mulu0": 1.0,
+        "after2_5_nf": 1.0,
+        "after2_5_w": 1e-06,
+        "after3_0_delvto": 0.0,
+        "after3_0_l": 2.4000000000000003e-07,
+        "after3_0_m": 1.0,
+        "after3_0_mulu0": 1.0,
+        "after3_0_nf": 1.0,
+        "after3_0_w": 4e-06,
+        "after3_1_delvto": 0.0,
+        "after3_1_l": 2.4000000000000003e-07,
+        "after3_1_m": 1.0,
+        "after3_1_mulu0": 1.0,
+        "after3_1_nf": 1.0,
+        "after3_1_w": 4e-06,
+        "after3_2_delvto": 0.0,
+        "after3_2_l": 2.4000000000000003e-07,
+        "after3_2_m": 1.0,
+        "after3_2_mulu0": 1.0,
+        "after3_2_nf": 1.0,
+        "after3_2_w": 4e-06,
+        "after3_3_delvto": 0.0,
+        "after3_3_l": 2.4000000000000003e-07,
+        "after3_3_m": 1.0,
+        "after3_3_mulu0": 1.0,
+        "after3_3_nf": 1.0,
+        "after3_3_w": 4e-06,
+        "after3_4_delvto": 0.0,
+        "after3_4_l": 2.4000000000000003e-07,
+        "after3_4_m": 1.0,
+        "after3_4_mulu0": 1.0,
+        "after3_4_nf": 1.0,
+        "after3_4_w": 4e-06,
+        "after3_5_delvto": 0.0,
+        "after3_5_l": 4.0000000000000003e-07,
+        "after3_5_m": 1.0,
+        "after3_5_mulu0": 1.0,
+        "after3_5_nf": 1.0,
+        "after3_5_w": 1e-06,
+        "after4_0_delvto": 0.0,
+        "after4_0_l": 2.4000000000000003e-07,
+        "after4_0_m": 1.0,
+        "after4_0_mulu0": 1.0,
+        "after4_0_nf": 1.0,
+        "after4_0_w": 4e-06,
+        "after4_1_delvto": 0.0,
+        "after4_1_l": 2.4000000000000003e-07,
+        "after4_1_m": 1.0,
+        "after4_1_mulu0": 1.0,
+        "after4_1_nf": 1.0,
+        "after4_1_w": 4e-06,
+        "after4_2_delvto": 0.0,
+        "after4_2_l": 2.4000000000000003e-07,
+        "after4_2_m": 1.0,
+        "after4_2_mulu0": 1.0,
+        "after4_2_nf": 1.0,
+        "after4_2_w": 4e-06,
+        "after4_3_delvto": 0.0,
+        "after4_3_l": 2.4000000000000003e-07,
+        "after4_3_m": 1.0,
+        "after4_3_mulu0": 1.0,
+        "after4_3_nf": 1.0,
+        "after4_3_w": 4e-06,
+        "after4_4_delvto": 0.0,
+        "after4_4_l": 2.4000000000000003e-07,
+        "after4_4_m": 1.0,
+        "after4_4_mulu0": 1.0,
+        "after4_4_nf": 1.0,
+        "after4_4_w": 4e-06,
+        "after4_5_delvto": 0.0,
+        "after4_5_l": 4.0000000000000003e-07,
+        "after4_5_m": 1.0,
+        "after4_5_mulu0": 1.0,
+        "after4_5_nf": 1.0,
+        "after4_5_w": 1e-06,
+        "applied0_0_delvto": 0.0,
+        "applied0_0_l": 2.4000000000000003e-07,
+        "applied0_0_m": 1.0,
+        "applied0_0_mulu0": 1.0,
+        "applied0_0_nf": 1.0,
+        "applied0_0_w": 4e-06,
+        "applied0_1_delvto": 0.0,
+        "applied0_1_l": 2.4000000000000003e-07,
+        "applied0_1_m": 1.0,
+        "applied0_1_mulu0": 1.0,
+        "applied0_1_nf": 1.0,
+        "applied0_1_w": 4e-06,
+        "applied0_2_delvto": 0.0,
+        "applied0_2_l": 2.4000000000000003e-07,
+        "applied0_2_m": 1.0,
+        "applied0_2_mulu0": 1.0,
+        "applied0_2_nf": 1.0,
+        "applied0_2_w": 4e-06,
+        "applied0_3_delvto": 0.0,
+        "applied0_3_l": 2.4000000000000003e-07,
+        "applied0_3_m": 1.0,
+        "applied0_3_mulu0": 1.0,
+        "applied0_3_nf": 1.0,
+        "applied0_3_w": 4e-06,
+        "applied0_4_delvto": 0.0,
+        "applied0_4_l": 2.4000000000000003e-07,
+        "applied0_4_m": 1.0,
+        "applied0_4_mulu0": 1.0,
+        "applied0_4_nf": 1.0,
+        "applied0_4_w": 4e-06,
+        "applied0_5_delvto": 0.0,
+        "applied0_5_l": 4.0000000000000003e-07,
+        "applied0_5_m": 1.0,
+        "applied0_5_mulu0": 1.0,
+        "applied0_5_nf": 1.0,
+        "applied0_5_w": 1e-06,
+        "applied1_0_delvto": 0.0,
+        "applied1_0_l": 2.4000000000000003e-07,
+        "applied1_0_m": 1.0,
+        "applied1_0_mulu0": 1.0,
+        "applied1_0_nf": 1.0,
+        "applied1_0_w": 4e-06,
+        "applied1_1_delvto": 0.0,
+        "applied1_1_l": 2.4000000000000003e-07,
+        "applied1_1_m": 1.0,
+        "applied1_1_mulu0": 1.0,
+        "applied1_1_nf": 1.0,
+        "applied1_1_w": 4e-06,
+        "applied1_2_delvto": 0.0,
+        "applied1_2_l": 2.4000000000000003e-07,
+        "applied1_2_m": 1.0,
+        "applied1_2_mulu0": 1.0,
+        "applied1_2_nf": 1.0,
+        "applied1_2_w": 4e-06,
+        "applied1_3_delvto": 0.0,
+        "applied1_3_l": 2.4000000000000003e-07,
+        "applied1_3_m": 1.0,
+        "applied1_3_mulu0": 1.0,
+        "applied1_3_nf": 1.0,
+        "applied1_3_w": 4e-06,
+        "applied1_4_delvto": 0.0,
+        "applied1_4_l": 2.4000000000000003e-07,
+        "applied1_4_m": 1.0,
+        "applied1_4_mulu0": 1.0,
+        "applied1_4_nf": 1.0,
+        "applied1_4_w": 4e-06,
+        "applied1_5_delvto": 0.0,
+        "applied1_5_l": 4.0000000000000003e-07,
+        "applied1_5_m": 1.0,
+        "applied1_5_mulu0": 1.0,
+        "applied1_5_nf": 1.0,
+        "applied1_5_w": 1e-06,
+        "applied2_0_delvto": 0.0,
+        "applied2_0_l": 2.4000000000000003e-07,
+        "applied2_0_m": 1.0,
+        "applied2_0_mulu0": 1.0,
+        "applied2_0_nf": 1.0,
+        "applied2_0_w": 4e-06,
+        "applied2_1_delvto": 0.0,
+        "applied2_1_l": 2.4000000000000003e-07,
+        "applied2_1_m": 1.0,
+        "applied2_1_mulu0": 1.0,
+        "applied2_1_nf": 1.0,
+        "applied2_1_w": 4e-06,
+        "applied2_2_delvto": 0.0,
+        "applied2_2_l": 2.4000000000000003e-07,
+        "applied2_2_m": 1.0,
+        "applied2_2_mulu0": 1.0,
+        "applied2_2_nf": 1.0,
+        "applied2_2_w": 4e-06,
+        "applied2_3_delvto": 0.0,
+        "applied2_3_l": 2.4000000000000003e-07,
+        "applied2_3_m": 1.0,
+        "applied2_3_mulu0": 1.0,
+        "applied2_3_nf": 1.0,
+        "applied2_3_w": 4e-06,
+        "applied2_4_delvto": 0.0,
+        "applied2_4_l": 2.4000000000000003e-07,
+        "applied2_4_m": 1.0,
+        "applied2_4_mulu0": 1.0,
+        "applied2_4_nf": 1.0,
+        "applied2_4_w": 4e-06,
+        "applied2_5_delvto": 0.0,
+        "applied2_5_l": 4.0000000000000003e-07,
+        "applied2_5_m": 1.0,
+        "applied2_5_mulu0": 1.0,
+        "applied2_5_nf": 1.0,
+        "applied2_5_w": 1e-06,
+        "applied3_0_delvto": 0.0,
+        "applied3_0_l": 2.4000000000000003e-07,
+        "applied3_0_m": 1.0,
+        "applied3_0_mulu0": 1.0,
+        "applied3_0_nf": 1.0,
+        "applied3_0_w": 4e-06,
+        "applied3_1_delvto": 0.0,
+        "applied3_1_l": 2.4000000000000003e-07,
+        "applied3_1_m": 1.0,
+        "applied3_1_mulu0": 1.0,
+        "applied3_1_nf": 1.0,
+        "applied3_1_w": 4e-06,
+        "applied3_2_delvto": 0.0,
+        "applied3_2_l": 2.4000000000000003e-07,
+        "applied3_2_m": 1.0,
+        "applied3_2_mulu0": 1.0,
+        "applied3_2_nf": 1.0,
+        "applied3_2_w": 4e-06,
+        "applied3_3_delvto": 0.0,
+        "applied3_3_l": 2.4000000000000003e-07,
+        "applied3_3_m": 1.0,
+        "applied3_3_mulu0": 1.0,
+        "applied3_3_nf": 1.0,
+        "applied3_3_w": 4e-06,
+        "applied3_4_delvto": 0.0,
+        "applied3_4_l": 2.4000000000000003e-07,
+        "applied3_4_m": 1.0,
+        "applied3_4_mulu0": 1.0,
+        "applied3_4_nf": 1.0,
+        "applied3_4_w": 4e-06,
+        "applied3_5_delvto": 0.0,
+        "applied3_5_l": 4.0000000000000003e-07,
+        "applied3_5_m": 1.0,
+        "applied3_5_mulu0": 1.0,
+        "applied3_5_nf": 1.0,
+        "applied3_5_w": 1e-06,
+        "applied4_0_delvto": 0.0,
+        "applied4_0_l": 2.4000000000000003e-07,
+        "applied4_0_m": 1.0,
+        "applied4_0_mulu0": 1.0,
+        "applied4_0_nf": 1.0,
+        "applied4_0_w": 4e-06,
+        "applied4_1_delvto": 0.0,
+        "applied4_1_l": 2.4000000000000003e-07,
+        "applied4_1_m": 1.0,
+        "applied4_1_mulu0": 1.0,
+        "applied4_1_nf": 1.0,
+        "applied4_1_w": 4e-06,
+        "applied4_2_delvto": 0.0,
+        "applied4_2_l": 2.4000000000000003e-07,
+        "applied4_2_m": 1.0,
+        "applied4_2_mulu0": 1.0,
+        "applied4_2_nf": 1.0,
+        "applied4_2_w": 4e-06,
+        "applied4_3_delvto": 0.0,
+        "applied4_3_l": 2.4000000000000003e-07,
+        "applied4_3_m": 1.0,
+        "applied4_3_mulu0": 1.0,
+        "applied4_3_nf": 1.0,
+        "applied4_3_w": 4e-06,
+        "applied4_4_delvto": 0.0,
+        "applied4_4_l": 2.4000000000000003e-07,
+        "applied4_4_m": 1.0,
+        "applied4_4_mulu0": 1.0,
+        "applied4_4_nf": 1.0,
+        "applied4_4_w": 4e-06,
+        "applied4_5_delvto": 0.0,
+        "applied4_5_l": 4.0000000000000003e-07,
+        "applied4_5_m": 1.0,
+        "applied4_5_mulu0": 1.0,
+        "applied4_5_nf": 1.0,
+        "applied4_5_w": 1e-06
+      },
+      "analyses": [
+        {
+          "analysis_index": 0,
+          "columns": 74,
+          "native_text_sha256": "35998f462aebdb17a4eec83a91cd4c8756c6a6301908a85cb0f58d2ceeccc303",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.25,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]",
+              "@rsource[resistance]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "analysis_index": 1,
+          "columns": 74,
+          "native_text_sha256": "5d60e8aba2e380bde3d8e461af154fa080aa740844da192d2d2891556215e97d",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.3,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]",
+              "@rsource[resistance]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "analysis_index": 2,
+          "columns": 74,
+          "native_text_sha256": "ceee2b1f1389cc4f3cea9b9c7e976830885159497b674081c1060afdc445fdfc",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "op",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.35,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)",
+              "@m.xm1.mapm045_vtg_core[gm]",
+              "@m.xm1.mapm045_vtg_core[gds]",
+              "@m.xm1.mapm045_vtg_core[gmbs]",
+              "@m.xm1.mapm045_vtg_core[vth]",
+              "@m.xm1.mapm045_vtg_core[vdsat]",
+              "@m.xm2.mapm045_vtg_core[gm]",
+              "@m.xm2.mapm045_vtg_core[gds]",
+              "@m.xm2.mapm045_vtg_core[gmbs]",
+              "@m.xm2.mapm045_vtg_core[vth]",
+              "@m.xm2.mapm045_vtg_core[vdsat]",
+              "@m.xm3.mapm045_vtg_core[gm]",
+              "@m.xm3.mapm045_vtg_core[gds]",
+              "@m.xm3.mapm045_vtg_core[gmbs]",
+              "@m.xm3.mapm045_vtg_core[vth]",
+              "@m.xm3.mapm045_vtg_core[vdsat]",
+              "@m.xm4.mapm045_vtg_core[gm]",
+              "@m.xm4.mapm045_vtg_core[gds]",
+              "@m.xm4.mapm045_vtg_core[gmbs]",
+              "@m.xm4.mapm045_vtg_core[vth]",
+              "@m.xm4.mapm045_vtg_core[vdsat]",
+              "@m.xm5.mapm045_vtg_core[gm]",
+              "@m.xm5.mapm045_vtg_core[gds]",
+              "@m.xm5.mapm045_vtg_core[gmbs]",
+              "@m.xm5.mapm045_vtg_core[vth]",
+              "@m.xm5.mapm045_vtg_core[vdsat]",
+              "@m.xm6.mapm045_vtg_core[gm]",
+              "@m.xm6.mapm045_vtg_core[gds]",
+              "@m.xm6.mapm045_vtg_core[gmbs]",
+              "@m.xm6.mapm045_vtg_core[vth]",
+              "@m.xm6.mapm045_vtg_core[vdsat]",
+              "@cload[capacitance]",
+              "@rload[resistance]",
+              "@rbias[resistance]",
+              "@rsource[resistance]"
+            ]
+          },
+          "rows": 1
+        },
+        {
+          "analysis_index": 3,
+          "columns": 79,
+          "native_text_sha256": "1b7c215b96341b3601583493817cbcd15b7821dc773e015d92e84ca4b5216b8d",
+          "recipe": {
+            "ac_sources": {
+              "Iinj": 0,
+              "Vdd": 0,
+              "Vin": 1,
+              "Vinj": 0,
+              "Voffset": 0
+            },
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "ac",
+            "points_per_decade": 60,
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.3,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "start": 1000.0,
+            "stop": 1000000000.0,
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)"
+            ]
+          },
+          "rows": 361
+        },
+        {
+          "analysis_index": 4,
+          "columns": 40,
+          "native_text_sha256": "9f7e9ef4e30c5ff2180e97ab8ca95578eaa4feda01d4a372bc4a720816ba5ea0",
+          "recipe": {
+            "elements": {
+              "Cload": 5e-12,
+              "Rload": 1000000.0
+            },
+            "kind": "tran",
+            "set_sources": {
+              "Iinj": 0.0,
+              "Vdd": 1.0,
+              "Vin": 0.3,
+              "Vinj": 0.0,
+              "Voffset": 0.0
+            },
+            "step": 2e-09,
+            "stop": 8.5e-06,
+            "tmax": 2e-09,
+            "vectors": [
+              "v(bias)",
+              "v(feedback)",
+              "v(inn)",
+              "v(inp)",
+              "v(input_access)",
+              "v(mirror)",
+              "v(out)",
+              "v(source)",
+              "v(tail)",
+              "v(vdd)",
+              "i(Vdd)",
+              "i(Vin)",
+              "i(Voffset)",
+              "i(Vfeedback)",
+              "i(Vinj)",
+              "i(VtM1b)",
+              "i(VtM1d)",
+              "i(VtM1g)",
+              "i(VtM1s)",
+              "i(VtM2b)",
+              "i(VtM2d)",
+              "i(VtM2g)",
+              "i(VtM2s)",
+              "i(VtM3b)",
+              "i(VtM3d)",
+              "i(VtM3g)",
+              "i(VtM3s)",
+              "i(VtM4b)",
+              "i(VtM4d)",
+              "i(VtM4g)",
+              "i(VtM4s)",
+              "i(VtM5b)",
+              "i(VtM5d)",
+              "i(VtM5g)",
+              "i(VtM5s)",
+              "i(VtM6b)",
+              "i(VtM6d)",
+              "i(VtM6g)",
+              "i(VtM6s)"
+            ]
+          },
+          "rows": 4337
+        }
+      ],
+      "array_file": "interface-D1-5p.npz",
+      "array_sha256": "4a73846f58815b37e6ffe90297e515df7e96ff00265310277a7d43ad9ca10fab",
+      "case": {
+        "ac": {
+          "points_per_decade": 60,
+          "start_hz": 1000.0,
+          "stop_hz": 1000000000.0
+        },
+        "ac_input_v": 0.3,
+        "cload_f": 5e-12,
+        "fixture": "D1",
+        "id": "D1-5p",
+        "op_input_v": [
+          0.25,
+          0.3,
+          0.35
+        ],
+        "pwl": [
+          [
+            0.0,
+            0.25
+          ],
+          [
+            5e-07,
+            0.25
+          ],
+          [
+            5.125e-07,
+            0.35
+          ],
+          [
+            4.5e-06,
+            0.35
+          ],
+          [
+            4.5125e-06,
+            0.25
+          ],
+          [
+            8.5e-06,
+            0.25
+          ]
+        ],
+        "role": "Same-core capacitive-load comparison",
+        "stop_s": 8.5e-06,
+        "tmax_s": 2e-09
+      },
+      "circuit_file": "interface-D1-5p.cir",
+      "circuit_sha256": "8b741d0c57391fc82ae893b84f2fdcb59e83bb8b79e11f13e074a481ec26f11d",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "original_attempt_sha256": "d35c759d6a5f222751fcb83369c7856da4efce1fd94f3222a050baafacd7041a",
+      "original_realization_id": "65efa54678ea74a7c699d6059431abfb710d765a049e28ba4c8065e64f07b35b",
+      "physical_devices": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm1"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_plus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm2"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/input_minus",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_reference",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/load_output",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 2.4e-07,
+          "path": [
+            "xm5"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/tail",
+          "w_m": 4e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xm6"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ota/bias_reference",
+          "w_m": 1e-06
+        }
+      ],
+      "profile_tier": "ARTIFICIAL",
+      "request_id": "9a071cbd9bdfcdcfdcc409713b528ef176dcf36a251ddc08b809673dcd80dd81",
+      "target_started_utc": "2026-09-13T11:35:36.006012+00:00",
+      "terminals": {
+        "xm1": [
+          "mirror",
+          "inp",
+          "tail",
+          "vdd"
+        ],
+        "xm2": [
+          "out",
+          "inn",
+          "tail",
+          "vdd"
+        ],
+        "xm3": [
+          "mirror",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm4": [
+          "out",
+          "mirror",
+          "0",
+          "0"
+        ],
+        "xm5": [
+          "tail",
+          "bias",
+          "vdd",
+          "vdd"
+        ],
+        "xm6": [
+          "bias",
+          "bias",
+          "vdd",
+          "vdd"
+        ]
+      }
+    }
+  },
+  "model_hashes": {
+    "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+    "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+    "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+  },
+  "plan_identity": "initial-d1-interface-001",
+  "plan_sha256": "05699f74d215331c2e27fe973e925b4cb0f8a2445e56036e41d2c5bc5508dc56",
+  "prepared_utc": "2026-09-13T11:32:34.434771+00:00",
+  "schema": "learning.initial-d1-interface.inputs.v1",
+  "temperature_c": 26.85
+}

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "interface-C-sink-0p05.npz": "284f5b89cbe580bac40809f25a90cc9d737bd7599ea07517dbcd777f5ebeeae2",
+    "interface-C-sink-0p25.npz": "d34ae4ae76176e22a9e35f3939d994360dcd89bdb6ddf10326b9f72fe2c69c3e",
+    "interface-C-sink-0p35.npz": "8754b9935e2c8460c9fb8b73a27c4e35de63ab9be0a05d5993b87f7930f41013",
+    "interface-C-source-0p25.npz": "4cc43d0d8ae6e7a719010d91a3add0d016ed8d9711d8d874a68fbb98a2a8db7e",
+    "interface-C-source-0p35.npz": "4070b999d4a8442e75f6f862ed2541b32b2d18c359828f39eae6957f1e9a5b22",
+    "interface-C-source-0p70.npz": "791027b84342b6adfe07d123b81a0a7bd5a52579e0b14ce736de4f5c8170366e",
+    "interface-D1-25p-refined.npz": "667ae21f2daeefdb9388d4580875e86860d3c8ec12c57b4dee03898ed25c9464",
+    "interface-D1-25p.npz": "8a6a634b3c353b2bcd6e36e5f53790a3563446155623d3133edda8e6ab2261a3",
+    "interface-D1-5p.npz": "4a73846f58815b37e6ffe90297e515df7e96ff00265310277a7d43ad9ca10fab",
+    "interface-inputs.json": "ae9934b7515f55d2f76adbe55404826f95a4c2937517ed7f22f545dcd860b963"
+  },
+  "schema": "learning.interface-data.v1"
+}

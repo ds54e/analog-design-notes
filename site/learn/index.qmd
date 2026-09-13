@@ -9,10 +9,16 @@ interfaces toward the questions an LDO would need answered. Each chapter makes
 a first prediction, checks selected observations, and uses the difference to
 make a design choice.
 
-**Learning edition v1.0.** The English chapters are the canonical route; the
+**Learning edition v1.1.** The English chapters are the canonical route; the
 [Japanese reading overview](../ja/learning-path.qmd) explains where to begin
 and how the evidence fits. The five detailed studies remain available with
 their original circuit files, definitions, downloads and results.
+
+This increment develops the worked current/gm/width argument and measured
+mirror/headroom limits. A new, separately planned **initial-D1 5/25-pF example**
+shows why a larger receiving capacitor slows response without repairing DC
+tracking error. The first edition and its exact evidence download remain
+available alongside the [learning-day supplement](../studies/learning-day-v1/reproduce.qmd).
 
 ## The reading order
 
@@ -72,12 +78,18 @@ omitted. A more elaborate circuit earns its cost only if it improves the
 required function under the relevant conditions.
 
 Here **observed** means a saved simulator observation with a stated model,
-circuit and stimulus. **Predicted** means an equation or approximation applied
-before, or explicitly retrospectively to, those observations. **Confirmation**
-refers to the original studies' frozen finite experiments; their samples are
-already known evidence for this learning edition. A nominal example is not
-a population result. A valid computation can represent a circuit that fails
-its performance requirement.
+circuit and stimulus. A **first estimate** uses a stated approximation without
+the target result. A **retrospective explanation** uses an already observed
+operating point or response—for example, inserting saved gm and gds into a
+node equation to explain the saved amplifier gain. A **prospective prediction**
+records its inputs and forecast before observing its declared target. These
+roles are different even when they use the same equation.
+
+**Confirmation** refers to the original studies' frozen finite experiments;
+their samples are already known evidence for this learning edition. Rewriting
+an explanation does not make its old targets unexposed again. A nominal example
+is not a population result, and a valid computation can represent a circuit
+that fails its performance requirement.
 
 Noise needs a bandwidth and a reference port. DC variation needs a physical
 realization model. The two are introduced where first used and brought together
@@ -94,6 +106,12 @@ failure records, original measurement definitions and exact downloads. The
 four selected archived differential-pair/OTA cases, current-balance calculations
 and figure regeneration. It supplies the selected public inputs; reading or
 replaying them does not require access to the private research archive.
+
+The [learning-day supplement](../studies/learning-day-v1/reproduce.qmd) adds
+selected historical sizing/mirror observations and the nine declared nominal
+receiving-port cases, with separate graph calculations and a public 25-pF
+OP/AC/step replay. Its new identifiers preserve the first package's bytes and
+the distinction between archival explanation and newly planned observation.
 
 The progression is informed by the device–diode–amplifier–mirror–pair–OTA order
 in [Pretl, Koefinger and Dorrer's course](https://iic-jku.github.io/analog-circuit-design/aicd.html)

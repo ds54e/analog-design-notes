@@ -1,0 +1,12 @@
+{
+  "exact_one_pole_25pf_forecast_s": 8.640158175761252e-07,
+  "exact_saved_training_bandwidth_hz": 4241447.80668238,
+  "exact_scaled_25pf_forecast_hz": 848289.561336476,
+  "new_native_target_count": 0,
+  "note": "The plan transcribed excess training-value digits as 4241447.807081715 Hz. Exact saved value is recorded here before target exposure. Difference is 0.000400 Hz (relative 9.4e-11); published rounded forecasts and all conditions/checks are unchanged. Preserve the original plan and barrier bytes.",
+  "plan_sha256": "05699f74d215331c2e27fe973e925b4cb0f8a2445e56036e41d2c5bc5508dc56",
+  "recorded_utc": "2026-09-13T11:34:15.855719+00:00",
+  "schema": "learning.receiving-port.pre-exposure-note.v1",
+  "source_field": "cases.D1.bandwidth_minus_3dB_Hz",
+  "source_summary_sha256": "243026ff208d3b0dd6d3f4183862669f02383ca2dca3293a9d3ddc961d5a802b"
+}

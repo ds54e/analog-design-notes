@@ -14,6 +14,13 @@ checkout. This repository calls APM's public APIs and model wrappers; it does
 not include the APM implementation or model files. ngspice 47 is separately
 installed and retains its own BSD/other component notices.
 
+The learning-day supplement additionally includes one **unmodified APM mirror
+example circuit**, `mirror-source-transfer.cir`, with its original copyright
+and SPDX Apache-2.0 header. This file is an exception to the original-work code
+default; the [APM Apache-2.0 license](LICENSES/APM-Apache-2.0.txt) is retained.
+Its saved numerical observations and the new explanatory analysis do not
+relicense the upstream circuit or the separately retrieved device models.
+
 Plots are generated with Matplotlib 3.9.4 and use DejaVu glyphs. The applicable
 [DejaVu/Bitstream Vera font notice](LICENSES/DejaVu.txt) is retained. External
 Python dependencies listed in the example are obtained separately, with their
