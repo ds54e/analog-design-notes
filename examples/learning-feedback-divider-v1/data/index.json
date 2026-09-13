@@ -1,0 +1,32 @@
+{
+  "cases": {
+    "D1-half-divider": {
+      "acquisition_input_sha256": "b7280103f52cabb62807be5f510c07b82d96b44b7b857e7bf68565d56666889e",
+      "attempt_sha256": "285d4f4818d77452c0fda5d4197d587034e25ff6d858844b657951539c08353d",
+      "circuit_sha256": "5b2c39e8f6ff70679900bb98739137978ab6f7868185f642f70d40459c3adc16",
+      "file": "D1-half-divider.npz",
+      "native_deck_sha256": "5bbab0fb749bd937d39f156098ce8eb25f42bab0487e0c0bf745dea33df13629",
+      "native_text_sha256": {
+        "analysis0": "e1cb39d3c04ba915f0c4471f2d66f3e76f9657207b3587d1d726bf829562024b",
+        "analysis1": "2641ecb317ad972e61a7fc45124d3a6ffa6bf0910799d687e62af8a8baf4f269"
+      },
+      "physical_readback": "Actual six MOS models/W/L/m/nf/DELVTO/MULU0 before/applied/after rechecked from the native log. All raw coordinates are saved zeros; no new draw.",
+      "realization_id": "402678b6229640b606649ebb6389b5ebb2f9878aeb5a1a8a22842b9fa6671859",
+      "request_id": "c2a277ce2ecc43b580ab535b816fe399f45e6bbaa607876a99dcdda1a1d2c5ec",
+      "rows": [
+        1,
+        361
+      ],
+      "sha256": "5368405163f6a17c6bc4745d503c2f466bbcacb0c77ae6e4b745607fdb61f527",
+      "status": "COMPLETE_AND_EXPOSED",
+      "target_started_utc": "2026-09-13T19:32:55.388122+00:00"
+    }
+  },
+  "freeze_sha256": "f547e6262c0f042aa49587e145f993af76119edb5e4a06aba5b1d9d6009962c6",
+  "plan_sha256": "9568727fdf3b106469f5a33cfb3858766e08cc0ad817a6a89f270bd5f7b88ce9",
+  "role": "One predeclared nominal condition, now exposed. Measurement checks are a separate saved-data step.",
+  "rows": 362,
+  "schema": "learning.initial-d1-feedback-divider.observations.v1",
+  "selected_utc": "2026-09-13T19:33:10.357885+00:00",
+  "status": "SELECTED_AFTER_IDENTITY_AND_COMPLETENESS_CHECKS"
+}

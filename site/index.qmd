@@ -13,7 +13,7 @@ change the decision.
 [**Read the entry page and eight chapters**](learn/index.qmd) ·
 [日本語の読み方](ja/learning-path.qmd)
 
-**Learning edition v1.7 · 2026-09-13.** Original explanations connect
+**Learning edition v1.8 · 2026-09-13.** Original explanations connect
 circuit estimates, selected observations and finite design costs. Basic
 KCL/KVL is introduced at the entry; no simulator installation is needed to read.
 
@@ -59,7 +59,10 @@ the earlier input-construction error. [Small worked calculations](learn/calculat
 reproduce the reference-current cost argument with standard Python.
 The [startup-current explanation](studies/learning-startup-v1/reproduce.qmd)
 uses four known R75 records and one new graph to connect those quantities.
-All twelve earlier ZIPs are retained.
+The [finite sensing-divider example](studies/learning-feedback-divider-v1/reproduce.qmd)
+then connects a higher output to a lower input comparison, with measured
+gate-current loading, finite precision and explicit resistor costs.
+All thirteen earlier ZIPs are retained.
 
 ## Detailed studies {#detailed-studies}
 

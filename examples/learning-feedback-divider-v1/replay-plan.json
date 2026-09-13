@@ -1,0 +1,14 @@
+{
+  "case": "D1-half-divider",
+  "checks": "Pinned native physical/model readback; full selected OP/AC terminal comparison; DC V/I of five resistors, MOS/output/input/sense KCL, AC Cload current/voltage.",
+  "created_utc": "2026-09-13T19:42:38.990714+00:00",
+  "role": "Known-input public replay after the corrected scientific condition was exposed; no fresh target.",
+  "schema": "learning.initial-d1-feedback-divider.replay-plan.v1",
+  "scientific_plan_sha256": "9568727fdf3b106469f5a33cfb3858766e08cc0ad817a6a89f270bd5f7b88ce9",
+  "script_sha256": "9a9a3d5eabbb5941574c9c4c13afd6108c1ee8e8c65cd04759ab02a0c2627a86",
+  "stopping_rule": "One public known-input replay in a new output directory; retain failures and diagnose before a bounded technical retry. No new scientific condition or threshold change.",
+  "tolerances": {
+    "current_absolute_a": 1e-10,
+    "voltage_absolute_v": 1e-06
+  }
+}

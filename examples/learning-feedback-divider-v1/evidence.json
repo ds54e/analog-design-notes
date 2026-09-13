@@ -1,0 +1,159 @@
+{
+  "calculation_sha256": {
+    "analyze.py": "7fc705f04ac9b058c63798dde4b67770b11422737fd48f04fe31e56f90c819f8",
+    "network.py": "4953dab763183ec5ed47f4e89db2983594a1186fc4969ecb9517cd7748dff2a5",
+    "prior.py": "ab420cf0cd3cb859fc2b840266f13bc2e34e3d3ccb2b3a18dbb859288b720658",
+    "replay.py": "9a9a3d5eabbb5941574c9c4c13afd6108c1ee8e8c65cd04759ab02a0c2627a86"
+  },
+  "checked_utc": "2026-09-13T19:46:49.557586+00:00",
+  "checks": {
+    "actual_passive_parameters": true,
+    "actual_physical_model_readback": true,
+    "capacitor_ac_relative_error": 1.151069656472567e-14,
+    "exact_stationary_error_accounting": true,
+    "independent_resistor_vi": 5,
+    "maximum_MOS_KCL_a": 1.4707371876355319e-16,
+    "maximum_node_KCL_a": 4.238849329592058e-17,
+    "maximum_terminal_span_v": 0.7087361665537322,
+    "prior_and_new_OP_independent_node_equations": true,
+    "signed_stationary_power_residual_w": 2.330357044486031e-17,
+    "source_voltages": true
+  },
+  "clean_reproduction": {
+    "apm_authentication": "Fresh public clone without credentials/extra headers",
+    "checked_utc": "2026-09-13T19:58:59.832807+00:00",
+    "environment": "Python 3.9.25",
+    "exact_regenerated_outputs": {
+      "error-accounting.csv": "e4f581d7cfbe2dca5d5638a9a186cde3d798a419338a79815162a567b3d892b6",
+      "network.json": "0da9a73bac8ae94465e109bf262bfe86fd808430de90110071f563fab4351b74",
+      "operating-point.csv": "19cb334efe3670185780ca09dcedf0da5afa78def5ccdb3e412c6666b3560364",
+      "prior.json": "8da6dbaa0e9b9b2cb6aa09b4e7e5d10af9076985dd4db1dedb212a8a59026eb4",
+      "summary.json": "d433645af809b46b8d6286541466c3ad635b425bb1fbcc441a7dbfe5882f8081"
+    },
+    "native": {
+      "actual_MOS_readback": "Pinned public APM checks actual model/W/L/m/nf/DELVTO/MULU0 before/applied/after.",
+      "actual_passive_readback": "Measured DC V/I for all five resistors and complex AC current/voltage for Cload; no copied expected values as observations.",
+      "binary_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "capacitor_ac_relative_error": 1.151069656472567e-14,
+      "differences": {
+        "0": {
+          "kind": "op",
+          "maximum_current_difference_a": 0.0,
+          "maximum_voltage_difference_v": 0.0,
+          "rows": 1
+        },
+        "1": {
+          "kind": "ac",
+          "maximum_current_difference_a": 0.0,
+          "maximum_voltage_difference_v": 0.0,
+          "rows": 361
+        }
+      },
+      "new_run_id": "f57e92aa020e93ebb02da6f7be6b6bca3330bcad1ae7ca54c4465f55c2f03918",
+      "original_realization_id": "402678b6229640b606649ebb6389b5ebb2f9878aeb5a1a8a22842b9fa6671859",
+      "relocated_realization_id": "dd3eef3ef5b20813fcdb70b0f4c358ae464a409cd743d6124ac0ee3cb4747436",
+      "resistor_vi_readback": {
+        "Rbias": {
+          "expected_ohm": 273692.63541213644,
+          "observed_v_over_i_ohm": 273692.6354179083,
+          "relative_difference": 2.1088908397359774e-11
+        },
+        "Rload": {
+          "expected_ohm": 1000000.0,
+          "observed_v_over_i_ohm": 999999.9999999511,
+          "relative_difference": -4.884981308350689e-14
+        },
+        "Rlower": {
+          "expected_ohm": 1000000.0,
+          "observed_v_over_i_ohm": 999999.9999999023,
+          "relative_difference": -9.769962616701378e-14
+        },
+        "Rsource": {
+          "expected_ohm": 10000.0,
+          "observed_v_over_i_ohm": 10000.000000010012,
+          "relative_difference": 1.0011991236069662e-12
+        },
+        "Rupper": {
+          "expected_ohm": 1000000.0,
+          "observed_v_over_i_ohm": 999999.9999999016,
+          "relative_difference": -9.836575998178887e-14
+        }
+      },
+      "rows": [
+        1,
+        361
+      ]
+    },
+    "retained_notices": 16,
+    "scope": "Same host, exact selected candidate and retrieved public dependencies; not independent scientific replication or fresh confirmation.",
+    "selected_execution_payloads": 19,
+    "source_zip_authentication": "Anonymous public HTTPS"
+  },
+  "comparison": {
+    "bandwidth_relative_residual": 0.04163289683575555,
+    "gain_relative_residual": -0.008068770401800762,
+    "observed_bandwidth_hz": 2259680.4230613983,
+    "observed_gain": 1.9062488240850481,
+    "observed_output_v": 0.579784170612965,
+    "output_residual_v": -0.0010352235064367,
+    "prior_bandwidth_hz": 2169363.5348171075,
+    "prior_gain": 1.921755024143368,
+    "prior_output_v": 0.5808193941194018
+  },
+  "condition": "Same initial six-unit core,0.3V input,1V supply,26.85C,10kohm source,finite Rbias,1Mohm receiver,5pF and two1Mohm sensing resistors.",
+  "data_manifest_sha256": "e07676f69cd435520343168c95e547fb448ec566a340f2f60379346264b8a7ae",
+  "freeze_sha256": "f547e6262c0f042aa49587e145f993af76119edb5e4a06aba5b1d9d6009962c6",
+  "input_plan_sha256": "9568727fdf3b106469f5a33cfb3858766e08cc0ad817a6a89f270bd5f7b88ce9",
+  "limits": [
+    "Same six artificial zero-raw units; no population, yield or qualification claim.",
+    "Gain-of-two finite divider changes required function and adds2Mohm resistance; not a matched-function ranking against unity feedback or ADS-6.",
+    "Fixed5pF is a diagnostic load; no pass-gate or integrated LDO.",
+    "No new transient/noise/common-mode range or stability/phase-margin claim.",
+    "Known data remain development evidence; no new confirmation.",
+    "Old-OP forecast and separately labeled new-OP explanation retain their misses.",
+    "Exact error accounting uses correlated quantities at one operating point; not an independent error distribution.",
+    "The1kHz gate-path refinement uses observed transfers; not an independent prospective prediction."
+  ],
+  "measurement_sha256": "7fc705f04ac9b058c63798dde4b67770b11422737fd48f04fe31e56f90c819f8",
+  "model": {
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "family": "APM045/VTG",
+    "ngspice": "47",
+    "physical_units": 6,
+    "raw_values": "All saved zeros; no draw, trim, rebias or mirror correction.",
+    "temperature_c": 26.85
+  },
+  "native": {
+    "acquisition_input_sha256": "b7280103f52cabb62807be5f510c07b82d96b44b7b857e7bf68565d56666889e",
+    "attempt_sha256": "285d4f4818d77452c0fda5d4197d587034e25ff6d858844b657951539c08353d",
+    "circuit_sha256": "5b2c39e8f6ff70679900bb98739137978ab6f7868185f642f70d40459c3adc16",
+    "file": "D1-half-divider.npz",
+    "native_deck_sha256": "5bbab0fb749bd937d39f156098ce8eb25f42bab0487e0c0bf745dea33df13629",
+    "native_text_sha256": {
+      "analysis0": "e1cb39d3c04ba915f0c4471f2d66f3e76f9657207b3587d1d726bf829562024b",
+      "analysis1": "2641ecb317ad972e61a7fc45124d3a6ffa6bf0910799d687e62af8a8baf4f269"
+    },
+    "physical_readback": "Actual six MOS models/W/L/m/nf/DELVTO/MULU0 before/applied/after rechecked from the native log. All raw coordinates are saved zeros; no new draw.",
+    "realization_id": "402678b6229640b606649ebb6389b5ebb2f9878aeb5a1a8a22842b9fa6671859",
+    "request_id": "c2a277ce2ecc43b580ab535b816fe399f45e6bbaa607876a99dcdda1a1d2c5ec",
+    "rows": [
+      1,
+      361
+    ],
+    "sha256": "5368405163f6a17c6bc4745d503c2f466bbcacb0c77ae6e4b745607fdb61f527",
+    "status": "COMPLETE_AND_EXPOSED",
+    "target_started_utc": "2026-09-13T19:32:55.388122+00:00"
+  },
+  "old_input_plan_sha256": "ebd3c0c8bad8a770161e8b2d3ef6e81e83ffdbf9e6e8de1d8f18177ec8d814c6",
+  "prelaunch_input_rejections": 1,
+  "retrospective_model": {
+    "bandwidth_relative_error": -0.024173923460717228,
+    "gain_relative_error": -0.002123176960812323,
+    "gate_path_role": "Uses already measured gate-current/voltage transfers at1kHz, DC MOS derivatives and the explicit external output capacitor. Explains a neglected path; not a prospective or independent transfer prediction."
+  },
+  "schema": "learning.initial-d1-feedback-divider.evidence.v1",
+  "scientific_native_conditions": 1,
+  "scientific_native_retries": 0,
+  "scientific_pre_target_commit": "c7743ee3898669e1692db02a9c768ac903926b4e",
+  "status": "SCIENTIFIC_REVIEW_AND_CLEAN_PUBLIC_REPRODUCTION_COMPLETE"
+}

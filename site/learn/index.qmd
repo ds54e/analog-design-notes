@@ -8,7 +8,7 @@ then follows mirrors, differential operation, feedback, uncertainty and supply
 interfaces toward the questions an LDO would need answered. Each chapter connects
 an estimate, selected observations and a design judgment.
 
-**Learning edition v1.7.** The English chapters are the canonical route; the
+**Learning edition v1.8.** The English chapters are the canonical route; the
 [Japanese reading overview](../ja/learning-path.qmd) explains where to begin
 and how the evidence fits. The five detailed studies remain available with
 their original circuit files, definitions, downloads and results.
@@ -28,6 +28,9 @@ bandwidth together: a slightly faster response can be less accurate. Each
 comparison has its own exact conditions, prediction role and evidence.
 All previous exact downloads remain available.
 
+A finite sensing divider then keeps the input comparison low while seeking a
+higher output. Its resistor current and modeled gate current both enter the
+precision budget; the ideal ratio does not remove finite-core error.
 The supply chapter then uses two known R75 startup histories to connect
 current peaks, stored charge, upstream delivery and ready time. A simple RC
 screen has useful early behavior but the wrong final voltage; a separate
@@ -180,3 +183,9 @@ The prose, circuit observations and comparisons in this route are original;
 upstream dimensions or statistical assumptions are not transferred to APM.
 
 Begin with [what the MOS operating point tells you](01-mos-operating-point.qmd).
+
+The [finite sensing-divider example](../studies/learning-feedback-divider-v1/reproduce.qmd)
+adds one predeclared OP/AC condition on the same initial six-unit core. It keeps
+its old-OP forecast, new observations and retrospective error accounting
+separate, including the input representation rejected before native launch.
+Its changed gain and two added1-MΩ resistors are explicit costs.

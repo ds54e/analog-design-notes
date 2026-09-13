@@ -251,6 +251,74 @@ attribute the changed behavior to a single isolated parameter change. The
 [selected equations and replay](../studies/learning-common-mode-v1/reproduce.qmd)
 preserve that distinction and the failed large-range linear extrapolation.
 
+### A finite sensing divider changes both the target and its errors
+
+[Chapter 4's two-resistor connection](04-differential-pair-and-ota.qmd#sense-low-while-driving-a-higher-output)
+keeps the input comparison near 0.3 V while seeking a higher output. Let
+$\beta=R_{lower}/(R_{upper}+R_{lower})=1/2$ and
+$R_\parallel=R_{upper}\parallel R_{lower}=500$ kΩ. Define $I_{g-}$ positive
+into the negative MOS gate. Divider KCL gives
+
+$$V_- = \beta V_O-R_\parallel I_{g-}.$$
+
+This is a loaded sensing node. Its modeled gate current at the observed OP
+is **−2.743 nA**, so the sensed voltage is **1.372 mV above** half the output.
+The upper resistor carries 0.288520 µA and the lower carries 0.291264 µA;
+the gate supplies the difference. Assuming the same current in both resistors
+would discard this input interface.
+
+Now define $d=V_+-V_-$ and $I_{g+}$ positive into the other gate.
+The finite source gives $V_+=V_s-R_{source}I_{g+}$. Combine the two node
+equations before assigning an error to the amplifier:
+
+$$\begin{aligned}
+V_O-\frac{V_s}{\beta}
+&=-\frac{R_{source}I_{g+}}{\beta}\\
+&\quad-\frac d\beta+\frac{R_\parallel I_{g-}}\beta.
+\end{aligned}$$
+
+| Output-error contribution at this OP | mV |
+| --- | ---: |
+| Finite positive-input source drop | +0.046895 |
+| Required input difference, 8.759614 mV | −17.519228 |
+| Negative-input gate loading of the divider | −2.743496 |
+| Sum: observed output minus ideal 0.6 V | **−20.215829** |
+
+This is exact stationary error accounting for the connected circuit. These
+quantities change together with its operating point; they are not independent
+random errors or isolated causal interventions. The first term is positive
+because the input source absorbs 2.345 nA. The input difference is what the
+finite core needs to supply its receiver and divider currents. Neither the
+correct feedback sign nor the ideal resistor ratio makes that difference zero.
+
+There is a real resistance/current tradeoff. Large resistors reduce divider
+current, but multiply gate-current error through $R_\parallel$. Reducing them
+would change both the receiver current and operating point; this one condition
+does not establish an optimized resistance. It adds 2 MΩ of resistance to the
+unchanged initial core. Its gain-two job differs from the unity buffer's job.
+
+The same distinction applies to a local derivative. Ignoring gate-current
+derivatives for a first model, $v_-=\beta v_o$ gives
+
+$$H=\frac{A_+}{1-\beta A_-}.$$
+
+Here $A_+$ and $A_-$ must include the divider's output loading,
+$1/(R_{upper}+R_{lower})$, as well as Rload and the finite MOS devices.
+Using the **old OP before exposure** gave a gain forecast of **1.921755**;
+the native 1-kHz real gain is **1.906249**, a −0.807% discrepancy. The
+separately labeled **new-OP explanation** gives $A_+=33.381$,
+$A_-=-33.097$ and $H=1.902202$. Two node-equation constructions agree on that
+approximation, which is still 0.212% below the native result.
+
+The neglected input-current derivative matters here. At 1 kHz, the measured
+negative-input/output transfer has real part **0.498821**, rather than exactly
+0.5. KCL relates this to the measured gate-current increment; its sign need
+not match the DC gate current's sign. Substituting the already observed gate
+transfers into the local model brings real gain within 0.0034%. That last step
+is a retrospective path explanation using observed transfers, not a new
+independent prediction. The [saved calculation](../studies/learning-feedback-divider-v1/reproduce.qmd)
+keeps all three steps and their remaining errors separate.
+
 **Reading stop:** you can now identify the correcting path, its finite loading
 and what error it fails to cancel. Continue when those three circuits and their
 different input ports are clear.
@@ -290,6 +358,20 @@ slightly wider bandwidth than the central 1-MΩ case while tracking less
 accurately. Both new receiver/common-mode conditions have OP/AC observations
 only; neither supplies a measured large-step settling time or overload-recovery
 claim.
+
+The finite half-divider connection changes the transfer again, with the same
+5 pF and 1-MΩ receiver. Its **old-OP forecast** was **2.169364 MHz**; the
+observed relative −3-dB bandwidth is **2.259680 MHz**, 4.16% higher. A
+**new-OP**, external-capacitor-only calculation gives **2.205055 MHz**, still
+2.42% lower. These are separate prediction and explanation steps. Intrinsic
+charging and finite input-current derivatives remain outside that simple pole
+model; its remaining error is preserved.
+
+The lower feedback fraction has allowed a higher signal gain, about 1.906,
+with less bandwidth than the central unity buffer. The required gain and
+divider load changed, so this is not an equal-function speed ranking. Only
+OP/AC was acquired for this connection. Its bandwidth cannot be substituted
+for a measured step, ready time or overload recovery in the following sections.
 
 A return-ratio measurement asks how an injected perturbation travels around
 a specified loop and returns, with the operating point and loading preserved.

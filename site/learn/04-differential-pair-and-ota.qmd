@@ -351,6 +351,60 @@ retain the failed extrapolation and all numerical checks. These two points do
 not locate an exact common-mode limit. Chapter 5 next explains why even the
 local feedback gain has changed at this new operating point.
 
+### Sense low while driving a higher output
+
+The input and output need not follow each other one-for-one. Keep the same
+six initial MOS units, 1-V supply, finite bias, 10-kΩ input source, 1-MΩ
+receiver and 5-pF capacitor. Replace the direct output-to-negative-input wire
+with two 1-MΩ resistors:
+
+```text
+Vin(source, 0) = 0.3 V
+Rsource(source, input_access)
+    = 10 kohm
+Voffset(inp, input_access) = 0 V
+Rupper(out, feedback) = 1 Mohm
+Rlower(feedback, 0) = 1 Mohm
+Vinj(inn, feedback) = 0 V
+Rload(out, 0) = 1 Mohm
+Cload(out, 0) = 5 pF
+```
+
+The [exact fixture for the six MOS units](../studies/learning-feedback-divider-v1/circuits/D1-half-divider.cir)
+retains every D/G/S/B connection and diagnostic source. Higher output now
+raises the negative input through the divider, reducing net sourcing. With
+very high gain and negligible gate current, a half-voltage sense would suggest
+0.6 V output for 0.3 V input. Those are assumptions to check.
+
+Before the new observation, a calculation using the **old central D1 OP**
+and its derivatives predicted **0.580819 V**, rather than 0.6 V. It replaced
+the wire with both resistors in the node-current equations, including known
+gate/body currents in the DC intercept. Its derivative and intrinsic-charge
+approximations remained explicit. The one declared OP/AC condition then gave
+**0.579784 V**, missing that forecast by −1.035 mV.
+
+The positive gate is 0.300023 V and negative gate 0.291264 V: input common
+mode stays **0.295644 V** while the output is higher. P5 retains **246.250 mV
+VSD** and supplies 14.006 µA. P2 retains 173.966 mV VSD, supplies 7.483 µA,
+and N4 sinks 6.615 µA. The remaining 0.868 µA supplies the actual receiver
+current **0.580 µA** and upper-divider current **0.289 µA**. VDD delivers
+16.016 µA for the core and its reference.
+
+This is a finite example of separate sensing and output voltages. It does
+not establish a 0.7-V output range, or turn the earlier high-common-mode
+buffer failure into a success. The required function is now gain two, with
+two added 1-MΩ resistors and **0.168 µW** divider dissipation; the six MOS
+units still occupy 5.2 µm² of drawn device area. The actual error from the
+ideal 0.6-V target is **−20.216 mV**. Chapter 5 traces why the resistor ratio
+alone does not set precision, and why its local response must also be measured.
+
+The [frozen plan, original adapter rejection and known-input replay](../studies/learning-feedback-divider-v1/reproduce.qmd)
+preserve the complete acquisition history. An initial input representation
+was rejected before native launch; removing redundant resistor overrides
+left the exact circuit, physical values, prediction and measurement unchanged.
+One subsequent native condition completed, with no scientific retry or new
+transient/noise campaign.
+
 The [selected arrays, definitions and calculations](../studies/learning-path-v1/reproduce.qmd)
 support the original A/B/C/D1 examples; the new clamp observations have their
 own [supplement and frozen plan](../studies/learning-day-v1/reproduce.qmd).

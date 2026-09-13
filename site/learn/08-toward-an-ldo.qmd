@@ -144,6 +144,20 @@ its output. The high-command D1 result therefore does **not** rule out a
 both voltage interfaces together with required source/sink current and charge.
 No integrated regulator has been simulated in this example.
 
+The [finite half-divider connection](04-differential-pair-and-ota.qmd#sense-low-while-driving-a-higher-output)
+provides a concrete intermediate example: the same six-unit OTA has input
+common mode 0.295644 V while its output is 0.579784 V. Its tail retains
+246.250 mV VSD, and the supply delivers 16.016 µA. Two added 1-MΩ resistors
+consume 0.168 µW, while finite input difference and divider gate current leave
+**−20.216 mV** error from the ideal 0.6-V output. A voltage interface can be
+feasible without meeting a precision requirement.
+
+That amplifier divider senses `out` and feeds the **negative** input. The
+conceptual PMOS-pass regulator instead senses `vreg` and feeds the **positive**
+input, because its pass device adds another inversion. The new example has
+neither that pass-device path nor its charge/load model. Its gain, error and
+OP/AC result therefore do not establish regulator accuracy or stability.
+
 Together the observations require a receiving-port specification with both
 voltage and current directions. A pass gate needing more charge, a voltage
 closer to a rail, or rapid recovery after a prolonged overload has a different
@@ -156,6 +170,7 @@ plan; it never borrows the later archive's selected-D1 transfer.
 | --- | --- | --- |
 | Input comparison | A/B current steering; finite-tail common-mode dependence; C's PMOS-input sign at 0.3 V; same-output C clamp at 0.7-V common mode shows a current/headroom loss. | Reference/sense voltage ranges over the intended regulator supply and temperature domain; no continuous common-mode range is qualified. |
 | Buffer accuracy | Initial D1: source 0.25–0.35 V, output 0.249311–0.347634 V, worst error 2.366 mV. A separate 0.7-V command gives 0.663495 V output and 36.505-mV error. | Required regulator accuracy after reference, divider loading and pass-device operating point are included; buffer command and regulator control output are different interfaces. |
+| Finite sensing divider | Same six-unit core, two 1-MΩ resistors: input common mode 0.295644 V, output 0.579784 V; explicit gate-current/error accounting and one OP/AC condition. | Actual regulator divider loading, reference errors and the additional pass-device path; this is a changed amplifier function, not a completed regulator. |
 | Amplifier resource cost | Same six-device initial core, 5.2 µm² drawn MOS area; at most 16.085 µA VDD current on its saved input grid. | Total regulator budget, including reference, divider, startup, compensation and any driver stage. |
 | Receiving-port charge | Same initial-D1 1-MΩ/5-versus-25-pF steps, independent DC endpoints and one timestep refinement; six C-fixture current/headroom clamps; predeclared 12/15-pF checks of a 500-ns illustrative deadline. | Actual pass-gate voltage/charge trajectory, required delivery/absorption and overload recovery. |
 | Supply and sequencing | Published A75/R75/F75L driven/clamped histories; selected R75 fast/slow current partition, charge/energy window and original arrival brackets. | Floating pins, current-limited sources, arbitrary stored charge and startup of the integrated regulator. |

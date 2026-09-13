@@ -51,6 +51,8 @@ def main():
                  'learn/figures/common-mode-interface.svg']
     required += ['studies/learning-startup-v1/reproduce.html','downloads/learning-startup-v1.0.zip','learn/figures/startup-current-and-charge.svg']
     required += ['learn/figures/startup-current-and-charge-narrow.svg']
+    required += ['studies/learning-feedback-divider-v1/reproduce.html','downloads/learning-feedback-divider-v1.0.zip',
+                 'studies/learning-feedback-divider-v1/circuits/D1-half-divider.cir']
     required += ['studies/learning-dc-load-v1/reproduce.html','downloads/learning-dc-load-v1.0.zip',
                  'learn/calculations/index.html','learn/calculations/reference-investment.py',
                  'learn/calculations/reference-investment-summary.json','learn/calculations/reference-investment.csv','learn/calculations/manifest.json']

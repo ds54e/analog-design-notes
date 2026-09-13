@@ -1,0 +1,228 @@
+{
+  "cases": {
+    "D1-half-divider": {
+      "added_divider_resistance_ohm": 2000000.0,
+      "available_a": 8.683045077796906e-07,
+      "bandwidth": {
+        "bracket_hz": [
+          2238721.138568316,
+          2326305.0671536014
+        ],
+        "definition": "First downward -3.000-dB crossing relative to |H(1 kHz)|; dB interpolation in log frequency, as learning.bridge.v1.",
+        "hz": 2259680.4230613983,
+        "status": "CROSSING"
+      },
+      "capacitor_ac_relative_error": 1.151069656472567e-14,
+      "divider_beta": 0.5,
+      "divider_gate_current_shift_v": 0.0013717481397853772,
+      "divider_parallel_ohm": 500000.0,
+      "error_v": -0.020215829387035034,
+      "gain_one_khz": [
+        1.9062488240850481,
+        -0.0008625777365279352
+      ],
+      "ideal_output_v": 0.6000000000000001,
+      "input_common_mode_v": 0.29564364052201336,
+      "input_delivered_a": -2.3447597758773206e-09,
+      "input_difference_v": 0.008759614151490958,
+      "load_current_a": 5.79784170612965e-07,
+      "lower_current_a": 2.912638334462679e-07,
+      "maximum_MOS_KCL_a": 1.4707371876355319e-16,
+      "maximum_sensing_AC_KCL_a": 2.117840846301881e-22,
+      "maximum_terminal_span_v": 0.7087361665537322,
+      "n4_vds_v": 0.579784170612965,
+      "node_KCL_a": {
+        "bias": 4.238849329592058e-17,
+        "mirror": 0.0,
+        "negative_input": 0.0,
+        "output": 2.837560373301906e-20,
+        "positive_input": 0.0,
+        "sensing_node": 5.293955920339377e-23,
+        "tail": 0.0,
+        "vdd": 0.0
+      },
+      "op": {
+        "@cload[capacitance]": 5e-12,
+        "@m.xm1.mapm045_vtg_core[gds]": 5.612931631485265e-07,
+        "@m.xm1.mapm045_vtg_core[gm]": 0.00012478022170159324,
+        "@m.xm1.mapm045_vtg_core[gmbs]": 2.290087519138341e-05,
+        "@m.xm1.mapm045_vtg_core[vdsat]": 0.08415330963614633,
+        "@m.xm1.mapm045_vtg_core[vth]": 0.4305358635799991,
+        "@m.xm2.mapm045_vtg_core[gds]": 2.1147541497253093e-06,
+        "@m.xm2.mapm045_vtg_core[gm]": 0.00013830027522407514,
+        "@m.xm2.mapm045_vtg_core[gmbs]": 2.5410104741775392e-05,
+        "@m.xm2.mapm045_vtg_core[vdsat]": 0.08863636043797274,
+        "@m.xm2.mapm045_vtg_core[vth]": 0.43066820884328644,
+        "@m.xm3.mapm045_vtg_core[gds]": 5.030788918275523e-07,
+        "@m.xm3.mapm045_vtg_core[gm]": 0.00013555168434247427,
+        "@m.xm3.mapm045_vtg_core[gmbs]": 3.0781440704494276e-05,
+        "@m.xm3.mapm045_vtg_core[vdsat]": 0.059286565381962135,
+        "@m.xm3.mapm045_vtg_core[vth]": 0.4105090265149404,
+        "@m.xm4.mapm045_vtg_core[gds]": 4.5434279038468005e-07,
+        "@m.xm4.mapm045_vtg_core[gm]": 0.00013739695149651775,
+        "@m.xm4.mapm045_vtg_core[gmbs]": 3.1202939860017636e-05,
+        "@m.xm4.mapm045_vtg_core[vdsat]": 0.05931284086862725,
+        "@m.xm4.mapm045_vtg_core[vth]": 0.4104105116511504,
+        "@m.xm5.mapm045_vtg_core[gds]": 1.996581348895707e-06,
+        "@m.xm5.mapm045_vtg_core[gm]": 0.00022552854928131072,
+        "@m.xm5.mapm045_vtg_core[gmbs]": 4.681385339946068e-05,
+        "@m.xm5.mapm045_vtg_core[vdsat]": 0.10463142381848865,
+        "@m.xm5.mapm045_vtg_core[vth]": 0.38409960322611864,
+        "@m.xm6.mapm045_vtg_core[gds]": 1.0979396006093587e-07,
+        "@m.xm6.mapm045_vtg_core[gm]": 3.259740686314178e-05,
+        "@m.xm6.mapm045_vtg_core[gmbs]": 6.760887358566204e-06,
+        "@m.xm6.mapm045_vtg_core[vdsat]": 0.1048277888051371,
+        "@m.xm6.mapm045_vtg_core[vth]": 0.3842149676658612,
+        "@rbias[resistance]": 273692.63541213644,
+        "@rload[resistance]": 1000000.0,
+        "@rlower[resistance]": 1000000.0,
+        "@rsource[resistance]": 10000.0,
+        "@rupper[resistance]": 1000000.0,
+        "i(Vdd)": -1.6016207735006355e-05,
+        "i(Vin)": 2.3447597758773206e-09,
+        "i(Vinj)": 2.7434962795707543e-09,
+        "i(Voffset)": 2.3447597758773206e-09,
+        "i(VtM1b)": 1.8754442443480457e-12,
+        "i(VtM1d)": -6.517982873346288e-06,
+        "i(VtM1g)": -2.3447597758773206e-09,
+        "i(VtM1s)": 6.520325757687588e-06,
+        "i(VtM2b)": 1.7923718065304683e-12,
+        "i(VtM2d)": -7.483154009175921e-06,
+        "i(VtM2g)": -2.7434962795707543e-09,
+        "i(VtM2s)": 7.4858957132307595e-06,
+        "i(VtM3b)": -1.0612073529408593e-12,
+        "i(VtM3d)": 6.517716294892932e-06,
+        "i(VtM3g)": 1.4185616570294712e-10,
+        "i(VtM3s)": -6.517857089831434e-06,
+        "i(VtM4b)": -1.2676517700751379e-12,
+        "i(VtM4d)": 6.614849501396231e-06,
+        "i(VtM4g)": 1.2472228765313684e-10,
+        "i(VtM4s)": -6.614972956047152e-06,
+        "i(VtM5b)": 7.246980793240709e-13,
+        "i(VtM5d)": -1.4006221470918347e-05,
+        "i(VtM5g)": -2.1643568326457086e-09,
+        "i(VtM5s)": 1.4008385103017267e-05,
+        "i(VtM6b)": 6.630251903061435e-13,
+        "i(VtM6d)": -2.0069353061329166e-06,
+        "i(VtM6g)": -8.829332820425861e-10,
+        "i(VtM6s)": 2.0078175764497667e-06,
+        "v(bias)": 0.5501174339111365,
+        "v(feedback)": 0.2912638334462679,
+        "v(inn)": 0.2912638334462679,
+        "v(inp)": 0.30002344759775884,
+        "v(input_access)": 0.30002344759775884,
+        "v(mirror)": 0.3744815760409534,
+        "v(out)": 0.579784170612965,
+        "v(source)": 0.30000000000000004,
+        "v(tail)": 0.7537498027477936,
+        "v(vdd)": 1.0
+      },
+      "output_v": 0.579784170612965,
+      "p2_vsd_v": 0.17396563213482852,
+      "p2_vsg_v": 0.4624859693015257,
+      "passive_parameter_readback": {
+        "@cload[capacitance]": 5e-12,
+        "@rbias[resistance]": 273692.63541213644,
+        "@rload[resistance]": 1000000.0,
+        "@rlower[resistance]": 1000000.0,
+        "@rsource[resistance]": 10000.0,
+        "@rupper[resistance]": 1000000.0
+      },
+      "resistor_vi_readback": {
+        "Rbias": {
+          "declared_ohm": 273692.63541213644,
+          "observed_v_over_i_ohm": 273692.6354179083,
+          "relative_difference": 2.1088908397359774e-11,
+          "status": "MEASURED"
+        },
+        "Rload": {
+          "declared_ohm": 1000000.0,
+          "observed_v_over_i_ohm": 999999.9999999511,
+          "relative_difference": -4.884981308350689e-14,
+          "status": "MEASURED"
+        },
+        "Rlower": {
+          "declared_ohm": 1000000.0,
+          "observed_v_over_i_ohm": 999999.9999999023,
+          "relative_difference": -9.769962616701378e-14,
+          "status": "MEASURED"
+        },
+        "Rsource": {
+          "declared_ohm": 10000.0,
+          "observed_v_over_i_ohm": 10000.000000010012,
+          "relative_difference": 1.0011991236069662e-12,
+          "status": "MEASURED"
+        },
+        "Rupper": {
+          "declared_ohm": 1000000.0,
+          "observed_v_over_i_ohm": 999999.9999999016,
+          "relative_difference": -9.836575998178887e-14,
+          "status": "MEASURED"
+        }
+      },
+      "role": "One new nominal finite feedback-divider connection; same initial six saved zero-raw units, changed required function.",
+      "sensed_voltage_from_KCL_v": 0.2912638334462679,
+      "sensing_gate_current_a": -2.7434962795707543e-09,
+      "sensing_transfer_one_khz": [
+        0.49882108935911035,
+        -1.1913094447688832e-06
+      ],
+      "sink_branch_a": 6.614849501396231e-06,
+      "source_branch_a": 7.483154009175921e-06,
+      "source_voltage_errors_v": {
+        "source": 5.551115123125783e-17,
+        "vdd": 0.0
+      },
+      "stationary_power_w": {
+        "MOS": {
+          "m1": 2.4731281472222142e-06,
+          "m2": 1.3030808875874657e-06,
+          "m3": 2.4408177928198124e-06,
+          "m4": 3.835231738095447e-06,
+          "m5": 3.450008506341889e-06,
+          "m6": 9.032824218480237e-07
+        },
+        "ports_absorbed": {
+          "Vdd": -1.6016207735006355e-05,
+          "Vin": 7.034279327631963e-10
+        },
+        "residual": 2.330357044486031e-17,
+        "resistors": {
+          "Rbias": 1.105726468077095e-06,
+          "Rload": 3.361496844933638e-07,
+          "Rlower": 8.483462067381528e-08,
+          "Rsource": 5.4978984065832705e-14,
+          "Rupper": 8.324398495878462e-08
+        },
+        "total_source_delivery": 1.601550430707359e-05
+      },
+      "status": "NUMERICAL_CHECKS_PASS",
+      "supply_delivered_a": 1.6016207735006355e-05,
+      "tail_delivered_a": 1.4006221470918347e-05,
+      "tail_v": 0.7537498027477936,
+      "tail_vsd_v": 0.24625019725220643,
+      "upper_current_a": 2.885203371666972e-07
+    }
+  },
+  "comparison": {
+    "bandwidth_relative_residual": 0.04163289683575555,
+    "gain_relative_residual": -0.008068770401800762,
+    "observed_bandwidth_hz": 2259680.4230613983,
+    "observed_gain": 1.9062488240850481,
+    "observed_output_v": 0.579784170612965,
+    "output_residual_v": -0.0010352235064367,
+    "prior_bandwidth_hz": 2169363.5348171075,
+    "prior_gain": 1.921755024143368,
+    "prior_output_v": 0.5808193941194018
+  },
+  "limits": [
+    "Same six artificial zero-raw units; no population, yield or qualification claim.",
+    "Gain-of-two finite divider changes required function and adds2Mohm resistance; not a matched-function ranking against unity feedback or ADS-6.",
+    "Fixed5pF is a diagnostic load; no pass-gate or integrated LDO.",
+    "No new transient/noise/common-mode range or stability/phase-margin claim.",
+    "Known data remain development evidence; no new confirmation."
+  ],
+  "plan_sha256": "9568727fdf3b106469f5a33cfb3858766e08cc0ad817a6a89f270bd5f7b88ce9",
+  "schema": "learning.initial-d1-feedback-divider.measure.v1",
+  "status": "NUMERICAL_CHECKS_PASS"
+}

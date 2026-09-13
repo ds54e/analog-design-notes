@@ -1,0 +1,239 @@
+{
+  "accounting_limit": "These correlated quantities belong to this one operating point. They are not independent random errors or isolated causal interventions.",
+  "bandwidth_relative_error": -0.024173923460717228,
+  "conductance_matrix_s": [
+    [
+      0.0003160641055205967,
+      -5.612931631485265e-07,
+      -2.1147541497253093e-06,
+      0.00022552854928131072,
+      -0.00013830027522407514,
+      -0.00012478022170159324
+    ],
+    [
+      -0.00014824239005612518,
+      0.00013661605639745034,
+      0.0,
+      0.0,
+      0.0,
+      0.00012478022170159324
+    ],
+    [
+      -0.00016582513411557583,
+      0.00013739695149651775,
+      4.569096940109989e-06,
+      0.0,
+      0.00013730027522407514,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      3.636093450330033e-05,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1e-06,
+      0.0,
+      2e-06,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0001
+    ]
+  ],
+  "costs": {
+    "added_resistance_ohm": 2000000.0,
+    "divider_power_w": 1.6807860563259991e-07,
+    "drawn_mos_area_um2": 5.2,
+    "supply_delivered_a": 1.6016207735006355e-05,
+    "total_source_delivery_w": 1.601550430707359e-05
+  },
+  "exact_stationary_error_accounting_v": {
+    "finite_input_difference": -0.017519228302981915,
+    "negative_input_gate_loading": -0.0027434962795707543,
+    "positive_input_source_drop": 4.689519551754641e-05
+  },
+  "exact_stationary_error_sum_v": -0.020215829387035124,
+  "full_native_operating_point_residual_a": [
+    0.0,
+    0.0,
+    -2.837560373301906e-20,
+    4.238849329592058e-17,
+    -5.293955920339377e-23,
+    2.347124988119216e-21
+  ],
+  "full_stamp_gain": 1.9022015205001752,
+  "full_stamp_output_transimpedance_ohm": 14401.22892213021,
+  "gain_relative_error": -0.002123176960812323,
+  "limits": [
+    "Finite gain-of-two connection changes function and adds divider loading; do not rank against unity feedback as the same job.",
+    "The unfitted new-OP model still omits gate/body-current derivatives and intrinsic capacitance; retain its residuals.",
+    "No new transient, noise, return-ratio, current-limited supply or LDO result."
+  ],
+  "nodes": [
+    "tail",
+    "mirror",
+    "out",
+    "bias",
+    "inn",
+    "inp"
+  ],
+  "observation_sha256": "5368405163f6a17c6bc4745d503c2f466bbcacb0c77ae6e4b745607fdb61f527",
+  "observed_gate_path": {
+    "external_output_capacitance_f": 5e-12,
+    "frequency_hz": 1000.0,
+    "input_transfer": [
+      0.999932930144696,
+      -4.4240861836137106e-07
+    ],
+    "native_gain": [
+      1.9062488240850481,
+      -0.0008625777365279352
+    ],
+    "open_output_transimpedance_ohm": 252722.71696238147,
+    "real_gain_relative_error": 3.322861676013922e-05,
+    "reconstructed_gain": [
+      1.906312166096673,
+      -0.0008609415348310753
+    ],
+    "role": "Uses already measured gate-current/voltage transfers at1kHz, DC MOS derivatives and the explicit external output capacitor. Explains a neglected path; not a prospective or independent transfer prediction.",
+    "sensing_transfer": [
+      0.49882108935911035,
+      -1.1913094447688832e-06
+    ]
+  },
+  "old_and_new_derivatives": {
+    "1": {
+      "new": [
+        0.00012478022170159324,
+        2.290087519138341e-05,
+        5.612931631485265e-07
+      ],
+      "old": [
+        0.0001302833583150868,
+        2.3938693662974584e-05,
+        5.902018665721905e-07
+      ],
+      "order": [
+        "gm",
+        "gmb",
+        "gds"
+      ],
+      "units": "S"
+    },
+    "2": {
+      "new": [
+        0.00013830027522407514,
+        2.5410104741775392e-05,
+        2.1147541497253093e-06
+      ],
+      "old": [
+        0.00013424578343872046,
+        2.466904102402319e-05,
+        5.545659032007792e-07
+      ],
+      "order": [
+        "gm",
+        "gmb",
+        "gds"
+      ],
+      "units": "S"
+    },
+    "3": {
+      "new": [
+        0.00013555168434247427,
+        3.0781440704494276e-05,
+        5.030788918275523e-07
+      ],
+      "old": [
+        0.00014214013428026786,
+        3.228508024638004e-05,
+        5.270179521844553e-07
+      ],
+      "order": [
+        "gm",
+        "gmb",
+        "gds"
+      ],
+      "units": "S"
+    },
+    "4": {
+      "new": [
+        0.00013739695149651775,
+        3.1202939860017636e-05,
+        4.5434279038468005e-07
+      ],
+      "old": [
+        0.00014129373278404895,
+        3.209197178840394e-05,
+        5.904790951348064e-07
+      ],
+      "order": [
+        "gm",
+        "gmb",
+        "gds"
+      ],
+      "units": "S"
+    },
+    "5": {
+      "new": [
+        0.00022552854928131072,
+        4.681385339946068e-05,
+        1.996581348895707e-06
+      ],
+      "old": [
+        0.0002254344022262186,
+        4.679493593050762e-05,
+        2.0334364809128687e-06
+      ],
+      "order": [
+        "gm",
+        "gmb",
+        "gds"
+      ],
+      "units": "S"
+    },
+    "6": {
+      "new": [
+        3.259740686314178e-05,
+        6.760887358566204e-06,
+        1.0979396006093587e-07
+      ],
+      "old": [
+        3.259739698755592e-05,
+        6.76088528304036e-06,
+        1.0979392099631566e-07
+      ],
+      "order": [
+        "gm",
+        "gmb",
+        "gds"
+      ],
+      "units": "S"
+    }
+  },
+  "old_prior_sha256": "8da6dbaa0e9b9b2cb6aa09b4e7e5d10af9076985dd4db1dedb212a8a59026eb4",
+  "plan_sha256": "9568727fdf3b106469f5a33cfb3858766e08cc0ad817a6a89f270bd5f7b88ce9",
+  "reduced_network": {
+    "a_minus": -33.09738208161183,
+    "a_plus": 33.38114678060876,
+    "beta": 0.5,
+    "feedback_denominator": 17.548691040805917,
+    "gain": 1.9022015205001723,
+    "output_transimpedance_ohm": 14401.2289221302
+  },
+  "role": "Retrospective new-OP local explanation and exact stationary error accounting; original prior remains frozen.",
+  "schema": "learning.initial-d1-feedback-divider.network.v1",
+  "single_external_output_pole_hz": 2210296.689990445,
+  "single_pole_minus3db_hz": 2205055.081468631
+}

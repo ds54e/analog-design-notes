@@ -1,0 +1,396 @@
+{
+  "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+  "cases": {
+    "D1-half-divider": {
+      "analyses": [
+        {
+          "elements": {
+            "Cload": 5e-12,
+            "Rload": 1000000.0
+          },
+          "kind": "op",
+          "set_sources": {
+            "Iinj": 0.0,
+            "Vdd": 1.0,
+            "Vin": 0.3,
+            "Vinj": 0.0,
+            "Voffset": 0.0
+          },
+          "vectors": [
+            "v(bias)",
+            "v(feedback)",
+            "v(inn)",
+            "v(inp)",
+            "v(input_access)",
+            "v(mirror)",
+            "v(out)",
+            "v(source)",
+            "v(tail)",
+            "v(vdd)",
+            "i(Vdd)",
+            "i(Vin)",
+            "i(Voffset)",
+            "i(Vinj)",
+            "i(VtM1b)",
+            "i(VtM1d)",
+            "i(VtM1g)",
+            "i(VtM1s)",
+            "i(VtM2b)",
+            "i(VtM2d)",
+            "i(VtM2g)",
+            "i(VtM2s)",
+            "i(VtM3b)",
+            "i(VtM3d)",
+            "i(VtM3g)",
+            "i(VtM3s)",
+            "i(VtM4b)",
+            "i(VtM4d)",
+            "i(VtM4g)",
+            "i(VtM4s)",
+            "i(VtM5b)",
+            "i(VtM5d)",
+            "i(VtM5g)",
+            "i(VtM5s)",
+            "i(VtM6b)",
+            "i(VtM6d)",
+            "i(VtM6g)",
+            "i(VtM6s)",
+            "@m.xm1.mapm045_vtg_core[gm]",
+            "@m.xm1.mapm045_vtg_core[gds]",
+            "@m.xm1.mapm045_vtg_core[gmbs]",
+            "@m.xm1.mapm045_vtg_core[vth]",
+            "@m.xm1.mapm045_vtg_core[vdsat]",
+            "@m.xm2.mapm045_vtg_core[gm]",
+            "@m.xm2.mapm045_vtg_core[gds]",
+            "@m.xm2.mapm045_vtg_core[gmbs]",
+            "@m.xm2.mapm045_vtg_core[vth]",
+            "@m.xm2.mapm045_vtg_core[vdsat]",
+            "@m.xm3.mapm045_vtg_core[gm]",
+            "@m.xm3.mapm045_vtg_core[gds]",
+            "@m.xm3.mapm045_vtg_core[gmbs]",
+            "@m.xm3.mapm045_vtg_core[vth]",
+            "@m.xm3.mapm045_vtg_core[vdsat]",
+            "@m.xm4.mapm045_vtg_core[gm]",
+            "@m.xm4.mapm045_vtg_core[gds]",
+            "@m.xm4.mapm045_vtg_core[gmbs]",
+            "@m.xm4.mapm045_vtg_core[vth]",
+            "@m.xm4.mapm045_vtg_core[vdsat]",
+            "@m.xm5.mapm045_vtg_core[gm]",
+            "@m.xm5.mapm045_vtg_core[gds]",
+            "@m.xm5.mapm045_vtg_core[gmbs]",
+            "@m.xm5.mapm045_vtg_core[vth]",
+            "@m.xm5.mapm045_vtg_core[vdsat]",
+            "@m.xm6.mapm045_vtg_core[gm]",
+            "@m.xm6.mapm045_vtg_core[gds]",
+            "@m.xm6.mapm045_vtg_core[gmbs]",
+            "@m.xm6.mapm045_vtg_core[vth]",
+            "@m.xm6.mapm045_vtg_core[vdsat]",
+            "@cload[capacitance]",
+            "@rload[resistance]",
+            "@rbias[resistance]",
+            "@rsource[resistance]",
+            "@rupper[resistance]",
+            "@rlower[resistance]"
+          ]
+        },
+        {
+          "ac_sources": {
+            "Iinj": 0,
+            "Vdd": 0,
+            "Vin": 1,
+            "Vinj": 0,
+            "Voffset": 0
+          },
+          "elements": {
+            "Cload": 5e-12,
+            "Rload": 1000000.0
+          },
+          "kind": "ac",
+          "points_per_decade": 60,
+          "set_sources": {
+            "Iinj": 0.0,
+            "Vdd": 1.0,
+            "Vin": 0.3,
+            "Vinj": 0.0,
+            "Voffset": 0.0
+          },
+          "start": 1000.0,
+          "stop": 1000000000.0,
+          "vectors": [
+            "v(bias)",
+            "v(feedback)",
+            "v(inn)",
+            "v(inp)",
+            "v(input_access)",
+            "v(mirror)",
+            "v(out)",
+            "v(source)",
+            "v(tail)",
+            "v(vdd)",
+            "i(Vdd)",
+            "i(Vin)",
+            "i(Voffset)",
+            "i(Vinj)",
+            "i(VtM1b)",
+            "i(VtM1d)",
+            "i(VtM1g)",
+            "i(VtM1s)",
+            "i(VtM2b)",
+            "i(VtM2d)",
+            "i(VtM2g)",
+            "i(VtM2s)",
+            "i(VtM3b)",
+            "i(VtM3d)",
+            "i(VtM3g)",
+            "i(VtM3s)",
+            "i(VtM4b)",
+            "i(VtM4d)",
+            "i(VtM4g)",
+            "i(VtM4s)",
+            "i(VtM5b)",
+            "i(VtM5d)",
+            "i(VtM5g)",
+            "i(VtM5s)",
+            "i(VtM6b)",
+            "i(VtM6d)",
+            "i(VtM6g)",
+            "i(VtM6s)"
+          ]
+        }
+      ],
+      "circuit": "circuits/D1-half-divider.cir",
+      "connections": {
+        "m1": {
+          "nodes": {
+            "b": "vdd",
+            "d": "mirror",
+            "g": "inp",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM1b",
+            "d": "VtM1d",
+            "g": "VtM1g",
+            "s": "VtM1s"
+          }
+        },
+        "m2": {
+          "nodes": {
+            "b": "vdd",
+            "d": "out",
+            "g": "inn",
+            "s": "tail"
+          },
+          "sensors": {
+            "b": "VtM2b",
+            "d": "VtM2d",
+            "g": "VtM2g",
+            "s": "VtM2s"
+          }
+        },
+        "m3": {
+          "nodes": {
+            "b": "0",
+            "d": "mirror",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM3b",
+            "d": "VtM3d",
+            "g": "VtM3g",
+            "s": "VtM3s"
+          }
+        },
+        "m4": {
+          "nodes": {
+            "b": "0",
+            "d": "out",
+            "g": "mirror",
+            "s": "0"
+          },
+          "sensors": {
+            "b": "VtM4b",
+            "d": "VtM4d",
+            "g": "VtM4g",
+            "s": "VtM4s"
+          }
+        },
+        "m5": {
+          "nodes": {
+            "b": "vdd",
+            "d": "tail",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM5b",
+            "d": "VtM5d",
+            "g": "VtM5g",
+            "s": "VtM5s"
+          }
+        },
+        "m6": {
+          "nodes": {
+            "b": "vdd",
+            "d": "bias",
+            "g": "bias",
+            "s": "vdd"
+          },
+          "sensors": {
+            "b": "VtM6b",
+            "d": "VtM6d",
+            "g": "VtM6g",
+            "s": "VtM6s"
+          }
+        }
+      },
+      "expected_source_nodes_v": {
+        "source": 0.3,
+        "vdd": 1.0
+      },
+      "prior_case": "D1-5p",
+      "prior_realization_id": "65efa54678ea74a7c699d6059431abfb710d765a049e28ba4c8065e64f07b35b",
+      "role": "One new nominal finite feedback-divider connection; same initial six saved zero-raw units, changed required function."
+    }
+  },
+  "created_utc": "2026-09-13T19:31:31.457722+00:00",
+  "fixed": {
+    "cload_f": 5e-12,
+    "rbias_ohm": 273692.63541213644,
+    "rload_ohm": 1000000.0,
+    "rlower_ohm": 1000000.0,
+    "rsource_ohm": 10000.0,
+    "rupper_ohm": 1000000.0,
+    "vdd_v": 1.0
+  },
+  "identity": "initial-d1-half-divider-corrected-input-v2",
+  "input_correction": "The v1 wrapper was rejected before deck/output-directory creation because the existing adapter permits external-load overrides only for Rload/Cload. Remove redundant Rupper/Rlower overrides; their unchanged1Mohm values remain bound in the exact circuit. No native target was exposed. All physical values, source conditions, prior and frozen measurement code/tolerances are unchanged.",
+  "limits": [
+    "Same six artificial zero-raw units; no population, yield or qualification claim.",
+    "Gain-of-two finite divider changes required function and adds2Mohm resistance; not a matched-function ranking against unity feedback or ADS-6.",
+    "Fixed5pF is a diagnostic load; no pass-gate or integrated LDO.",
+    "No new transient/noise/common-mode range or stability/phase-margin claim.",
+    "Known data remain development evidence; no new confirmation."
+  ],
+  "measurement_script_sha256": "7fc705f04ac9b058c63798dde4b67770b11422737fd48f04fe31e56f90c819f8",
+  "measurements": {
+    "capacitor_ac_relative": 1e-05,
+    "kcl_max_a": 1e-10,
+    "passive_parameter_relative": 2e-11,
+    "passive_vi_relative": 1e-05,
+    "power_residual_w": 1e-12,
+    "source_voltage_v": 1e-09,
+    "terminal_span_max_v": 1.00000001,
+    "vi_minimum_current_a": 1e-14
+  },
+  "model_hashes": {
+    "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+    "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+    "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+  },
+  "native_concurrency": 1,
+  "new_target_exposure_at_freeze": 0,
+  "ngspice_version": "47",
+  "physical_units": [
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm1"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/input_plus",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm2"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/input_minus",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm3"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/load_reference",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm4"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/load_output",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 2.4e-07,
+      "path": [
+        "xm5"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/tail",
+      "w_m": 4e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 4e-07,
+      "path": [
+        "xm6"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ota/bias_reference",
+      "w_m": 1e-06
+    }
+  ],
+  "prospective_interpretation": "Ideal divider target0.6V/gain2 is a reference value, not a pass threshold. Freeze old-OP affine/nodal prediction before the one target. Keep misses and separately label any new-OP explanation.",
+  "representation_changes": "Remove only Vfeedback wire; add Rupper(out,feedback) and Rlower(feedback,0), both1Mohm. Same six zero-raw units,1Mohm receiver,5pF,0.3V input,1V supply and finite bias/source.",
+  "schema": "learning.initial-d1-feedback-divider.plan.v2",
+  "selected_input_sha256": {
+    "circuits/D1-half-divider.cir": "5b2c39e8f6ff70679900bb98739137978ab6f7868185f642f70d40459c3adc16",
+    "data/prior.json": "8da6dbaa0e9b9b2cb6aa09b4e7e5d10af9076985dd4db1dedb212a8a59026eb4",
+    "data/source.json": "b94f2a95d4259f36585a4f1b90c54afb6de72cc37efa68dc65d394f928342fda",
+    "prior.py": "ab420cf0cd3cb859fc2b840266f13bc2e34e3d3ccb2b3a18dbb859288b720658",
+    "requirements.txt": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a"
+  },
+  "status": "FROZEN_BEFORE_TARGET",
+  "stopping_rule": "Exactly one scientific OP/361AC condition. At most one technical retry in a fresh directory only for interrupted/incomplete acquisition, identical saved inputs. Valid physical failure ends acquisition. No ratio/Vin/bias/load adjustment or target extension.",
+  "supersedes_input_plan_sha256": "ebd3c0c8bad8a770161e8b2d3ef6e81e83ffdbf9e6e8de1d8f18177ec8d814c6",
+  "temperature_c": 26.85,
+  "unchanged_learning_t0": "2026-09-13T06:47:07Z"
+}

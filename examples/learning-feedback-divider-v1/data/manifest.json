@@ -1,0 +1,14 @@
+{
+  "files": {
+    "D1-half-divider.npz": "5368405163f6a17c6bc4745d503c2f466bbcacb0c77ae6e4b745607fdb61f527",
+    "error-accounting.csv": "e4f581d7cfbe2dca5d5638a9a186cde3d798a419338a79815162a567b3d892b6",
+    "index.json": "12f5eaed9422df3a7bf0df0e9ca0389e6403419b3d21fb0293920b6ab0890d38",
+    "network.json": "0da9a73bac8ae94465e109bf262bfe86fd808430de90110071f563fab4351b74",
+    "operating-point.csv": "19cb334efe3670185780ca09dcedf0da5afa78def5ccdb3e412c6666b3560364",
+    "prior.json": "8da6dbaa0e9b9b2cb6aa09b4e7e5d10af9076985dd4db1dedb212a8a59026eb4",
+    "source.json": "b94f2a95d4259f36585a4f1b90c54afb6de72cc37efa68dc65d394f928342fda",
+    "summary.json": "d433645af809b46b8d6286541466c3ad635b425bb1fbcc441a7dbfe5882f8081"
+  },
+  "role": "Exact selected original/prior/observation/measurement/retrospective files. New and old definitions remain distinct.",
+  "schema": "learning.selected-data.manifest.v1"
+}

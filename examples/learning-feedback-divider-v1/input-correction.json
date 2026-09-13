@@ -1,0 +1,15 @@
+{
+  "corrected_plan_sha256": "9568727fdf3b106469f5a33cfb3858766e08cc0ad817a6a89f270bd5f7b88ce9",
+  "correction": "The v1 wrapper was rejected before deck/output-directory creation because the existing adapter permits external-load overrides only for Rload/Cload. Remove redundant Rupper/Rlower overrides; their unchanged1Mohm values remain bound in the exact circuit. No native target was exposed. All physical values, source conditions, prior and frozen measurement code/tolerances are unchanged.",
+  "error": "ValueError: Invalid declared external load at tools/acquire.py:133",
+  "native_attempt_directories": 0,
+  "new_scientific_conditions_exposed": 0,
+  "observed_utc": "2026-09-13T19:31:31.457722+00:00",
+  "original_plan_sha256": "ebd3c0c8bad8a770161e8b2d3ef6e81e83ffdbf9e6e8de1d8f18177ec8d814c6",
+  "pretarget_commit": "465a73a72d1076917fa5d0b77c4f83f816f93b60",
+  "schema": "ads.initial-d1-feedback-divider.input-rejection.v1",
+  "scope": "Adapter validation before deck creation, output directory, subprocess launch or native target exposure.",
+  "status": "REJECTED_BEFORE_NATIVE_LAUNCH",
+  "unchanged_measurement_sha256": "7fc705f04ac9b058c63798dde4b67770b11422737fd48f04fe31e56f90c819f8",
+  "unchanged_prior_sha256": "8da6dbaa0e9b9b2cb6aa09b4e7e5d10af9076985dd4db1dedb212a8a59026eb4"
+}
