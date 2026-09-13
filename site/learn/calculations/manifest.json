@@ -1,0 +1,9 @@
+{
+  "files": {
+    "reference-investment-summary.json": "2b5ad65027de507dfa329142aa39ba3d75236b2d3590e41a7b64dee0d65d5ae7",
+    "reference-investment.csv": "41f5a0c5d590cb3d7dc51a3925e619307245b2c6c7cd37e6766b5a9ecd7611d7",
+    "reference-investment.py": "f164696462741d0c539589a8dbeb510ce9e20f00d4dc24c15d25206772de0b2b"
+  },
+  "schema": "adn.learning-worked-calculations.v1",
+  "source_zip_sha256": "4d2dda32baa15f173c6a897e7429ba0e421b0fa1738ff722fe8b889d1cf3e55f"
+}

@@ -60,17 +60,47 @@ DELVTO and ln(MULU0). The studies use a native reference Jacobian to map between
 them and check each saved physical realization at the reference condition.
 DELVTO is not silently substituted for the observable threshold coordinate.
 
+One unit's calculation can be written explicitly. Let $q$ contain its raw
+DELVTO and ln(MULU0), and let $s$ contain its reference-extracted threshold
+shift and **fractional current-factor change** $(\beta-\beta_0)/\beta_0$.
+The nominal reference measurement gives $\delta s\simeq J_{ref}\delta q$.
+If independent standardized coordinates $z$ generate $\delta s=D_\sigma z$,
+and the biased amplifier has the raw sensitivity row $b$, then
+
+$$\delta v_o\simeq bJ_{ref}^{-1}D_\sigma z,\qquad
+ a=bJ_{ref}^{-1}D_\sigma.$$
+
+The unit's variance is the sum of squares of that row's two components.
+Equivalently, its raw covariance is
+$\Sigma_q=J_{ref}^{-1}D_\sigma^2(J_{ref}^{-1})^T$, and the contribution is
+$b\Sigma_qb^T$. Even when the observable coordinates are independent,
+$\Sigma_q$ need not be diagonal. Dropping its cross term would describe a
+different uncertainty model. This is a derivative at the nominal reference
+condition; saved finite physical realizations were separately read back there
+before their amplifier observations. It is not a new fit to their output errors.
+
 The signal-circuit sensitivities then act on those mapped raw changes. A unit's
 geometry changes both its source profile and its circuit operating point;
 $\sum WL$ alone does not specify the outcome. These are model-based local
 forecasts, with finite nonlinear residuals checked against later observations,
 not an independent transistor theory or foundry yield prediction.
 
-The first current-allocation study made the consequence concrete. Enlarging
-only the active reference reduced its predicted contribution, while the
-unchanged output PMOS remained the dominant error floor. The later equal-area
-study put resources at that output source and improved its own architecture.
-The resistor-load baseline still had a much smaller output-current path.
+The [worked reference investment](03-mirrors-and-bias.qmd#put-the-saved-budget-beside-the-actual-cost)
+makes that separation concrete. Two to five reference units nearly double
+current and reduce that role's predicted variance by 60%, but reduce the whole
+circuit's predicted SD by only 8.0%. Its other sources remain. The restricted
+67.851-mV floor holds A37's input/load contributions fixed; it is not an
+architecture-wide limit. The later equal-area study instead invested at the
+output source, while the resistor-load baseline retained a much smaller
+output-current path.
+
+Keep the loss function separate as well: the source calculation predicts a
+6.288-mV **SD** reduction; the old nominal confirmation observed a 6.129-mV
+**MAE** reduction. Their similar numerical values are coincidental. They have
+different definitions, and the original 5-mV MAE-benefit interval still did
+not clear its threshold. There is no general conversion from a role-variance
+budget to MAE or a fixed-window pass count without further distributional
+assumptions and evidence.
 
 ## Compare a prediction with the loss the design actually cares about
 

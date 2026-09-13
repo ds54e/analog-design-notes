@@ -8,25 +8,25 @@ then follows mirrors, differential operation, feedback, uncertainty and supply
 interfaces toward the questions an LDO would need answered. Each chapter connects
 an estimate, selected observations and a design judgment.
 
-**Learning edition v1.5.** The English chapters are the canonical route; the
+**Learning edition v1.6.** The English chapters are the canonical route; the
 [Japanese reading overview](../ja/learning-path.qmd) explains where to begin
 and how the evidence fits. The five detailed studies remain available with
 their original circuit files, definitions, downloads and results.
 
 The route develops the worked current/gm/width argument and measured
-mirror/headroom limits. Its separately planned **initial-D1 5/25-pF example**
-shows why a larger receiving capacitor slows response without repairing DC
-tracking error. This increment uses that result to forecast and check a
-12-versus-15-pF choice against an illustrative deadline. It also derives the
-finite reference's supply-error path and explains a narrower distribution
-with fewer fixed-window passes. The finite-signal explanation now connects
-independent saved DC curvature to harmonics, actual gate/source motion and
-input-current costs. Chapter 6 then traces one resistor’s noise through both
-of its terminals and quantifies the passive noise cost. A two-condition
-common-mode example then tests why an output clamp's current capability does
-not define the input range of a buffer. It connects changed tail headroom,
-unequal input paths and weaker feedback response. All previous exact downloads
-remain available.
+mirror/headroom limits. Increasing a finite mirror's reference investment
+then shows why reducing one error source gives a smaller improvement in the
+total error. The finite-signal and noise explanations follow actual gate/source
+motion, input-current cost and the two terminals of a single noise source.
+Supply and fixed-target comparisons keep precision separate from spread.
+
+The **same six-unit initial OTA** provides a connected receiving-port example.
+Its 5/25-pF comparison leads to a predeclared 12/15-pF deadline choice. Moving
+the input common mode then changes tail headroom and local gain. Finally,
+requiring more stationary receiver current changes the output error and
+bandwidth together: a slightly faster response can be less accurate. Each
+comparison has its own exact conditions, prediction role and evidence.
+All previous exact downloads remain available.
 
 ## The reading order
 
@@ -145,6 +145,17 @@ adds two initial-core OP/AC conditions, a separate retrospective node calculatio
 one figure and a known-input high-command D1 replay. It retains the failed
 large-range local extrapolation and distinguishes a buffer's moving input from
 an LDO's separately specified sense/reference and control ports.
+
+The [DC receiving-load example](../studies/learning-dc-load-v1/reproduce.qmd)
+keeps that core at a 0.3-V command and changes Rload from 1 MΩ to 100 kΩ.
+It preserves the prior forecast, actual OP/AC result and an earlier rejected
+wrong-condition attempt. A separate current/power calculation explains why
+the output-load current and supply-current changes are different.
+
+[Small worked calculations](calculations/index.qmd) provide the reference-
+investment arithmetic using the original first-study ZIP and standard Python.
+They check circuit inventory and cost before comparing predicted SD with the
+original confirmation's MAE decision; they do not create a new cohort.
 
 The progression is informed by the device–diode–amplifier–mirror–pair–OTA order
 in [Pretl, Koefinger and Dorrer's course](https://iic-jku.github.io/analog-circuit-design/aicd.html)

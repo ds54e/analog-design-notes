@@ -152,6 +152,55 @@ The near agreement is a local explanation, not an assertion that C's loaded
 null is exactly D1's source-to-output offset. Nor would a larger open-loop gain
 automatically remove an intrinsic input-referred device offset.
 
+### Predict a finite DC receiving-current change
+
+The [100-kΩ receiver](04-differential-pair-and-ota.qmd#a-dc-receiver-needs-current-after-charging-has-ended)
+keeps initial D1's source at 0.3 V and capacitor at 5 pF. Before its target was
+observed, the known central OP derivatives gave a closed-connection output-
+current transimpedance $Z_c\approx7.491$ kΩ. A three-node elimination and a
+separate six-MOS/four-node construction agree. They retain gm, gmb, gds and the
+finite resistors while neglecting leakage derivatives and capacitance in this
+low-frequency estimate.
+
+The added conductance is $\Delta G=1/(100\,\mathrm{k}\Omega)-1/(1\,\mathrm{M}\Omega)
+=9$ µS. With the source command fixed, its extra outgoing current is
+$\Delta G(V_{O0}+\delta V_O)$. Linearizing the rest of the circuit at the known
+OP gives
+
+$$\delta V_O=-Z_c\Delta G(V_{O0}+\delta V_O),\qquad
+ V_{O,new}\simeq\frac{V_{O0}}{1+Z_c\Delta G}.$$
+
+The divisor is 1.067418. Holding the same derivatives also reduces local gain
+by that divisor. A dominant-output-pole approximation at fixed C increases
+bandwidth by it. The old OP's single-pole model gives a −3.000-dB crossing,
+normalized to 1 kHz, that agrees with the known 1-MΩ bandwidth within 0.053%.
+
+| Quantity at 100 kΩ | Saved prior estimate | New observation |
+| --- | ---: | ---: |
+| Output, V | 0.279606 | 0.279412 |
+| Real gain at 1 kHz, V/V | 0.921211 | 0.918230 |
+| Relative −3-dB bandwidth, MHz | 4.527397 | 4.401678 |
+
+The output misses the estimate by −0.193 mV; bandwidth is 2.78% below the
+estimate. These discrepancies remain. The operating point moved: P1/P2 gm
+changes from 130.283/134.246 to 110.588/152.854 µS as their currents separate.
+The receiver is no longer a small added conductance around exactly the old
+biased state.
+
+A **retrospective** calculation with the new observed derivatives gives gain
+0.918337 and a −3.000-dB bandwidth of 4.399545 MHz using the external capacitor
+alone, within 0.012% and 0.049% of the corresponding native values. Its effective closed output
+conductance increases by 5.048 µS, rather than the added resistor's 9 µS with
+all other terms frozen. The complete node equations account for the changed
+paths; this is not an intervention isolating one gm value. The new calculation
+explains the earlier forecast's limit and does not replace it.
+
+The [selected observations and calculation](../studies/learning-dc-load-v1/reproduce.qmd)
+retain the original forecast, both input versions and unchanged measurement
+checks. This one OP/AC condition has no new transient, noise or physical
+sample population. Its design lesson is specific: a receiver's DC current
+requirement changes precision as well as response, even at fixed capacitance.
+
 ### Keep both input coefficients when common mode changes
 
 The [high-command example](04-differential-pair-and-ota.qmd#a-high-output-clamp-does-not-establish-high-input-common-mode)
@@ -223,20 +272,24 @@ $V_O/V_{source}$ with its complete functional feedback connection intact.
 It does not measure a broken-loop return ratio.
 
 The high-command example gives a second way to reduce bandwidth without
-changing the capacitor. Compare it with the separate 25-pF observation:
+changing the capacitor. Compare it with the separate 25-pF and 100-kΩ
+observations. Rload remains 1 MΩ except where 100 kΩ is stated:
 
 | Initial D1 condition | 1-kHz gain magnitude, V/V | Relative −3-dB bandwidth, MHz | DC source-to-output error, mV |
 | --- | ---: | ---: | ---: |
 | 0.3-V source, 5 pF | 0.983317 | 4.241 | −1.544 |
 | 0.3-V source, 25 pF | 0.983317 | 0.848 | −1.544 |
 | 0.7-V source, 5 pF | 0.515957 | 0.863 | −36.505 |
+| 0.3-V source, 100 kΩ, 5 pF | 0.918230 | 4.402 | −20.588 |
 
-The last two bandwidths are close, but their precision and local gain are
-different. One change stores more charge at the old DC operating point;
+The 25-pF and high-command bandwidths are close, but their precision and local
+gain are different. One change stores more charge at the old DC operating point;
 the other changes headroom and current at the same 5-pF load. A bandwidth
-number alone cannot rank these interfaces. The new high-command case has
-OP/AC observations only; it does not supply a measured large-step settling
-time or overload-recovery claim.
+number alone cannot rank these interfaces. The 100-kΩ receiver even has
+slightly wider bandwidth than the central 1-MΩ case while tracking less
+accurately. Both new receiver/common-mode conditions have OP/AC observations
+only; neither supplies a measured large-step settling time or overload-recovery
+claim.
 
 A return-ratio measurement asks how an injected perturbation travels around
 a specified loop and returns, with the operating point and loading preserved.

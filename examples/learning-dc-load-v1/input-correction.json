@@ -1,0 +1,42 @@
+{
+  "actual_applied": {
+    "Cload_f": 5e-12,
+    "Rload_ohm": 1000000.0,
+    "Vdd_v": 1.0,
+    "Vin_v": 0.7
+  },
+  "cause": "Preparation copied the previous high-command analyses, changing the circuit body/expected fields but leaving both per-analysis set_sources.Vin=0.7 and elements.Rload=1e6. The adapter correctly applied those frozen overrides. Actual native parameter/source readback contradicts the intended condition.",
+  "corrected_plan_sha256": "ce5cf2eed19bbc8f44b4ee185bb648df835cb345306bcec990af119ced8415ee",
+  "corrected_target_started_utc": "2026-09-13T17:31:42.543875+00:00",
+  "declared_body_and_expected": {
+    "Rload_ohm": 100000.0,
+    "Vin_v": 0.3
+  },
+  "exposure": "The intended0.3V/100kohm target remains unobserved. Actual0.7V/1Mohm reproduces the already exposed P7 high-command condition; every selected OP/AC value is exactly equal. Different complete request/realization identity; not fresh confirmation.",
+  "final_total_scientific_acquisitions_in_item": 2,
+  "final_usable_intended_conditions": 1,
+  "known_duplicate": {
+    "maximum_array_differences": {
+      "analysis0": 0.0,
+      "analysis1": 0.0
+    },
+    "member": "example/data/D1-high-command.npz",
+    "member_sha256": "6d5cfd57ba0913a070a27d9598cc5e4befef234158cf157148ffd85a7f1fef1e",
+    "package": "learning-common-mode-v1.0.zip",
+    "package_sha256": "0995cd256492127d8e7bb3dcd953585be553facf81188473b476ab4ece3cb165"
+  },
+  "measurement_failure": "Frozen measure_case stopped at the unchanged passive-parameter check for @rload[resistance]. No successful dc-load-analysis-001 directory was written; the source-voltage expectation would also disagree.",
+  "native_acquisition_count_for_item": 1,
+  "native_rows": [
+    1,
+    361
+  ],
+  "original_plan_sha256": "35b75790c517ad9a95ac65574c4571622e7fdf5b068de826101330adb963aa59",
+  "realization_id": "53a08182bc3de79885e3c5b19c099dc739ce5724d3ea40cff01955e8ee018f37",
+  "remaining_scientific_acquisitions": 0,
+  "request_id": "6bf16c6cf36703126204c2ccc1fce279c95b58877b9a46b7cda81cb946a954d6",
+  "role": "One retained wrong-condition acquisition before the corrected100kohm observation; original completion marker is not evidence for the intended condition.",
+  "status": "ACQUISITION_COMPLETE_WRONG_APPLIED_CONDITION_NOT_ADOPTED",
+  "target_started_utc": "2026-09-13T17:24:20.335884+00:00",
+  "usable_declared_conditions": 0
+}

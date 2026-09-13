@@ -1,0 +1,14 @@
+{
+  "files": {
+    "D1-100k-load.npz": "e0bc5a893522888f2be1f16624d87fea8cfcc24a2e7b2909a4cadbe716e4a036",
+    "index.json": "4a453988e57ad21c4e6b4cd98e26cf75372661ce7e820de5c96ed06b04bb6855",
+    "network.csv": "89e029c371266c51cbcd3725016cf6db0fb2cf03f463693fed2c0d3db48be1d7",
+    "network.json": "c9351b4883fcbbef6ff3aa27cbcee6221a5d826f23a074bd1446d72304188ec3",
+    "operating-point.csv": "77e941c53c0d46d46f24d4fd2a082ce853d3e93c9efba661748204e07aca408a",
+    "prior.json": "3f4f1365d7e912dc23aa25fb07ab7200eb319246ae2714f6c416cdf232274d23",
+    "source.json": "b94f2a95d4259f36585a4f1b90c54afb6de72cc37efa68dc65d394f928342fda",
+    "summary.json": "eee8df6b7779d6a4b0061753593c4aa9408b744ad4833583bfaf849b05cf4566"
+  },
+  "role": "Exact prior source/forecast, corrected condition observations and separately labeled analysis. The original wrong-condition store remains preserved privately and its selected audit is public.",
+  "schema": "adn.initial-d1-dc-load.compact.v1"
+}

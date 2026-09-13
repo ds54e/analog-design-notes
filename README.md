@@ -4,7 +4,7 @@ Read the [site](https://ds54e.github.io/analog-design-notes/), start the
 [eight-chapter learning route](https://ds54e.github.io/analog-design-notes/learn/),
 or use the [Japanese reading overview](https://ds54e.github.io/analog-design-notes/ja/learning-path.html).
 
-Learning edition **v1.5** connects MOS operating points, common-source stages,
+Learning edition **v1.6** connects MOS operating points, common-source stages,
 mirrors, differential pairs/OTAs, feedback, errors and supply/startup to the
 remaining interfaces of an LDO. Its [original selected evidence package](examples/learning-path-v1/README.md)
 contains four archived nominal examples, current-balance calculations and eight
@@ -26,6 +26,13 @@ The [common-mode supplement](examples/learning-common-mode-v1/README.md) separat
 input headroom from output-clamp voltage using two initial-core conditions and
 a retrospective node calculation. Its public replay retains the high-command
 buffer's larger tracking error and changed local response.
+
+The [DC receiving-load example](examples/learning-dc-load-v1/README.md) retains
+a frozen forecast, one corrected 100-kΩ result and an earlier rejected input
+attempt. It explains current redistribution, changed precision and bandwidth.
+[Small worked calculations](https://ds54e.github.io/analog-design-notes/learn/calculations/)
+reproduce the finite mirror's reference-current investment from the original
+first-study ZIP using standard Python.
 
 The power-sequencing study explains input delivery/absorption and supply
 charging peaks in 59 nominal static/history/control observations. It preserves
@@ -65,8 +72,8 @@ before export. The immutable research tags are
 `gain-operating-point-accuracy-v1.0`, `passive-sensitivity-v1.0`,
 `active-allocation-v1.0`, `finite-feedback-v1.0` and `power-sequencing-v1.0`.
 The earlier edition tags `learning-path-v1.0`, `learning-path-v1.1` and
-`learning-path-v1.2`, `learning-path-v1.3` and `learning-path-v1.4` are retained;
-the new edition tag is `learning-path-v1.5`. Versioned
+`learning-path-v1.2`, `learning-path-v1.3`, `learning-path-v1.4` and
+`learning-path-v1.5` are retained; the new edition tag is `learning-path-v1.6`. Versioned
 downloads are static checked artifacts; the first release's ZIP bytes are preserved.
 
 Maintainers render with Quarto **1.10.18**:

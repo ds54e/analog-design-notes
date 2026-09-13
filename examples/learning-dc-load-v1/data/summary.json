@@ -1,0 +1,181 @@
+{
+  "cases": {
+    "D1-100k-load": {
+      "available_a": 2.791243729760392e-06,
+      "bandwidth": {
+        "bracket_hz": [
+          4298662.3470822275,
+          4466835.92150958
+        ],
+        "definition": "First downward -3.000-dB crossing relative to |H(1 kHz)|; dB interpolation in log frequency, as learning.bridge.v1.",
+        "hz": 4401678.325104952,
+        "status": "CROSSING"
+      },
+      "capacitor_ac_relative_error": 3.503484567031315e-16,
+      "clamp_sink_a": 0.0,
+      "error_v": -0.020587556208106594,
+      "gain_one_khz": [
+        0.9182300896684241,
+        -0.00020930587420545235
+      ],
+      "input_common_mode_v": 0.28971684038905077,
+      "input_delivered_a": -2.123698620795254e-09,
+      "input_difference_v": 0.02060879319431458,
+      "input_source_v": 0.30000000000000004,
+      "maximum_MOS_KCL_a": 1.3675855153189032e-16,
+      "maximum_terminal_span_v": 0.7205875562081065,
+      "n4_vds_v": 0.27941244379189345,
+      "net_after_resistor_a": -2.880708158542873e-09,
+      "node_KCL_a": {
+        "bias": 4.0940532824236715e-16,
+        "feedback": 0.0,
+        "input": 0.0,
+        "mirror": 0.0,
+        "output": 0.0,
+        "tail": 0.0,
+        "vdd": 0.0
+      },
+      "op": {
+        "@cload[capacitance]": 5e-12,
+        "@m.xm1.mapm045_vtg_core[gds]": 4.887807859411172e-07,
+        "@m.xm1.mapm045_vtg_core[gm]": 0.0001105882619971482,
+        "@m.xm1.mapm045_vtg_core[gmbs]": 2.0234759337180566e-05,
+        "@m.xm1.mapm045_vtg_core[vdsat]": 0.08054669041397988,
+        "@m.xm1.mapm045_vtg_core[vth]": 0.4316650380342126,
+        "@m.xm2.mapm045_vtg_core[gds]": 6.372263063306821e-07,
+        "@m.xm2.mapm045_vtg_core[gm]": 0.00015285404839693382,
+        "@m.xm2.mapm045_vtg_core[gmbs]": 2.7998284681540506e-05,
+        "@m.xm2.mapm045_vtg_core[vdsat]": 0.09117839423574614,
+        "@m.xm2.mapm045_vtg_core[vth]": 0.4316082323457329,
+        "@m.xm3.mapm045_vtg_core[gds]": 4.423397112480456e-07,
+        "@m.xm3.mapm045_vtg_core[gm]": 0.00011880936858539061,
+        "@m.xm3.mapm045_vtg_core[gmbs]": 2.6965582408153795e-05,
+        "@m.xm3.mapm045_vtg_core[vdsat]": 0.057499858650586516,
+        "@m.xm3.mapm045_vtg_core[vth]": 0.4105123608181976,
+        "@m.xm4.mapm045_vtg_core[gds]": 5.10414507794994e-07,
+        "@m.xm4.mapm045_vtg_core[gm]": 0.00011798146457630074,
+        "@m.xm4.mapm045_vtg_core[gmbs]": 2.677699072108479e-05,
+        "@m.xm4.mapm045_vtg_core[vdsat]": 0.05748953206239542,
+        "@m.xm4.mapm045_vtg_core[vth]": 0.41055464794120006,
+        "@m.xm5.mapm045_vtg_core[gds]": 1.9049320319645778e-06,
+        "@m.xm5.mapm045_vtg_core[gm]": 0.00022577250087405605,
+        "@m.xm5.mapm045_vtg_core[gmbs]": 4.686295188026174e-05,
+        "@m.xm5.mapm045_vtg_core[vdsat]": 0.1046339805748931,
+        "@m.xm5.mapm045_vtg_core[vth]": 0.3840954956867445,
+        "@m.xm6.mapm045_vtg_core[gds]": 1.0979406245045283e-07,
+        "@m.xm6.mapm045_vtg_core[gm]": 3.2597432747332793e-05,
+        "@m.xm6.mapm045_vtg_core[gmbs]": 6.760892798578529e-06,
+        "@m.xm6.mapm045_vtg_core[vdsat]": 0.10482783057158247,
+        "@m.xm6.mapm045_vtg_core[vth]": 0.3842149676596463,
+        "@rbias[resistance]": 273692.63541213644,
+        "@rload[resistance]": 100000.0,
+        "@rsource[resistance]": 10000.0,
+        "i(Vdd)": -1.6028649041361315e-05,
+        "i(Vfeedback)": 2.880708158542873e-09,
+        "i(Vin)": 2.123698620795254e-09,
+        "i(Vinj)": 2.880708158542873e-09,
+        "i(Voffset)": 2.123698620795254e-09,
+        "i(VtM1b)": 1.8261503420546887e-12,
+        "i(VtM1d)": -5.632049637838005e-06,
+        "i(VtM1g)": -2.123698620795254e-09,
+        "i(VtM1s)": 5.634171510372774e-06,
+        "i(VtM2b)": 2.2102319974237616e-12,
+        "i(VtM2d)": -8.381612644222381e-06,
+        "i(VtM2g)": -2.880708158542873e-09,
+        "i(VtM2s)": 8.384491142247938e-06,
+        "i(VtM3b)": -1.0077059633318402e-12,
+        "i(VtM3d)": 5.631803507922914e-06,
+        "i(VtM3g)": 1.220820666780753e-10,
+        "i(VtM3s)": -5.6319245822769305e-06,
+        "i(VtM4b)": -9.191701315844478e-13,
+        "i(VtM4d)": 5.590368914461989e-06,
+        "i(VtM4g)": 1.2404784841349854e-10,
+        "i(VtM4s)": -5.590492043148415e-06,
+        "i(VtM5b)": 7.311373728668968e-13,
+        "i(VtM5d)": -1.4018662652620711e-05,
+        "i(VtM5g)": -2.1619313561593856e-09,
+        "i(VtM5s)": 1.4020823852824736e-05,
+        "i(VtM6b)": 6.630251903061435e-13,
+        "i(VtM6d)": -2.0069374867098856e-06,
+        "i(VtM6g)": -8.829341702210058e-10,
+        "i(VtM6s)": 2.007819757991675e-06,
+        "v(bias)": 0.55011736722748,
+        "v(feedback)": 0.27941244379189345,
+        "v(inn)": 0.27941244379189345,
+        "v(inp)": 0.30002123698620803,
+        "v(input_access)": 0.30002123698620803,
+        "v(mirror)": 0.3675332167859939,
+        "v(out)": 0.27941244379189345,
+        "v(source)": 0.30000000000000004,
+        "v(tail)": 0.7473779475082614,
+        "v(vdd)": 1.0
+      },
+      "output_v": 0.27941244379189345,
+      "p2_vsd_v": 0.4679655037163679,
+      "p2_vsg_v": 0.4679655037163679,
+      "passive_parameter_readback": {
+        "@cload[capacitance]": 5e-12,
+        "@rbias[resistance]": 273692.63541213644,
+        "@rload[resistance]": 100000.0,
+        "@rsource[resistance]": 10000.0
+      },
+      "resistor_vi_readback": {
+        "Rbias": {
+          "declared_ohm": 273692.63541213644,
+          "observed_v_over_i_ohm": 273692.6354678838,
+          "relative_difference": 2.0368595698982972e-10,
+          "status": "MEASURED"
+        },
+        "Rload": {
+          "declared_ohm": 100000.0,
+          "observed_v_over_i_ohm": 100000.0,
+          "relative_difference": 0.0,
+          "status": "MEASURED"
+        },
+        "Rsource": {
+          "declared_ohm": 10000.0,
+          "observed_v_over_i_ohm": 10000.000000014907,
+          "relative_difference": 1.4905854328617352e-12,
+          "status": "MEASURED"
+        }
+      },
+      "role": "One predeclared nominal100kohm receiving-load condition on the same six saved initial-core units; no new physical draw.",
+      "sink_branch_a": 5.590368914461989e-06,
+      "source_branch_a": 8.381612644222381e-06,
+      "source_voltage_errors_v": {
+        "source": 5.551115123125783e-17,
+        "vdd": 0.0
+      },
+      "status": "NUMERICAL_CHECKS_PASS",
+      "supply_delivered_a": 1.6028649041361315e-05,
+      "tail_delivered_a": 1.4018662652620711e-05,
+      "tail_v": 0.7473779475082614,
+      "tail_vsd_v": 0.25262205249173864
+    }
+  },
+  "comparison": {
+    "bandwidth_relative_residual": -0.027768351840384065,
+    "gain_relative_residual": -0.003236210523546168,
+    "known_bandwidth_hz": 4241447.8066823725,
+    "known_gain": [
+      0.9833173168832835,
+      -0.00023242489068392818
+    ],
+    "known_output_v": 0.29845625823310806,
+    "observed_bandwidth_hz": 4401678.325104952,
+    "observed_gain_real": 0.9182300896684241,
+    "observed_output_v": 0.27941244379189345,
+    "output_residual_v": -0.0001934168164041683,
+    "prior_bandwidth_hz": 4527396.668723036,
+    "prior_gain_real": 0.9212113234477757,
+    "prior_output_v": 0.2796058606082976
+  },
+  "limits": [
+    "One nominal condition plus known1Mohm baseline, not a continuous load qualification or new confirmation population.",
+    "No transient, overload-recovery, noise or integrated LDO/pass-gate claim. Fixed5pF and100kohm are a diagnostic receiver.",
+    "Same APM v5.0.0/APM045 VTG/ngspice47 model; not calibrated foundry statistics or silicon qualification."
+  ],
+  "plan_sha256": "ce5cf2eed19bbc8f44b4ee185bb648df835cb345306bcec990af119ced8415ee",
+  "schema": "learning.initial-d1-dc-load.measure.v1",
+  "status": "NUMERICAL_CHECKS_PASS"
+}

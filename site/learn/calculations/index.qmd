@@ -1,0 +1,69 @@
+---
+title: "Small worked calculations"
+---
+
+[Reading route](../index.qmd) · [Mirrors and bias](../03-mirrors-and-bias.qmd) ·
+[Errors and resources](../06-errors-and-resources.qmd)
+
+These small calculations make the arithmetic behind a chapter's design
+judgment inspectable. They use selected, already published observations and
+write new result directories. The five detailed studies and the nominal
+OTA examples retain their own frozen inputs, measurements and reproduction.
+
+## Reference-current investment
+
+Chapter 3 asks what A37→A75 gains by increasing the reference from two units
+to five while retaining the signal and output-load devices. The calculation
+checks the exact circuit inventory, drawn area, finite resistors and historical
+role-variance table, then distinguishes the cost, predicted SD and original
+confirmation's MAE decision.
+
+Download [reference-investment.py](reference-investment.py), the
+[expected summary](reference-investment-summary.json),
+[three-case table](reference-investment.csv) and
+[file manifest](manifest.json). The script requires standard Python 3.9 or
+later, with no external Python package or SPICE run. Original calculation
+code is MIT-licensed; the site's [license notices](../../licenses/LICENSE.md)
+and the source package retain applicable text/data and third-party terms.
+
+Use a new directory:
+
+~~~bash
+mkdir reference-investment-example
+cd reference-investment-example
+curl --fail --location https://ds54e.github.io/analog-design-notes/learn/calculations/reference-investment.py --output reference-investment.py
+curl --fail --location https://ds54e.github.io/analog-design-notes/downloads/gain-study-v1.0.zip --output gain-study-v1.0.zip
+python3 -I reference-investment.py --source-zip gain-study-v1.0.zip --output results-001
+~~~
+
+The program checks the ZIP against SHA256
+`4d2dda32baa15f173c6a897e7429ba0e421b0fa1738ff722fe8b889d1cf3e55f`
+and checks its eleven selected members. It independently counts MOS units
+and area from the SPICE bodies and configuration, verifies unchanged units
+and resistors, and cross-checks the original two contrast representations.
+`results-001` contains `reference-investment-summary.json` and
+`reference-investment.csv`; an existing destination is refused.
+
+Expected results include +37.489 µA positive-delivered current and +1.44 µm²
+of drawn MOS area. The original predicted total SD changes from 78.657 to
+72.369 mV. Inverse reference-count scaling estimates 72.367 mV for the latter.
+Removing only A37's reference variance leaves 67.851 mV: that row is a
+restricted mathematical floor, with no finite current/area assigned. It is
+not a third fabricated circuit or a newly simulated result.
+
+The source budget remains the original native-Jacobian source-transfer
+estimate. This calculation does not recalibrate it, rerun the reference maps,
+refit a distribution or acquire new confirmation. It preserves the two
+original 464-pair MAE reductions and intervals; predicted SD and observed
+MAE are different quantities. The original data and ZIP remain unchanged.
+
+The [first-study reproduction](../../studies/gain-operating-point-accuracy/reproduce.qmd)
+provides its graph/statistics regeneration and selected saved-physical native
+OP/AC replay. The [initial-OTA example](../../studies/learning-common-mode-v1/reproduce.qmd)
+separately covers its two exposed common-mode conditions. Neither native
+route is required by this arithmetic-only exercise.
+
+The isolated-mode check on 2026-09-13 retrieved the original ZIP anonymously
+into a clean directory. Standard Python regenerated both result files with
+exact bytes. It installed no Python package and ran no native simulator. This
+is a same-host reproduction check, not an independent scientific replication.

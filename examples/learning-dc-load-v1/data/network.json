@@ -1,0 +1,139 @@
+{
+  "assumptions": [
+    "Local MOS gm/gmb/gds are taken at each actual OP; all body derivatives and finite load/bias resistance are retained.",
+    "The gain network neglects leakage derivatives and intrinsic capacitances; the absolute pole estimate uses the external5pF alone.",
+    "Terminal-power balance includes actual leakage currents even though their derivatives are omitted from the local network.",
+    "Both new gain/pole values use already observed derivatives. They are explanations, not a replacement for the frozen old-OP forecast or measured response."
+  ],
+  "cases": [
+    {
+      "actual_rload_ohm": 1000000.0,
+      "case": "known1Mohm",
+      "error_v": -0.0015437417668919817,
+      "feedback_p2_gm_s": 0.00013424578343872046,
+      "gain_relative_error_to_native_real": 0.00011377727929895443,
+      "independent_stamp": {
+        "gain": 0.9834291960522861,
+        "output_transimpedance_ohm": 7490.860958430078
+      },
+      "input_common_mode_v": 0.2992402740430766,
+      "input_difference_v": 0.0015680316199370714,
+      "input_p1_gm_s": 0.0001302833583150868,
+      "load_current_a": 2.9845625823310804e-07,
+      "n4_sink_a": 6.828391068541934e-06,
+      "native_bandwidth_hz": 4241447.8066823725,
+      "native_gain_one_khz": [
+        0.9833173168832835,
+        -0.00023242489068392818
+      ],
+      "network": {
+        "effective_output_conductance_s": 0.0001334960034032694,
+        "gain": 0.9834291960522861,
+        "output_transimpedance_ohm": 7490.860958430078
+      },
+      "output_v": 0.29845625823310806,
+      "p2_source_a": 7.124364897109405e-06,
+      "power": {
+        "balance_residual_w": 1.9860593272508394e-16,
+        "input_delivered_a": -2.4289853045081063e-09,
+        "interpretation": "Stationary OP terminal power including body/gate currents. Capacitor DC current and zero-volt probe power are zero. This is not measured transient energy or a pass-device model.",
+        "mos_absorbed_w": {
+          "m1": 2.606190280388324e-06,
+          "m2": 3.2615459430003294e-06,
+          "m3": 2.5909278532363037e-06,
+          "m4": 2.0380332337551404e-06,
+          "m5": 3.415958608939166e-06,
+          "m6": 9.032819962654976e-07
+        },
+        "net_port_delivered_w": 1.6010740683213802e-05,
+        "port_delivered_signed_w": {
+          "Vdd": 1.6011469378805154e-05,
+          "Vin": -7.28695591352432e-10
+        },
+        "resistor_absorbed_w": {
+          "Rbias": 1.1057265703522313e-06,
+          "Rload": 8.907613807850768e-08,
+          "Rsource": 5.899969609518432e-14
+        },
+        "supply_delivered_a": 1.6011469378805154e-05
+      },
+      "role": "Retrospective calculation at this observed OP",
+      "single_output_bw_relative_error": -0.0005223930131269539,
+      "single_output_minus3db_hz": 4239232.103982619,
+      "single_output_pole_hz": 4249309.7649285635,
+      "tail_delivered_a": 1.4001482796655536e-05,
+      "tail_v": 0.7560983693077092
+    },
+    {
+      "actual_rload_ohm": 100000.0,
+      "case": "observed100kohm",
+      "error_v": -0.020587556208106594,
+      "feedback_p2_gm_s": 0.00015285404839693382,
+      "gain_relative_error_to_native_real": 0.00011669997692065337,
+      "independent_stamp": {
+        "gain": 0.9183372470986966,
+        "output_transimpedance_ohm": 7217.904463232747
+      },
+      "input_common_mode_v": 0.28971684038905077,
+      "input_difference_v": 0.02060879319431458,
+      "input_p1_gm_s": 0.0001105882619971482,
+      "load_current_a": 2.7941244379189347e-06,
+      "n4_sink_a": 5.590368914461989e-06,
+      "native_bandwidth_hz": 4401678.325104952,
+      "native_gain_one_khz": [
+        0.9182300896684241,
+        -0.00020930587420545235
+      ],
+      "network": {
+        "effective_output_conductance_s": 0.0001385443663176613,
+        "gain": 0.9183372470986962,
+        "output_transimpedance_ohm": 7217.904463232745
+      },
+      "output_v": 0.27941244379189345,
+      "p2_source_a": 8.381612644222381e-06,
+      "power": {
+        "balance_residual_w": -2.252201314442877e-16,
+        "input_delivered_a": -2.123698620795254e-09,
+        "interpretation": "Stationary OP terminal power including body/gate currents. Capacitor DC current and zero-volt probe power are zero. This is not measured transient energy or a pass-device model.",
+        "mos_absorbed_w": {
+          "m1": 2.140254890302076e-06,
+          "m2": 3.92365421348082e-06,
+          "m3": 2.069919728788231e-06,
+          "m4": 1.5620642317928218e-06,
+          "m5": 3.542395947849946e-06,
+          "m6": 9.032835372167303e-07
+        },
+        "net_port_delivered_w": 1.6028011931775077e-05,
+        "port_delivered_signed_w": {
+          "Vdd": 1.6028649041361315e-05,
+          "Vin": -6.371095862385763e-10
+        },
+        "resistor_absorbed_w": {
+          "Rbias": 1.1057262000111328e-06,
+          "Rload": 7.807131374575801e-07,
+          "Rsource": 4.5100958319743875e-14
+        },
+        "supply_delivered_a": 1.6028649041361315e-05
+      },
+      "role": "Retrospective calculation at this observed OP",
+      "single_output_bw_relative_error": -0.0004845785376318412,
+      "single_output_minus3db_hz": 4399545.366259047,
+      "single_output_pole_hz": 4410004.147398017,
+      "tail_delivered_a": 1.4018662652620711e-05,
+      "tail_v": 0.7473779475082614
+    }
+  ],
+  "changes": {
+    "effective_conductance_increase_s": 5.0483629143919075e-06,
+    "externally_added_conductance_s": 9e-06,
+    "load_power_increase_w": 6.916369993790725e-07,
+    "measured_bandwidth_ratio": 1.0377773170213571,
+    "measured_gain_ratio": 0.9338085213213173,
+    "supply_current_increase_a": 1.7179662556160712e-08
+  },
+  "limits": "One fixed receiver load change; no transient/overload/stability/noise/population or LDO qualification. The network does not isolate a single transistor parameter as the sole cause.",
+  "measurements_sha256": "eee8df6b7779d6a4b0061753593c4aa9408b744ad4833583bfaf849b05cf4566",
+  "role": "Retrospective interpretation using the two already observed operating points; original prior forecast remains separate and unchanged.",
+  "schema": "learning.initial-d1-dc-load.network.v1",
+  "status": "ALGEBRA_AND_POWER_CHECKS_PASS"
+}

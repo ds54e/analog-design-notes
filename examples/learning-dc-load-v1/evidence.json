@@ -1,0 +1,172 @@
+{
+  "corrected_plan_sha256": "ce5cf2eed19bbc8f44b4ee185bb648df835cb345306bcec990af119ced8415ee",
+  "corrected_usable_conditions": 1,
+  "frozen_numerical_checks": {
+    "capacitor_ac_relative_error": 3.503484567031315e-16,
+    "maximum_MOS_KCL_a": 1.3675855153189032e-16,
+    "maximum_node_KCL_a": 4.0940532824236715e-16,
+    "maximum_terminal_span_v": 0.7205875562081065,
+    "resistor_vi_readback": {
+      "Rbias": {
+        "declared_ohm": 273692.63541213644,
+        "observed_v_over_i_ohm": 273692.6354678838,
+        "relative_difference": 2.0368595698982972e-10,
+        "status": "MEASURED"
+      },
+      "Rload": {
+        "declared_ohm": 100000.0,
+        "observed_v_over_i_ohm": 100000.0,
+        "relative_difference": 0.0,
+        "status": "MEASURED"
+      },
+      "Rsource": {
+        "declared_ohm": 10000.0,
+        "observed_v_over_i_ohm": 10000.000000014907,
+        "relative_difference": 1.4905854328617352e-12,
+        "status": "MEASURED"
+      }
+    }
+  },
+  "input_correction": "input-correction.json",
+  "limits": [
+    "One nominal condition plus known1Mohm baseline, not a continuous load qualification or new confirmation population.",
+    "No transient, overload-recovery, noise or integrated LDO/pass-gate claim. Fixed5pF and100kohm are a diagnostic receiver.",
+    "Same APM v5.0.0/APM045 VTG/ngspice47 model; not calibrated foundry statistics or silicon qualification.",
+    "New-OP network/power calculations are retrospective and do not replace the frozen prior forecast.",
+    "Internal checks are not prior human review or independent scientific replication."
+  ],
+  "measurement_script_sha256": "3de2972992fae2f9fe15f9ec9e32a2f7ec623a98e0f96160304a9d34c197a021",
+  "measurement_tolerances_unchanged": true,
+  "model": {
+    "apm": "5.0.0",
+    "commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "family": "APM045 VTG",
+    "ngspice": "47"
+  },
+  "observation_identity": {
+    "acquisition_input_sha256": "80c1b143e05be535b7feb7756ae1f900992273b96ef0165d7d52fcfdf1dd86a8",
+    "attempt_sha256": "9d348a1d7bacfb6fa79f4c5f68d220bd50154bcb9c5703dde0050193dc356e87",
+    "circuit_sha256": "c859ef17ff6fffe2cdf60e59bd26d0c73622fcc529ff3023c7718c9fa93331c1",
+    "file": "D1-100k-load.npz",
+    "native_deck_sha256": "919b420dbce6113aad6c495e5f0792da82ed95ce43deb0a5af7e8b886adc0b6f",
+    "native_text_sha256": {
+      "analysis0": "2bfd1528450231bea2e4ad1c901c9535fe580791714e289793572836183ea57e",
+      "analysis1": "b9ac5d91f3145d470c6552f16b99aead34e09b590cc7d3f251ee4c0e6be782fc"
+    },
+    "physical_readback": "Actual six MOS models/W/L/m/nf/DELVTO/MULU0 before/applied/after rechecked from the native log. All raw coordinates are saved zeros; no new draw.",
+    "realization_id": "95916757d3400585f3bf533507028c08b413bd21ba134c37435a6dc6b247f553",
+    "request_id": "384dd4e1ec1862bd611482446f64f3f6260696f3958cf2d0e6c5c81797a8192a",
+    "rows": [
+      1,
+      361
+    ],
+    "sha256": "e0bc5a893522888f2be1f16624d87fea8cfcc24a2e7b2909a4cadbe716e4a036",
+    "status": "COMPLETE_AND_EXPOSED",
+    "target_started_utc": "2026-09-13T17:31:42.543875+00:00"
+  },
+  "original_forecast_preserved": true,
+  "original_input_plan_sha256": "35b75790c517ad9a95ac65574c4571622e7fdf5b068de826101330adb963aa59",
+  "physical_inventory": "Six original initial-D1 zero-raw units, no new physical draw",
+  "prior_comparison": {
+    "bandwidth_relative_residual": -0.027768351840384065,
+    "gain_relative_residual": -0.003236210523546168,
+    "known_bandwidth_hz": 4241447.8066823725,
+    "known_gain": [
+      0.9833173168832835,
+      -0.00023242489068392818
+    ],
+    "known_output_v": 0.29845625823310806,
+    "observed_bandwidth_hz": 4401678.325104952,
+    "observed_gain_real": 0.9182300896684241,
+    "observed_output_v": 0.27941244379189345,
+    "output_residual_v": -0.0001934168164041683,
+    "prior_bandwidth_hz": 4527396.668723036,
+    "prior_gain_real": 0.9212113234477757,
+    "prior_output_v": 0.2796058606082976
+  },
+  "public_reproduction": {
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "binary_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+    "checked_utc": "2026-09-13T18:08:21.131667+00:00",
+    "dependency_lock_sha256": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a",
+    "exact_regenerated_outputs": {
+      "network.csv": "89e029c371266c51cbcd3725016cf6db0fb2cf03f463693fed2c0d3db48be1d7",
+      "network.json": "c9351b4883fcbbef6ff3aa27cbcee6221a5d826f23a074bd1446d72304188ec3",
+      "operating-point.csv": "77e941c53c0d46d46f24d4fd2a082ce853d3e93c9efba661748204e07aca408a",
+      "prior.json": "3f4f1365d7e912dc23aa25fb07ab7200eb319246ae2714f6c416cdf232274d23",
+      "summary.json": "eee8df6b7779d6a4b0061753593c4aa9408b744ad4833583bfaf849b05cf4566"
+    },
+    "limitations": "Same host, pinned model and one known OP/AC condition; no new confirmation, transient or load-range qualification.",
+    "ngspice": "47",
+    "original_realization_id": "95916757d3400585f3bf533507028c08b413bd21ba134c37435a6dc6b247f553",
+    "relocated_realization_id": "6025f30f09d32327d7737e5a9c8f6435b2a709773f8f4af2763d2ede39825c34",
+    "retained_license_files": 16,
+    "role": "Same-host clean public-input reproduction of an already exposed condition, not independent scientific replication or a new scientific acquisition.",
+    "run_id": "357650f064631734bd5aac1abf6fee578b3f90c78bc61b4e8a7641c83f359819",
+    "status": "PASS",
+    "terminal_differences": {
+      "0": {
+        "kind": "op",
+        "maximum_current_difference_a": 0.0,
+        "maximum_voltage_difference_v": 0.0,
+        "rows": 1
+      },
+      "1": {
+        "kind": "ac",
+        "maximum_current_difference_a": 0.0,
+        "maximum_voltage_difference_v": 0.0,
+        "rows": 361
+      }
+    },
+    "tested_payload_sha256": {
+      "analyze.py": "3de2972992fae2f9fe15f9ec9e32a2f7ec623a98e0f96160304a9d34c197a021",
+      "circuits/D1-100k-load.cir": "c859ef17ff6fffe2cdf60e59bd26d0c73622fcc529ff3023c7718c9fa93331c1",
+      "data/D1-100k-load.npz": "e0bc5a893522888f2be1f16624d87fea8cfcc24a2e7b2909a4cadbe716e4a036",
+      "data/index.json": "4a453988e57ad21c4e6b4cd98e26cf75372661ce7e820de5c96ed06b04bb6855",
+      "data/manifest.json": "3d128582fee696c8f07d1a4dc34223b82b2867f5dfee3d9d06a6ce01ea5e6416",
+      "data/network.csv": "89e029c371266c51cbcd3725016cf6db0fb2cf03f463693fed2c0d3db48be1d7",
+      "data/network.json": "c9351b4883fcbbef6ff3aa27cbcee6221a5d826f23a074bd1446d72304188ec3",
+      "data/operating-point.csv": "77e941c53c0d46d46f24d4fd2a082ce853d3e93c9efba661748204e07aca408a",
+      "data/prior.json": "3f4f1365d7e912dc23aa25fb07ab7200eb319246ae2714f6c416cdf232274d23",
+      "data/source.json": "b94f2a95d4259f36585a4f1b90c54afb6de72cc37efa68dc65d394f928342fda",
+      "data/summary.json": "eee8df6b7779d6a4b0061753593c4aa9408b744ad4833583bfaf849b05cf4566",
+      "explain.py": "b99fbdff22aae22200acc70221165ef7e21f0405f0c000e3c4ee18047c71ef7b",
+      "input-correction.json": "7d48993e545d0b27b12471a31e854041f25a962d6f37abe13845ecb75397e221",
+      "measurement-origin.json": "703df5ea57f29c46359db516e3ecad15b9f7937b70689f975bc657b127bc4f34",
+      "original-input-plan.json": "35b75790c517ad9a95ac65574c4571622e7fdf5b068de826101330adb963aa59",
+      "plan.json": "ce5cf2eed19bbc8f44b4ee185bb648df835cb345306bcec990af119ced8415ee",
+      "prior.py": "ae4c9cf356987cc3b23749d0e93f3eeebcfaf324df16da3bc0efbd73ac44ee7b",
+      "replay-plan.json": "c63c0336e66e91e07b6932080638bb3546af842c3c1d005c8206092cef9c01bf",
+      "replay.py": "94424289743c5204d7b3e043c483bfb785d6017ee2120afe5f1214dd2576cd13",
+      "requirements.txt": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a"
+    }
+  },
+  "remaining_scientific_acquisitions": 0,
+  "results": {
+    "bandwidth": {
+      "bracket_hz": [
+        4298662.3470822275,
+        4466835.92150958
+      ],
+      "definition": "First downward -3.000-dB crossing relative to |H(1 kHz)|; dB interpolation in log frequency, as learning.bridge.v1.",
+      "hz": 4401678.325104952,
+      "status": "CROSSING"
+    },
+    "error_v": -0.020587556208106594,
+    "gain_one_khz": [
+      0.9182300896684241,
+      -0.00020930587420545235
+    ],
+    "input_delivered_a": -2.123698620795254e-09,
+    "output_v": 0.27941244379189345,
+    "sink_branch_a": 5.590368914461989e-06,
+    "source_branch_a": 8.381612644222381e-06,
+    "supply_delivered_a": 1.6028649041361315e-05
+  },
+  "retrospective_network_and_power": "data/network.json",
+  "schema": "adn.initial-d1-dc-load.evidence.v1",
+  "scientific_acquisitions": 2,
+  "scientific_conditions": 1,
+  "status": "SCIENTIFIC_REVIEW_AND_CLEAN_PUBLIC_REPRODUCTION_COMPLETE",
+  "wrong_condition_acquisitions_not_adopted": 1
+}

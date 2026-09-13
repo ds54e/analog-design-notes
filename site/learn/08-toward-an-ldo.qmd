@@ -94,6 +94,16 @@ from 0.492 to 2.458 pC. The new 25-pF peak charging current is about
 10.24 µA and falls as feedback reduces the error. More stored charge at the
 same finite current costs response time; it does not repair DC precision.
 
+Stationary receiving current is a separate condition. With the same 5 pF,
+[changing D1's resistor to 100 kΩ](04-differential-pair-and-ota.qmd#a-dc-receiver-needs-current-after-charging-has-ended)
+increases its actual load current from 0.298 to 2.794 µA and changes source-to-
+output error from −1.544 to −20.588 mV. Bandwidth rises slightly, to 4.402 MHz.
+A faster local response has not preserved the original tracking function.
+This resistor represents a declared DC demand, such as a diagnostic bleeder;
+it does not establish a real pass gate's leakage or voltage-dependent charge.
+Specify both the stationary current and the charging trajectory of the actual
+receiver before carrying a buffer result into another feedback connection.
+
 Chapter 5 then [turns that relation into a load choice](05-feedback-and-response.qmd#choose-a-receiving-load-against-a-deadline).
 For an explicitly illustrative 500-ns actual-endpoint deadline, known 5/25-pF
 data suggested a provisional 13.93-pF allowance. Two conditions chosen before

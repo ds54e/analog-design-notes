@@ -23,6 +23,9 @@ for study in packages:
     archive=root/study['archive_file']
     assert hashlib.sha256(archive.read_bytes()).hexdigest()==study['archive_sha256']
     shutil.copyfile(archive,downloads/study['download'])
+for name,expected in release.get('learning_calculations',{}).get('resource_sha256',{}).items():
+    path=Path(name);assert not path.is_absolute() and '..' not in path.parts
+    assert hashlib.sha256((site/path).read_bytes()).hexdigest()==expected,name
 licenses=site/'licenses';licenses.mkdir(exist_ok=True)
 license_files=['LICENSE.md','THIRD_PARTY_NOTICES.md']+['LICENSES/'+p.name for p in sorted((root/'LICENSES').iterdir()) if p.is_file()]
 for name in license_files:

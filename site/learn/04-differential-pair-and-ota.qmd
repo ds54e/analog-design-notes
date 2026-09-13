@@ -264,6 +264,42 @@ their complete fixtures and saved realization identities differ. The later
 archived “selected D1” and its 25-pF transfer use a different selection history
 and are not evidence for this initial circuit.
 
+### A DC receiver needs current after charging has ended
+
+The capacitor is open at the stationary operating point, but Rload still
+consumes current. A separately planned example keeps the same six units,
+0.3-V source, finite bias/source network and 5 pF, and changes Rload from
+1 MΩ to **100 kΩ**. Its [exact circuit and effective recipe](../studies/learning-dc-load-v1/reproduce.qmd)
+are available with the retained input-correction history.
+
+The observed output becomes **0.279412 V**, an error of −20.588 mV from the
+source. The receiver takes 2.794 µA at that actual voltage; using 3 µA would
+assume the output had remained exactly 0.3 V. The larger input difference
+steers the pair and changes both currents meeting at the output:
+
+| Stationary current magnitude, µA | Known 1 MΩ | New 100 kΩ |
+| --- | ---: | ---: |
+| P2 supplies output | 7.124 | 8.382 |
+| N4 removes output current | 6.828 | 5.590 |
+| Rload consumes | 0.298 | 2.794 |
+| P5 tail supplies | 14.001 | 14.019 |
+| VDD supplies whole core and reference | 16.011 | 16.029 |
+
+More P2 sourcing and less mirrored N4 sinking together provide the added
+receiver current. Small feedback-gate currents complete the exact KCL; all
+terminal currents are retained in the selected observations. The supply
+current therefore rises only **0.017 µA**, despite the approximately 2.496-µA
+increase in load current. This is current redistribution within the biased
+core, not a rule that any additional load costs no supply current.
+
+Rload's absorbed power rises from 0.089 to 0.781 µW. Summing actual signed
+port power, all six MOS terminal powers and the three resistor powers checks
+the stationary balance to better than 1 fW. More power reaches the receiver
+while less is dissipated elsewhere; the output precision has also changed.
+No transient energy, new startup behavior or efficiency-optimal design was
+measured. Chapter 5 compares the prior load-line estimate with this result and
+shows why its slightly wider bandwidth does not recover the lost accuracy.
+
 ### A high output clamp does not establish high input common mode
 
 The earlier C clamp can source current at a 0.7-V output while its gates stay

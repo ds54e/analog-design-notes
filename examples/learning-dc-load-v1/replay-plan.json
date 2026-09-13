@@ -1,0 +1,14 @@
+{
+  "case": "D1-100k-load",
+  "checks": "Native model/physical readback, full OP/AC axes and selected terminal comparison, DC V/I of three resistors, MOS/node KCL, AC Cload current/voltage.",
+  "created_utc": "2026-09-13T17:42:03.695501+00:00",
+  "role": "Known-input public replay after the corrected scientific condition was exposed; no fresh target.",
+  "schema": "learning.initial-d1-dc-load.replay-plan.v1",
+  "scientific_plan_sha256": "ce5cf2eed19bbc8f44b4ee185bb648df835cb345306bcec990af119ced8415ee",
+  "script_sha256": "94424289743c5204d7b3e043c483bfb785d6017ee2120afe5f1214dd2576cd13",
+  "stopping_rule": "One public known-input replay in a new output directory; retain any failure and diagnose before retry. No new scientific condition or threshold change.",
+  "tolerances": {
+    "current_absolute_a": 1e-10,
+    "voltage_absolute_v": 1e-06
+  }
+}

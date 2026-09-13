@@ -13,7 +13,7 @@ change the decision.
 [**Read the entry page and eight chapters**](learn/index.qmd) ·
 [日本語の読み方](ja/learning-path.qmd)
 
-**Learning edition v1.5 · 2026-09-13.** Original explanations connect
+**Learning edition v1.6 · 2026-09-13.** Original explanations connect
 circuit estimates, selected observations and finite design costs. Basic
 KCL/KVL is introduced at the entry; no simulator installation is needed to read.
 
@@ -21,9 +21,10 @@ Work from required current and gm to supported dimensions, mirror accuracy,
 and a finite OTA's response. The route connects receiving-capacitor choices,
 finite-reference supply error and fixed accuracy requirements. The finite-signal
 argument traces local curvature, gate/source motion and input-current cost.
-The noise argument follows one resistor through both terminals. This increment
-then separates input common mode from output voltage: the same initial OTA
-can lose current and local feedback gain when the input interface moves upward.
+The noise argument follows one resistor through both terminals. Worked mirror
+arithmetic shows what added reference current buys when other errors remain.
+The initial OTA then separates input common mode, output voltage and receiver
+current. A heavier DC load can increase bandwidth while worsening precision.
 
 | Follow the circuit | Make the next judgment |
 | --- | --- |
@@ -50,7 +51,11 @@ The [resistor-noise example](studies/learning-noise-v1/reproduce.qmd) adds a
 partial power budget and one direct branch-current AC replay. The
 [common-mode example](studies/learning-common-mode-v1/reproduce.qmd) adds two
 initial-core conditions, a node-equation explanation and one known-input replay.
-All ten earlier ZIPs are retained.
+The [DC receiving-load example](studies/learning-dc-load-v1/reproduce.qmd)
+compares a frozen forecast with one corrected 100-kΩ condition and retains
+the earlier input-construction error. [Small worked calculations](learn/calculations/index.qmd)
+reproduce the reference-current cost argument with standard Python.
+All eleven earlier ZIPs are retained.
 
 ## Detailed studies {#detailed-studies}
 

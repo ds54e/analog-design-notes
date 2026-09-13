@@ -661,7 +661,7 @@
       "archive_sha256": "72966373eb6f0e0f29f94c1be38d66c87c69d4011c0014eb5e1b1b18533d678d"
     }
   ],
-  "collection_version": "2026-09-13.learning-v1.5",
+  "collection_version": "2026-09-13.learning-v1.6",
   "additional_packages": [
     {
       "schema": "adn.selected-learning-package.v1",
@@ -1298,11 +1298,93 @@
       "download": "learning-common-mode-v1.0.zip",
       "archive_file": "releases/learning-common-mode-v1.0.zip",
       "archive_sha256": "0995cd256492127d8e7bb3dcd953585be553facf81188473b476ab4ece3cb165"
+    },
+    {
+      "schema": "adn.selected-learning-package.v1",
+      "study": "learning-dc-load-v1",
+      "version": "1.0",
+      "research_tag": "learning-path-v1.6",
+      "canonical_language": "en",
+      "kind": "One corrected initial-OTA DC-load condition with preserved prior forecast and wrong-condition attempt; no load range or new population",
+      "example_files": [
+        "README.md",
+        "analyze.py",
+        "circuits/D1-100k-load.cir",
+        "data/D1-100k-load.npz",
+        "data/index.json",
+        "data/manifest.json",
+        "data/network.csv",
+        "data/network.json",
+        "data/operating-point.csv",
+        "data/prior.json",
+        "data/source.json",
+        "data/summary.json",
+        "evidence.json",
+        "explain.py",
+        "input-correction.json",
+        "measurement-origin.json",
+        "original-input-plan.json",
+        "plan.json",
+        "prior.py",
+        "replay-plan.json",
+        "replay.py",
+        "requirements.txt"
+      ],
+      "web_resources": [
+        "analyze.py",
+        "circuits/D1-100k-load.cir",
+        "data/D1-100k-load.npz",
+        "data/index.json",
+        "data/manifest.json",
+        "data/network.csv",
+        "data/network.json",
+        "data/operating-point.csv",
+        "data/prior.json",
+        "data/source.json",
+        "data/summary.json",
+        "evidence.json",
+        "explain.py",
+        "input-correction.json",
+        "measurement-origin.json",
+        "original-input-plan.json",
+        "plan.json",
+        "prior.py",
+        "replay-plan.json",
+        "replay.py",
+        "requirements.txt"
+      ],
+      "example_sha256": {
+        "README.md": "5c4bc734c8c46df9a795658e0b970a2260c93d8db64f133c45348d32e1f18f67",
+        "analyze.py": "3de2972992fae2f9fe15f9ec9e32a2f7ec623a98e0f96160304a9d34c197a021",
+        "circuits/D1-100k-load.cir": "c859ef17ff6fffe2cdf60e59bd26d0c73622fcc529ff3023c7718c9fa93331c1",
+        "data/D1-100k-load.npz": "e0bc5a893522888f2be1f16624d87fea8cfcc24a2e7b2909a4cadbe716e4a036",
+        "data/index.json": "4a453988e57ad21c4e6b4cd98e26cf75372661ce7e820de5c96ed06b04bb6855",
+        "data/manifest.json": "3d128582fee696c8f07d1a4dc34223b82b2867f5dfee3d9d06a6ce01ea5e6416",
+        "data/network.csv": "89e029c371266c51cbcd3725016cf6db0fb2cf03f463693fed2c0d3db48be1d7",
+        "data/network.json": "c9351b4883fcbbef6ff3aa27cbcee6221a5d826f23a074bd1446d72304188ec3",
+        "data/operating-point.csv": "77e941c53c0d46d46f24d4fd2a082ce853d3e93c9efba661748204e07aca408a",
+        "data/prior.json": "3f4f1365d7e912dc23aa25fb07ab7200eb319246ae2714f6c416cdf232274d23",
+        "data/source.json": "b94f2a95d4259f36585a4f1b90c54afb6de72cc37efa68dc65d394f928342fda",
+        "data/summary.json": "eee8df6b7779d6a4b0061753593c4aa9408b744ad4833583bfaf849b05cf4566",
+        "evidence.json": "0bdce8e577e47799922c4c45085b1efe20cef5580d40105ed291a646fa32458d",
+        "explain.py": "b99fbdff22aae22200acc70221165ef7e21f0405f0c000e3c4ee18047c71ef7b",
+        "input-correction.json": "7d48993e545d0b27b12471a31e854041f25a962d6f37abe13845ecb75397e221",
+        "measurement-origin.json": "703df5ea57f29c46359db516e3ecad15b9f7937b70689f975bc657b127bc4f34",
+        "original-input-plan.json": "35b75790c517ad9a95ac65574c4571622e7fdf5b068de826101330adb963aa59",
+        "plan.json": "ce5cf2eed19bbc8f44b4ee185bb648df835cb345306bcec990af119ced8415ee",
+        "prior.py": "ae4c9cf356987cc3b23749d0e93f3eeebcfaf324df16da3bc0efbd73ac44ee7b",
+        "replay-plan.json": "c63c0336e66e91e07b6932080638bb3546af842c3c1d005c8206092cef9c01bf",
+        "replay.py": "94424289743c5204d7b3e043c483bfb785d6017ee2120afe5f1214dd2576cd13",
+        "requirements.txt": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a"
+      },
+      "download": "learning-dc-load-v1.0.zip",
+      "archive_file": "releases/learning-dc-load-v1.0.zip",
+      "archive_sha256": "4813d3d8a28c265db8e39b7a32f934a54ba009c61de10e47167146df155d8593"
     }
   ],
   "learning_edition": {
-    "version": "1.5",
-    "tag": "learning-path-v1.5",
+    "version": "1.6",
+    "tag": "learning-path-v1.6",
     "entry": "learn/index.html",
     "chapters": [
       "learn/01-mos-operating-point.html",
@@ -1315,5 +1397,16 @@
       "learn/08-toward-an-ldo.html"
     ],
     "japanese": "ja/learning-path.html"
+  },
+  "learning_calculations": {
+    "schema": "adn.selected-static-calculations.v1",
+    "entry": "learn/calculations/index.html",
+    "resource_sha256": {
+      "learn/calculations/reference-investment.py": "f164696462741d0c539589a8dbeb510ce9e20f00d4dc24c15d25206772de0b2b",
+      "learn/calculations/reference-investment-summary.json": "2b5ad65027de507dfa329142aa39ba3d75236b2d3590e41a7b64dee0d65d5ae7",
+      "learn/calculations/reference-investment.csv": "41f5a0c5d590cb3d7dc51a3925e619307245b2c6c7cd37e6766b5a9ecd7611d7",
+      "learn/calculations/manifest.json": "c753ae8daa4701bbd11bd3ec80bd335daa568be34955e4ad5f108b4df2158c0a"
+    },
+    "role": "Exact standard-Python saved-data arithmetic; original study ZIP and releases remain unchanged"
   }
 }

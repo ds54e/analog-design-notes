@@ -162,19 +162,105 @@ counts its input and resistor costs.
 ## Decide which mirror error is worth reducing
 
 The reference devices, output device and input bank are distinct uncertainty
-sources. Making the reference larger can average its modeled independent
-unit-to-unit errors, but cannot average the separate output PMOS that remains
-unchanged. In **A75**, five reference units replace two and Rbias is reduced
-once to obtain nearly 75 µA total. The signal bank, source resistor and single
-output-load unit stay unchanged. The model's first-order output-load SD
-contribution therefore remains about 64.71 mV, while the reference contribution
-falls from 39.79 to 25.17 mV. Independent *variances* add; SDs do not.
+sources. In **A75**, five reference units replace two and Rbias is reduced
+once. The two signal NMOS units, their source resistor and the single output
+PMOS stay unchanged. This is a particular investment in the reference branch;
+its added devices do not average the separate output-load device.
 
-These numbers are source-transfer estimates of DC realization-to-realization
-variation, not stationary noise. They do not include calibrated resistor,
-spatial or foundry process distributions. The [original source-budget
-explanation](../studies/gain-operating-point-accuracy/index.qmd#which-source-does-reference-current-reduce)
-and chapter 6 explain how the source model and the transmission path compose.
+### First predict what the reference bank can average
+
+At fixed VDD, let $\epsilon_k$ be a small extra current supplied by reference
+unit $k$ into `pbias`, evaluated before the node voltage responds. An increase
+in `pbias` reduces PMOS $V_{SG}$ and increases resistor current. With identical
+nominal reference units, the incremental current balance is
+
+$$(n g_r+G_b)\,\delta v_b=\sum_{k=1}^{n}\epsilon_k,\qquad
+ g_r=g_{mR}+g_{dsR},\quad G_b=1/R_{bias}.$$
+
+The diode-connected device contributes both gm and gds because its drain and
+gate move together. The source and body stay at the fixed supply. A positive
+reference-current error raises `pbias`, weakens the output PMOS and lowers
+`out`. Its approximate output increment is
+$\delta v_{o,ref}=-Z_Og_{mP}\delta v_b$, with the output PMOS's gds already
+included in $Z_O$.
+
+For independent reference-unit errors with the same current variance
+$\sigma_\epsilon^2$,
+
+$$\operatorname{Var}(v_{o,ref})\simeq
+ (Z_Og_{mP})^2\frac{n\sigma_\epsilon^2}{(n g_r+G_b)^2}.$$
+
+Adding units while keeping Rbias fixed would also change their bias. Here
+Rbias is reduced approximately in inverse proportion to unit count, keeping
+current per reference unit and the output branch nearly fixed. Then $G_b$
+grows with $n$ and reference variance falls approximately as $1/n$. For two
+to five units, the first estimate is a variance ratio of $2/5$, or an SD ratio
+of $\sqrt{2/5}$. It is the variance of the *sum* divided by the squared node
+conductance, not the arithmetic average of device SDs.
+
+These current-error sources summarize the model's mapped threshold/current-
+factor variation at each unit. They are independent across the selected model's
+units; raw DELVTO and ln(MULU0) within one unit are mapped together.
+[Chapter 6](06-errors-and-resources.qmd#predict-with-independent-sources-in-the-correct-coordinates)
+spells out that coordinate boundary. No passive, spatial or foundry statistics
+are added to this estimate.
+
+### Put the saved budget beside the actual cost
+
+The exact [A37](../studies/gain-operating-point-accuracy/circuits/A37.cir) and
+[A75](../studies/gain-operating-point-accuracy/circuits/A75.cir) bodies use
+Rbias = 20.495 and 8.198 kΩ: a ratio of 0.400017. The historical first-order
+source budget has a reference-variance ratio of 0.400032. This close match is
+a retrospective check of the scaling argument using already known designs.
+
+| Quantity | A37: two reference units | A75: five reference units |
+| --- | ---: | ---: |
+| Total positive-delivered current, µA | 37.500 | 74.989 |
+| Drawn MOS area, µm² | 3.037 | 4.477 |
+| Input contribution to output SD, mV | 20.397 | 20.397 |
+| Reference contribution to output SD, mV | 39.789 | 25.166 |
+| Output-load contribution to output SD, mV | 64.713 | 64.714 |
+| Quadrature total output SD, mV | 78.657 | 72.369 |
+
+The added three $2/0.24$-µm reference units cost **1.44 µm² and 37.489 µA**.
+Current nearly doubles, while predicted total SD falls **8.0%**. Nominal signal
+gain remains near −6, bandwidth near 1.747 MHz and output-current sensitivity
+near 90.523 kΩ. Those retained paths explain why this investment is selective.
+The drawn area excludes layout and resistor implementation; the ideal external
+voltage-source implementations are also outside the measured circuit cost.
+
+To see the limit before adding more reference units, hold A37's input/load
+variances and their paths fixed. The restricted first-order estimate is
+
+$$\sigma_o^2(n)\simeq
+ \left(4603.752+\frac{3166.327}{n}\right)\,\mathrm{mV}^2.$$
+
+At five units it gives 72.367 mV SD, close to the historical A75 value above.
+Even removing the entire reference variance leaves **67.851 mV SD**, a maximum
+13.7% reduction from A37 under this restriction. This is a mathematical floor:
+infinite reference averaging would demand unbounded current and area in this
+scaling argument. Changing the load, input or feedback path would define a
+different intervention.
+The unchanged output PMOS already supplies 67.7% of A37's predicted variance
+and about 80.0% of A75's. That is where a different resource choice becomes
+worth investigating.
+
+These SDs describe the original local source-transfer estimate of DC variation,
+not stationary noise or observed MAE. In the original 464-pair confirmation,
+A37→A75 reduced nominal MAE by 6.129 mV, with the frozen family interval
+[2.943, 9.314] mV. The direction was supported, but whether it reached the
+predeclared **5-mV minimum benefit remained inconclusive**. At 0.97 V the
+reduction was 1.534 mV, interval [−1.616, 4.684] mV. Neither a local SD estimate
+nor a lower mean MAE authorizes changing that original decision rule.
+The paired coordinates are now known evidence; adding units changes the
+complete physical inventory.
+
+The [small calculation](calculations/reference-investment.py),
+[summary with exact source hashes](calculations/reference-investment-summary.json)
+and [three-case table](calculations/reference-investment.csv) read the immutable
+first-study ZIP. [Reproduction commands](calculations/index.qmd#reference-current-investment)
+need only standard Python. The original [source-budget guide](../studies/gain-operating-point-accuracy/index.qmd#which-source-does-reference-current-reduce)
+retains its native mapping and confirmation boundaries.
 
 The next completed study took the alternative seriously: keep 37.5 µA and
 allocate a 3.7-µm² drawn-MOS budget among input, reference, output load and a

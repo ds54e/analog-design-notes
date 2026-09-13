@@ -1,0 +1,132 @@
+{
+  "designs": {
+    "A37": {
+      "Rbias_ohm": 20495.010790220753,
+      "bandwidth_MHz": 1.7471275867924634,
+      "drawn_mos_area_um2": 3.0365110997308102,
+      "injected_current_sensitivity_kohm": 90.52254545375283,
+      "nominal_gain": -5.999999999994579,
+      "reference_units": 2,
+      "role_sd_mV": {
+        "input": 20.39657867728391,
+        "load": 64.71268183278525,
+        "reference": 39.78898774220893
+      },
+      "role_variance_fraction": {
+        "input": 0.06724197942962565,
+        "load": 0.676869018490414,
+        "reference": 0.25588900207996035
+      },
+      "role_variance_mV2": {
+        "input": 416.02042173863265,
+        "load": 4187.731189991295,
+        "reference": 1583.1635455496526
+      },
+      "supply_sensitivity_v_per_v": 1.998198356916947,
+      "total_current_uA": 37.499999999926615,
+      "total_sd_mV": 78.65694602054913
+    },
+    "A75": {
+      "Rbias_ohm": 8198.35869363817,
+      "bandwidth_MHz": 1.7474889012599295,
+      "drawn_mos_area_um2": 4.476511099730811,
+      "injected_current_sensitivity_kohm": 90.5225735636228,
+      "nominal_gain": -6.00000180105283,
+      "reference_units": 5,
+      "role_sd_mV": {
+        "input": 20.396584986629996,
+        "load": 64.7144276529182,
+        "reference": 25.16577473825019
+      },
+      "role_variance_fraction": {
+        "input": 0.0794342795425514,
+        "load": 0.7996414009734998,
+        "reference": 0.12092431948394892
+      },
+      "role_variance_mV2": {
+        "input": 416.0206791168202,
+        "load": 4187.9571464447845,
+        "reference": 633.3162181763513
+      },
+      "supply_sensitivity_v_per_v": 1.998191771666935,
+      "total_current_uA": 74.9891600644749,
+      "total_sd_mV": 72.36915118845845
+    }
+  },
+  "investment": {
+    "Rbias_ratio": 0.4000172909179457,
+    "actual_budget_total_sd_mV": 72.36915118845845,
+    "current_ratio": 1.9997109350565774,
+    "extra_current_uA": 37.48916006454829,
+    "extra_drawn_area_um2": 1.44,
+    "extra_reference_units": 3,
+    "inverse_count_reference_variance_mV2": 633.2654182198611,
+    "inverse_count_total_sd_mV": 72.36723726901414,
+    "inverse_count_total_sd_relative_residual": 2.644731948509005e-05,
+    "inverse_unit_count_ratio": 0.4,
+    "reference_variance_ratio": 0.40003208762394327,
+    "total_sd_reduction_fraction": 0.07993947324687634,
+    "total_sd_reduction_mV": 6.2877948320906825
+  },
+  "limits": "Variance/SD are model-derived local spread estimates, not measured MAE, noise, manufacturing yield or global guarantees. All source observations and confirmation exposures remain historical.",
+  "original_contrasts": [
+    {
+      "condition": "nominal",
+      "interval_contains_required_reduction": true,
+      "interval_lower_exceeds_required": false,
+      "interval_mV": [
+        2.943478139292382,
+        9.313578022981945
+      ],
+      "interval_supports_positive_reduction": true,
+      "mae_reduction_mV": 6.128528081137164,
+      "n_pairs": 464,
+      "required_reduction_mV": 5.0,
+      "role": "Original known confirmation result, no new statistical fit"
+    },
+    {
+      "condition": "supply_097",
+      "interval_contains_required_reduction": false,
+      "interval_lower_exceeds_required": false,
+      "interval_mV": [
+        -1.6158266340296095,
+        4.683895889764894
+      ],
+      "interval_supports_positive_reduction": false,
+      "mae_reduction_mV": 1.534034627867642,
+      "n_pairs": 464,
+      "required_reduction_mV": 5.0,
+      "role": "Original known confirmation result, no new statistical fit"
+    }
+  ],
+  "restricted_floor": {
+    "cost": "No finite current/area assigned. Infinite reference averaging would consume unbounded resources.",
+    "exclusions": "No resizing of load/input, feedback redesign, source correlation, nonlinear tails or calibrated foundry distribution",
+    "held_fixed": "A37 input and output-load first-order variances and their transmission paths",
+    "maximum_sd_reduction_fraction": 0.13738131371964823,
+    "reference_variance_mV2": 0,
+    "role": "Restricted mathematical limit, not a finite circuit or a new native condition",
+    "total_sd_mV": 67.85095144307063
+  },
+  "role": "Retrospective arithmetic and restricted first-order limit from the original public study",
+  "schema": "adn.learning-reference-investment.v1",
+  "source": {
+    "selected_member_sha256": {
+      "circuits/A37.cir": "e50295b64c2ad9e95cfabfb2603d6db0c15dd413714a1dd946278fd79ff23bca",
+      "circuits/A75.cir": "2d2a3ad9c83aa3780d9ed13e05a4d7e263596359e4f81e9440b8dc347510a2ef",
+      "confirmation-plan.json": "61b8769b9fb7f26bb2cbaa12b1ca015a8a19fb6fe526a8f3312dab1e1bfdd1b8",
+      "data/configuration.json": "05738190673fe52393ef1d141a97d1a1cf0ba8e3f6504f38a29ab55bfe5e762d",
+      "data/contrasts.csv": "6135343571ad50c419142ef9a9b422b2bd5b61435ab6987ebae9fde255345d60",
+      "data/manifest.json": "3ecd7e566e27d2c226717097af08640e19f97f1a0bfb8afc8edec61d678e9da7",
+      "data/nominal.csv": "89f1c4cd15425098e62a676cc24e289b0850bab17588fc5256b8df7c7113661a",
+      "data/sensitivities.csv": "2286c6e3e257a4c5957c955bea846fd961f4997423194820429c5351aa048116",
+      "data/source-budget.csv": "7ccd18144f99bb6a23b79f3751c17ab019aa0522b863399c9fcbf37f84a37566",
+      "data/statistics.json": "7b54cfc33a653ed238f5711f8655123d62a070654026ed1c6a1990a233d09471",
+      "development-contract-v1.json": "cb91b8ab367fb46421c6b073429f95ec8921441a5495ed66850276e796ed9eb0"
+    },
+    "sha256": "4d2dda32baa15f173c6a897e7429ba0e421b0fa1738ff722fe8b889d1cf3e55f",
+    "url": "https://ds54e.github.io/analog-design-notes/downloads/gain-study-v1.0.zip"
+  },
+  "source_profile": "Historical native-Jacobian source-transfer budget; independent observable coordinates per unit. Raw DELVTO and ln(MULU0) are mapped jointly, not assumed independent. No recalibration here.",
+  "status": "PASS"
+}

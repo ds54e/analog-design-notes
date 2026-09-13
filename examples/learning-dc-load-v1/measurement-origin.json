@@ -1,0 +1,11 @@
+{
+  "measure_case_change": "Only the fixture-name condition changes from D1-high-command to D1-100k-load; same numerical/passive/source/terminal/KCL definitions and tolerances. The one-case wrapper compares the separately saved prior forecast and uses explicit LF CSV records.",
+  "source": "learning/common-mode/analyze.py",
+  "source_sha256": "dbb09770e3f38d2c0c8e233f8be42609612df01d9a44ff8e2291a315f062851e",
+  "unchanged_function_sha256": {
+    "bandwidth": "0fd2bf90d71548822d2651619518cb1a49e39c5473dcf1165b2711c8f3f24769",
+    "columns": "4c380205b59c6aa98dac6a027d8ad1d7e56265c028c0ca69209d6307f43084c2",
+    "read": "57c008ff4bfd843af6966be9c8f759d607e4e71c0efff98d7835454798353429",
+    "sha": "3d415f5c23ee20731523765aba65f1d77a460587ac662338198c5a95315b86c4"
+  }
+}
