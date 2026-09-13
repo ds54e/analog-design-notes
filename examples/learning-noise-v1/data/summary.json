@@ -1,0 +1,123 @@
+{
+  "boltzmann_j_per_k": 1.380649e-23,
+  "cases": [
+    {
+      "band_hz": [
+        1000.0,
+        1000000.0
+      ],
+      "candidate": "R75",
+      "input_series_ohm": 1000.0,
+      "matrix": {
+        "direct_branch_vs_two_paths_relative": 0.0,
+        "effective_gm_s": 0.000976697436740225,
+        "gate_to_output_branch_ohm": -12145.338653852323,
+        "gds_s": 3.4859152100148483e-06,
+        "gm_s": 0.001231172419444464,
+        "gmb_s": 0.000281750660125299,
+        "matrix_signal_vs_native_1khz_relative": 0.00018014147225731136,
+        "matrix_vs_reduced_relative": 1.1102230246251565e-16,
+        "matrix_zout_vs_native_1khz_relative": 3.016199262573238e-06,
+        "output_conductance_s": 0.00016275358745251994,
+        "pmos_gds_s": 0,
+        "signal_gain": -6.00108084883325,
+        "source_feedback_denominator": 1.2605463812350746,
+        "zout_ohm": 6144.257805019073
+      },
+      "minimum_unassigned_psd_v2_per_hz": 1.8604902305412902e-17,
+      "one_khz": {
+        "combined_branch_imag_ohm": 0.4871993147606346,
+        "combined_branch_real_ohm": -12144.239272768817,
+        "gate_path_real_ohm": -5999.999999999706,
+        "opposite_output_path_real_ohm": -6144.239272769109,
+        "signal_imag": 0.00024335358584859357,
+        "signal_real": -5.999999999999706,
+        "zout_imag_ohm": -0.24384572891204104,
+        "zout_real_ohm": 6144.239272769109
+      },
+      "original_input_noise_rms_v": 7.091664998025675e-06,
+      "partial_fraction_of_total_variance": 0.3843191029490542,
+      "partial_passive_rms_v": 4.396369617347406e-06,
+      "temperature_k": 300.0
+    },
+    {
+      "band_hz": [
+        1000.0,
+        1000000.0
+      ],
+      "candidate": "F75L",
+      "feedback_branch": {
+        "correct_over_incorrect_variance": 1.5340900891248699,
+        "correct_rms_v": 5.2457428176334386e-06,
+        "cross_fraction_of_correct_variance": 0.3481477997355061,
+        "incorrect_independent_ends_rms_v": 4.235274491686197e-06,
+        "one_khz_equivalent_input_resistance_ohm": 1662.5853715459255,
+        "real_path_signs_add_at_1khz": true
+      },
+      "input_series_ohm": 10000.0,
+      "matrix": {
+        "direct_branch_vs_two_paths_relative": 2.220446049250313e-16,
+        "effective_gm_s": 0.00039027417956225067,
+        "gate_to_output_branch_ohm": -77384.29862120378,
+        "gds_s": 1.6234682037115358e-06,
+        "gm_s": 0.0005754999139592942,
+        "gmb_s": 0.0001308541284383561,
+        "matrix_signal_vs_native_1khz_relative": 0.00022185703363541975,
+        "matrix_vs_reduced_relative": 0.0,
+        "matrix_zout_vs_native_1khz_relative": -0.00028904539720564504,
+        "output_conductance_s": 1.3025774239469237e-05,
+        "pmos_gds_s": 1.924822343768804e-06,
+        "signal_gain": -6.002202827702057,
+        "source_feedback_denominator": 1.4746041221707293,
+        "zout_ohm": 17362.2703441832
+      },
+      "minimum_unassigned_psd_v2_per_hz": 1.2895763678276994e-16,
+      "one_khz": {
+        "combined_branch_imag_ohm": 8.739492027305548,
+        "combined_branch_real_ohm": -77376.00520103623,
+        "gate_path_real_ohm": -60008.7149215358,
+        "opposite_output_path_real_ohm": -17367.290279500427,
+        "signal_imag": 0.0006817930096592567,
+        "signal_real": -6.00087149215358,
+        "zout_imag_ohm": -1.9215619307129819,
+        "zout_real_ohm": 17367.290279500427
+      },
+      "original_input_noise_rms_v": 2.0458253074846757e-05,
+      "partial_fraction_of_total_variance": 0.4645106666464809,
+      "partial_passive_rms_v": 1.3943326347636012e-05,
+      "temperature_k": 300.0
+    }
+  ],
+  "definitions": {
+    "branch_transfer": "Current from output to gate gives Rt*H-Zout; square the complete complex sum before adding independent-source powers.",
+    "integration": "Original linear-frequency trapezoid with exact 1 kHz/1 MHz endpoints inserted.",
+    "referral": "Each output PSD divided by the original log-frequency interpolation of |H|^2 onto the noise grid.",
+    "remainder": "Observed total PSD minus selected ordinary-resistor PSDs; unassigned MOS/other-passive sources, not a complete BSIM decomposition."
+  },
+  "direct_branch_diagnostic": {
+    "feedback_rms_from_direct_native_path_v": 5.245742817635921e-06,
+    "feedback_variance_relative_to_prior_two_path_result": 9.463541061904834e-13,
+    "maximum_complex_forecast_relative_error": 1.2243323852030286e-12,
+    "new_run_id": "ce1c86f25dfb00083d3f237cb7dfc6d6aced9b83174a826e31a602df65cca7fe",
+    "physical_scope": "Same five nominal MOS units and bias/load in a new ideal branch-source/sensor fixture; no new full noise run or physical sample.",
+    "plan_sha256": "b43ef5ac204377a58d7adb52f2c4b2ef9c1b18941968173b9cc0e1d3187f2697",
+    "role": "One predeclared direct-source AC diagnostic, now exposed; aggregation of its saved observations",
+    "rows": [
+      1,
+      241
+    ]
+  },
+  "limits": [
+    "Original signal/noise records are known nominal evidence; the separately predeclared direct branch diagnostic is identified below. No calibrated noise population or foundry qualification.",
+    "Complex transfers are sampled at 80 points/decade, noise at 160; output powers are interpolated in log frequency before the original referral. This is a finite sampled approximation.",
+    "Low-frequency nodal check neglects capacitance and leakage derivatives; it is compared at 1 kHz, not claimed valid over all frequencies.",
+    "The two terminals of one resistor share the same noise source. Independent resistors contribute independent source powers; no independent-terminal assumption.",
+    "No noise is added by the ideal external generators; a real driver/reference can add more.",
+    "Same-function R75/F75L designs have different device/current/resistor allocations; this analysis does not isolate feedback as the only redesign change."
+  ],
+  "role": "Retrospective resistor-budget calculation from known nominal observations; direct branch diagnostic separately identified when supplied",
+  "schema": "learning.resistor-noise-path.v1",
+  "source_sha256": "e05901cc6b3f81e7e5870f8df933d930377681de57547fc1e0292329681fc97b",
+  "status": "PASS",
+  "thermal_model": "4*k*T/R one-sided current PSD for an ordinary resistor at actual 300 K. SI Boltzmann constant used for this analytic contribution."
+}

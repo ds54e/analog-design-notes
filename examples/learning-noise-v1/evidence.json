@@ -1,0 +1,113 @@
+{
+  "clean_public_reproduction": {
+    "APM_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "APM_retrieval": "Public v5.0.0 clone with global/system Git config, credential helper, extra headers and prompting disabled; commit verified.",
+    "anonymous_inputs": {
+      "authentication": "Ordinary public HTTPS with no Authorization header, token, cookies or session.",
+      "bytes": 3068219,
+      "checked_utc": "2026-09-13T15:33:39.798529+00:00",
+      "sha256": "348d3f2c8cb3ef41b9c968f4bbb68c011c40cfb64ddda4138d2ff115c5e95bc6",
+      "status": 200,
+      "url": "https://ds54e.github.io/analog-design-notes/downloads/feedback-study-v1.0.zip"
+    },
+    "checked_utc": "2026-09-13T15:47:24.522366+00:00",
+    "limits": "Fresh Python environment and new directory with selected candidate ZIP, anonymous public inputs and existing ngspice47 on this same host; not a clean OS or independent scientific replication. Final README/evidence metadata are outside executable payload hashes.",
+    "native": {
+      "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+      "binary_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+      "capacitor_ac_relative_error": 4.443700213761593e-16,
+      "circuit_sha256": "811dd9cc679e93810730e26b30a9b6afd2a1a85756eeaff242eb8566bc0d580f",
+      "dc_node_differences_v": {
+        "v(drive)": 2.3370194668359545e-14,
+        "v(gate)": 2.338684801372892e-13,
+        "v(in)": 0.0,
+        "v(out)": -3.869460307726058e-12,
+        "v(pbias)": 1.6653345369377348e-16,
+        "v(pdrive)": 1.6653345369377348e-16,
+        "v(source)": 5.840466998918714e-14,
+        "v(vdd)": 0.0
+      },
+      "forecast_sha256": "031ef8dab1b993b109b74f742535ef98defd6cf847076370cd16f9676fac2c4e",
+      "limits": "One nominal linear AC transfer diagnostic with ideal current/voltage instrumentation. It is not a new full noise analysis, noise population, physical amplitude limit, or regulator.",
+      "maximum_MOS_dc_kcl_a": 8.244002269036654e-17,
+      "maximum_ac_kcl_a": 1.3239026958283942e-21,
+      "maximum_complex_forecast_relative_error": 1.2243323852030286e-12,
+      "maximum_terminal_span_v": 0.5965304870265935,
+      "measured_one_khz_ohm": [
+        -77376.00520111316,
+        8.739492027294014
+      ],
+      "new_run_id": "aab07effae9ddb26c4e823e0e5e8d6c6528dc606f6f224e863887cb0d5f09873",
+      "ngspice_version": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Fri Sep  4 11:07:24 UTC 2026\n******",
+      "observations_sha256": "c68cb6e9172f25e6be4734fc3a297ffbc4f516a9c34d818a0ba9dabee5857827",
+      "original_realization_id": "531cdd9a4bd877f10b7880e0d2d42cb6abff03230d491abdf05edd6b50a1971a",
+      "physical_readback": "Pinned APM model/W/L/m/nf/DELVTO/MULU0 before/applied/after; measured DC V/I for all six resistors and AC current/voltage for capacitor.",
+      "plan_sha256": "b43ef5ac204377a58d7adb52f2c4b2ef9c1b18941968173b9cc0e1d3187f2697",
+      "realization_id": "407f50e7ad15c21e6098966d2cc6bf5ce1420a92f832262dda4d5257addc6d55",
+      "resistor_readback_ohm": {
+        "rbias": 10731.024577367356,
+        "rf": 99999.99999788817,
+        "rin": 9000.00000000058,
+        "rload": 100000.00000019096,
+        "rs": 670.3660992954394,
+        "rsrc": 1000.0000000001054
+      },
+      "resistor_readback_relative_error": {
+        "rbias": -2.220446049250313e-16,
+        "rf": -2.111832930751234e-11,
+        "rin": 6.439293542825908e-14,
+        "rload": 1.9095836023552692e-12,
+        "rs": 2.4424906541753444e-15,
+        "rsrc": 1.0547118733938987e-13
+      },
+      "role": "Replay of an already exposed direct branch condition, not a fresh target",
+      "rows": [
+        1,
+        241
+      ],
+      "schema": "learning.noise-branch-measurement.v1",
+      "source_current_readback_relative_error": 1.1102230246251565e-16,
+      "status": "PASS"
+    },
+    "observations_byte_identical_to_first_diagnostic": true,
+    "python": "Python 3.9.25",
+    "regenerated_summary_csv_sha256": {
+      "noise-budget.csv": "13394e75d775736341a9da40e3bf53db8132af8dc8a70b7ccab696c3480e60df",
+      "noise-spectrum.csv": "c89db2fa1ca30b8ba6d5f62cf11a01cd0d4b73542b64c000ce54d26b20213d03",
+      "summary.json": "f0b4d03b4fa0ad445bd401a1bb461a7320e0f3e2d3a6916c392ff7e04a3d2d5b"
+    },
+    "regenerated_svg_sha256": {
+      "resistor-noise-paths.svg": "01e468e82989f38950bf9b98cc393ea80aa8723c78c0114a5148251ef326ad71"
+    },
+    "schema": "ads.learning-noise-clean-public.v1",
+    "status": "PASS",
+    "tested_execution_payload_files": 18
+  },
+  "direct_branch": {
+    "feedback_variance_relative_change": 9.463541061904834e-13,
+    "maximum_complex_forecast_relative_error": 1.2243323852030286e-12,
+    "plan_sha256": "b43ef5ac204377a58d7adb52f2c4b2ef9c1b18941968173b9cc0e1d3187f2697",
+    "pretarget_private_commit": "85a877d1efccf913fc21f8f463269ae2d5889c1a",
+    "role": "One predeclared direct AC branch diagnostic, now exposed. Later repeats are known reproduction.",
+    "rows": [
+      1,
+      241
+    ],
+    "run_id": "ce1c86f25dfb00083d3f237cb7dfc6d6aced9b83174a826e31a602df65cca7fe",
+    "status": "PASS"
+  },
+  "limits": [
+    "Original signal/noise records are known nominal evidence; the separately predeclared direct branch diagnostic is identified below. No calibrated noise population or foundry qualification.",
+    "Complex transfers are sampled at 80 points/decade, noise at 160; output powers are interpolated in log frequency before the original referral. This is a finite sampled approximation.",
+    "Low-frequency nodal check neglects capacitance and leakage derivatives; it is compared at 1 kHz, not claimed valid over all frequencies.",
+    "The two terminals of one resistor share the same noise source. Independent resistors contribute independent source powers; no independent-terminal assumption.",
+    "No noise is added by the ideal external generators; a real driver/reference can add more.",
+    "Same-function R75/F75L designs have different device/current/resistor allocations; this analysis does not isolate feedback as the only redesign change."
+  ],
+  "old_native_rows_checked": 22589,
+  "old_source_attempts": 4,
+  "schema": "learning.resistor-noise-path.evidence.v1",
+  "selected_current_ac_rows": 802,
+  "source_sha256": "e05901cc6b3f81e7e5870f8df933d930377681de57547fc1e0292329681fc97b",
+  "status": "SCOPED_NUMERICAL_AND_PUBLIC_REPRODUCTION_CHECKS_PASS"
+}

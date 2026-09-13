@@ -1,0 +1,14 @@
+{
+  "files": {
+    "branch-forecast.csv": "031ef8dab1b993b109b74f742535ef98defd6cf847076370cd16f9676fac2c4e",
+    "branch-observations.npz": "c68cb6e9172f25e6be4734fc3a297ffbc4f516a9c34d818a0ba9dabee5857827",
+    "branch-result.json": "4931f426a3ca017a9ca141c844909dff629f4db93c6d49ec2780a746722e9bf6",
+    "current-transfer.csv": "4c3e3645e847cd9903e137e2810e975e60eb1a3bce85682f111bc32de205e116",
+    "noise-budget.csv": "13394e75d775736341a9da40e3bf53db8132af8dc8a70b7ccab696c3480e60df",
+    "noise-spectrum.csv": "c89db2fa1ca30b8ba6d5f62cf11a01cd0d4b73542b64c000ce54d26b20213d03",
+    "prebranch-summary.json": "ff36262fbf48fea36f73ddab6db1eef92d79f2b9bd8148141da06b0e8d5d45ce",
+    "source.json": "e05901cc6b3f81e7e5870f8df933d930377681de57547fc1e0292329681fc97b",
+    "summary.json": "f0b4d03b4fa0ad445bd401a1bb461a7320e0f3e2d3a6916c392ff7e04a3d2d5b"
+  },
+  "schema": "learning.resistor-noise-path.data-manifest.v1"
+}

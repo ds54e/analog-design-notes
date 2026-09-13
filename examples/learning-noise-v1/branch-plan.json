@@ -1,0 +1,116 @@
+{
+  "case": "F75L-noise-branch",
+  "circuit": "circuits/F75L-noise-branch.cir",
+  "circuit_sha256": "811dd9cc679e93810730e26b30a9b6afd2a1a85756eeaff242eb8566bc0d580f",
+  "conditions": {
+    "cload_f": 1e-12,
+    "current_ac_a": 1e-09,
+    "current_direction": "out to noise_probe to gate; i(Vnoise) is the actual measured branch current",
+    "other_ac_sources": "Vin, Vdd, Idist and Vbiasdiag all zero",
+    "points_per_decade": 80,
+    "rload_ohm": 100000.0,
+    "sweep_hz": [
+      1000.0,
+      1000000.0
+    ],
+    "temperature_c": 26.85,
+    "vdd_v": 1,
+    "vin_dc_v": 0.45
+  },
+  "created_utc": "2026-09-13T15:12:20.916921+00:00",
+  "finite_stop": "Exactly one diagnostic circuit: one OP and one AC sweep, native concurrency one. Retain any partial/failed attempt. At most one identical retry for an identified execution failure; no target-driven circuit/threshold/frequency changes. A later advertised clean public replay is known-input reproduction, not another scientific sample.",
+  "forecast": "data/branch-forecast.csv",
+  "forecast_sha256": "031ef8dab1b993b109b74f742535ef98defd6cf847076370cd16f9676fac2c4e",
+  "known_analysis_summary_sha256": "ff36262fbf48fea36f73ddab6db1eef92d79f2b9bd8148141da06b0e8d5d45ce",
+  "measurement": "One OP then241 complex AC points. Normalize output by measured i(Vnoise); compare frozen complex forecast. Read actual MOS and passives; check full node/MOS KCL, zero Vin/Vdd AC, C through measured current/voltage.",
+  "original_nominal_realization_id": "531cdd9a4bd877f10b7880e0d2d42cb6abff03230d491abdf05edd6b50a1971a",
+  "physical_units": [
+    {
+      "family": "apm045/vtg",
+      "l_m": 4e-07,
+      "path": [
+        "xn0"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ads/gain/input/0",
+      "w_m": 3.999999999999793e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 4e-07,
+      "path": [
+        "xn1"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ads/gain/input/1",
+      "w_m": 3.999999999999793e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 4e-07,
+      "path": [
+        "xn2"
+      ],
+      "polarity": "n",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ads/gain/input/2",
+      "w_m": 3.999999999999793e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 4e-07,
+      "path": [
+        "xr0"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ads/gain/reference/0",
+      "w_m": 3.3333333333333333e-06
+    },
+    {
+      "family": "apm045/vtg",
+      "l_m": 4e-07,
+      "path": [
+        "xp0"
+      ],
+      "polarity": "p",
+      "raw": [
+        0.0,
+        0.0
+      ],
+      "uid": "ads/gain/load/0",
+      "w_m": 3.3333333333333333e-06
+    }
+  ],
+  "question": "Does one current flowing from output into gate produce the complete complex Rt*H-Z path, including the opposite injection signs, on the same finite F75L MOS core?",
+  "role": "Prospective linear-superposition diagnostic based on known nominal H and Z; no new physical sample, optimization or statistical confirmation",
+  "schema": "learning.noise-branch-diagnostic.v1",
+  "scientific_basis": "The four checked old attempts provide separate H and Z paths but no direct combined branch-current trace. This one finite diagnostic tests that circuit/source correspondence and provides a small public replay.",
+  "script_sha256": "2381dd0771589c9c2396b9562888eba8d7121b1d3626d00905c3239ac8430eb1",
+  "source_sha256": "e05901cc6b3f81e7e5870f8df933d930377681de57547fc1e0292329681fc97b",
+  "status": "FROZEN_BEFORE_DIRECT_BRANCH_TARGET",
+  "tolerances": {
+    "ac_kcl_relative_to_probe": 1e-06,
+    "branch_complex_relative": 1e-06,
+    "capacitor_ac_relative": 1e-05,
+    "dc_kcl_a": 1e-11,
+    "dc_passive_relative": 1e-05,
+    "op_voltage_v": 1e-08,
+    "source_ac_relative": 1e-08,
+    "terminal_span_slack_v": 1e-08
+  }
+}

@@ -187,6 +187,86 @@ resistor contribution compared with the observed total, not a measured
 decomposition of every BSIM noise source. Ideal external voltage generators
 add no source noise in these examples; a real reference or driver can add more.
 
+### Keep both terminals of one resistor in the same noise path
+
+The 10-kΩ floor is only part of the passive cost. Follow Rf's noise current
+through the actual connection in chapter 5. Let $H(f)=v_o/v_{in}$ with the
+input source driven, and let $Z_o(f)=v_o/i_{dist}$ with current injected into
+the output and the input source held at AC zero. Both transfers include the
+finite MOS core, reference, feedback loading and capacitances.
+
+Define positive resistor-noise current $i_n$ from **output to gate**.
+It injects $+i_n$ at the gate and $-i_n$ at the output. With the unbranched
+series input resistance $R_t$, the gate injection has the same nodal effect
+as an external source voltage $R_ti_n$. Superposition therefore gives
+
+$$v_{o,n}=(R_tH-Z_o)i_n.$$
+
+These are two paths from **one** random source. They must be combined before
+squaring the complex magnitude. For an ordinary resistor at temperature $T$,
+the one-sided current PSD is $4k_BT/R_f$; the input-referred contribution is
+
+$$S_{v,in,R_f}(f)=
+\frac{4k_BT}{R_f}\left|R_t-\frac{Z_o(f)}{H(f)}\right|^2.$$
+
+The resistor model and squared-noise convention are documented in the
+[ngspice 47 manual, §§3.3.2 and 11.3.4](https://ngspice.sourceforge.io/docs/ngspice-47-manual.pdf).
+Here the source/path calculation uses the original saved complex transfers
+and the same 1-kHz–1-MHz input-referral/integration definition as the total.
+
+At 1 kHz in F75L, the real gate-path contribution is −60.009 kΩ and the
+opposite output injection contributes −17.367 kΩ. Their sum is −77.376 kΩ;
+the small imaginary components remain in the calculation. A current flowing
+into the gate increases NMOS pull-down, while the same current leaving the
+output also pulls it down. The two effects reinforce each other in this band.
+
+Treating the ends as independent would instead use
+$|R_tH|^2+|Z_o|^2$ and discard the cross term. Across the stated band,
+that gives **4.235 µV RMS** for Rf, versus **5.246 µV** with the coherent
+path. The discarded term accounts for about 34.8% of this resistor's actual
+calculated noise variance. Negative signal feedback does not imply that every
+noise source in its network is cancelled.
+
+The output resistor's current uses $Z_o$ alone; R75's drain resistor does too
+when the ideal supply is held at AC zero. The selected contributions are:
+
+| Input-referred RMS over 1 kHz–1 MHz, µV | R75 | F75L |
+| --- | ---: | ---: |
+| Series input resistors | 4.068 | 12.865 |
+| Drain resistor | 1.613 | — |
+| Feedback resistor, both ends together | — | 5.246 |
+| 100-kΩ output load | 0.417 | 1.177 |
+| Square root of the selected power sum | **4.396** | **13.943** |
+| Original observed total | **7.092** | **20.458** |
+
+[![One resistor's two paths add coherently; separate resistor powers form a partial noise budget.](figures/resistor-noise-paths.svg)](figures/resistor-noise-paths.svg)
+
+Add independent-source **variances**, then take a square root; do not add the
+RMS entries down the table. These selected resistors account for 38.4% of
+R75's and 46.5% of F75L's total noise variance. The gray remainder retains
+MOS and unassigned passive noise. It is not a measured breakdown into every
+BSIM source, nor a claim that Rs or Rbias is noiseless. The source temperature
+is 300 K; no calibrated population of noise parameters is introduced.
+
+The separate low-frequency node equations agree with the reduced transfer
+formulas and explain the native 1-kHz signal/current responses within 0.03%.
+A separately frozen direct branch diagnostic then applied 1 nA AC from output
+to gate on the same five-unit F75L core. Its 241 points over this band match
+the prior complex sum within $1.3\times10^{-12}$ relative error, well inside
+the declared $10^{-6}$ numerical tolerance. Actual branch current, MOS/passive
+readback and gate/output KCL were checked. This validates the branch-path
+calculation; it is not a new complete noise analysis or a population test.
+
+The [selected calculation and one native replay](../studies/learning-noise-v1/reproduce.qmd)
+retain the original PSD definition, frozen direct-source forecast and compact
+observations.
+
+The design judgment remains practical: F75L's lower distortion comes with an
+input-resistor noise term that already exceeds R75's complete nominal noise.
+More PMOS area can address other contributions, but cannot remove the unchanged
+10-kΩ series term. A lower distortion number alone cannot decide between
+these two circuits for a noise-limited job.
+
 The archived OTA noise has a different retained convention: total output RMS
 is divided by signal gain at 1 kHz after integration. The learning package
 labels that old scalar explicitly. It is not mixed into this ADS comparison,

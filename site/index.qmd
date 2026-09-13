@@ -13,15 +13,16 @@ change the decision.
 [**Read the entry page and eight chapters**](learn/index.qmd) ·
 [日本語の読み方](ja/learning-path.qmd)
 
-**Learning edition v1.3 · 2026-09-13.** Original explanations connect first
-predictions with selected saved observations and finite design costs. Basic
+**Learning edition v1.4 · 2026-09-13.** Original explanations connect
+circuit estimates, selected observations and finite design costs. Basic
 KCL/KVL is introduced at the entry; no simulator installation is needed to read.
 
 Work from required current and gm to supported dimensions, mirror accuracy,
 and a finite OTA's response. The route connects receiving-capacitor choices,
-finite-reference supply error and fixed accuracy requirements. New in this
-increment: estimate finite-signal distortion from a complete circuit's local
-curvature, then trace the gate/source motion and input-current cost of feedback.
+finite-reference supply error and fixed accuracy requirements. The finite-signal
+argument traces local curvature, gate/source motion and input-current cost.
+This increment follows resistor noise through both terminals of one source,
+showing why the feedback circuit’s lower distortion still has a noise cost.
 
 | Follow the circuit | Make the next judgment |
 | --- | --- |
@@ -44,7 +45,9 @@ adds supply/loss calculations and the predeclared 12/15-pF choice, with three
 graphs and a native 12-pF replay. The
 [signal explanation](studies/learning-signal-v1/reproduce.qmd) adds two graphs,
 selected known static/cycle observations and a small native F75L replay.
-All eight earlier ZIPs are retained.
+The [resistor-noise example](studies/learning-noise-v1/reproduce.qmd) adds a
+partial power budget and one direct branch-current AC replay. All nine earlier
+ZIPs are retained.
 
 ## Detailed studies {#detailed-studies}
 

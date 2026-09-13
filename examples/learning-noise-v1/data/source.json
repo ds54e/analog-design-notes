@@ -1,0 +1,1245 @@
+{
+  "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+  "cases": [
+    {
+      "ac_recipe": {
+        "kind": "ac",
+        "points_per_decade": 80,
+        "set_sources": {},
+        "start": 1000.0,
+        "stop": 100000000.0,
+        "vectors": [
+          "v(in)",
+          "v(gate)",
+          "v(out)",
+          "i(Vdd)",
+          "i(Vin)"
+        ]
+      },
+      "candidate": "R75",
+      "case": "R75-nominal",
+      "circuit": "external feedback-study-v1.0.zip:example/circuits/R75.cir",
+      "circuit_sha256": "6b377b2d9def103caed4e183a5a2400fa6010f1002932c7b47b8612eadb79946",
+      "observed_ac_source_overrides": {},
+      "observed_op": {
+        "@m.xn0.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn0.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn0.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn0.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn0.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn1.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn1.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn1.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn1.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn1.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn2.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn2.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn2.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn2.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn2.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn3.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn3.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn3.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn3.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn3.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn4.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn4.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn4.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn4.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn4.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn5.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn5.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn5.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn5.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn5.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "i(Vdd)": -7.499409362814787e-05,
+        "i(Vin)": -5.906371849831275e-09,
+        "i(Vn0b)": -3.090559244465645e-12,
+        "i(Vn0d)": 1.1665682271358062e-05,
+        "i(Vn0g)": 9.843953430177521e-10,
+        "i(Vn0s)": -1.1666663576141165e-05,
+        "i(Vn1b)": -3.09055924446565e-12,
+        "i(Vn1d)": 1.1665682271358048e-05,
+        "i(Vn1g)": 9.843953430177521e-10,
+        "i(Vn1s)": -1.1666663576141165e-05,
+        "i(Vn2b)": -3.09055924446565e-12,
+        "i(Vn2d)": 1.1665682271358048e-05,
+        "i(Vn2g)": 9.843953430177521e-10,
+        "i(Vn2s)": -1.1666663576141165e-05,
+        "i(Vn3b)": -3.090559244465645e-12,
+        "i(Vn3d)": 1.166568227135806e-05,
+        "i(Vn3g)": 9.843953430177521e-10,
+        "i(Vn3s)": -1.1666663576141172e-05,
+        "i(Vn4b)": -3.090559244465645e-12,
+        "i(Vn4d)": 1.1665682271358053e-05,
+        "i(Vn4g)": 9.843953430177521e-10,
+        "i(Vn4s)": -1.1666663576141172e-05,
+        "i(Vn5b)": -3.090559244465645e-12,
+        "i(Vn5d)": 1.1665682271358053e-05,
+        "i(Vn5g)": 9.843953430177521e-10,
+        "i(Vn5s)": -1.1666663576141172e-05,
+        "v(gate)": 0.4499940936281502,
+        "v(in)": 0.45,
+        "v(out)": 0.5000000000000061,
+        "v(source)": 0.012027257763498332,
+        "v(vdd)": 1.0
+      },
+      "op_recipe": {
+        "kind": "op",
+        "set_sources": {},
+        "vectors": [
+          "v(gate)",
+          "v(in)",
+          "v(out)",
+          "v(source)",
+          "v(vdd)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vn3d)",
+          "i(Vn3g)",
+          "i(Vn3s)",
+          "i(Vn3b)",
+          "i(Vn4d)",
+          "i(Vn4g)",
+          "i(Vn4s)",
+          "i(Vn4b)",
+          "i(Vn5d)",
+          "i(Vn5g)",
+          "i(Vn5s)",
+          "i(Vn5b)",
+          "@m.xn0.mapm045_vtg_core[gm]",
+          "@m.xn0.mapm045_vtg_core[gds]",
+          "@m.xn0.mapm045_vtg_core[gmbs]",
+          "@m.xn0.mapm045_vtg_core[vdsat]",
+          "@m.xn0.mapm045_vtg_core[vth]",
+          "@m.xn1.mapm045_vtg_core[gm]",
+          "@m.xn1.mapm045_vtg_core[gds]",
+          "@m.xn1.mapm045_vtg_core[gmbs]",
+          "@m.xn1.mapm045_vtg_core[vdsat]",
+          "@m.xn1.mapm045_vtg_core[vth]",
+          "@m.xn2.mapm045_vtg_core[gm]",
+          "@m.xn2.mapm045_vtg_core[gds]",
+          "@m.xn2.mapm045_vtg_core[gmbs]",
+          "@m.xn2.mapm045_vtg_core[vdsat]",
+          "@m.xn2.mapm045_vtg_core[vth]",
+          "@m.xn3.mapm045_vtg_core[gm]",
+          "@m.xn3.mapm045_vtg_core[gds]",
+          "@m.xn3.mapm045_vtg_core[gmbs]",
+          "@m.xn3.mapm045_vtg_core[vdsat]",
+          "@m.xn3.mapm045_vtg_core[vth]",
+          "@m.xn4.mapm045_vtg_core[gm]",
+          "@m.xn4.mapm045_vtg_core[gds]",
+          "@m.xn4.mapm045_vtg_core[gmbs]",
+          "@m.xn4.mapm045_vtg_core[vdsat]",
+          "@m.xn4.mapm045_vtg_core[vth]",
+          "@m.xn5.mapm045_vtg_core[gm]",
+          "@m.xn5.mapm045_vtg_core[gds]",
+          "@m.xn5.mapm045_vtg_core[gmbs]",
+          "@m.xn5.mapm045_vtg_core[vdsat]",
+          "@m.xn5.mapm045_vtg_core[vth]"
+        ]
+      },
+      "original_analysis_sha256": {
+        "0": "1154f9543039f58f189150f14f2b8f5f05d421a2ca7ae27ace3dddc06e0ec5f9",
+        "1": "8e295327fd5d152c64b1bf631969efd0736cdbda202b6ad9790a9fb46fc89333",
+        "2": "26e2c9d823cc566ac736d2ae993dca698e9b1260cc916a8bba99085f5fe4f878",
+        "3": "bfce02e40115b67fb1e823fc1fe82106ec7a9d0f11823db8a0e5a7e47ca6e9d3"
+      },
+      "original_attempt_sha256": "6d7fa62b547ee1d3cf839d5deaa82c2cfe8e097972ebfa6771e4aa28b5af3d23",
+      "original_native_deck_sha256": "1711511eb4d9b6b299cd66da7346529dc3626caf3e1e3e64b273d85a14f76d23",
+      "original_request_sha256": "2194d8a69eaa97bebfb5d877e557bcbacd96fc3988a11c7efb839998f6adb3bc",
+      "original_rows": [
+        1,
+        401,
+        481,
+        10009
+      ],
+      "parameters": {
+        "amplitude": 0.005,
+        "cload": 1e-12,
+        "load": "resistor",
+        "nl": 0.4,
+        "nn": 6,
+        "nw": 3.8674887684728407,
+        "rd": 6667.191718846597,
+        "rload": 100000.0,
+        "rs": 171.81801356494375,
+        "rsrc": 1000.0,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/3",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/4",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn5"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/5",
+          "w_m": 3.867488768472841e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 before/applied/after; resistor values from actual native parameter vectors or measured V/I with the route and numerical tolerance explicit; current-probe source override amplitudes read back from native log.",
+      "realization_id": "cf830be2ace7a54158b73f7078fe38e5a870d1a306b0ab0f4d3be71ac9d2b4d4",
+      "resistor_readback": {
+        "rd": {
+          "method": "Observed DC voltage/current using MOS terminal sums and source currents",
+          "observed_ohm": 6667.191718846598,
+          "relative_difference": 2.220446049250313e-16,
+          "tolerance": 1e-07
+        },
+        "rload": {
+          "method": "Observed DC voltage/current using MOS terminal sums and source currents",
+          "observed_ohm": 100000.00000001017,
+          "relative_difference": 1.0169642905566434e-13,
+          "tolerance": 1e-07
+        },
+        "rs": {
+          "method": "Observed DC voltage/current using MOS terminal sums and source currents",
+          "observed_ohm": 171.8180135649435,
+          "relative_difference": -1.4432899320127035e-15,
+          "tolerance": 1e-07
+        },
+        "rsrc": {
+          "method": "Observed DC voltage/current using MOS terminal sums and source currents",
+          "observed_ohm": 999.9999999995595,
+          "relative_difference": -4.405364961712621e-13,
+          "tolerance": 1e-07
+        }
+      },
+      "role": "nominal",
+      "temperature_c": 26.85
+    },
+    {
+      "ac_recipe": {
+        "ac_sources": {
+          "Idist": 1,
+          "Vdd": 0,
+          "Vin": 0
+        },
+        "kind": "ac",
+        "points_per_decade": 80,
+        "set_sources": {},
+        "start": 1000.0,
+        "stop": 100000000.0,
+        "vectors": [
+          "v(in)",
+          "v(out)",
+          "v(vdd)"
+        ]
+      },
+      "candidate": "R75",
+      "case": "R75-current",
+      "circuit": "circuits/R75-current.cir",
+      "circuit_sha256": "eb4b0493a3930f23d012d4d497da11697b74c7a7b01ccbf6fdcf737fc7c0b647",
+      "observed_ac_source_overrides": {
+        "Idist": 1.0,
+        "Vdd": 0.0,
+        "Vin": 0.0
+      },
+      "observed_op": {
+        "@m.xn0.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn0.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn0.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn0.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn0.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn1.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn1.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn1.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn1.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn1.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn2.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn2.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn2.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn2.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn2.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn3.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn3.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn3.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn3.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn3.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn4.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn4.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn4.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn4.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn4.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "@m.xn5.mapm045_vtg_core[gds]": 5.809858683358081e-07,
+        "@m.xn5.mapm045_vtg_core[gm]": 0.000205195403240744,
+        "@m.xn5.mapm045_vtg_core[gmbs]": 4.695844335421649e-05,
+        "@m.xn5.mapm045_vtg_core[vdsat]": 0.08211022948366906,
+        "@m.xn5.mapm045_vtg_core[vth]": 0.4131726216556173,
+        "i(Vdd)": -7.499409362814787e-05,
+        "i(Vin)": -5.906371849831275e-09,
+        "i(Vn0b)": -3.090559244465645e-12,
+        "i(Vn0d)": 1.1665682271358062e-05,
+        "i(Vn0g)": 9.843953430177521e-10,
+        "i(Vn0s)": -1.1666663576141165e-05,
+        "i(Vn1b)": -3.09055924446565e-12,
+        "i(Vn1d)": 1.1665682271358048e-05,
+        "i(Vn1g)": 9.843953430177521e-10,
+        "i(Vn1s)": -1.1666663576141165e-05,
+        "i(Vn2b)": -3.09055924446565e-12,
+        "i(Vn2d)": 1.1665682271358048e-05,
+        "i(Vn2g)": 9.843953430177521e-10,
+        "i(Vn2s)": -1.1666663576141165e-05,
+        "i(Vn3b)": -3.090559244465645e-12,
+        "i(Vn3d)": 1.166568227135806e-05,
+        "i(Vn3g)": 9.843953430177521e-10,
+        "i(Vn3s)": -1.1666663576141172e-05,
+        "i(Vn4b)": -3.090559244465645e-12,
+        "i(Vn4d)": 1.1665682271358053e-05,
+        "i(Vn4g)": 9.843953430177521e-10,
+        "i(Vn4s)": -1.1666663576141172e-05,
+        "i(Vn5b)": -3.090559244465645e-12,
+        "i(Vn5d)": 1.1665682271358053e-05,
+        "i(Vn5g)": 9.843953430177521e-10,
+        "i(Vn5s)": -1.1666663576141172e-05,
+        "v(gate)": 0.4499940936281502,
+        "v(in)": 0.45,
+        "v(out)": 0.5000000000000061,
+        "v(source)": 0.012027257763498332,
+        "v(vdd)": 1.0
+      },
+      "op_recipe": {
+        "kind": "op",
+        "set_sources": {},
+        "vectors": [
+          "v(gate)",
+          "v(in)",
+          "v(out)",
+          "v(source)",
+          "v(vdd)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vn3d)",
+          "i(Vn3g)",
+          "i(Vn3s)",
+          "i(Vn3b)",
+          "i(Vn4d)",
+          "i(Vn4g)",
+          "i(Vn4s)",
+          "i(Vn4b)",
+          "i(Vn5d)",
+          "i(Vn5g)",
+          "i(Vn5s)",
+          "i(Vn5b)",
+          "@m.xn0.mapm045_vtg_core[gm]",
+          "@m.xn0.mapm045_vtg_core[gds]",
+          "@m.xn0.mapm045_vtg_core[gmbs]",
+          "@m.xn0.mapm045_vtg_core[vdsat]",
+          "@m.xn0.mapm045_vtg_core[vth]",
+          "@m.xn1.mapm045_vtg_core[gm]",
+          "@m.xn1.mapm045_vtg_core[gds]",
+          "@m.xn1.mapm045_vtg_core[gmbs]",
+          "@m.xn1.mapm045_vtg_core[vdsat]",
+          "@m.xn1.mapm045_vtg_core[vth]",
+          "@m.xn2.mapm045_vtg_core[gm]",
+          "@m.xn2.mapm045_vtg_core[gds]",
+          "@m.xn2.mapm045_vtg_core[gmbs]",
+          "@m.xn2.mapm045_vtg_core[vdsat]",
+          "@m.xn2.mapm045_vtg_core[vth]",
+          "@m.xn3.mapm045_vtg_core[gm]",
+          "@m.xn3.mapm045_vtg_core[gds]",
+          "@m.xn3.mapm045_vtg_core[gmbs]",
+          "@m.xn3.mapm045_vtg_core[vdsat]",
+          "@m.xn3.mapm045_vtg_core[vth]",
+          "@m.xn4.mapm045_vtg_core[gm]",
+          "@m.xn4.mapm045_vtg_core[gds]",
+          "@m.xn4.mapm045_vtg_core[gmbs]",
+          "@m.xn4.mapm045_vtg_core[vdsat]",
+          "@m.xn4.mapm045_vtg_core[vth]",
+          "@m.xn5.mapm045_vtg_core[gm]",
+          "@m.xn5.mapm045_vtg_core[gds]",
+          "@m.xn5.mapm045_vtg_core[gmbs]",
+          "@m.xn5.mapm045_vtg_core[vdsat]",
+          "@m.xn5.mapm045_vtg_core[vth]"
+        ]
+      },
+      "original_analysis_sha256": {
+        "0": "1154f9543039f58f189150f14f2b8f5f05d421a2ca7ae27ace3dddc06e0ec5f9",
+        "1": "698cea3e2f9c7404331c0be7ffe948fecffde336d88516afbb7027f2b1723c49"
+      },
+      "original_attempt_sha256": "a9494a1f5006189d0649801607f3e819d4ab896895898923ea0393e580cbf82e",
+      "original_native_deck_sha256": "9ecdc7cde96f5ecdd414d66a662fba4717a06883572116e2159ed7e8ab51f738",
+      "original_request_sha256": "498d1bb33b0ae6f52385af705e144b208e4448c54b2dd964fda9fb960647c1d1",
+      "original_rows": [
+        1,
+        401
+      ],
+      "parameters": {
+        "amplitude": 0.005,
+        "cload": 1e-12,
+        "load": "resistor",
+        "nl": 0.4,
+        "nn": 6,
+        "nw": 3.8674887684728407,
+        "rd": 6667.191718846597,
+        "rload": 100000.0,
+        "rs": 171.81801356494375,
+        "rsrc": 1000.0,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn3"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/3",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn4"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/4",
+          "w_m": 3.867488768472841e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn5"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/5",
+          "w_m": 3.867488768472841e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 before/applied/after; resistor values from actual native parameter vectors or measured V/I with the route and numerical tolerance explicit; current-probe source override amplitudes read back from native log.",
+      "realization_id": "e8c01078f318801fe89e4e9edf442bc5d21718453097b461d0f5314b7adf7960",
+      "resistor_readback": {
+        "rd": {
+          "method": "Observed DC voltage/current using MOS terminal sums and source currents",
+          "observed_ohm": 6667.191718846598,
+          "relative_difference": 2.220446049250313e-16,
+          "tolerance": 1e-07
+        },
+        "rload": {
+          "method": "Observed DC voltage/current using MOS terminal sums and source currents",
+          "observed_ohm": 100000.00000001017,
+          "relative_difference": 1.0169642905566434e-13,
+          "tolerance": 1e-07
+        },
+        "rs": {
+          "method": "Observed DC voltage/current using MOS terminal sums and source currents",
+          "observed_ohm": 171.8180135649435,
+          "relative_difference": -1.4432899320127035e-15,
+          "tolerance": 1e-07
+        },
+        "rsrc": {
+          "method": "Observed DC voltage/current using MOS terminal sums and source currents",
+          "observed_ohm": 999.9999999995595,
+          "relative_difference": -4.405364961712621e-13,
+          "tolerance": 1e-07
+        }
+      },
+      "role": "current",
+      "temperature_c": 26.85
+    },
+    {
+      "ac_recipe": {
+        "kind": "ac",
+        "points_per_decade": 80,
+        "set_sources": {},
+        "start": 1000.0,
+        "stop": 100000000.0,
+        "vectors": [
+          "v(in)",
+          "v(gate)",
+          "v(out)",
+          "i(Vdd)",
+          "i(Vin)"
+        ]
+      },
+      "candidate": "F75L",
+      "case": "F75L-nominal",
+      "circuit": "external feedback-study-v1.0.zip:example/circuits/F75L.cir",
+      "circuit_sha256": "82d6730f7a7bcf1600eb4ec5cecd59c07c600726ca9fbb1c182ec4524e3ab161",
+      "observed_ac_source_overrides": {},
+      "observed_op": {
+        "@m.xn0.mapm045_vtg_core[gds]": 5.411560679038464e-07,
+        "@m.xn0.mapm045_vtg_core[gm]": 0.00019183330465309827,
+        "@m.xn0.mapm045_vtg_core[gmbs]": 4.361804281278542e-05,
+        "@m.xn0.mapm045_vtg_core[vdsat]": 0.0789692613013648,
+        "@m.xn0.mapm045_vtg_core[vth]": 0.4151337022929968,
+        "@m.xn1.mapm045_vtg_core[gds]": 5.411560679038447e-07,
+        "@m.xn1.mapm045_vtg_core[gm]": 0.000191833304653098,
+        "@m.xn1.mapm045_vtg_core[gmbs]": 4.361804281278534e-05,
+        "@m.xn1.mapm045_vtg_core[vdsat]": 0.0789692613013648,
+        "@m.xn1.mapm045_vtg_core[vth]": 0.4151337022929968,
+        "@m.xn2.mapm045_vtg_core[gds]": 5.411560679038447e-07,
+        "@m.xn2.mapm045_vtg_core[gm]": 0.000191833304653098,
+        "@m.xn2.mapm045_vtg_core[gmbs]": 4.361804281278534e-05,
+        "@m.xn2.mapm045_vtg_core[vdsat]": 0.0789692613013648,
+        "@m.xn2.mapm045_vtg_core[vth]": 0.4151337022929968,
+        "@m.xp0.mapm045_vtg_core[gds]": 1.924822343768804e-06,
+        "@m.xp0.mapm045_vtg_core[gm]": 0.0003009971612330459,
+        "@m.xp0.mapm045_vtg_core[gmbs]": 6.557664427943222e-05,
+        "@m.xp0.mapm045_vtg_core[vdsat]": 0.21434307025717222,
+        "@m.xp0.mapm045_vtg_core[vth]": 0.38421030108239523,
+        "@m.xr0.mapm045_vtg_core[gds]": 1.6393344182782309e-06,
+        "@m.xr0.mapm045_vtg_core[gm]": 0.0003024869367579773,
+        "@m.xr0.mapm045_vtg_core[gmbs]": 6.589276551208602e-05,
+        "@m.xr0.mapm045_vtg_core[vdsat]": 0.21435017973961498,
+        "@m.xr0.mapm045_vtg_core[vth]": 0.384201300157011,
+        "@rbias[resistance]": 10731.024577367358,
+        "@rf[resistance]": 100000.0,
+        "@rin[resistance]": 9000.0,
+        "@rload[resistance]": 100000.0,
+        "@rs[resistance]": 670.3660992954377,
+        "@rsrc[resistance]": 1000.0,
+        "i(Vbiasdiag)": -1.4556453979035558e-08,
+        "i(Vdd)": -7.499737786299414e-05,
+        "i(Vin)": 4.5247987670989044e-07,
+        "i(Vn0b)": -3.1037027312809586e-12,
+        "i(Vn0d)": 1.0647759508477108e-05,
+        "i(Vn0g)": 9.128042766093358e-10,
+        "i(Vn0s)": -1.0648669209054376e-05,
+        "i(Vn1b)": -3.1037027312809554e-12,
+        "i(Vn1d)": 1.0647759508477095e-05,
+        "i(Vn1g)": 9.128043321204871e-10,
+        "i(Vn1s)": -1.0648669209054344e-05,
+        "i(Vn2b)": -3.1037027312809554e-12,
+        "i(Vn2d)": 1.0647759508477095e-05,
+        "i(Vn2g)": 9.128043321204871e-10,
+        "i(Vn2s)": -1.0648669209054344e-05,
+        "i(Vp0b)": 1.0914047443577601e-11,
+        "i(Vp0d)": -3.739896309229131e-05,
+        "i(Vp0g)": -1.4556453979035558e-08,
+        "i(Vp0s)": 3.741350863230533e-05,
+        "i(Vr0b)": 1.1013218115252243e-11,
+        "i(Vr0d)": -3.756931795332295e-05,
+        "i(Vr0g)": -1.4540363302284476e-08,
+        "i(Vr0s)": 3.758384730342325e-05,
+        "v(drive)": 0.45045247987670994,
+        "v(gate)": 0.454524798767099,
+        "v(in)": 0.45,
+        "v(out)": 0.5000466277265493,
+        "v(pbias)": 0.40346951297340633,
+        "v(pdrive)": 0.40346951297340633,
+        "v(source)": 0.021415520521083652,
+        "v(vdd)": 1.0
+      },
+      "op_recipe": {
+        "kind": "op",
+        "set_sources": {},
+        "vectors": [
+          "v(vdd)",
+          "v(in)",
+          "v(drive)",
+          "v(gate)",
+          "v(out)",
+          "v(source)",
+          "v(pbias)",
+          "v(pdrive)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vbiasdiag)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vr0d)",
+          "i(Vr0g)",
+          "i(Vr0s)",
+          "i(Vr0b)",
+          "i(Vp0d)",
+          "i(Vp0g)",
+          "i(Vp0s)",
+          "i(Vp0b)",
+          "@m.xn0.mapm045_vtg_core[gm]",
+          "@m.xn0.mapm045_vtg_core[gmbs]",
+          "@m.xn0.mapm045_vtg_core[gds]",
+          "@m.xn0.mapm045_vtg_core[vdsat]",
+          "@m.xn0.mapm045_vtg_core[vth]",
+          "@m.xn1.mapm045_vtg_core[gm]",
+          "@m.xn1.mapm045_vtg_core[gmbs]",
+          "@m.xn1.mapm045_vtg_core[gds]",
+          "@m.xn1.mapm045_vtg_core[vdsat]",
+          "@m.xn1.mapm045_vtg_core[vth]",
+          "@m.xn2.mapm045_vtg_core[gm]",
+          "@m.xn2.mapm045_vtg_core[gmbs]",
+          "@m.xn2.mapm045_vtg_core[gds]",
+          "@m.xn2.mapm045_vtg_core[vdsat]",
+          "@m.xn2.mapm045_vtg_core[vth]",
+          "@m.xr0.mapm045_vtg_core[gm]",
+          "@m.xr0.mapm045_vtg_core[gmbs]",
+          "@m.xr0.mapm045_vtg_core[gds]",
+          "@m.xr0.mapm045_vtg_core[vdsat]",
+          "@m.xr0.mapm045_vtg_core[vth]",
+          "@m.xp0.mapm045_vtg_core[gm]",
+          "@m.xp0.mapm045_vtg_core[gmbs]",
+          "@m.xp0.mapm045_vtg_core[gds]",
+          "@m.xp0.mapm045_vtg_core[vdsat]",
+          "@m.xp0.mapm045_vtg_core[vth]",
+          "@rsrc[resistance]",
+          "@rin[resistance]",
+          "@rf[resistance]",
+          "@rs[resistance]",
+          "@rbias[resistance]",
+          "@rload[resistance]"
+        ]
+      },
+      "original_analysis_sha256": {
+        "0": "edab5a8e6b5a1d33c2711dbdabeceff60730020386a061045cc26d3e8bbee868",
+        "1": "995681e0213edcaf8d513a34e2920fc1e4ff9f7739bc8ab9a7df41e83eee2b77",
+        "2": "a471a458773ce4b25d66bdcd7b6b53db53a7cc52cec1be3e293bd1a816746b37",
+        "3": "d86e75c9088c048f87e3b7f76c5644eb0f1ad2fea6adcb659413b1afb3d66955"
+      },
+      "original_attempt_sha256": "f86f2fda97470b89800d6317fc01bf9189821e5e821a3c94064e38d8712d13cf",
+      "original_native_deck_sha256": "f81e18b270661babf9cd253449f824e1f128bf3aeae3a5380ba419ae804fe52b",
+      "original_request_sha256": "b5f6c82bb0fcfbe06eb4a15a131c03f549299c316a0035821b58c348395fc556",
+      "original_rows": [
+        1,
+        401,
+        481,
+        10010
+      ],
+      "parameters": {
+        "amplitude": 0.005,
+        "cload": 1e-12,
+        "load": "active",
+        "nl": 0.4,
+        "nn": 3,
+        "np": 1,
+        "nr": 1,
+        "nw": 3.9999999999997935,
+        "pl": 0.4,
+        "pw": 3.3333333333333335,
+        "rbias": 10731.024577367358,
+        "rf": 100000.0,
+        "rin": 9000.0,
+        "rl": 0.4,
+        "rload": 100000.0,
+        "rs": 670.3660992954378,
+        "rsrc": 1000.0,
+        "rw": 3.3333333333333335,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xr0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/reference/0",
+          "w_m": 3.3333333333333333e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xp0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/load/0",
+          "w_m": 3.3333333333333333e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 before/applied/after; resistor values from actual native parameter vectors or measured V/I with the route and numerical tolerance explicit; current-probe source override amplitudes read back from native log.",
+      "realization_id": "531cdd9a4bd877f10b7880e0d2d42cb6abff03230d491abdf05edd6b50a1971a",
+      "resistor_readback": {
+        "rbias": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 10731.024577367358,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        },
+        "rf": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 100000.0,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        },
+        "rin": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 9000.0,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        },
+        "rload": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 100000.0,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        },
+        "rs": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 670.3660992954377,
+          "relative_difference": -2.220446049250313e-16,
+          "tolerance": 2e-11
+        },
+        "rsrc": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 1000.0,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        }
+      },
+      "role": "nominal",
+      "temperature_c": 26.85
+    },
+    {
+      "ac_recipe": {
+        "ac_sources": {
+          "Idist": 1,
+          "Vbiasdiag": 0,
+          "Vdd": 0,
+          "Vin": 0
+        },
+        "kind": "ac",
+        "points_per_decade": 80,
+        "set_sources": {},
+        "start": 1000.0,
+        "stop": 100000000.0,
+        "vectors": [
+          "v(in)",
+          "v(out)",
+          "v(vdd)",
+          "v(pbias)",
+          "v(pdrive)"
+        ]
+      },
+      "candidate": "F75L",
+      "case": "F75L-current",
+      "circuit": "circuits/F75L-current.cir",
+      "circuit_sha256": "82d6730f7a7bcf1600eb4ec5cecd59c07c600726ca9fbb1c182ec4524e3ab161",
+      "observed_ac_source_overrides": {
+        "Idist": 1.0,
+        "Vbiasdiag": 0.0,
+        "Vdd": 0.0,
+        "Vin": 0.0
+      },
+      "observed_op": {
+        "@m.xn0.mapm045_vtg_core[gds]": 5.411560679038464e-07,
+        "@m.xn0.mapm045_vtg_core[gm]": 0.00019183330465309827,
+        "@m.xn0.mapm045_vtg_core[gmbs]": 4.361804281278542e-05,
+        "@m.xn0.mapm045_vtg_core[vdsat]": 0.0789692613013648,
+        "@m.xn0.mapm045_vtg_core[vth]": 0.4151337022929968,
+        "@m.xn1.mapm045_vtg_core[gds]": 5.411560679038447e-07,
+        "@m.xn1.mapm045_vtg_core[gm]": 0.000191833304653098,
+        "@m.xn1.mapm045_vtg_core[gmbs]": 4.361804281278534e-05,
+        "@m.xn1.mapm045_vtg_core[vdsat]": 0.0789692613013648,
+        "@m.xn1.mapm045_vtg_core[vth]": 0.4151337022929968,
+        "@m.xn2.mapm045_vtg_core[gds]": 5.411560679038447e-07,
+        "@m.xn2.mapm045_vtg_core[gm]": 0.000191833304653098,
+        "@m.xn2.mapm045_vtg_core[gmbs]": 4.361804281278534e-05,
+        "@m.xn2.mapm045_vtg_core[vdsat]": 0.0789692613013648,
+        "@m.xn2.mapm045_vtg_core[vth]": 0.4151337022929968,
+        "@m.xp0.mapm045_vtg_core[gds]": 1.924822343768804e-06,
+        "@m.xp0.mapm045_vtg_core[gm]": 0.0003009971612330459,
+        "@m.xp0.mapm045_vtg_core[gmbs]": 6.557664427943222e-05,
+        "@m.xp0.mapm045_vtg_core[vdsat]": 0.21434307025717222,
+        "@m.xp0.mapm045_vtg_core[vth]": 0.38421030108239523,
+        "@m.xr0.mapm045_vtg_core[gds]": 1.6393344182782309e-06,
+        "@m.xr0.mapm045_vtg_core[gm]": 0.0003024869367579773,
+        "@m.xr0.mapm045_vtg_core[gmbs]": 6.589276551208602e-05,
+        "@m.xr0.mapm045_vtg_core[vdsat]": 0.21435017973961498,
+        "@m.xr0.mapm045_vtg_core[vth]": 0.384201300157011,
+        "@rbias[resistance]": 10731.024577367358,
+        "@rf[resistance]": 100000.0,
+        "@rin[resistance]": 9000.0,
+        "@rload[resistance]": 100000.0,
+        "@rs[resistance]": 670.3660992954377,
+        "@rsrc[resistance]": 1000.0,
+        "i(Vbiasdiag)": -1.4556453979035558e-08,
+        "i(Vdd)": -7.499737786299414e-05,
+        "i(Vin)": 4.5247987670989044e-07,
+        "i(Vn0b)": -3.1037027312809586e-12,
+        "i(Vn0d)": 1.0647759508477108e-05,
+        "i(Vn0g)": 9.128042766093358e-10,
+        "i(Vn0s)": -1.0648669209054376e-05,
+        "i(Vn1b)": -3.1037027312809554e-12,
+        "i(Vn1d)": 1.0647759508477095e-05,
+        "i(Vn1g)": 9.128043321204871e-10,
+        "i(Vn1s)": -1.0648669209054344e-05,
+        "i(Vn2b)": -3.1037027312809554e-12,
+        "i(Vn2d)": 1.0647759508477095e-05,
+        "i(Vn2g)": 9.128043321204871e-10,
+        "i(Vn2s)": -1.0648669209054344e-05,
+        "i(Vp0b)": 1.0914047443577601e-11,
+        "i(Vp0d)": -3.739896309229131e-05,
+        "i(Vp0g)": -1.4556453979035558e-08,
+        "i(Vp0s)": 3.741350863230533e-05,
+        "i(Vr0b)": 1.1013218115252243e-11,
+        "i(Vr0d)": -3.756931795332295e-05,
+        "i(Vr0g)": -1.4540363302284476e-08,
+        "i(Vr0s)": 3.758384730342325e-05,
+        "v(drive)": 0.45045247987670994,
+        "v(gate)": 0.454524798767099,
+        "v(in)": 0.45,
+        "v(out)": 0.5000466277265493,
+        "v(pbias)": 0.40346951297340633,
+        "v(pdrive)": 0.40346951297340633,
+        "v(source)": 0.021415520521083652,
+        "v(vdd)": 1.0
+      },
+      "op_recipe": {
+        "kind": "op",
+        "set_sources": {},
+        "vectors": [
+          "v(vdd)",
+          "v(in)",
+          "v(drive)",
+          "v(gate)",
+          "v(out)",
+          "v(source)",
+          "v(pbias)",
+          "v(pdrive)",
+          "i(Vdd)",
+          "i(Vin)",
+          "i(Vbiasdiag)",
+          "i(Vn0d)",
+          "i(Vn0g)",
+          "i(Vn0s)",
+          "i(Vn0b)",
+          "i(Vn1d)",
+          "i(Vn1g)",
+          "i(Vn1s)",
+          "i(Vn1b)",
+          "i(Vn2d)",
+          "i(Vn2g)",
+          "i(Vn2s)",
+          "i(Vn2b)",
+          "i(Vr0d)",
+          "i(Vr0g)",
+          "i(Vr0s)",
+          "i(Vr0b)",
+          "i(Vp0d)",
+          "i(Vp0g)",
+          "i(Vp0s)",
+          "i(Vp0b)",
+          "@m.xn0.mapm045_vtg_core[gm]",
+          "@m.xn0.mapm045_vtg_core[gmbs]",
+          "@m.xn0.mapm045_vtg_core[gds]",
+          "@m.xn0.mapm045_vtg_core[vdsat]",
+          "@m.xn0.mapm045_vtg_core[vth]",
+          "@m.xn1.mapm045_vtg_core[gm]",
+          "@m.xn1.mapm045_vtg_core[gmbs]",
+          "@m.xn1.mapm045_vtg_core[gds]",
+          "@m.xn1.mapm045_vtg_core[vdsat]",
+          "@m.xn1.mapm045_vtg_core[vth]",
+          "@m.xn2.mapm045_vtg_core[gm]",
+          "@m.xn2.mapm045_vtg_core[gmbs]",
+          "@m.xn2.mapm045_vtg_core[gds]",
+          "@m.xn2.mapm045_vtg_core[vdsat]",
+          "@m.xn2.mapm045_vtg_core[vth]",
+          "@m.xr0.mapm045_vtg_core[gm]",
+          "@m.xr0.mapm045_vtg_core[gmbs]",
+          "@m.xr0.mapm045_vtg_core[gds]",
+          "@m.xr0.mapm045_vtg_core[vdsat]",
+          "@m.xr0.mapm045_vtg_core[vth]",
+          "@m.xp0.mapm045_vtg_core[gm]",
+          "@m.xp0.mapm045_vtg_core[gmbs]",
+          "@m.xp0.mapm045_vtg_core[gds]",
+          "@m.xp0.mapm045_vtg_core[vdsat]",
+          "@m.xp0.mapm045_vtg_core[vth]",
+          "@rsrc[resistance]",
+          "@rin[resistance]",
+          "@rf[resistance]",
+          "@rs[resistance]",
+          "@rbias[resistance]",
+          "@rload[resistance]"
+        ]
+      },
+      "original_analysis_sha256": {
+        "0": "edab5a8e6b5a1d33c2711dbdabeceff60730020386a061045cc26d3e8bbee868",
+        "1": "322d15eb6ff20900eb540f9f976d5ee5c27a3d1ad36f10f2aecff6d975e34529"
+      },
+      "original_attempt_sha256": "eff839263e38751b9b1508eb3d0d5a4befc2b9d880cf9f7bb4d80bb215c1f1e9",
+      "original_native_deck_sha256": "f6ddfc549451faea4c6af2c73785b279797d5ed5d514d256dc3ea9f6b563f4fa",
+      "original_request_sha256": "7f61a648457629d0c8d3b3704dbffc4d383f44733dca834451da26ee6faf54ee",
+      "original_rows": [
+        1,
+        401
+      ],
+      "parameters": {
+        "amplitude": 0.005,
+        "cload": 1e-12,
+        "load": "active",
+        "nl": 0.4,
+        "nn": 3,
+        "np": 1,
+        "nr": 1,
+        "nw": 3.9999999999997935,
+        "pl": 0.4,
+        "pw": 3.3333333333333335,
+        "rbias": 10731.024577367358,
+        "rf": 100000.0,
+        "rin": 9000.0,
+        "rl": 0.4,
+        "rload": 100000.0,
+        "rs": 670.3660992954378,
+        "rsrc": 1000.0,
+        "rw": 3.3333333333333335,
+        "vdd": 1.0,
+        "vin": 0.45
+      },
+      "physical_units": [
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn0"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/0",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn1"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/1",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xn2"
+          ],
+          "polarity": "n",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/input/2",
+          "w_m": 3.999999999999793e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xr0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/reference/0",
+          "w_m": 3.3333333333333333e-06
+        },
+        {
+          "family": "apm045/vtg",
+          "l_m": 4e-07,
+          "path": [
+            "xp0"
+          ],
+          "polarity": "p",
+          "raw": [
+            0.0,
+            0.0
+          ],
+          "uid": "ads/gain/load/0",
+          "w_m": 3.3333333333333333e-06
+        }
+      ],
+      "real_readback": "Model/W/L/m/nf/DELVTO/MULU0 before/applied/after; resistor values from actual native parameter vectors or measured V/I with the route and numerical tolerance explicit; current-probe source override amplitudes read back from native log.",
+      "realization_id": "531cdd9a4bd877f10b7880e0d2d42cb6abff03230d491abdf05edd6b50a1971a",
+      "resistor_readback": {
+        "rbias": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 10731.024577367358,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        },
+        "rf": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 100000.0,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        },
+        "rin": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 9000.0,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        },
+        "rload": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 100000.0,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        },
+        "rs": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 670.3660992954377,
+          "relative_difference": -2.220446049250313e-16,
+          "tolerance": 2e-11
+        },
+        "rsrc": {
+          "method": "Native resistance parameter",
+          "observed_ohm": 1000.0,
+          "relative_difference": 0.0,
+          "tolerance": 2e-11
+        }
+      },
+      "role": "current",
+      "temperature_c": 26.85
+    }
+  ],
+  "current_transfer_sha256": "4c3e3645e847cd9903e137e2810e975e60eb1a3bce85682f111bc32de205e116",
+  "limits": [
+    "R75 current probe retains older 10-mV sine body; its OP/AC settings, unit inventory/raw/passives and observed OP match the later 5-mV nominal body. Bound identities remain separate.",
+    "No new target, population or complete MOS noise-source decomposition."
+  ],
+  "model_hashes": {
+    "models/apm045/families/vtg/ngspice/wrapper.inc": "a51aa8d116f2a837343b02fc3ff077947eef8ff5110de1738e547e345066d95c",
+    "models/apm045/vendor/freepdk45/NMOS_VTG.inc": "3cb730470427d99b6d22ab4d029493fa949daa1040d2ed51179118263682a14c",
+    "models/apm045/vendor/freepdk45/PMOS_VTG.inc": "a7d95a2631897134d2f52a9fa8469aef4e7c6dd2a2b5a499fc08645da3465d4a"
+  },
+  "ngspice_binary_sha256": "dc38a04579a4dfd6521ddb8f417cdeb4da410d4995927a89dd5f99d51b8d0834",
+  "noise_convention": "Native set sqrnoise: V^2/Hz. Same original 1-kHz..1-MHz band and log-frequency interpolation of |H|^2 before linear-frequency trapezoidal PSD integration.",
+  "old_public_commit": "721a59b9c33146b6ff1d8662e6b9a5076aafe448",
+  "old_public_tag": "finite-feedback-v1.0",
+  "old_zip": "feedback-study-v1.0.zip",
+  "old_zip_sha256": "348d3f2c8cb3ef41b9c968f4bbb68c011c40cfb64ddda4138d2ff115c5e95bc6",
+  "role": "Known nominal saved-data explanation",
+  "schema": "learning.resistor-noise-path.source.v1",
+  "selected_members_sha256": {
+    "circuits/F75L.cir": "82d6730f7a7bcf1600eb4ec5cecd59c07c600726ca9fbb1c182ec4524e3ab161",
+    "circuits/R75.cir": "6b377b2d9def103caed4e183a5a2400fa6010f1002932c7b47b8612eadb79946",
+    "data/ac.csv": "194fb06535994450eb23894a5fe2baa98642addf2066c851e15c6a279880ac00",
+    "data/configuration.json": "e9fabbf61daeecdbd75a6cbf1c207fb3a8c6c4f9ec4f7021a8bf7d507dde1ba5",
+    "data/manifest.json": "a902778b360a806f96287e1748a12f6fff9ccb7734cd385683953d6e1a605857",
+    "data/noise.csv": "69aaebd2443349ab6adb10fcfd4505d759207a01c2c9dd8bb67d33c5840f067a",
+    "data/nominal-op.csv": "fb8374f84d709a52f90c40c398b8f1b643cef1c85e3eb72a71520de17fc6fd64",
+    "data/nominal.csv": "f3a69d18b889b62eb17f8c231fc37f5866ef814487aa4e66d1026b23f6da4051",
+    "data/sensitivities.csv": "e3fa1d1ec1d450f88e533cc4ac93e9a50d436d61bce637532fe1d3230519fab4",
+    "measurements-v1.json": "3192b35472b7b68fcfcf08dfc683f709060d733f331c03c489fa2a9b10fe0139"
+  }
+}

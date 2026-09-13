@@ -1,0 +1,150 @@
+# Reproduce the resistor-noise path explanation
+
+This selected supplement accompanies the learning route's discussion of
+finite feedback and noise in chapters 5 and 6. It follows one resistor's
+current through both of its terminals, then compares a partial resistor
+budget with the original total noise of R75 and F75L.
+
+Download [the selected package](https://ds54e.github.io/analog-design-notes/downloads/learning-noise-v1.0.zip)
+or inspect [its public files](https://github.com/ds54e/analog-design-notes/tree/main/examples/learning-noise-v1).
+The prior study packages, tags and original measurement definitions remain
+unchanged. No new physical population or full BSIM noise decomposition is
+introduced.
+
+## Exact inputs and what was checked
+
+The external input is the preserved
+[feedback-study-v1.0.zip](https://ds54e.github.io/analog-design-notes/downloads/feedback-study-v1.0.zip), SHA256
+`348d3f2c8cb3ef41b9c968f4bbb68c011c40cfb64ddda4138d2ff115c5e95bc6`,
+from tag `finite-feedback-v1.0` at public commit
+`721a59b9c33146b6ff1d8662e6b9a5076aafe448`.
+
+[The selected source record](data/source.json) names ten exact ZIP members,
+model/circuit hashes, the original physical units and four saved native
+attempts: R75/F75L nominal records and their separate output-current AC probes.
+The [current-transfer table](data/current-transfer.csv) contains 802 complex
+AC points. Original signal gain and noise arrays stay in the external ZIP.
+Their values match the saved native observations exactly.
+
+Both designs use 1 V, 26.85 °C (300 K), 0.45-V DC input and
+100 kΩ || 1 pF output load. R75’s six and F75L’s five MOS units retain their saved
+zero-raw nominal parameters. R75's older current probe has 10-mV sine text,
+while its later nominal body has 5-mV text. The actual OP/AC source settings,
+physical unit inventory/raw values, passives and stationary node values were
+checked. The different circuit and bound-realization identities are retained.
+
+The old native decks explicitly set `sqrnoise`, so their noise columns are
+PSD in V²/Hz. The calculation preserves the original 1-kHz–1-MHz band,
+log-frequency interpolation of squared gain for input referral and
+linear-frequency trapezoidal PSD integration with exact endpoints. AC is
+sampled at 80 points/decade and noise at 160; the sampled power interpolation
+is explicit. The resistor contribution uses the SI Boltzmann constant and
+ordinary 300-K thermal noise.
+
+## Recalculate the partial budget and graph
+
+In a new directory, extract the example and retrieve the original ZIP. Use
+Python 3.9 or later and the supplied pinned requirements. These calculations
+need no SPICE installation.
+
+~~~bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r example/requirements.txt
+curl --fail --location https://ds54e.github.io/analog-design-notes/downloads/feedback-study-v1.0.zip --output feedback-study-v1.0.zip
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/analyze.py --feedback-zip feedback-study-v1.0.zip --output "$PWD/analysis-001"
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/plot.py --feedback-zip feedback-study-v1.0.zip --output "$PWD/figures-001"
+~~~
+
+The analysis writes `summary.json`, `noise-budget.csv` and
+`noise-spectrum.csv`. The graph is `resistor-noise-paths.svg` and a PNG.
+Existing output destinations are refused. Expect selected-resistor RMS
+4.396/13.943 µV for R75/F75L, versus original total 7.092/20.458 µV.
+The remainder is unassigned MOS/other-passive noise, not a claim that source
+or bias resistors are noiseless.
+
+For F75L, the feedback resistor contributes about 5.246 µV RMS.
+Incorrectly treating its two ends as independent gives 4.235 µV. One current
+from output to gate has the complete complex transfer `Rt*H-Zout`:
+its gate injection and opposite output injection share the same source.
+The power calculation retains that relationship before adding contributions
+from separate independent resistors.
+
+A separate low-frequency nodal system checks the signs and reduced equations;
+it matches the old native 1-kHz signal/current responses within 0.03%.
+That check neglects capacitance and leakage derivatives and is not asserted
+over the whole AC range.
+
+## One direct branch-current native example
+
+The [finite plan](branch-plan.json) and
+[241-point complex forecast](data/branch-forecast.csv) were recorded before
+the first direct branch target. It keeps F75L's five saved MOS units, bias,
+source resistance and load. The [exact diagnostic circuit](circuits/F75L-noise-branch.cir)
+adds a 1-nA AC current from output to gate and ideal zero-volt current sensors;
+Vin, VDD and the other sources have zero AC drive. One OP and one
+1-kHz–1-MHz AC sweep are sufficient. This is a deterministic linear-path test,
+not a new full noise run.
+
+Retrieve public APM v5.0.0, commit
+`381517fda5107fabf98af7801d5a5103f38e230c`, and install ngspice **47** separately.
+SPICE stays outside the static site build.
+
+~~~bash
+git clone --branch v5.0.0 --depth 1 https://github.com/ds54e/analog-process-models.git apm-v5
+git -C apm-v5 rev-parse HEAD
+ngspice --version
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/replay_branch.py --apm "$PWD/apm-v5" --feedback-zip feedback-study-v1.0.zip --binary /usr/local/bin/ngspice --output "$PWD/branch-replay-001"
+~~~
+
+Adjust only the binary path to the installed ngspice 47. The public APM recipe
+API receives the saved five zero-raw units and records a new relocated
+realization and native run. No ADS adapter, private repository or legacy
+runtime is needed. The script and its frozen tolerance identity are checked.
+
+The example measures the actual branch current through its zero-volt sensor,
+normalizes the output by that complex current and compares the frozen forecast.
+It also checks independent DC node values, actual MOS parameters before/during/
+after analysis, six resistor values from measured DC voltage/current, capacitor
+current/voltage and node/MOS KCL. Expected passive values are not presented as
+native readbacks.
+
+The first direct observation is preserved in
+[branch-result.json](data/branch-result.json) and
+[the compact observations](data/branch-observations.npz). Its complete complex
+response matched the forecast within `1.23e-12` relative error, inside the
+predeclared `1e-6` numerical tolerance. Using that direct path changes the
+calculated Rf noise variance by about `9.5e-13` relative. The
+[pre-target analysis summary](data/prebranch-summary.json) keeps the earlier
+calculation separate. Repeating this example now reproduces an exposed
+condition; it does not create fresh confirmation.
+
+## Checks and limits
+
+The [evidence record](evidence.json) distinguishes the old saved-data selection,
+the first direct branch observation and clean public-input reproduction.
+A fresh Python 3.9.25 environment in a new directory reproduced all three
+summary/CSV files and the SVG byte for byte, using the extracted candidate
+package and the anonymously retrieved original feedback ZIP. A public APM
+clone at the pinned commit and ngspice 47 reproduced the direct branch case:
+one OP, 241 AC points and compact observation bytes identical to the first
+diagnostic. The relocated run identity is
+`aab07effae9ddb26c4e823e0e5e8d6c6528dc606f6f224e863887cb0d5f09873`.
+This is a checked public-input replay on the same execution host.
+
+The script writes new observations, not a replacement of the old source files.
+Bulk native logs remain separate from this compact selected package.
+
+The example supports an input-noise cost under a specified finite interface.
+It does not isolate feedback as the only difference between R75 and F75L,
+measure manufacturing noise statistics, establish a large-signal range or
+complete a regulator. A real driver/reference may add noise absent from the
+ideal external generators. A MOS area change can alter both its own noise
+and the circuit's operating point; this fixed-circuit decomposition is not
+an optimized redesign.
+
+The resistor/noise conventions are described by the
+[ngspice 47 manual, §§3.3.2 and 11.3.4](https://ngspice.sourceforge.io/docs/ngspice-47-manual.pdf).
+The original [feedback study and reproduction](https://ds54e.github.io/analog-design-notes/studies/finite-feedback/reproduce.html)
+and [finite-signal supplement](https://ds54e.github.io/analog-design-notes/studies/learning-signal-v1/reproduce.html) retain their
+own checked inputs and definitions. This material has internal checks on the
+execution host, without prior human review or independent replication.
