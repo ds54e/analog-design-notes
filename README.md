@@ -4,7 +4,7 @@ Read the [site](https://ds54e.github.io/analog-design-notes/), start the
 [eight-chapter learning route](https://ds54e.github.io/analog-design-notes/learn/),
 or use the [Japanese reading overview](https://ds54e.github.io/analog-design-notes/ja/learning-path.html).
 
-Learning edition **v1.6** connects MOS operating points, common-source stages,
+Learning edition **v1.7** connects MOS operating points, common-source stages,
 mirrors, differential pairs/OTAs, feedback, errors and supply/startup to the
 remaining interfaces of an LDO. Its [original selected evidence package](examples/learning-path-v1/README.md)
 contains four archived nominal examples, current-balance calculations and eight
@@ -33,6 +33,12 @@ attempt. It explains current redistribution, changed precision and bandwidth.
 [Small worked calculations](https://ds54e.github.io/analog-design-notes/learn/calculations/)
 reproduce the finite mirror's reference-current investment from the original
 first-study ZIP using standard Python.
+
+The [startup-current explanation](examples/learning-startup-v1/README.md) uses
+four known R75 records to compare charging peaks, a fixed charge/energy window
+and original ready-time brackets. Its passive RC screen and unfitted final-OP
+tail calculation have different assumptions. One new graph is regenerated
+from selected saved data; the original native histories are preserved.
 
 The power-sequencing study explains input delivery/absorption and supply
 charging peaks in 59 nominal static/history/control observations. It preserves
@@ -73,7 +79,8 @@ before export. The immutable research tags are
 `active-allocation-v1.0`, `finite-feedback-v1.0` and `power-sequencing-v1.0`.
 The earlier edition tags `learning-path-v1.0`, `learning-path-v1.1` and
 `learning-path-v1.2`, `learning-path-v1.3`, `learning-path-v1.4` and
-`learning-path-v1.5` are retained; the new edition tag is `learning-path-v1.6`. Versioned
+`learning-path-v1.5` and `learning-path-v1.6` are retained; the new edition tag
+is `learning-path-v1.7`. Versioned
 downloads are static checked artifacts; the first release's ZIP bytes are preserved.
 
 Maintainers render with Quarto **1.10.18**:

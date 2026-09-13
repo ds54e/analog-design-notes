@@ -13,7 +13,7 @@ change the decision.
 [**Read the entry page and eight chapters**](learn/index.qmd) ·
 [日本語の読み方](ja/learning-path.qmd)
 
-**Learning edition v1.6 · 2026-09-13.** Original explanations connect
+**Learning edition v1.7 · 2026-09-13.** Original explanations connect
 circuit estimates, selected observations and finite design costs. Basic
 KCL/KVL is introduced at the entry; no simulator installation is needed to read.
 
@@ -25,6 +25,8 @@ The noise argument follows one resistor through both terminals. Worked mirror
 arithmetic shows what added reference current buys when other errors remain.
 The initial OTA then separates input common mode, output voltage and receiver
 current. A heavier DC load can increase bandwidth while worsening precision.
+The worked supply-ramp comparison then separates peak current, capacitor
+storage, supply-delivered charge/energy and the time when the circuit is ready.
 
 | Follow the circuit | Make the next judgment |
 | --- | --- |
@@ -55,7 +57,9 @@ The [DC receiving-load example](studies/learning-dc-load-v1/reproduce.qmd)
 compares a frozen forecast with one corrected 100-kΩ condition and retains
 the earlier input-construction error. [Small worked calculations](learn/calculations/index.qmd)
 reproduce the reference-current cost argument with standard Python.
-All eleven earlier ZIPs are retained.
+The [startup-current explanation](studies/learning-startup-v1/reproduce.qmd)
+uses four known R75 records and one new graph to connect those quantities.
+All twelve earlier ZIPs are retained.
 
 ## Detailed studies {#detailed-studies}
 

@@ -1,0 +1,25 @@
+{
+  "cases": [
+    "R75-both_on",
+    "R75-input_first-fast-8p",
+    "R75-input_first-slow-8p",
+    "R75-input_only"
+  ],
+  "package": "sequencing-study-v1.0.zip",
+  "package_sha256": "72966373eb6f0e0f29f94c1be38d66c87c69d4011c0014eb5e1b1b18533d678d",
+  "role": "Original definitions and known full-horizon scalar observations, plus selected full native axes in this new package. Plot-only old CSV is not used for measurement.",
+  "schema": "learning.startup-current.source.v1",
+  "selected_zip_members": {
+    "circuits/R75-both_on.cir": "c75894eeccc46b071ad47b115bbdd78968512a5417f0f27cf6ddaa81d99f0fe0",
+    "circuits/R75-input_first-fast-8p.cir": "9560b05829ebb5c1a0a5bae189ec905426694febd0e00d675f83fc63b337c065",
+    "circuits/R75-input_first-slow-8p.cir": "e49e0bd80b71cbe7f5009797e0b902d2119a54553b00c33c36d3975a7adbf6e9",
+    "circuits/R75-input_only.cir": "92c5c4d3943e2d6a01b9955079f88135baaffd6f622079a4028b17aaf690f8dc",
+    "data/configuration.json": "28c31e660ab236d927ba2180b757108e4a8e41087dc569f3b46430193570ac69",
+    "data/histories.csv": "a26f7ca38f9306822df896004a3e6c4feb7b4abe10974be888b5f4020452cd30",
+    "data/manifest.json": "f23d67927d514bc25c0cfbff88077ccc8820807e569d7e17f28574f5d594d481",
+    "data/observations.json": "33c11895b0dfe2edfcc4c3e9ab20e57c4a82a2da393ab49280f570d452e019c0",
+    "data/plateaus.csv": "5507fee176e637e70b3d42b806b923edcbfa27f9c0c5d92f18ff40c104329dc8",
+    "nominal-plan.json": "634102c9a8c2237328282af4bfc30090bcd6c57cc441f1066dad6024ea1d8865"
+  },
+  "url": "https://ds54e.github.io/analog-design-notes/downloads/sequencing-study-v1.0.zip"
+}

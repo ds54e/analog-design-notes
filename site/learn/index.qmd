@@ -8,7 +8,7 @@ then follows mirrors, differential operation, feedback, uncertainty and supply
 interfaces toward the questions an LDO would need answered. Each chapter connects
 an estimate, selected observations and a design judgment.
 
-**Learning edition v1.6.** The English chapters are the canonical route; the
+**Learning edition v1.7.** The English chapters are the canonical route; the
 [Japanese reading overview](../ja/learning-path.qmd) explains where to begin
 and how the evidence fits. The five detailed studies remain available with
 their original circuit files, definitions, downloads and results.
@@ -27,6 +27,12 @@ requiring more stationary receiver current changes the output error and
 bandwidth together: a slightly faster response can be less accurate. Each
 comparison has its own exact conditions, prediction role and evidence.
 All previous exact downloads remain available.
+
+The supply chapter then uses two known R75 startup histories to connect
+current peaks, stored charge, upstream delivery and ready time. A simple RC
+screen has useful early behavior but the wrong final voltage; a separate
+unfitted OP calculation explains the final approach. Both keep the actual
+circuits, histories and approximation limits visible.
 
 ## The reading order
 
@@ -156,6 +162,13 @@ the output-load current and supply-current changes are different.
 investment arithmetic using the original first-study ZIP and standard Python.
 They check circuit inventory and cost before comparing predicted SD with the
 original confirmation's MAE decision; they do not create a new cohort.
+
+The [startup-current explanation](../studies/learning-startup-v1/reproduce.qmd)
+adds four selected full-axis R75 records, a fixed-window current/charge/energy
+calculation and one graph. It preserves the original arrival definitions and
+distinguishes a known-error-anchored local estimate from a prospective forecast.
+Its new calculation needs no native acquisition; the original sequencing
+package retains its advertised native examples.
 
 The progression is informed by the device–diode–amplifier–mirror–pair–OTA order
 in [Pretl, Koefinger and Dorrer's course](https://iic-jku.github.io/analog-circuit-design/aicd.html)

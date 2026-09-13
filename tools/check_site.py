@@ -49,6 +49,8 @@ def main():
                  'learn/figures/resistor-noise-paths.svg']
     required += ['studies/learning-common-mode-v1/reproduce.html','downloads/learning-common-mode-v1.0.zip',
                  'learn/figures/common-mode-interface.svg']
+    required += ['studies/learning-startup-v1/reproduce.html','downloads/learning-startup-v1.0.zip','learn/figures/startup-current-and-charge.svg']
+    required += ['learn/figures/startup-current-and-charge-narrow.svg']
     required += ['studies/learning-dc-load-v1/reproduce.html','downloads/learning-dc-load-v1.0.zip',
                  'learn/calculations/index.html','learn/calculations/reference-investment.py',
                  'learn/calculations/reference-investment-summary.json','learn/calculations/reference-investment.csv','learn/calculations/manifest.json']

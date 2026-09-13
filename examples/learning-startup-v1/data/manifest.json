@@ -1,0 +1,15 @@
+{
+  "files": {
+    "R75-both_on.npz": "519ccf82a43c3909f07f32ba94aafae18a65d0270701df674dd12c961b47b070",
+    "R75-input_first-fast-8p.npz": "ada7ac5b063c9d7c8e293a6ce032a9cf7f35f4e470131d172182e5c1160f62dd",
+    "R75-input_first-slow-8p.npz": "f53e395a0a27af06dae56ca079442f83f5efb38eff8022c059949e893cdb0970",
+    "R75-input_only.npz": "d837628d8e42ec6b33cf45ec44bd3bbda671d64c2b61c9f845366264d71ffcd2",
+    "comparison.csv": "02411da422df14efe52bf1744883c86443ace8507f8e8c14bae505a2f34c7208",
+    "index.json": "cd5ca4feaec3f3e59a8de142f2d128ac41c88e978d1e95c4856f5dbd53d8ebac",
+    "source.json": "0a1e7ec504761c7b35f3db09e98809e3c9abc7388128ec09496b7e7b5d38370e",
+    "summary.json": "14c5be311494624a5740189dc9210211c57ff07e5f8218a46274d9771135597d",
+    "waveforms.csv": "5df2848fab8d1445fb79cabcc713f3ac6e3e2dbd1b9dbc7e52df57605942dc23"
+  },
+  "role": "Four exact selected full-native arrays, source identities and retrospective results; waveforms.csv is for drawing only.",
+  "schema": "learning.startup-current.data.v1"
+}

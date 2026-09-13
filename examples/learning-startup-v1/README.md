@@ -1,0 +1,126 @@
+# Reproduce the supply-ramp current and charge explanation
+
+This calculation develops [chapter 7's worked startup argument](https://ds54e.github.io/analog-design-notes/learn/07-supply-and-startup.html#predict-the-charging-demand-and-observe-a-bounded-history).
+It uses four already exposed R75 records from the original power-sequencing
+study. The two histories hold input at 0.45 V and raise the ideal driven supply
+from 0 to 1 V in 10 ns or 1 µs, with the same 8-pF output load. Separate
+input-only and both-on OP records provide the initial and final references.
+The original study, its definitions and exact ZIP are retained.
+
+Download [the selected calculation package](https://ds54e.github.io/analog-design-notes/downloads/learning-startup-v1.0.zip)
+or inspect [its public files](https://github.com/ds54e/analog-design-notes/tree/main/examples/learning-startup-v1).
+This is saved-data reanalysis, with **zero new native acquisitions or fresh
+confirmation conditions**. The old observations were already known when the
+explanation and its fixed 2-µs integration window were chosen.
+
+## Exact inputs and measurement roles
+
+[source.json](data/source.json) binds ten selected members of the original
+[sequencing-study-v1.0.zip](https://ds54e.github.io/analog-design-notes/downloads/sequencing-study-v1.0.zip), SHA256
+`72966373eb6f0e0f29f94c1be38d66c87c69d4011c0014eb5e1b1b18533d678d`.
+They include four exact circuits, configuration, original plan, native scalar
+observations, history/arrival tables and their manifest. The separate
+[index](data/index.json) identifies four compact NPZ files containing the
+original full native axes, with 12,208 total rows. These include four OP rows
+and the two transient trajectories; no waveform interpolation is used for
+current maxima, charge or energy integration.
+
+Every case has the same saved six zero-raw NMOS units, APM v5.0.0/APM045 VTG,
+at commit `381517fda5107fabf98af7801d5a5103f38e230c`, ngspice 47 and 26.85 °C.
+The source audit reread request/output/circuit identities, all actual MOS
+model/W/L/m/nf/DELVTO/MULU0 states, passive parameters and terminal domains.
+The original measurement code regenerated each selected case's scalar
+observations exactly. The old plotting CSV is a drawing product and is not
+substituted for the full native records supplied here.
+
+R75 has six 3.867489/0.40-µm NMOS units with D=out, G=gate, S=source, B=0.
+Rsrc is 1 kΩ, Rs is 171.818014 Ω, Rd is 6667.191719 Ω and Rload is 100 kΩ.
+The [fast](circuits/R75-input_first-fast-8p.cir) and
+[slow](circuits/R75-input_first-slow-8p.cir) files include exact values and
+all current sensors. Their capacitor is 8 pF. The independent stationary
+reference files retain their original 1-pF bookkeeping; stationary capacitor
+current is zero. The original fast/slow maximum time steps are 2/10 ns and
+the full history ends at 20 µs.
+
+The new calculation keeps three different roles explicit:
+
+- An analytic RC screen omits the NMOS drain-terminal current and intrinsic
+  charging. It retains Rd, Rload, the external capacitor and the independently
+  observed initial output. Its wrong final output is preserved.
+- Measured supply, capacitor and MOS terminal currents check pointwise KCL
+  and a declared integration window from absolute time 2 to 4 µs. Signed
+  source charge/energy and external capacitor storage remain separate.
+- A final-OP local model retains source/body motion and uses an independent
+  two-node KCL calculation. Its exponential starts at the already observed
+  ramp-end error. It explains the known final approach without fitting a time
+  constant; it is not a prospective startup forecast.
+
+The original absolute 1-mV arrival band, ramp-end time origin, 20-µs horizon
+and native brackets remain unchanged. Charge comparison uses the original
+relative tolerance 0.001; terminal KCL uses 1e-10 A. The selected results are
+well inside those tolerances. Gate/drain terminal currents include conduction
+and displacement together; no compact-model channel/charge decomposition or
+transient device-energy accounting is invented.
+
+## Regenerate the numbers and graph
+
+Extract the new ZIP in a clean directory. Its `example/` directory includes
+the scripts, compact arrays, manifests and retained license notices. Use the
+declared Python 3.9-or-later environment and a new output destination:
+
+~~~bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r example/requirements.txt
+curl --fail --location https://ds54e.github.io/analog-design-notes/downloads/sequencing-study-v1.0.zip --output sequencing-study-v1.0.zip
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/analyze.py --source-zip sequencing-study-v1.0.zip --output "$PWD/analysis-001"
+PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B example/plot.py --analysis "$PWD/analysis-001" --output "$PWD/figures-001"
+~~~
+
+Compare `analysis-001/summary.json`, `comparison.csv` and `waveforms.csv` with
+the files in `example/data/`. The last is an explicitly interpolated drawing
+table. `figures-001/startup-current-and-charge.svg` reproduces the chapter's
+graph; `startup-current-and-charge-narrow.svg` stacks the same panels for
+small screens. Existing output directories are refused. No APM import, simulator or
+acquisition occurs in either script; SPICE stays outside the static site build.
+
+The [evidence record](evidence.json) preserves source, calculation and
+reproduction identities. A fresh-directory calculation uses no APM import or
+native execution and is a same-host reproduction check.
+
+The final check on 2026-09-13 retrieved the original ZIP anonymously and
+installed the declared requirements in a fresh Python environment. All three
+JSON/CSV outputs and both wide/narrow SVG arrangements regenerated with exact
+bytes. Seventeen input/script payloads and sixteen retained license notices
+were checked. The original wide figure and all numerical results remained
+unchanged when the readable narrow layout was added.
+
+Expected supply peaks are 140.981/81.797 µA. At those peaks the external
+capacitor receives 86.143/7.357 µA, while the NMOS drain terminals receive
+54.237/69.893 µA. Both histories add about 4 pC and 1 pJ to the external
+capacitor. Supply delivery over the declared 2-µs window is about 153/130 pC
+and 153/110 pJ because the other paths also conduct. The window includes
+different amounts of nearly stationary operation; this is not an equal-service
+efficiency comparison. Input delivery/absorption is retained separately.
+
+The passive screen's time constant is 50.004 ns, but its final output would
+be 0.937495 V. The active final-OP time constant is 49.154 ns; similar time
+constants do not establish the same DC function. Its observed-error-anchored
+tail estimates are 299.184/187.499 ns, inside the original post-ramp brackets.
+Total ready times are about 0.310/1.189 µs after adding the ramp itself.
+
+## Retained native reproduction and limits
+
+The original [power-sequencing reproduction](https://ds54e.github.io/analog-design-notes/studies/power-sequencing/reproduce.html)
+provides the separately acquired APM dependency, frozen requirements and
+advertised `R75-input_first-fast-8p` native replay. That known-input native
+example was checked for the original release. It remains part of the unchanged
+original package. Regenerating this new arithmetic and graph requires only
+the selected saved observations; it does not rerun the original 59-case block.
+
+Two input-first ramps do not demonstrate arbitrary initial stored charge,
+floating pins, a current-limited real supply, all possible equilibria or
+integrated-regulator startup. A 75-µA current-limited source would not
+automatically reproduce the specified ideal voltage ramp. The self-bias
+prototype remains unresolved and is not used here. These are pinned-model,
+same-host numerical explanations, without prior human review or independent
+scientific replication.

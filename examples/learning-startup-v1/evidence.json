@@ -1,0 +1,253 @@
+{
+  "calculation_sha256": {
+    "analyze.py": "f51012b59f25c73f89e253d56baf9f4dbea69c406d2dc24bd425afb7f33ea69c",
+    "plot.py": "596312f79d7baada147146c4eef484e32c567c628e6522de8fd90e530a14d49c"
+  },
+  "model": {
+    "apm": "5.0.0",
+    "apm_commit": "381517fda5107fabf98af7801d5a5103f38e230c",
+    "family": "APM045 VTG",
+    "ngspice": "47",
+    "temperature_c": 26.85
+  },
+  "new_confirmation_conditions": 0,
+  "new_native_acquisitions": 0,
+  "public_reproduction": {
+    "apm_imports": 0,
+    "checked_utc": "2026-09-13T18:51:36.332002+00:00",
+    "exact_regenerated_outputs": {
+      "comparison.csv": "02411da422df14efe52bf1744883c86443ace8507f8e8c14bae505a2f34c7208",
+      "summary.json": "14c5be311494624a5740189dc9210211c57ff07e5f8218a46274d9771135597d",
+      "waveforms.csv": "5df2848fab8d1445fb79cabcc713f3ac6e3e2dbd1b9dbc7e52df57605942dc23"
+    },
+    "exact_regenerated_svg": {
+      "startup-current-and-charge-narrow.svg": "ac1f97193d94d2f0bd9a95afaa07422832cfa077d2e71b7ab4784e315b978dbd",
+      "startup-current-and-charge.svg": "6e239a97203d4c533684c1fbc8fcbf2278c8bd6577f012dc6a077ceb6f382cc5"
+    },
+    "layout": "Two arrangements of one figure from identical data; wide original bytes retained, narrow panels stacked for legible labels.",
+    "native_acquisitions": 0,
+    "python": "Python 3.9.25",
+    "retained_license_files": 16,
+    "role": "Fresh directory and Python environment, anonymous old input retrieval; same-host saved-data and wide/narrow graph reproduction, not a new experiment or independent scientific replication.",
+    "source_sha256": "72966373eb6f0e0f29f94c1be38d66c87c69d4011c0014eb5e1b1b18533d678d",
+    "source_url": "https://ds54e.github.io/analog-design-notes/downloads/sequencing-study-v1.0.zip",
+    "status": "PASS",
+    "tested_payload_sha256": {
+      "analyze.py": "f51012b59f25c73f89e253d56baf9f4dbea69c406d2dc24bd425afb7f33ea69c",
+      "circuits/R75-both_on.cir": "c75894eeccc46b071ad47b115bbdd78968512a5417f0f27cf6ddaa81d99f0fe0",
+      "circuits/R75-input_first-fast-8p.cir": "9560b05829ebb5c1a0a5bae189ec905426694febd0e00d675f83fc63b337c065",
+      "circuits/R75-input_first-slow-8p.cir": "e49e0bd80b71cbe7f5009797e0b902d2119a54553b00c33c36d3975a7adbf6e9",
+      "circuits/R75-input_only.cir": "92c5c4d3943e2d6a01b9955079f88135baaffd6f622079a4028b17aaf690f8dc",
+      "data/R75-both_on.npz": "519ccf82a43c3909f07f32ba94aafae18a65d0270701df674dd12c961b47b070",
+      "data/R75-input_first-fast-8p.npz": "ada7ac5b063c9d7c8e293a6ce032a9cf7f35f4e470131d172182e5c1160f62dd",
+      "data/R75-input_first-slow-8p.npz": "f53e395a0a27af06dae56ca079442f83f5efb38eff8022c059949e893cdb0970",
+      "data/R75-input_only.npz": "d837628d8e42ec6b33cf45ec44bd3bbda671d64c2b61c9f845366264d71ffcd2",
+      "data/comparison.csv": "02411da422df14efe52bf1744883c86443ace8507f8e8c14bae505a2f34c7208",
+      "data/index.json": "cd5ca4feaec3f3e59a8de142f2d128ac41c88e978d1e95c4856f5dbd53d8ebac",
+      "data/manifest.json": "8580df256171c3689257825b3f85138542db05e4874fccdb828cd0565d37a8d9",
+      "data/source.json": "0a1e7ec504761c7b35f3db09e98809e3c9abc7388128ec09496b7e7b5d38370e",
+      "data/summary.json": "14c5be311494624a5740189dc9210211c57ff07e5f8218a46274d9771135597d",
+      "data/waveforms.csv": "5df2848fab8d1445fb79cabcc713f3ac6e3e2dbd1b9dbc7e52df57605942dc23",
+      "plot.py": "596312f79d7baada147146c4eef484e32c567c628e6522de8fd90e530a14d49c",
+      "requirements.txt": "55db679fd13539a5689f580f6aedd2a03e9aef2dfe85db845f19da27aba0655a"
+    }
+  },
+  "results": {
+    "cases": {
+      "R75-input_first-fast-8p": {
+        "checks": {
+          "MOS_terminal_kcl_max_a": 1.5301780396516583e-16,
+          "output_kcl_max_a": 1.0727457251375481e-16,
+          "supply_resistor_kcl_max_a": 2.710505431213761e-20
+        },
+        "common_window": {
+          "capacitor_charge_C_delta_V_c": 3.999971892715371e-12,
+          "capacitor_charge_integral_c": 3.999972145626966e-12,
+          "capacitor_charge_relative_difference": 6.322834300576119e-08,
+          "drain_terminal_charge_c": 1.3942217165267628e-10,
+          "duration_s": 2e-06,
+          "external_capacitor_energy_change_j": 9.999999999525936e-13,
+          "input_signed_charge_c": 4.473080512427857e-15,
+          "input_signed_energy_j": 2.0128862305925364e-15,
+          "integrated_output_KCL_residual_c": -1.2464254737981657e-24,
+          "resistive_load_charge_c": 9.738487100201752e-12,
+          "start_s": 2e-06,
+          "stop_s": 4e-06,
+          "supply_signed_charge_c": 1.5316063089850375e-10,
+          "supply_signed_energy_j": 1.5291941349086078e-10
+        },
+        "current_peak": {
+          "NMOS_drain_terminal_sum_a": 5.423732036828033e-05,
+          "capacitor_a": 8.614279715098497e-05,
+          "load_resistor_a": 6.005486968631768e-07,
+          "output_voltage_v": 0.06005486968631768,
+          "relative_to_ramp_start_s": 1.0000000000000751e-08,
+          "supply_delivered_a": 0.00014098066621613363,
+          "supply_voltage_v": 1.0
+        },
+        "native_maximum_timestep_s": 2.0000000000009973e-09,
+        "original_arrival": {
+          "band_v": 0.001,
+          "horizon_s": 2e-05,
+          "post_ramp_bracket_s": [
+            2.984707397817318e-07,
+            3.0047073978173197e-07
+          ],
+          "status": "OBSERVED_FINAL_ENTRY",
+          "target_v": 0.5000000000000068,
+          "total_from_ramp_start_bracket_s": [
+            3.0847073978173183e-07,
+            3.10470739781732e-07
+          ]
+        },
+        "ramp_end": {
+          "observed_output_v": 0.06005486968630864,
+          "observed_supply_current_a": 0.00014098066621612228,
+          "passive_screen_output_v": 0.08779678511885862,
+          "passive_screen_supply_current_a": 0.00013681970660938932
+        },
+        "ramp_time_s": 1e-08,
+        "retrospective_local_tail": {
+          "estimate_minus_original_upper_s": -1.287164878141413e-09,
+          "estimated_post_ramp_time_s": 2.9918357490359056e-07,
+          "ramp_end_absolute_error_v": 0.43994513031369814,
+          "role": "Unfitted final-OP single-capacitor estimate anchored at already observed ramp-end error; not prospective startup prediction.",
+          "tau_s": 4.9154062440152596e-08
+        },
+        "rows": 10108
+      },
+      "R75-input_first-slow-8p": {
+        "checks": {
+          "MOS_terminal_kcl_max_a": 1.4060516616659336e-16,
+          "output_kcl_max_a": 1.5093004429185244e-17,
+          "supply_resistor_kcl_max_a": 4.0657581468206416e-20
+        },
+        "common_window": {
+          "capacitor_charge_C_delta_V_c": 3.999971892184356e-12,
+          "capacitor_charge_integral_c": 3.9999823453734805e-12,
+          "capacitor_charge_relative_difference": 2.61331564477274e-06,
+          "drain_terminal_charge_c": 1.1963279095091305e-10,
+          "duration_s": 2e-06,
+          "external_capacitor_energy_change_j": 9.999999996870826e-13,
+          "input_signed_charge_c": 5.417526923235309e-15,
+          "input_signed_energy_j": 2.437887115455889e-15,
+          "integrated_output_KCL_residual_c": -8.966508593104109e-26,
+          "resistive_load_charge_c": 6.334811921195171e-12,
+          "start_s": 2e-06,
+          "stop_s": 4e-06,
+          "supply_signed_charge_c": 1.2996758521748162e-10,
+          "supply_signed_energy_j": 1.0976369061737088e-10
+        },
+        "current_peak": {
+          "NMOS_drain_terminal_sum_a": 6.989315175531722e-05,
+          "capacitor_a": 7.3571883499512405e-06,
+          "load_resistor_a": 4.546451109825085e-06,
+          "output_voltage_v": 0.4546451109825084,
+          "relative_to_ramp_start_s": 9.999999999999997e-07,
+          "supply_delivered_a": 8.179679121509286e-05,
+          "supply_voltage_v": 0.9999999999999996
+        },
+        "native_maximum_timestep_s": 1.0000000000001598e-08,
+        "original_arrival": {
+          "band_v": 0.001,
+          "horizon_s": 2e-05,
+          "post_ramp_bracket_s": [
+            1.785012641067503e-07,
+            1.885012641067502e-07
+          ],
+          "status": "OBSERVED_FINAL_ENTRY",
+          "target_v": 0.5000000000000068,
+          "total_from_ramp_start_bracket_s": [
+            1.1785012641067502e-06,
+            1.1885012641067501e-06
+          ]
+        },
+        "ramp_end": {
+          "observed_output_v": 0.4546451109825088,
+          "observed_supply_current_a": 8.179679121509281e-05,
+          "passive_screen_output_v": 0.8906171551345027,
+          "passive_screen_supply_current_a": 1.6406134618312762e-05
+        },
+        "ramp_time_s": 1e-06,
+        "retrospective_local_tail": {
+          "estimate_minus_original_upper_s": -1.0022092817839743e-09,
+          "estimated_post_ramp_time_s": 1.8749905482496622e-07,
+          "ramp_end_absolute_error_v": 0.04535488901749796,
+          "role": "Unfitted final-OP single-capacitor estimate anchored at already observed ramp-end error; not prospective startup prediction.",
+          "tau_s": 4.9154062440152596e-08
+        },
+        "rows": 2096
+      }
+    },
+    "conditions": {
+      "Rd_ohm": 6667.191718846597,
+      "Rload_ohm": 100000.0,
+      "Rs_ohm": 171.81801356494375,
+      "Rsrc_ohm": 1000.0,
+      "candidate": "R75",
+      "external_capacitance_f": 8e-12,
+      "input_v": 0.45,
+      "original_horizon_s": 2e-05,
+      "physical_units": 6,
+      "ramp_start_s": 2e-06,
+      "raw": "Saved six zero pairs",
+      "supply_final_v": 1.0,
+      "temperature_c": 26.85
+    },
+    "final_OP_local_tail": {
+      "assumptions": "Fixed input gate in the local model; neglect gate/leakage and intrinsic capacitance derivatives. Retain source and body motion through Rs. No fit to transient time or waveform.",
+      "derivative_sums_s": {
+        "gds": 3.4859152100148378e-06,
+        "gm": 0.0012311724194444624,
+        "gmbs": 0.00028175066012529854
+      },
+      "effective_gds_s": 2.765400196222342e-06,
+      "independent_output_source_matrix_s": [
+        [
+          0.0001634741024663124,
+          -0.0015164089947797758
+        ],
+        [
+          -3.4859152100148378e-06,
+          0.007336520514239405
+        ]
+      ],
+      "independent_output_transimpedance_ohm": 6144.257805019075,
+      "source_feedback_denominator": 1.2605463812350743,
+      "tau_s": 4.9154062440152596e-08
+    },
+    "limits": [
+      "Two known input-first ramps, not arbitrary initial charge, all-history reachability, finite upstream-driver behavior or new qualification.",
+      "Current maxima and arrival brackets retain the original finite time grids and definitions.",
+      "The2us common energy/charge window contains different amounts of nominal operation after each startup; it is not equal-service efficiency or compact-model stored-energy accounting.",
+      "MOS drain-terminal current includes compact-model conduction and displacement; it is not a separately measured channel-current component."
+    ],
+    "passive_screen": {
+      "alpha": 0.9374953853062901,
+      "assumption": "Omit all NMOS terminal current and intrinsic charging. Include Rd, Rload and external capacitor; same independently observed initial output.",
+      "final_output_v": 0.9374953853062901,
+      "short_ramp_current_screen_a": 0.0001499881872562976,
+      "tau_s": 5.0003691754967976e-08
+    },
+    "reference": {
+      "final_input_delivered_a": 5.9063718498854854e-09,
+      "final_output_v": 0.5000000000000068,
+      "final_supply_delivered_a": 7.499409362814778e-05,
+      "initial_output_v": 3.51341107045592e-06
+    },
+    "role": "Retrospective four-record calculation; original59-case study and exposure history unchanged.",
+    "schema": "learning.startup-current.analysis.v1",
+    "source_zip_sha256": "72966373eb6f0e0f29f94c1be38d66c87c69d4011c0014eb5e1b1b18533d678d"
+  },
+  "review": "Internal source/readback/KCL/charge/independent-node/definition review. No prior human or independent scientific review.",
+  "reviewed_utc": "2026-09-13T18:36:21.954172+00:00",
+  "schema": "adn.learning-startup-current.evidence.v1",
+  "source": {
+    "index": "data/index.json",
+    "old_measurements_exact": true,
+    "selected_old_cases": 4,
+    "selected_rows": 12208,
+    "source": "data/source.json"
+  },
+  "status": "SCIENTIFIC_REVIEW_AND_CLEAN_PUBLIC_REPRODUCTION_COMPLETE"
+}

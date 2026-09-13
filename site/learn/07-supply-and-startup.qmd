@@ -193,6 +193,178 @@ near 150 µA, compared with about 75 µA at the final 0.5-V output. The measured
 peak for input-first startup, a 10-ns supply ramp and 8-pF load is **140.981 µA**.
 The nominal DC budget did not forbid that separately measured peak.
 
+Use the actual resistor-loaded circuit for this comparison. R75 has six NMOS
+units, each 3.867489/0.40 µm; all bodies connect to ground. There is no PMOS
+reference branch in this stage:
+
+```text
+Vin(in, 0) = 0.45 V throughout the history
+VDD(vdd, 0): 0 -> 1 V, starting at 2 us
+Rsrc(in, gate) = 1 kohm
+N0 ... N5(D=out, G=gate, S=source, B=0)
+Rs(source, 0) = 171.818014 ohm
+Rd(vdd, out) = 6667.191719 ohm
+Rload(out, 0) = 100 kohm; Cload(out, 0) = 8 pF
+```
+
+The [10-ns](../studies/power-sequencing/circuits/R75-input_first-fast-8p.cir)
+and [1-µs](../studies/power-sequencing/circuits/R75-input_first-slow-8p.cir)
+SPICE bodies retain every terminal and current sensor. Vin is already present;
+the independently solved initial output is 3.513 µV with VDD clamped to zero.
+Both histories approach the same independently solved 0.500000-V output.
+The following calculations use these **already known observations**. Their
+RC comparisons are retrospective explanations, with no fitted time constant
+or new startup target.
+
+### What the first RC screen includes and omits
+
+Temporarily omit the NMOS bank's drain-terminal current and intrinsic charging.
+Keep both output resistors and the external capacitor. Output KCL becomes
+
+$$C\frac{dv_o}{dt}+Gv_o=\frac{v_{DD}}{R_D}.$$
+
+$$G=\frac1{R_D}+\frac1{R_L}.$$
+
+$$\tau=\frac C G,\qquad \alpha=\frac{1/R_D}{G}.$$
+
+Here $R_L$ is Rload and time starts at the supply-ramp beginning. During a
+linear ramp $v_{DD}=V_{max}t/T_r$, the solution for $0\leq t\leq T_r$ is
+
+$$\begin{aligned}
+v_o(t)&=\frac{\alpha V_{max}}{T_r}\,t\\
+&\quad-\frac{\alpha V_{max}\tau}{T_r}\left(1-e^{-t/\tau}\right)\\
+&\quad+v_o(0)e^{-t/\tau}.
+\end{aligned}$$
+
+After the ramp, this screen approaches $\alpha V_{max}$ exponentially.
+The circuit values give $\tau=50.004$ ns and $\alpha=0.937495$.
+At the end of the 10-ns ramp, it estimates 87.797 mV output and 136.820 µA
+from the supply. The actual output is 60.055 mV and the supply delivers
+140.981 µA. The simple calculation gives a useful scale for the fast peak,
+but the active bank is already removing current while the capacitor charges.
+
+The omission becomes obvious for the 1-µs ramp. The same passive screen gives
+0.890617 V and only 16.406 µA at ramp end; the actual amplifier gives
+0.454645 V and 81.797 µA. Its final output is 0.5 V, not the screen's
+0.937495 V. A resistor/capacitor estimate that explains a charging scale
+does not establish an active amplifier's operating point.
+
+<figure class="figure">
+<a href="figures/startup-current-and-charge.svg"><picture>
+<source media="(max-width: 600px)" srcset="figures/startup-current-and-charge-narrow.svg">
+<img class="img-fluid" src="figures/startup-current-and-charge.svg" alt="The same R75 has different charging and transistor-current partitions under fast and slow supply ramps. The passive screen omits the NMOS bank.">
+</picture></a>
+<figcaption class="figure-caption">The same R75 under two supply ramps. The RC screen omits the NMOS bank. Panels stack on a narrow screen; open the figure for the full comparison.</figcaption>
+</figure>
+
+### Trace the current before choosing the source capacity
+
+The complete output-node identity is
+
+$$\begin{aligned}
+I_{VDD}&=\frac{V_{DD}-V_O}{R_D}\\
+&=I_C+\frac{V_O}{R_L}+\sum_{k=0}^{5}I_{D,k}.
+\end{aligned}$$
+
+The drain currents are measured terminal currents, including compact-model
+conduction and displacement. They are not separately extracted channel-current
+components. The original sensors measure $I_C$ independently. At the observed
+supply peak, which is at ramp end in both selected histories:
+
+| Current, µA | 10-ns ramp | 1-µs ramp |
+| --- | ---: | ---: |
+| Supply delivers | 140.981 | 81.797 |
+| External capacitor receives | 86.143 | 7.357 |
+| Six NMOS drain terminals receive | 54.237 | 69.893 |
+| Rload receives | 0.601 | 4.546 |
+
+The fast source must provide a large capacitor current before output catches
+up. In the slow history, the NMOS bank is much closer to its final current
+when the supply reaches 1 V, and the external capacitor needs less current.
+The final supply current is 74.994 µA; the input source separately delivers
+5.906 nA. A 75-µA nominal total budget therefore describes neither transient
+peak nor every upstream interface.
+
+Pointwise output KCL closes within $1.1\times10^{-16}$ A in these full saved
+arrays. That numerical balance supports the current accounting. It does not
+show that a real source limited to the nominal current can reproduce the
+specified ideal voltage ramp; such a source would change the imposed history.
+
+### Stored charge, source charge and energy are different requirements
+
+Use a declared common observation window: **2 µs from the supply-ramp start**,
+absolute time 2–4 µs. Integrating the measured capacitor current gives about
+4.000 pC in either history. It agrees with $C\Delta V$ within $2.7\times10^{-6}$
+relative error, inside the original charge-check tolerance. This is a check
+on full native time axes, separate from the interpolated drawing grid.
+
+| Signed quantity in that common window | 10-ns ramp | 1-µs ramp |
+| --- | ---: | ---: |
+| External capacitor charge, pC | 4.000 | 4.000 |
+| Supply-delivered charge, pC | 153.161 | 129.968 |
+| Supply-delivered energy, pJ | 152.919 | 109.764 |
+| External capacitor energy increase, pJ | 1.000 | 1.000 |
+
+The remaining supply charge flows through the NMOS drain terminals and Rload;
+integrating their currents closes the same output KCL. Most supply-delivered
+energy in this window is not newly stored in the external capacitor. The
+input source also participates, with signed energies about 0.0020/0.0024 pJ.
+This accounting does not infer a complete transient compact-model energy
+partition from terminal current alone.
+
+The window is part of the comparison. The fast circuit spends more of it
+already near normal operation; the slow circuit spends longer at lower supply
+and output voltages. The smaller slow-ramp energy here is not an equal-service
+efficiency claim, and choosing a different window would change both totals.
+Specify ready time, peak current and the relevant energy interval together.
+
+### Estimate the final approach without fitting the waveform
+
+Return to the complete circuit's final OP. Chapter 2's source-node equation
+gives the bank's effective output conductance, with the input gate held locally
+fixed:
+
+$$D_S=1+R_S(G_m+G_{mb}+G_{ds}).$$
+
+$$g_{ds,eff}=\frac{G_{ds}}{D_S}.$$
+
+$$\tau_{on}=\frac C{1/R_D+1/R_L+g_{ds,eff}}.$$
+
+The capital derivatives are sums over the six NMOS units. The known OP gives
+$G_{ds}=3.485915$ µS, a source-feedback denominator 1.260546 and
+$g_{ds,eff}=2.765400$ µS. With 8 pF, $\tau_{on}=49.154$ ns. This local model
+includes the active bank; it still omits intrinsic capacitance and gate/leakage
+derivatives. It is an unfitted one-pole explanation, not a whole-history model.
+An independent two-node output/source KCL solve gives the same local output
+resistance. The external resistors contribute about 160 µS, much more than
+the bank's effective 2.765 µS, so the two time constants are close even though
+omitting the bank gives the wrong DC center. Similar time constants do not
+make two circuits perform the same function.
+
+Anchor that exponential at each **already observed ramp-end error** $e_r$,
+relative to the independent final OP. A local estimate of the subsequent
+1-mV-band arrival is
+
+$$T_{tail}\approx\tau_{on}\ln\left(\frac{|e_r|}{1\ \mathrm{mV}}\right).$$
+
+| Time from ramp end, ns | 10-ns ramp | 1-µs ramp |
+| --- | ---: | ---: |
+| OP-based estimate, observed error as anchor | 299.184 | 187.499 |
+| Original measured final-entry bracket | 298.471–300.471 | 178.501–188.501 |
+
+Both estimates fall within the original brackets. This does not create finer
+time resolution or make the observed anchor a prospective prediction. The
+finite waveform and original 20-µs horizon establish the retained final-entry
+measurement. Unlike chapter 5's D1 step example, this measurement starts at
+the **ramp end** and uses an absolute 1-mV band around its independent 0.5-V OP.
+Adding the ramp duration gives total arrival brackets **308.471–310.471 ns**
+and **1178.501–1188.501 ns**. A smaller post-ramp delay can accompany a much
+later ready time.
+
+The [saved-data calculation](../studies/learning-startup-v1/reproduce.qmd)
+supplies these four selected records, exact source identities, current/charge
+arithmetic and one regenerable graph. No new native history was acquired.
+
 [![The published fast histories expose supply and input peak demands.](../studies/power-sequencing/figures/peak-demands.svg)](../studies/power-sequencing/figures/peak-demands.svg)
 
 The fixed sequencing block includes 59 nominal observations and controls:
@@ -204,10 +376,9 @@ possible equilibria.
 
 For the fast 8-pF input-first case, post-ramp settling to a 1-mV band around
 the separately solved stationary endpoint takes about 0.300 µs in R75,
-0.871 µs in F75L and 4.445 µs in A75. Lengthening R75's supply ramp to 1 µs
-reduces its peak to 81.797 µA and its *post-ramp* delay to 0.189 µs. But total
-time from the start of the ramp grows from about 0.310 to 1.189 µs. The time
-origin changes the meaning of “faster.”
+0.871 µs in F75L and 4.445 µs in A75. These are different finite designs under
+the same declared startup job. Nominal current matching alone would hide
+their different ready times and transient source requirements.
 
 On a supply off/on cycle with input held at 0.45 V, F75L continues drawing
 about 4 µA from the input during the zero-supply hold. Some slow downward
